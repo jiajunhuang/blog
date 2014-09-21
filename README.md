@@ -1,6 +1,4 @@
 #Blog
 
-
-* Thanks jekyll theme from [pixyll](https://github.com/johnotander/pixyll)
-
+会当凌绝顶，一览众山小. -- 杜甫《望岳》
 
