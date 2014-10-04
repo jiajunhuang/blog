@@ -17,7 +17,7 @@ sudo apt-get install git
 ```
 
 ```bash
-git clone https://github.com/jiajunhuang/configs .xmonad
+git clone https://github.com/gansteed/configs .xmonad
 ```
 
 ```bash
