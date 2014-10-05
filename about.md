@@ -4,4 +4,5 @@ title: About
 permalink: /about/
 ---
 
-BLOG use [Jekyll](jekyllrb.com)
+Blog use [Jekyll](jekyllrb.com)
+Weibo: [Here](http://weibo.com/herozem)
