@@ -2,7 +2,7 @@
 title: Simple
 email: gansteed(at, you know)gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Logging me?
+  Just my notes.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 twitter_username: 
@@ -11,4 +11,4 @@ github_username:  gansteed
 # Build settings
 markdown: redcarpet
 redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data", "strikethrough"]
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough"]
