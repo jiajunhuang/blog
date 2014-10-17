@@ -38,3 +38,7 @@ int (*func_p)(double)
 5, 翻译成中文: `func_p 是指向返回类型为int的函数的指针`
 
 ;p 怎么样， 这方法很有效吧？
+
+2014-10-17:
+
+添加别人翻译的《征服C指针web版》: [点我](http://avnpc.com/pages/c-pointer)
