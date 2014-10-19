@@ -17,7 +17,7 @@ title: Docker资料收集
 
 [官方文档上的Docker 周报](https://blog.docker.com/docker-weekly-archives/)
 
-[外国人收集的Docker资料](http://www.nkode.io/2014/08/24/valuable-docker-links.html)
+[nkode.io收集的Docker资料](http://www.nkode.io/2014/08/24/valuable-docker-links.html)
 
 [Jonathan Bergknoff的博客](http://jonathan.bergknoff.com/journal)
 
@@ -44,4 +44,6 @@ title: Docker资料收集
 
 ## 免责声明
 
-首先， 我好像没有侵权？因为我没有转载； 第二， 如有雷同， 你来打我呀， 哈哈哈哈
+我好像没有侵权？因为我没有转载
+
+转载需声明作者及文章出处
