@@ -5,4 +5,3 @@ permalink: /about/
 ---
 
 Blog use [Jekyll](jekyllrb.com)
-Weibo: [Here](http://weibo.com/herozem)
