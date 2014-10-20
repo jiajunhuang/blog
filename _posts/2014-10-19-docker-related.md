@@ -36,6 +36,8 @@ title: Docker资料收集
 
 [segmentfault上的Docker相关文章](http://segmentfault.com/t/docker/blogs)
 
+[segmentfault上Docker问答子站](http://segmentfault.com/docker)
+
 ### 技巧篇:
 
 [在已运行的Container上如何暴露新的端口？](http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container)
