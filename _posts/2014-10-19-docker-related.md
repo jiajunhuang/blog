@@ -3,17 +3,11 @@ layout: post
 title: Docker资料收集
 ---
 
-我对新鲜的事物并不那么敏感， 但是只看到微博上的人DockerDockerDocker的刷了好一阵了， 正好这几天肌肉有点小拉伤， 窝在寝室里， 就把Docker拿出来搞了搞。
+**这里可不是教你学Docker的** 只是把搜集到的资料贴出来， 至于怎么学， 完全靠自己 :)
 
-但是注意 **我这可不是教你学Docker的** 我只把我搜集到的资料贴出来， 至于怎么学， 完全看你个人， 但是我建议能看英文的同学尽量看英文， 因为：英文的先出； 一般来说译者水平有限(好吧， 我就是说我翻译渣渣..)。
-
-## 2014-10-21 注：
-
-**文章浏览量很高， 但是我想要的不是这个， 是大家一起把自己收集到的资料共享出来，谢谢！**
-
-## 2014-10-19 注：
-
-**如果您有更好的资料， 请务必联系我， 我及时更新， 大家共同学习 ^_^**
+## 2014-10-31 注：
+最新资料在docker weekly里， 为什么不订阅呢？
+[http://blog.docker.com/docker-weekly-archives/](http://blog.docker.com/docker-weekly-archives/)
 
 资料：
 
@@ -40,15 +34,10 @@ title: Docker资料收集
 
 [Docker -- 从入门到实践](http://yeasy.gitbooks.io/docker_practice/content/)
 
-[UC - 利用Docker构建开发环境](http://tech.uc.cn/?p=2726)
-
 [InfoQ 上的Docker专题](http://www.infoq.com/cn/dockers)
 
 [segmentfault上的Docker相关文章](http://segmentfault.com/t/docker/blogs)
 
-[CSDN上的Docker专题](http://special.csdncms.csdn.net/BeDocker/)
-
-[Docker.cn 上的文章](https://docker.cn/p)
 
 ### 技巧篇:
 
