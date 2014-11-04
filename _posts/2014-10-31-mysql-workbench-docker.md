@@ -35,3 +35,38 @@ sudo docker stop learnmysql
 ```bash
 sudo docker start leanrmysql
 ```
+
+2014-11-04 更新:
+
+今天做了个更无聊事情： 既然我把`mysql-server`放容器里了， 干脆把`mysql-client` 也放一个容器里好了。
+
+开干： 首先， 打个小广告， 拉取ubuntu的镜像， 我自己做了一个， 只是在官方镜像上改了镜像源而已， 换成了163的， 其他的丝毫未动， 镜像地址[点我](https://registry.hub.docker.com/u/gansteed/docker-ubuntu-cn/):
+
+```bash
+sudo docker pull gansteed/docker-ubuntu-cn
+```
+
+当然， 最聪明的办法就是写个`Dockerfile`让它自己安装`mysql-client-5.6`， 但是就这一个， 咱直接自己动手好了：
+
+```bash
+sudo docker run --name mysql-client --link learnmysql:client -dti ubuntu:trusty /bin/bash
+```
+
+记得要获取`learnmysql`的ip地址， 要不然是没办法连上去的， 我一开始在这卡了好久 ;(
+
+```bash
+$ sudo docker inspect learnmysql | grep 'IPAddress'
+        "IPAddress": "172.17.0.2",
+```
+
+接下来
+
+```bash
+sudo attach mysql-client
+
+apt-get install -y mysql-client-5.6 #我一开始写成5.7了， 我说半天搜不到..
+mysql -h 172.17.0.2 -u root -p
+# 输入你的`mysql-server`密码
+```
+
+OK！
