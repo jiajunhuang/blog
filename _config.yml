@@ -13,7 +13,7 @@ tagline:             'my notes and blogs'
 description:         '你的眼睛能看多远'
 url:                 /
 baseurl:             /
-paginate:            5
+paginate:            8
 
 # About/contact
 author:
@@ -23,3 +23,7 @@ author:
 
 # Custom vars
 saying:              Welcome
+
+# redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     "with_toc_data", "strikethrough"]

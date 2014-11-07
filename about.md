@@ -10,10 +10,11 @@ A Software-Engineering Student in Jiangxi University of Finance and Econmics.
 Thanks:
 
 * [Jekyll](http://www.jekyllrb.com)
-* [Github](http://www.github.com)
+* [Github](https://www.github.com)
+* [lanyon](https://github.com/poole/lanyon/)
 
 Contact me:
 
 * [Sina Weibo](http://www.weibo.com/herozem)
 * [Email:gansteed(at, you know)gmail.com](#)
-* [Github](http://www.github.com/gansteed)
+* [Github](https://www.github.com/gansteed)
