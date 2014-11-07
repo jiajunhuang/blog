@@ -10,7 +10,6 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}blogs">Blogs</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -26,6 +25,7 @@
       {% endif %}
     {% endfor %}
 
+    <a class="sidebar-nav-item" href="{{ site.baseurl }}blogs">Blogs</a>
     <a class="sidebar-nav-item" href="https://www.github.com/gansteed">GitHub</a>
     <span class="sidebar-nav-item">{{ site.saying }}</span>
   </nav>
