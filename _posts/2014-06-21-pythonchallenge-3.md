@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      Python-Challenge第三题
-date:       2014-09-09 15:31:19
 ---
 
 记录一下这一题:

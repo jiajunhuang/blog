@@ -1,14 +1,25 @@
-# Site settings
-title: Simple
-email: gansteed(at, you know)gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Just my notes.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-twitter_username: 
-github_username:  gansteed
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
 
-# Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough"]
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               gansteed
+tagline:             'my notes and blogs'
+description:         '你的眼睛能看多远'
+url:                 /
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              gansteed
+  url:               http://weibo.com/herozem
+
+# Custom vars
+saying:              Welcome
