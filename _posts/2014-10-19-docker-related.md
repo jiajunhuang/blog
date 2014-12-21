@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Docker资料收集
+tags: [docker]
 ---
 
 **这里可不是教你学Docker的** 只是把搜集到的资料贴出来， 至于怎么学， 完全靠自己 :)

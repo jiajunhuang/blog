@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Python-Challenge第三题
+tags: [python]
 ---
 
 记录一下这一题:

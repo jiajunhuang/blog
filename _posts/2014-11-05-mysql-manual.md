@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mysql manual 笔记
+tags: [mysql]
 ---
 
 ### SELECT 相关

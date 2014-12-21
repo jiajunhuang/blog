@@ -1,6 +1,7 @@
 ---
 layout: post
 title: use mysql-workbench with docker
+tags: [mysql, docker]
 ---
 
 本来想说明一下为什么用docker装mysql的， 但是想了一下， 做个笔记而已啦啦啦

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      C语言中点操作符(.)和箭头操作符(->)的不同之处
+tags: [c]
 ---
 
 自己写一个简单的uname， 要用到utsname结构体， 编译报错如下：

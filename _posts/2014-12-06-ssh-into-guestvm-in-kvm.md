@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 怎样ssh连接到kvm中的虚拟机
+tags: [kvm, ssh, linux]
 ---
 
 这几天玩kvm虚拟机， 却不知道怎么ssh进去(不懂得虚拟机中网桥和ip到底是什么关系)，[找到一个方法](http://rwmj.wordpress.com/2010/10/26/tip-find-the-ip-address-of-a-virtual-machine/):

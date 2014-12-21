@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 让程序使用socks5代理
+tags: [socks5, linux]
 ---
 
 首先得有shadowsocks代理到本地
