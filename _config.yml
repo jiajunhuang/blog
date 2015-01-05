@@ -18,11 +18,10 @@ paginate:            8
 # About/contact
 author:
   name:              gansteed
-  url:               http://weibo.com/herozem
   disqus:            gansteed
 
 # Custom vars
-saying:              "如果你想成功，那么就去做吧，不必考虑别人的感受， 我是说真的。"
+saying:              'Stand on the shoulders of giants, observing details of the world.'
 
 # redcarpet
 redcarpet:
