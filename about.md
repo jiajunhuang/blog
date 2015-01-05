@@ -15,5 +15,4 @@ Thanks:
 
 Contact me:
 
-* [Sina Weibo](http://www.weibo.com/herozem)
 * [Email:gansteed(at, you know)gmail.com](#)
