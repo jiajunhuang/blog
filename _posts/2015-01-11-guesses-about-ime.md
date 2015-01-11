@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "关于输入法的猜想"
+tags: [talk]
 ---
 
 每逢期末便是大作业、答辩涌来之时。
