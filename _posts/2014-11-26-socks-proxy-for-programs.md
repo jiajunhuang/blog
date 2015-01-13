@@ -19,3 +19,9 @@ sudo tsocks pip install shadowsocks
 
 ...
 ```
+
+2015-01-13 更新：
+
+还发现了一个叫`proxychains`的程序， 用起来和`tsocks`一样， 配置见[这里](https://github.com/shadowsocks/shadowsocks/wiki/Using-Shadowsocks-with-Command-Line-Tools)
+
+另外还有直接转成http proxy的软件， 可以供Android SDK Manager这样子只能使用http proxy的程序用， [点这里](https://github.com/shadowsocks/shadowsocks/wiki/Convert-Shadowsocks-into-an-HTTP-proxy)
