@@ -13,3 +13,14 @@ tags: [linux]
 另外`Archlinux`内存占用那是相当的小啊， 我特意看了一下， `Archlinux`上开机以后只占110多M， 但是`Ubuntu 14.04`占用了780多M， 安装的需要自启动的软件基本相当(Xmonad+Fcitx+LightDM+系统)， `Ubuntu`就多了一个`samba`而已也不要大这么多吧。
 
 另外`Archlinux`有很多在`Ubuntu`里需要ppa安装的软件都在官方源里，直接`sudo pacman -S ***`安装即可，还是最新的 爽啊！如果x61上试用一段时间不崩溃的话， 有必要考虑把小y也从`Ubuntu`切过来啊！
+
+### 2015-03-03:
+现在两台笔记本都切换到了Archlinux， 使用一段时间的感受有以下几点：
+
+* archlinux使用最新的软件， 对桌面来说其实是利大于弊的， 并且并非如网上所说的那么不稳定
+
+* kvm用着有点不爽， 而且在里面装上ubuntu竟然会更新错误(有些直接在安装过程就出错了)， 总而言之archlinux上kvm给我的体验很不好
+
+* 基本上不开yaourt也是可以过的， 浏览器有chromium(但是没有pepperflash插件， 这个在aur里才有)
+
+* archlinux的wiki真的是业界良心！
