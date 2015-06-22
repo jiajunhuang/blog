@@ -4,10 +4,11 @@ title: "Block I/O"
 tags: [linux]
 ---
 
-* The difference comes down to whether the device accesses data randomly
---- in otherwords, whether the device can seek to one position from another.
+* The difference (between character device and block device) comes down to 
+whether the device accesses data randomly --- in otherwords, whether the 
+device can seek to one position from another.
 
-* The block is an abstraction of the filesystem—filesystems can be
+* The block is an abstraction of the filesystem --- filesystems can be
 accessed only in multiples of a block.Although the physical device is 
 addressable at the sector level, the kernel performs all disk operations in 
 terms of blocks.
