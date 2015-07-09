@@ -14,12 +14,13 @@ determines the indentation of the line.
 
 * the indentation levels of the consecutive are used to generate `INDENT` and 
 `DEDENT` tokens, using a stack:
+
 > * before the first line is read, a 0 is pushed on the stack
 > * at the befinning of each logical line, the line's indentation level is 
 compared to the top of the stack. 
-`=`: nothing happens
-`>`: pushed on the stack, generate one `INDENT` token
-`<`: if it is elements on the stack, all the elements larger than it will be
+> * `=`: nothing happens
+> * `>`: pushed on the stack, generate one `INDENT` token
+> * `<`: if it is elements on the stack, all the elements larger than it will be
 poped off, else raise an exception.
 
 * at the end of the file, a `DEDENT` token is generate for each number 
