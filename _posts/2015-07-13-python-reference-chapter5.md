@@ -14,8 +14,6 @@ statement.
 * it's important to keep in mind that all packages are modules, but not all 
 modules are packages.
 
-* namespce package. ** what the hell, man **
-
 * the first place checked during import search is `sys.module`. this mapping
 serves as a cache of all modules that have been previously imported, including
 the intermediate paths(e.g. `foo.bar.baz` -> `foo`, `foo.bar`, `foo.bar.baz`).
@@ -23,5 +21,3 @@ the intermediate paths(e.g. `foo.bar.baz` -> `foo`, `foo.bar`, `foo.bar.baz`).
 * if you keep a reference to the module object, invalidate its cache entry in 
 `sys.modules`, and then re-import the named module. the two module objects
 will not be the same.
-
-* `__spec__` need reread. (what's the usage of it?)

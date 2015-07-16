@@ -7,8 +7,6 @@ tags: [python]
 * assignment statements are used to (rebind) names to values and to modify 
 attributes or items of mutable objects.
 
-* assignment statements **need reread**, [here](https://docs.python.org/3/reference/simple_stmts.html#assignment-statements)
-
 * unlike normal assignments, argumented assignments evaluate the left-hand side
 before evaluating the right-hand side.
 
