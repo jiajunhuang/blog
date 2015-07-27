@@ -8,7 +8,7 @@ highlighter:         pygments
 permalink:           pretty
 
 # Setup
-title:               gansteed
+title:               Jiajun
 tagline:             'my notes and blogs'
 description:         '你的眼睛能看多远'
 url:                 /
@@ -17,7 +17,7 @@ paginate:            8
 
 # About/contact
 author:
-  name:              gansteed
+  name:              Jiajun Huang
   disqus:            gansteed
 
 # Custom vars
