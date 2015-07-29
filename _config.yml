@@ -18,6 +18,7 @@ paginate:            8
 # About/contact
 author:
   name:              Jiajun Huang
+  github:            jiajunhuang
   disqus:            gansteed
 
 # Custom vars
