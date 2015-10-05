@@ -4,7 +4,7 @@ title:      "程序设计实践笔记1 -- Style"
 tags: [programming, notes]
 ---
 
-=== Names
+### Names
 
 * use descriptive names for globals, short names for locals.
 
@@ -22,7 +22,7 @@ verbs, perhaps followed by nouns.
 
 * be accurate(保证准确).
 
-=== Expressions and Statements
+### Expressions and Statements
 
 * indent to show structure (python have a native support for it, hahah).
 
@@ -54,7 +54,7 @@ leap_year = ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0));
 array[i++] = array[i++] = ' ';
 ```
 
-=== Consistency and Idioms
+### Consistency and Idioms
 
 * use a consistent indentation and brace style. the program;s consistency is 
 more import than your own,
@@ -119,7 +119,7 @@ switch (c) {
 }
 ```
 
-=== Function Macros
+### Function Macros
 
 * avoid function macros.
 
@@ -137,7 +137,7 @@ switch (c) {
 // #define square(x) ((x) * (x))
 ```
 
-=== Magic Numbers
+### Magic Numbers
 
 * `magic numbers` are the constants, array sizes, character posiitions, 
 conversion factors, and other literal numeric values that appear in programs.
@@ -165,7 +165,7 @@ if (isupper(c))
 #define NELEMS(array) (sizeof(array) / sizeof(array[0]))
 ```
 
-=== Comments
+### Comments
 
 * the best comments aid the understanding of a program by briefly pointing out 
 salient details or by providing a larger-scale view of the proceedings.
@@ -187,7 +187,7 @@ parts, not create more obstacles. when it takes more than a few words to
 explain what's happening, it's often an indication that the code should be 
 rewritten.
 
-=== 吐槽
+### 吐槽
 
 《程序设计实践》这本书是作者经验总结，原书很棒。但是我买的是一本评注版，
 原以为评注版会更好，没想到反而是影响阅读。他评注的我都会，我不会的他也没评注= =!
