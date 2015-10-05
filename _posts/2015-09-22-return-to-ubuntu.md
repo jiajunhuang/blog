@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      我又回到了Ubuntu
+title:      回到Ubuntu
 tags: [linux]
 ---
 
