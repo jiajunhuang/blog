@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "程序设计实践笔记3 --Debugging 
+title:      "程序设计实践笔记3 --Debugging"
 tags: [programming, notes]
 ---
 
