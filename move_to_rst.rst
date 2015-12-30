@@ -39,6 +39,7 @@ Other thing
 gh-pages跳转到blog的repo代码:
 
 .. code:: html
+
     <!DOCTYPE html>
     <html>
         <body>
