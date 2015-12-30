@@ -6,4 +6,4 @@ My blog
 
 Here is `about me`_.
 
-.. _`about me`: 
+.. _`about me`: https://github.com/jiajunhuang/blog/blob/master/about_me.rst
