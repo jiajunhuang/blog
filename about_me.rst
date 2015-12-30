@@ -1,10 +1,12 @@
 About me
 ========
 
-My name is `jiajunhuang`_
+Motto: Stand on the shoulders of giants, observing details of the world.
+
+Hi, my name is `jiajunhuang`_
 
 A Software-Engineering Student in
-Jiangxi University of Finance and Econmics(2012-2016).
+Jiangxi University of Finance and Econmics(09/2012 - 06/2016).
 
 I am a Archlinux_, Neovim_, XMonad_ fans. Use `Linux` and `Vim` from 2012,
 and switch to Archlinux_ and Neovim_ from 2014.
