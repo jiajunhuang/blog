@@ -16,10 +16,12 @@ Catalogue
 2016:
 ~~~~~
 
-#. `xx/xx/xxxx - placeholder <https://github.com/jiajunhuang/blog/blob/master/>`__
+#. `xx/xx/2016 - placeholder <https://github.com/jiajunhuang/blog/blob/master/>`__
 
 2015:
 ~~~~~
+
+#. `12/30/2015 - Python import笔记 <https://github.com/jiajunhuang/blog/blob/master/notes_on_python_reference_of_import.rst>`__
 
 #. `12/30/2015 - RST大迁移 <https://github.com/jiajunhuang/blog/blob/master/move_to_rst.rst>`__
 
