@@ -65,3 +65,10 @@ Catalogue
 #. `07/08/2014 - C语言的位操作 <https://github.com/jiajunhuang/blog/blob/master/bitwise_operation_in_c.rst>`__
 
 #. `06/17/2014 - 使用cron <https://github.com/jiajunhuang/blog/blob/master/use_cron.rst>`__
+
+LICENSE
+-------
+
+`Creative Commons 4.0`_
+
+.. _`Creative Commons 4.0`: https://creativecommons.org/licenses/by/4.0/legalcode
