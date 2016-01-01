@@ -21,7 +21,7 @@ Catalogue
 2015:
 ~~~~~
 
-# `12/31/2015 - Python 标准库浏览 <https://github.com/jiajunhuang/blog/blob/master/notes_on_python_stdlib.rst>`__
+#. `12/31/2015 - Python 标准库浏览 <https://github.com/jiajunhuang/blog/blob/master/notes_on_python_stdlib.rst>`__
 
 #. `12/30/2015 - Python import笔记 <https://github.com/jiajunhuang/blog/blob/master/notes_on_python_reference_of_import.rst>`__
 
