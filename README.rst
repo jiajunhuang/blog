@@ -18,6 +18,8 @@ Catalogue
 
 #. `xx/xx/2016 - placeholder <https://github.com/jiajunhuang/blog/blob/master/>`__
 
+#. `01/06/2016 - 实习小结 <https://github.com/jiajunhuang/blog/blob/master/internship_during_201507_20160131.rst>`__
+
 2015:
 ~~~~~
 
