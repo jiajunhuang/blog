@@ -41,7 +41,8 @@
 
 - 7月份，刚来公司，mentor要我先把 `Python Reference`_ 看一遍，我以为是要尽快看完
   然后开始接任务，然后看得非常的草率，快速扫描后，第二天就跟mentor说看完了，结果
-  被mentor问了面红耳赤，羞愧不如。唉，所以说，实习生还是不要太急，跟着mentor走。
+  被mentor问了面红耳赤，羞愧不如(幸好看了源码剖析，还答上一部分，要不然...)。
+  唉，所以说，实习生还是不要太急，跟着mentor走。
 
 - 8月份，八月份主要是做了一些数据导出的工作。比如各种运营数据，干这个还是略
   苦逼的，本来这些事情能在网页上让运营同学自己点点做完，但是往往数据量太大，
@@ -80,4 +81,4 @@ CTO嘴里说出来，我觉得非常能体现这个团队的文化和氛围。
 
 .. _看见音乐: http://www.kanjian.com
 .. _`Python Reference`: https://docs.python.org/3/reference/index.html
-.. _`Python源码剖析`: #
+.. _`Python源码剖析`: http://book.douban.com/subject/3117898/
