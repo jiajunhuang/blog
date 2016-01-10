@@ -9,4 +9,6 @@
 
 .. code:: bash
 
-    awk '$5 == 200 {print $9,$7}' im.out | grep -v '/404' | sort -u -k 2 | sort -g
+    #!/bin/bash
+
+    awk '$5 == 200 {print $9,$7}' $1 | grep -v '/404' | sort -g | awk -F'[=&?]' '{print $1 $2}'
