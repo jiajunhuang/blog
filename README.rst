@@ -20,8 +20,6 @@ Catalogue
 
 #. `01/07/2016 - 分析日志里响应时间最长的Bash脚本 <https://github.com/jiajunhuang/blog/blob/master/log_analysis_bash_script.rst>`__
 
-#. `01/06/2016 - 实习小结 <https://github.com/jiajunhuang/blog/blob/master/internship_during_201507_20160131.rst>`__
-
 2015:
 ~~~~~
 
