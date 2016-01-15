@@ -8,7 +8,7 @@
 这一次我做了一个拼音检索汉字的原型,
 数据结构表示如下图(这种数据结构叫做字典树)：
 
-.. image:: images/ime.png
+.. image:: http://7xq4lh.com1.z0.glb.clouddn.com/ime.png
 
 每个节点的结构如下：
 
