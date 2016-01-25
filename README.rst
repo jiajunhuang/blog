@@ -18,6 +18,8 @@ Catalogue
 
 #. `xx/xx/2016 - placeholder <https://github.com/jiajunhuang/blog/blob/master/>`__
 
+#. `01/25/2016 - 分治 <https://github.com/jiajunhuang/blog/blob/master/divide_and_conqure.rst>`__
+
 #. `01/07/2016 - 分析日志里响应时间最长的Bash脚本 <https://github.com/jiajunhuang/blog/blob/master/log_analysis_bash_script.rst>`__
 
 2015:
