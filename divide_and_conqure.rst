@@ -3,8 +3,8 @@
 分治
 ======
 
-Divide and Conquer. 在之前读 `Eric Roberts`_ 先生所著的
-`Thinking Recursively`_ 之后写过几句小总结,那本小书介绍了如何以递归的角度去
+Divide and Conquer. 在之前读 `Eric Roberts` 先生所著的
+`Thinking Recursively` 之后写过几句小总结,那本小书介绍了如何以递归的角度去
 看一些数据结构和算法,比如树和汉诺塔问题. 其中的三点, 也就是现在这篇文章需要
 总结的, 分治.
 
@@ -32,7 +32,7 @@ Divide and Conquer. 在之前读 `Eric Roberts`_ 先生所著的
 
 举个简单的例子,快排:
 
-.. code::python
+.. code:: python
 
     def qsort(alist):
         length = len(alist)
@@ -84,5 +84,6 @@ Divide and Conquer. 在之前读 `Eric Roberts`_ 先生所著的
   左向右,累加,找到最大值的sum和right_index,然后再从左向右减,看是不是能找到更大
   的sum,并记录left_index.这个算法最多只要扫描两遍,算法复杂度为O(n). `O(n)解法`_
 
+.. _`算法导论`: https://mitpress.mit.edu/books/introduction-algorithms
 .. _`O(nlgn)解法`: https://github.com/jiajunhuang/intro_to_algorithms/blob/master/chap4/max_subarray/maxsub.c
 .. _`O(n)解法`: https://github.com/jiajunhuang/intro_to_algorithms/blob/master/chap4/max_subarray/maxsub_linear.c
