@@ -18,6 +18,8 @@ Catalogue
 
 #. `xx/xx/2016 - placeholder <>`__
 
+#. `02/06/2016 - 位操作 <bitwise_operation.rst>`__
+
 #. `01/28/2016 - 抽象 <abstraction.rst>`__
 
 #. `01/25/2016 - 分治 <divide_and_conqure.rst>`__
@@ -67,8 +69,6 @@ Catalogue
 #. `09/07/2014 - C语言指针和数组 <pointer_and_array_in_c.rst>`__
 
 #. `08/22/2014 - APUE-UNIX文件权限 <notes_on_apue_v2_page93_of_file_permissions.rst>`__
-
-#. `07/08/2014 - C语言的位操作 <bitwise_operation_in_c.rst>`__
 
 #. `06/17/2014 - 使用cron <use_cron.rst>`__
 
