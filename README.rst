@@ -18,6 +18,8 @@ Catalogue
 
 #. `xx/xx/2016 - placeholder <>`__
 
+#. `02/20/2016 - CSS笔记 <css.rst>`__
+
 #. `02/14/2016 - python weakref <python_weakref.rst>`__
 
 #. `02/06/2016 - 位操作 <bitwise_operation.rst>`__
