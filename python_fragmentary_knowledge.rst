@@ -3,8 +3,7 @@
 Python零碎知识汇总
 ===================
 
-    这些都是我在文档里阅读到,而以前不知道或者没有注意或者我觉得仍然需要
-    注意的知识.
+    这些都是我在文档里阅读到或者是在网上看到的,不足以成文却值得注意的知识.
 
 - 字符格式化: '%s'会先把参数转换成unicode然后再填充进去.
 
@@ -30,3 +29,28 @@ Python零碎知识汇总
 
 - ``iter(object[, sentinel])`` 要求 object 必须实现 ``__iter__()`` 或者 ``__getitem__()``
   之一，第二个参数是停止提示。
+
+- ``round(number, [ndigits])`` 给小数截断:
+
+.. code:: python
+
+    >>> round(10.12345, 2)
+    10.12
+
+- python 2 中的 ``hasattr`` 比较坑,原因如下:
+
+    The arguments are an object and a string. The result is True if the string
+    is the name of one of the object’s attributes, False if not. (This is
+    implemented by calling getattr(object, name) and seeing whether it raises
+    an exception or not.)
+
+  坑就坑在它接住的异常不是 ``AttributeError`` 而是 ``Exception``
+
+- ``sum(iterable, [start])`` 可以接受字符串，数字等。For some use cases,
+    there are good alternatives to sum(). The preferred, fast way to
+    concatenate a sequence of strings is by calling ''.join(sequence).
+    To add floating point values with extended precision, see math.fsum().
+    To concatenate a series of iterables, consider using itertools.chain().
+
+- ``type(name, bases, dict)`` 可以用来动态创建类，其中name是类名，bases是基类，
+  dict是类的 ``__dict__`` 属性
