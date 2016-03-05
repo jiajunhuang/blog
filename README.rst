@@ -18,7 +18,7 @@ Catalogue
 
 #. `xx/xx/2016 - placeholder <>`__
 
-#. `03/05/2016 - python零碎知识<python_fragmentary_knowledge.rst>`__
+#. `03/05/2016 - python零碎知识 <python_fragmentary_knowledge.rst>`__
 
 #. `02/20/2016 - CSS笔记 <css.rst>`__
 
