@@ -132,7 +132,7 @@ start做了一件最重要的事情：把自己加入IOLoop。这样子，每当
 当前进程拉起来，然后开始执行，当然，首先，我们要找到 `poll` 才能说服你嘛。别着急，
 我们先看看 `ioloop.IOLoop.instance().start()` 做了什么。
 在 `这里 <https://github.com/tornadoweb/tornado/blob/branch1.2/tornado/ioloop.py#L211>`__
-我们找到了时间循环，是吧，我就说一定是这样的^_^:
+我们找到了事件循环，是吧，我就说一定是这样的^_^:
 
 .. code:: python
 
