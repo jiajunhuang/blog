@@ -131,9 +131,8 @@ Web UI
 
     # git clone https://github.com/binux/yaaw /data/www/yaaw
 
-  - 然后配置nginx::
+  - 然后配置 `/etc/nginx/sites-enabled/default` ::
 
-    # cat /etc/nginx/sites-enabled/default
     server {
         listen 80 default_server;
         listen [::]:80 default_server;
@@ -164,12 +163,10 @@ Web UI
 
     # curl localhost
     <DOCTYPE html>
-    <!--
-    Copyright (C) 2015 Binux <roy@binux.me>
     ...
 
   - 接下来再安装一个chrome插件叫 `aria2c-integration`_ ，把平时的下载拦截然
-    后导入到aria2c去，安装完成以后记得配置一下 ``json-rpc`` 为 ``http://{树莓派ip地址}:6800/jsonrpc``。
+    后导入到aria2c去，安装完成以后记得配置一下 ``json-rpc`` 为 ``http://{树莓派ip地址}:6800/jsonrpc``
 
 .. _`yaaw`: https://github.com/binux/yaaw
 .. _`webui-aria2c`: https://github.com/ziahamza/webui-aria2
