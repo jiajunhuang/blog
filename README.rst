@@ -22,6 +22,8 @@ Catalogue
 2016:
 ~~~~~
 
+#. `04/03/2016 - 树莓派，用起来 <raspberrypi.rst>`__
+
 #. `03/18/2016 - 用apidocjs生成文档 <use_apidocjs.rst>`__
 
 #. `03/14/2016 - Tornado 源码剖析 <tornado.rst>`__

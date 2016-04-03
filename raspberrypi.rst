@@ -120,6 +120,9 @@ Web UI
 界面，一个是 `yaaw`_ 和 `webui-aria2`_ 。还有人把 `yaaw`_ 打包成了chrome插件。
 接下来我讲一下怎么把 `yaaw`_ 部署在树莓派上。
 
+.. _`yaaw`: https://github.com/binux/yaaw
+.. _`webui-aria2`: https://github.com/ziahamza/webui-aria2
+
 - 首先安装nginx和git::
 
     # apt-get install nginx git
@@ -136,7 +139,6 @@ Web UI
     server {
         listen 80 default_server;
         listen [::]:80 default_server;
-
         # SSL configuration
         #
         # listen 443 ssl default_server;
@@ -146,9 +148,7 @@ Web UI
         # Don't use them in a production server!
         #
         # include snippets/snakeoil.conf;
-
         server_name _;
-
         location / {
             root /data/www/yaaw;
             index index.html index.htm;
@@ -162,14 +162,10 @@ Web UI
   - 测试访问80端口::
 
     # curl localhost
-    <DOCTYPE html>
-    ...
 
   - 接下来再安装一个chrome插件叫 `aria2c-integration`_ ，把平时的下载拦截然
-    后导入到aria2c去，安装完成以后记得配置一下 ``json-rpc`` 为 ``http://{树莓派ip地址}:6800/jsonrpc``
+    后导入到aria2c去，安装完成以后记得配置一下 ``json-rpc`` 为 ``http://{树莓派ip地址}:6800/jsonrpc`` 。
 
-.. _`yaaw`: https://github.com/binux/yaaw
-.. _`webui-aria2c`: https://github.com/ziahamza/webui-aria2
 .. _`aria2c-integration`: https://chrome.google.com/webstore/detail/aria2c-integration/edcakfpjaobkpdfpicldlccdffkhpbfk
 
 配置ftp
