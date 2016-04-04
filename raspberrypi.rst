@@ -23,7 +23,7 @@
   折腾机器，用root比较方便，例如少打sudo(虽然你也可以在 ``/etc/sudoers`` 里设置
   不需要密码，但那还不如直接用root呢)。
 
-.. code: bash
+.. code:: bash
 
     # 首先，切换到root
     $ sudo su
@@ -41,7 +41,7 @@ aria2 is a lightweight multi-protocol & multi-source command-line download
 utility. It supports HTTP/HTTPS, FTP, BitTorrent and Metalink. aria2 can be
 manipulated via built-in JSON-RPC and XML-RPC interfaces.
 
-.. code: bash
+.. code:: bash
 
     apt-get install aria2
 
@@ -91,7 +91,7 @@ manipulated via built-in JSON-RPC and XML-RPC interfaces.
 
 下一步就是使用systemd来让aria2c开机启动了:
 
-.. code: bash
+.. code:: bash
 
     # cat /etc/systemd/system/aria2c.service
     [Unit]
@@ -168,11 +168,11 @@ Web UI
 
 .. _`aria2c-integration`: https://chrome.google.com/webstore/detail/aria2c-integration/edcakfpjaobkpdfpicldlccdffkhpbfk
 
-配置ftp
-----------
+配置ftp或Samba
+----------------
 
 可以下东西，也可以看到下载进度，那怎么用下载好的东西呢？本来是想配置samba的，
-但是一看安装那么多东西，还是改成ftp吧:
+但是一看安装那么多依赖，还是改成ftp吧:
 
   - 首先安装vsftp::
 
@@ -182,4 +182,58 @@ Web UI
 
         http://www.g-loaded.eu/2008/12/02/set-up-an-anonymous-ftp-server-with-vsftpd-in-less-than-a-minute/
 
-大功告成!
+定时报告公网ip
+----------------
+
+试了一下，我家里的ip地址是分配的公网ip，但是是会变的，比如重启路由器之类的。
+如果你们家的ip不是公网ip那还是跳过这一段吧，哈哈哈。
+写了一个程序让树莓派邮件报告当前公网ip:
+
+.. code:: python
+
+    # coding=utf-8
+
+    import requests
+    import smtplib
+    from email.mime.text import MIMEText
+
+    USER = "xxx@qq.com"
+    PASSWD = "xxx"
+    TO = "xxx@xxx.com"
+    TITLE = "raspberry_pi_ip_report"
+
+    # get ip
+
+    API = "http://www.hahayangqi.cn/a/ip_api.php"
+    r = requests.get(API)
+
+    msg = MIMEText(r.text, "plain", "utf-8")
+    msg["Subject"] = TITLE
+    msg["From"] = USER
+    msg["To"] = TO
+
+    s = smtplib.SMTP_SSL("smtp.qq.com", 465)
+    s.set_debuglevel(1)
+    s.login(USER, PASSWD)
+    s.sendmail(USER, TO, msg.as_string())
+    s.quit()
+
+其中用来查询公网ip的API自己也可以做，比如tornado直接打印 ``self.request.remote_ip`` 就得了。
+
+接下来要做的事情就是在路由器里设置端口映射，把路由器的某个端口转发到树莓派上。
+
+设置完之后就可以ssh登陆上去啦！
+
+当然，更简单的一种方式是，检测到ip有变，就去dnspod更新对应的域名绑定，也可以检测到
+ip有变才发送邮件，否则不发送邮件。不过考虑到树莓派的sd卡是脆弱的，还是采用最简单粗暴
+的方式吧。
+
+最后，别忘了设置crontab定时执行任务。还有别忘了在gmail里加入过滤规则，要不然会被
+邮件淹没的。。。
+
+总结
+------
+
+折腾下来，树莓派常用的软件都有，CPU也还过得去，性能瓶颈在于IO。我用的 class 10 的
+sd卡，还是会感觉到卡顿。另外CPU也不是特别够用，比如vim装了很多插件以后就特别特别卡，
+一方面是IO，一方面是CPU。所以树莓派上的vim用的都是我特别精简版的vimrc。
