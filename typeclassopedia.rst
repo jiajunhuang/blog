@@ -1,17 +1,17 @@
 :Date: 05/05/2016
 
-Haskell TypeClass 笔记
-============================
+Haskell TypeClass 笔记（未完待续）
+===================================
 
 这是Haskell Wiki上的 `一篇文章 <http://wiki.haskell.org/Typeclassopedia>`_ ，以下是我的学习笔记。
 
 学好Haskell有两个重点:
 
-    - Understand the types
+- Understand the types
 
-    - Gain a deep intuition for each type class and its
-      relationship to other type classes, backed up by
-      familiarity with many examples.
+- Gain a deep intuition for each type class and its
+  relationship to other type classes, backed up by
+  familiarity with many examples.
 
 Haskell的类型系统如下图所示：
 
@@ -19,15 +19,15 @@ Haskell的类型系统如下图所示：
 
 其中：
 
-    - 实线箭头，如图中Functor指向Applicative的箭头，表示
-      Applicative包含于Functor
+- 实线箭头，如图中Functor指向Applicative的箭头，表示
+  Applicative包含于Functor
 
-    - 虚线箭头，如图中Applicative指向Traversable，表示
-      其他的某种关系
+- 虚线箭头，如图中Applicative指向Traversable，表示
+  其他的某种关系
 
-    - Monad和ArrowApply是相等的
+- Monad和ArrowApply是相等的
 
-    - Semigroup, Apply, Comonad 尚未包含在标准库中
+- Semigroup, Apply, Comonad 尚未包含在标准库中
 
 另外，不要被Haskell中的class关键字迷惑了，其实不是类，更像是
 Java中的Interface。
@@ -79,4 +79,4 @@ Functor Law
 - fmap (g . h) = (fmap g) . (fmap h)
 
 这两条在一起保证了fmap g不会改变容器而只改变其中的内容。
-`其中第一条是第二条的充分不必要条件 <https://github.com/quchen/articles/blob/master/second_functor_law.md>`__
+`其中第一条是第二条的充分不必要条件 <https://github.com/quchen/articles/blob/master/second_functor_law.md>`__ 。
