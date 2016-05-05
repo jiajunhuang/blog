@@ -23,6 +23,8 @@ Catalogue
 2016:
 ~~~~~
 
+#. `05/05/2016 - Haskell TypeClass 笔记 <typeclassopedia.rst>`__
+
 #. `04/03/2016 - 重新捡起你那吃灰的树莓派 <raspberrypi.rst>`__
 
 #. `03/18/2016 - 用apidocjs生成文档 <use_apidocjs.rst>`__
