@@ -80,3 +80,73 @@ Functor Law
 
 这两条在一起保证了fmap g不会改变容器而只改变其中的内容。
 `其中第一条是第二条的充分不必要条件 <https://github.com/quchen/articles/blob/master/second_functor_law.md>`__ 。
+
+Applicative
+-------------
+
+Applicative 介于Functor和Monad之间，对于Functor，fmap可以
+把 *普通函数* 作用于容器内的内容。而Applicative为我们提供了
+``<*>`` 来一个 *在容器内的函数* 作用于容器内的内容
+(``<*>`` 读作"apply")，另外还有一个函数，``pure`` 可以把
+参数加入到容器内。看Applicative的定义：
+
+.. code:: haskell
+
+    class Functor f => Applicative f where
+        pure :: a -> f a
+        infixl 4 <*>
+        (<*>) :: f (a -> b) -> f a -> f b
+
+如上，Applicative必定属于Functor。这里的f也是一个类型构造子
+(type constructor)。
+
+.. code:: haskell
+
+    data MyMaybe a = MyNothing | MyJust a deriving (Show, Eq)
+
+    instance Functor MyMaybe where
+        fmap g MyNothing = MyNothing
+        fmap g (MyJust a) = MyJust (g a)
+
+    instance Applicative MyMaybe where
+        pure = MyJust
+        MyNothing <*> _ = MyNothing
+        (MyJust f) <*> box = fmap f box
+
+.. code:: bash
+
+    [root@arch haskell]# ghci
+    GHCi, version 7.10.3: http://www.haskell.org/ghc/  :? for help
+    Prelude> :l fun.hs
+    [1 of 1] Compiling Main             ( fun.hs, interpreted )
+    Ok, modules loaded: Main.
+    Main> pure (+) <*> MyJust 1 <*> MyJust 2
+    MyJust 3
+
+Applicative Law
+~~~~~~~~~~~~~~~~~
+
+- The identity law::
+
+    pure id <*> v = v
+
+- Homomorphism(同态性)::
+
+    pure f <*> pure x = pure (f x)
+
+- Interchange(交换性)::
+
+    u <*> pure y = pure ($ y) <*> u
+
+- Composition(组合)::
+
+    u <*> (v <*> w) = pure (.) <*> u <*> v <*> w
+
+另外，在 ``Control.Applicative`` 中定义了 ``<$>`` ，相当于
+fmap::
+
+    g <$> x = pure g <*> x
+
+It says that mapping a pure function g over a context x
+is the same as first injecting g into a context with pure,
+and then applying it to x with (<*>).
