@@ -71,7 +71,7 @@ Functor的定义如下：
 
 常见的instance有 ``Either e`` , ``((,) e)`` , `` ((->) e)`` , IO , 还有许多容器类型如 Tree, Map等。
 
-Functor Law
+Functor Laws
 ~~~~~~~~~~~~~
 
 - fmap id = id
@@ -123,7 +123,7 @@ Applicative 介于Functor和Monad之间，对于Functor，fmap可以
     Main> pure (+) <*> MyJust 1 <*> MyJust 2
     MyJust 3
 
-Applicative Law
+Applicative Laws
 ~~~~~~~~~~~~~~~~~
 
 - The identity law::
@@ -150,3 +150,88 @@ fmap::
 It says that mapping a pure function g over a context x
 is the same as first injecting g into a context with pure,
 and then applying it to x with (<*>).
+
+Monad
+-------
+
+首先来看Monad的定义:
+
+.. code:: haskell
+
+    class Applicative m => Monad m where
+        return :: a -> m a
+        (>>=) :: m a -> (a -> m b) -> m b
+        (>>) :: m a -> m b -> m b
+        m >> n = m >>= \_ -> n
+
+        fail :: String -> m a
+
+其中的return就是pure，从其他编程语言过来的人一定要注意不要混淆。
+``>>`` 是 ``>>=`` 的一种特殊情况，看上面的默认实现就知道了，另外，
+``m >> n`` ignores the result of m, but not its effects.
+
+    在这里我们可以对比一下Functor，Applicative，Monad三者，继续以
+    容器为例，fmap的类型为 ``fmap :: (a -> b) -> f a -> f b`` 即把
+    一个容器内的内容作用于普通函数；而 ``<*>`` 的类型为
+    ``(<*>) :: Applicative f => f (a -> b) -> f a -> f b`` 即把一个
+    在容器内的内容作用于在容器内的函数；而 ``>>=`` 的类型为
+    ``(>>=) :: Monad m => m a -> (a -> m b) -> m b`` 即把一个容器内的内容
+    作用于一个接受普通参数但产生容器类型的函数。Haskell的好处便在这里有了
+    体现，我们可以直接通过看函数的类型签名来判断函数的作用，却不需要查看
+    函数的具体实现。
+
+接下来把上面自己定义的MyMaybe实现为Monad的实例:
+
+.. code:: haskell
+
+    data MyMaybe a = MyNothing | MyJust a deriving (Show, Eq)
+
+    instance Functor MyMaybe where
+        fmap g MyNothing = MyNothing
+        fmap g (MyJust a) = MyJust (g a)
+
+    instance Applicative MyMaybe where
+        pure = MyJust
+        MyNothing <*> _ = MyNothing
+        (MyJust f) <*> box = fmap f box
+
+    instance Monad MyMaybe where
+        return a = MyJust a
+
+        MyNothing >>= _ = MyNothing
+        (MyJust a) >>= f = f a
+
+.. code:: bash
+
+    Main> MyJust 1 >>= (\p -> (MyJust (10+p)))
+    MyJust 11
+    Main> MyNothing >>= (\p -> (MyJust (10+p)))
+    MyNothing
+    Main> MyNothing >> MyJust 1 >>= (\p -> (MyJust (10+p)))
+    MyNothing
+
+more about >>=
+~~~~~~~~~~~~~~~~
+
+``>>=`` 通常读作 "bind"。The basic intuition is that it combines two
+computations into one larger computation. In other words, x >>= k is
+a computation which runs x, and then uses the result(s) of x to decide
+what computation to run second, using the output of the second
+computation as the result of the entire computation.
+
+详见原文5.3节，其中有包括用 fmap, pure, <*> 实现 >>= 的介绍。
+
+Monad Laws
+~~~~~~~~~~~~
+
+- ``return a >>= k = k a``
+
+- ``m >>= return = m``
+
+- ``m >>= (\k -> k x >> h) = (m >>= k) >>= h``
+
+do notation
+~~~~~~~~~~~~~
+
+do 是Haskell中提供的一种语法糖，让程序看起来更像是命令式编程风格。
+原文中介绍了do的缩进或者括号风格，还是直接看 `Haskell Report 2010中的相关介绍吧。 <https://www.haskell.org/onlinereport/haskell2010/haskellch10.html#x17-17800010.3>`__
