@@ -1,7 +1,7 @@
 :Date: 05/05/2016
 
-Haskell TypeClass 笔记（未完待续）
-===================================
+Haskell TypeClass 笔记
+========================
 
 这是Haskell Wiki上的 `一篇文章 <http://wiki.haskell.org/Typeclassopedia>`_ ，以下是我的学习笔记。
 
