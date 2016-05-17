@@ -6,7 +6,6 @@ My blog
 Support Me
 -----------
 
-如果你正好需要注册DigitalOcean家的VPS, 请点击 `这个链接 <https://m.do.co/c/dedfc09c3066>`__
 如果你正好需要注册Vultr家的VPS, 请点击 `这个链接 <http://www.vultr.com/?ref=6887917>`__
 注册, 对我们双方都有优惠。谢谢~
 
