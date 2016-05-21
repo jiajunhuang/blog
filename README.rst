@@ -22,6 +22,8 @@ Catalogue
 2016:
 ~~~~~
 
+#. `05/22/2016 - Fold <foldl_and_foldr.rst>`__
+
 #. `05/05/2016 - Haskell TypeClass 笔记 <typeclassopedia.rst>`__
 
 #. `04/03/2016 - 重新捡起你那吃灰的树莓派 <raspberrypi.rst>`__
