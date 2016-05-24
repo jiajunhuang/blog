@@ -61,11 +61,7 @@ Catalogue
 
 #. `10/26/2015 - PEP0333 WSGI 阅读笔记 <notes_on_pep_0333_wsgi.rst>`__
 
-#. `10/09/2015 - 程序设计实践 Chapter 5 阅读笔记 <notes_on_the_practice_of_programming_chap5.rst>`__
-
-#. `10/05/2015 - 程序设计实践 Chapter 2, 3 阅读笔记 <notes_on_the_practice_of_programming_chap2_and_chap3.rst>`__
-
-#. `10/05/2015 - 程序设计实践 Chapter 1 阅读笔记 <notes_on_the_practice_of_programming_chap1.rst>`__
+#. `10/09/2015 - 程序设计实践 阅读笔记 <notes_on_the_practice_of_programming.rst>`__
 
 #. `09/05/2015 - Thinking Recursively <thinking_recursively.rst>`__
 
