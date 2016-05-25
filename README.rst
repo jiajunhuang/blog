@@ -51,6 +51,8 @@ Catalogue
 
 #. `06/22/2015 - Linux Kernel Development Chapter 14 阅读笔记 <notes_on_linux_kernel_development_chap14.rst>`__
 
+#. `03/17/2015 - 如何解读C的声明？ <declaration_of_c_pointers.rst>`__
+
 #. `01/11/2015 - 我对输入法的猜想 <my_guess_about_input_method.rst>`__
 
 2014:
