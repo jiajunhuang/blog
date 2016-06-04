@@ -22,6 +22,8 @@ Catalogue
 2016:
 ~~~~~
 
+#. `06/05/2016 - do-notation <haskell_do_notation.rst>`__
+
 #. `05/22/2016 - Fold <foldl_and_foldr.rst>`__
 
 #. `05/05/2016 - Haskell TypeClass 笔记 <typeclassopedia.rst>`__
