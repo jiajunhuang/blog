@@ -34,7 +34,7 @@ Haskell Report 2010 [#]_ 上是这么说的: "A do expression provides a more
 conventional syntax for monadic programming." do作为一种语法糖，让
 Haskell写起来更方便。
 
-``then`` operator
+``>>`` operator
 ~~~~~~~~~~~~~~~~~~~
 
 为了完全理解do，我们首先要把它变回去。举个例子:
@@ -62,7 +62,7 @@ Haskell写起来更方便。
     Prelude> :t putStr "!"
     putStr "!" :: IO ()
 
-``bind`` operator
+``>>=`` operator
 ~~~~~~~~~~~~~~~~~~
 
 只进行输出的程序好像没有太大的用处，那么我们来举个能够和用户交互的例子:
@@ -122,7 +122,7 @@ Haskell写起来更方便。
     Hello jhon
 
 其中 ``>>=`` 的类型为 ``(>>=) :: Monad m => m a -> (a -> m b) -> m b`` 。理解
-了这个bind操作符理解上面的代码也就没问题了。
+了这个操作符理解上面的代码也就没问题了。
 
 return
 ----------
