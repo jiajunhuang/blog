@@ -1,4 +1,3 @@
-:Date: 09/05/2015
 
 Thinking Recursively
 =====================

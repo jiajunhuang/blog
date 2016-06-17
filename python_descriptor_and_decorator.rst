@@ -1,4 +1,3 @@
-:Date: 12/05/2015
 
 关于python的decorator和descriptor
 =================================

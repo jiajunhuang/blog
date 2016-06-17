@@ -1,4 +1,3 @@
-:Date: 06/04/2016
 
 Haskell do notation
 ======================
