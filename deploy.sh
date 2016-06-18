@@ -3,5 +3,5 @@
 git commit -m "$@"
 git push
 cd ../
-git commit -m "submodule && $@"
+git commit -am "submodule && $@"
 git push
