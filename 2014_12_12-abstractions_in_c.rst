@@ -1,4 +1,3 @@
-
 C语言与抽象思维
 ===============
 
@@ -46,7 +45,7 @@ Part I
 
 .. code:: bash
 
-    $ ./editor 
+    $ ./editor
     * Iabcd
      a b c d
             ^
@@ -125,8 +124,8 @@ Part I
     /*
      * File: editor.c
      *
-     * This program implements a simple character editor, which is used to test 
-     * the buffer abstraction. The editor reads and executes simple commands 
+     * This program implements a simple character editor, which is used to test
+     * the buffer abstraction. The editor reads and executes simple commands
      * entered by the user.
      */
 

@@ -1,4 +1,3 @@
-
 Haskell do notation
 ======================
 

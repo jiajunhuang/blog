@@ -1,4 +1,3 @@
-
 《征服C指针》笔记 - 数组和指针的微妙关系
 ========================================
 
@@ -76,7 +75,7 @@ Another blog about pointers and array:
     3. int main(int argc, char* argv[])
     4. {
     5. 　char str1[10] = "I Love U";
-    6. 　char str2[10]; 
+    6. 　char str2[10];
     7. 　strcpy(str2,str1);
     8. 　cout << "string array 1: " << str1 << endl;
     9. 　cout << "string array 2: " << str2 << endl;
@@ -158,7 +157,7 @@ Another blog about pointers and array:
     6. int main(int argc, char* argv[])
     7. {
     8. 　char str1[10] = "I Love U";
-    9. 　arrayTest(str1); 
+    9. 　arrayTest(str1);
     10.　 return 0;
     11. }
 

@@ -1,4 +1,3 @@
-
 Thinking Recursively
 =====================
 

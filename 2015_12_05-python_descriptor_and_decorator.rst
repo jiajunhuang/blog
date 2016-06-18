@@ -1,4 +1,3 @@
-
 关于python的decorator和descriptor
 =================================
 
