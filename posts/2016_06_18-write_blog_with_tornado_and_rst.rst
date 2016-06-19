@@ -11,8 +11,8 @@ rst，全称 ``reStructuredText`` ，也是一种标记文档。在Markdown异�
 效果
 ------
 
-.. image:: ./posts/img/screenshot0.png
-.. image:: ./posts/img/screenshot1.png
+.. image:: ./img/screenshot0.png
+.. image:: ./img/screenshot1.png
 
 开始配置
 -----------
@@ -94,4 +94,4 @@ upstream_ 模块。
 
 本项目还添加了对github webhooks的支持，当在github设置了git push的hook时，本地推送
 到github以后，github就会对配置的vps发起POST请求，然后项目会从github拉取代码并且重启
-进程，这样就不需要手动去pull代码了。
+进程，这样就不需要手动去pull代码了。详见 `这里 <2016_06_19-use-github-webhooks.rst>`__ 。

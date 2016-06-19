@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{ top_part["index_title"]}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <link rel="stylesheet" href=" {{ static_url('css/index.min.css') }}">
+        {% block extend_head %}
+        <!-- 扩展头部，例如css，js -->
+        {% end %}
+    </head>
+    <body>
+        <div id="page-header">
+            <div id="avatar-div">
+                <img id="avatar-image" src="{{ static_url('img/avatar.png') }}" alt="avatar">
+                <div id="title-content">
+                    <div id="title-body">{{ top_part["index_title"] }}</div>
+                    <div id="title-motto"><small>{{ top_part["subtitle"] }}</small></div>
+                </div>
+            </div>
+        </div>
+        <div id="nav-bar">
+            <div id="nav-content">
+                {% for (content, url) in top_part["navbar"][:-1] %}
+                <a class="nav-font" href="{{ url }}">{{ content }}</a>
+                <span class="separator">|</span>
+                {% end %}
+                <!-- 用tuple是为了节省内存，不过缺导致了这一行代码可读性不佳 -->
+                <a class="nav-font" href="{{ top_part['navbar'][-1][1] }}">{{ top_part['navbar'][-1][0] }}</a>
+            </div>
+        </div>
+        <div class="container">
+            {% block container %}
+            这是网站的下半部分，index为文章列表，博客页为博客内容
+            {% end %}
+        </div>
+        <div class="container">
+            {% block comments %}
+            <!-- disqus js 或者 多说js放在这里 -->
+            {% end %}
+        </div>
+        <div class="footer">
+            <a href="{{ top_part['github'] }}">@{{ top_part['username'] }}</a>
+        </div>
+    </body>
+</html>
