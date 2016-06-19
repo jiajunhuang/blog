@@ -7,7 +7,7 @@
 <div class="col-md-9" id="posts">
     {% for title, date, filename in catalog %}
     <div class="row post-div">
-        <p class="col-xs-3 post-div-time hidden-xs hidden-sm">{{ date }}</p>
+        <p class="col-xs-3 post-div-time hidden-sm-down">{{ date }}</p>
         <a class="col-xs-9 post-div-title" href="{{ article_url(filename) }}">{{ title }}</a>
     </div>
     {% end %}
