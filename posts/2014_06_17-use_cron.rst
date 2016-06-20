@@ -30,11 +30,3 @@ crontab是一个定时执行任务的daemon,
     env DISPLAY=:0.0
 
 这是显示在默认的屏幕上, 如果是笔记本的话一般就是笔记本上的屏幕了
-
---------------
-
-2014-10-04 增加:
-
-下面给出我的crontab做示范:
-
-``bash # m h  dom mon dow   command */5 * * * * env DISPLAY=:0 /home/jiajun/.xmonad/tools/battery.sh 0 * * * * env DISPLAY=:0 /home/jiajun/.xmonad/tools/goodforeyes.sh``

@@ -85,3 +85,4 @@ Divide and Conquer. 在之前读 `Eric Roberts` 先生所著的
 .. _`算法导论`: https://mitpress.mit.edu/books/introduction-algorithms
 .. _`O(nlgn)解法`: https://github.com/jiajunhuang/intro_to_algorithms/blob/master/chap4/max_subarray/maxsub.c
 .. _`O(n)解法`: https://github.com/jiajunhuang/intro_to_algorithms/blob/master/chap4/max_subarray/maxsub_linear.c
+.. _`递归信任`: ./2015_09_05-thinking_recursively.rst

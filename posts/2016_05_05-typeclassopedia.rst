@@ -232,4 +232,4 @@ do notation
 ~~~~~~~~~~~~~
 
 do 是Haskell中提供的一种语法糖，让程序看起来更像是命令式编程风格。
-原文中介绍了do的缩进或者括号风格，还是直接看 `Haskell Report 2010中的相关介绍吧。 <https://www.haskell.org/onlinereport/haskell2010/haskellch10.html#x17-17800010.3>`__
+原文中介绍了do的缩进或者括号风格，还是直接看 `Haskell Report 2010中的相关介绍吧 <https://www.haskell.org/onlinereport/haskell2010/haskellch10.html#x17-17800010.3>`__ 。

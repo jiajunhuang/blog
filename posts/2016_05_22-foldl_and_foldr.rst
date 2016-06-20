@@ -67,4 +67,6 @@ python中有reduce，作用相当于Haskell中的foldl:
     >>> reduce(operator.add, list(range(1, 6)), 0)
     15
 
-.. [#] https://wiki.haskell.org/Foldr_Foldl_Foldl'
+参考资料:
+
+.. [#] `<https://wiki.haskell.org/Foldr_Foldl_Foldl'>`_

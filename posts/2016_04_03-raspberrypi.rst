@@ -6,16 +6,18 @@
 操作系统
 ---------
 
-我安装的是官方的raspberry系统，基于debian。烧录到micro sd卡，启动系统以后，
+我安装的是官方的raspberry系统，基于debian。烧录到micro sd卡，启动系统以后：
 
 - 第一件要做的事情就是执行 ``raspi-config`` 选择第一项，把剩余的sd卡空间用起来。
 
-- 第二件要做的事情就是把软件源换成国内的::
+- 第二件要做的事情就是把软件源换成国内的:
+
+  .. code:: bash
 
     # cat /etc/apt/sources.list
     deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main non-free contrib rpi
 
-  虽然我买的是 class 10 的 micro sd 卡，但是 ``sudo apt-get update`` 以后还是会有点卡。
+虽然我买的是 class 10 的 micro sd 卡，但是 ``sudo apt-get update`` 以后还是会有点卡。
 
 - 第三件要做的事情就是把用户切换成root，虽然在生产环境这么做不太好，但是自己的
   折腾机器，用root比较方便，例如少打sudo(虽然你也可以在 ``/etc/sudoers`` 里设置

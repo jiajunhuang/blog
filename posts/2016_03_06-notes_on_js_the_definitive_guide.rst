@@ -30,7 +30,9 @@ JavaScript权威指南笔记
     undefined
     1
 
-- JS的in操作符，``"x" in {x: 1}`` 表现还比较正常，但是对数组操作的时候，就不是正规军了::
+- JS的in操作符，``"x" in {x: 1}`` 表现还比较正常，但是对数组操作的时候，就不是正规军了:
+
+.. code:: javascript
 
     > 1 in [1]
     false

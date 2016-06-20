@@ -70,7 +70,7 @@ X-Github-Delivery    这次请求的唯一ID
             mac = hmac.new(bytes(Config().github_secret_key, "utf-8"), msg=data, digestmod=hashlib.sha1)
             return hmac.compare_digest(mac.hexdigest(), signature)
 
-其中的 ``def get`` 是用来响应 github webhooks的ping请求 [2]_ 的。
+其中的 ``def get`` 是用来响应 github webhooks的ping请求 [#]_ 的。
 
 我们住要来看一下post的代码，首先，我们需要在项目的根目录放置我们在github填入的
 secret key，保存为 ``secret.txt`` 文件，这是用来校验用的。然后当请求到来以后，
