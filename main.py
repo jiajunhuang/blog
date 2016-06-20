@@ -34,6 +34,7 @@ class Application(tornado.web.Application):
             "cookie_secret": "cfHo1VmQ8z9kut.wMVwympjbM",
             "debug": options.debug,
         }
+        tornado.autoreload.watch(settings["template_path"])  # reload when layout changes
         if os.path.exists(Config().posts_path):
             tornado.autoreload.watch(Config().posts_path)
             settings.update({
