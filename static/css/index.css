@@ -75,7 +75,6 @@ html {
 
 #posts {
     display: block;
-    font-size: 20rem;
 }
 
 .post-div {
@@ -85,19 +84,32 @@ html {
 }
 
 .post-div-time {
-    font-size:1.2rem;
-    color:#bdbdbd;
-    line-height:1.8rem;
-    height:1.8rem;
-    overflow:hidden;
+    font-size: 1.2rem;
+    color: #bdbdbd;
+    line-height: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
 }
 
-.post-div-title {
-    font-size: 1.6rem;
-    padding-left:0.5rem;
-    line-height:1.8rem;
-    height:1.8rem;
-    overflow:hidden;
+@media (min-width: 768px) {
+    .post-div-title {
+        font-size: 1.6rem;
+        padding-left: 0.5rem;
+        line-height: 1.8rem;
+        height: 1.8rem;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-div-title {
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+        line-height: 1.8rem;
+        height: 1.8rem;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 #announcement {
