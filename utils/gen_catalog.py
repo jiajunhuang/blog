@@ -17,7 +17,7 @@ class Catalog(metaclass=Singleton):
             result = r.match(filename)  # match or not
             if result:
                 date = result.group(1)
-                with open(os.path.join("./posts", filename)) as f:
+                with open(os.path.join(Config().posts_path, filename)) as f:
                     date = date.replace("_", "-")
                     title = f.readline()
                     catalog.append((title, date, filename))

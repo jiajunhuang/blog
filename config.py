@@ -14,7 +14,7 @@ class Config(metaclass=Singleton):
         navbar=[
             ("首页", "/"),
             ("Github", "https://github.com/jiajunhuang"),
-            ("关于我", "/aboutme")
+            ("关于我", "/aboutme.rst.html")
         ],  # navbar这一栏的内容，将按照列表的顺序生成
         index_title="Jiajun's Blog",  # 网站首页的标题，以及顶部的标题
         subtitle="你的眼睛能看多远",  # 网站顶部的标题下面的话
@@ -39,7 +39,7 @@ class Config(metaclass=Singleton):
 
     @staticmethod
     def article_url(filename):  # 生成文章url所用的函数
-        return os.path.join("./article", filename)
+        return os.path.join("./article", '.'.join([filename, 'html']))
 
     @property
     def github_secret_key(self):

@@ -4,5 +4,5 @@ from controllers.article import ArticleHandler
 
 
 class AboutMeHandler(ArticleHandler):
-    def get(self, suffix):
+    def get(self):
         super().get("aboutme.rst")

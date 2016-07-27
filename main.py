@@ -24,8 +24,8 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/", IndexHandler),
             (r"/article/img/(.+)", tornado.web.StaticFileHandler, {"path": Config().article_img_path}),
-            (r"/article/(.+)/?", ArticleHandler),
-            (r"/aboutme(.rst)?/?", AboutMeHandler),
+            (r"/article/(.+)\.html/?", ArticleHandler),
+            (r"/aboutme\.rst\.html/?", AboutMeHandler),
             (r"/webhooks/?", GithubWebHooksHandler),
         ]
         settings = {
