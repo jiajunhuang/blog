@@ -3,7 +3,7 @@ About Me
 
 Hi, my name is `jiajunhuang`_ .
 
-I am a Archlinux_, Neovim_, XMonad_ fans. Use ``Linux`` and ``Vim`` from 2012, and switch to Archlinux_ and Neovim_ from 2014.
+I am a Archlinux_, Neovim_, XMonad_ fan. Use ``Linux`` and ``Vim`` from 2012, and switch to Archlinux_ and Neovim_ from 2014.
 
 .. _jiajunhuang: https://github.com/jiajunhuang
 .. _ArchLinux: https://www.archlinux.org/
