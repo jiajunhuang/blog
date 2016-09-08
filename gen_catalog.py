@@ -12,23 +12,29 @@ def gen_catalog():
     for filename in os.listdir("./"):
         result = r.match(filename)
         if result:
-            date = result.group(1)
+            date = result.group(1).replace("_", "/")
             with open(filename) as f:
-                title = f.readline()
+                title = f.readline().strip()
             catalog.append((title, date, filename))
 
     catalog = sorted(catalog, key=operator.itemgetter(2), reverse=True)  # sort by filename, in a reverse order
 
-    with open("./README.rst", "w") as f:
-        for line in f.readlines():
-            if line == "目录":
-                f.readline()  # move to next line
+    with open("./README.rst", "r+") as f:
+        # clear all the contents in file
+        f.truncate()
+
+        # write title, aboutme
+        f.write("Jiajun's Blog\n================\n\n")
+        f.write("会当凌绝顶，一览众山小。\n\n")
+        f.write("关于我\n------------\n\n")
+        f.write("`点我 <aboutme.rst>`__\n\n")
+        f.write("目录\n---------\n\n")
 
         # write catalog
         for item in catalog:
             title, date, filename = item
             f.write(
-                "{date} - {title} `<{filename}>`__\n".format(
+                "- {date} - {title} `<{filename}>`__\n".format(
                     date=date,
                     title=title,
                     filename=filename,
@@ -36,11 +42,9 @@ def gen_catalog():
             )
 
         # append LICENSE
-        f.write(
-            """
-            CC-BY <http://opendefinition.org/licenses/cc-by/>__
-            """
-        )
+        f.write("\n")
+        f.write("--------------------------------------------\n\n")
+        f.write("CC-BY `http://opendefinition.org/licenses/cc-by/`__\n")
 
 
 if __name__ == "__main__":
