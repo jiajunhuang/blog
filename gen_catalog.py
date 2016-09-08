@@ -34,7 +34,7 @@ def gen_catalog():
         for item in catalog:
             title, date, filename = item
             f.write(
-                "- {date} - {title} `<{filename}>`__\n".format(
+                "- {date} - `{title} <{filename}>`__\n".format(
                     date=date,
                     title=title,
                     filename=filename,
@@ -44,7 +44,7 @@ def gen_catalog():
         # append LICENSE
         f.write("\n")
         f.write("--------------------------------------------\n\n")
-        f.write("CC-BY `http://opendefinition.org/licenses/cc-by/`__\n")
+        f.write("`CC-BY <http://opendefinition.org/licenses/cc-by/>`__\n")
 
 
 if __name__ == "__main__":
