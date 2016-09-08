@@ -4,16 +4,18 @@ import os
 import re
 import operator
 
+POSTS_DIR = "posts"
+
 
 def gen_catalog():
     r = re.compile(r"(\d{4}_\d{2}_\d{2})-.+\..+")  # e.g. 2014_06_17-use_cron.rst
 
     catalog = []
-    for filename in os.listdir("./"):
+    for filename in os.listdir(POSTS_DIR):
         result = r.match(filename)
         if result:
             date = result.group(1).replace("_", "/")
-            with open(filename) as f:
+            with open(os.path.join(POSTS_DIR, filename)) as f:
                 title = f.readline().strip()
             catalog.append((title, date, filename))
 
@@ -27,16 +29,21 @@ def gen_catalog():
         f.write("Jiajun's Blog\n================\n\n")
         f.write("会当凌绝顶，一览众山小。\n\n")
         f.write("关于我\n------------\n\n")
-        f.write("`点我 <aboutme.rst>`__\n\n")
+        f.write(
+            "`点我 <{posts_dir}/aboutme.rst>`__\n\n".format(
+                posts_dir=POSTS_DIR,
+            )
+        )
         f.write("目录\n---------\n\n")
 
         # write catalog
         for item in catalog:
             title, date, filename = item
             f.write(
-                "- {date} - `{title} <{filename}>`__\n".format(
+                "- {date} - `{title} <{posts_dir}/{filename}>`__\n".format(
                     date=date,
                     title=title,
+                    posts_dir=POSTS_DIR,
                     filename=filename,
                 )
             )
