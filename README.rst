@@ -11,6 +11,7 @@ Jiajun's Blog
 目录
 ---------
 
+- 2016/10/13 - `干涩，零散的闷骚 <posts/2016_10_13-fragments.rst>`__
 - 2016/09/15 - `阅读Flask源码 <posts/2016_09_15-flask_source_code.rst>`__
 - 2016/08/25 - `尤克里里 <posts/2016_08_25-ukulele.rst>`__
 - 2016/08/25 - `Code Complete 2 <posts/2016_08_25-code-complete-2.rst>`__
