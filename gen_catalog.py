@@ -5,10 +5,11 @@ import re
 import operator
 
 POSTS_DIR = "posts"
+README_FILENAME = "./README.rst"
 
 
 def gen_catalog():
-    r = re.compile(r"(\d{4}_\d{2}_\d{2})-.+\..+")  # e.g. 2014_06_17-use_cron.rst
+    r = re.compile(r"(\d{4}_\d{2}_\d{2})-.+\..+")  # e.g. 2014_06_17-use_cron.rst, 2014_06_17-use_cron.md
 
     catalog = []
     for filename in os.listdir(POSTS_DIR):
@@ -21,7 +22,7 @@ def gen_catalog():
 
     catalog = sorted(catalog, key=operator.itemgetter(2), reverse=True)  # sort by filename, in a reverse order
 
-    with open("./README.rst", "r+") as f:
+    with open(README_FILENAME, "r+") as f:
         # clear all the contents in file
         f.truncate()
 

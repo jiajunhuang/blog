@@ -15,10 +15,13 @@ Timeline:
 
 - [09/2012 - 06/2016] A Software-Engineering Student in JXUFE_ (Jiangxi University of Finance and Econmics).
 
+- [07/2015 - 02/2016] A Python Engineer in KanjianMusic_.
+
 - [07/2016 - NOW] A Python Engineer in Smartx_.
 
 .. _JXUFE: http://www.jxufe.edu.cn/
-.. _Smartx: http://www.smartx.com
+.. _KanjianMusic: http://kanjian.com/
+.. _Smartx: http://www.smartx.com/
 
 Contact me:
 -----------
