@@ -18,6 +18,8 @@ def gen_catalog():
             date = result.group(1).replace("_", "/")
             with open(os.path.join(POSTS_DIR, filename)) as f:
                 title = f.readline().strip()
+                if filename.split(".")[-1] == "md":
+                    title = title.lstrip("# ")
             catalog.append((title, date, filename))
 
     catalog = sorted(catalog, key=operator.itemgetter(2), reverse=True)  # sort by filename, in a reverse order
