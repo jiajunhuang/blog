@@ -1,3 +1,4 @@
 docutils
 GitPython
 tornado
+Pygments
