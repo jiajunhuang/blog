@@ -1,0 +1,9 @@
+.keyword { color: #008000; font-weight: bold } /* Keyword */
+.builtin { color: #008000 } /* Name.Builtin */
+.comment { color: #408080; font-style: italic } /* Comment */
+.number { color: #666666 } /* Literal.Number */
+.string { color: #BA2121 } /* Literal.String */
+.namespace { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.operator { color: #666666 } /* Operator */
+.class { color: #19177C } /* Name.Variable.Class */
+.function { color: #0000FF } /* Name.Function */
