@@ -29,7 +29,6 @@ class Config(metaclass=Singleton):
     static_path = os.path.join(os.path.dirname(__file__), "static")  # 静态文件的路径
     posts_path = os.path.join(os.path.dirname(__file__), "posts")  # posts文件夹的路径
     article_img_path = os.path.join(posts_path, "img")  # 纯文本文件中 .. image:: img.png 的存储路径
-    text_type = "rst"  # 设置写作所用标记文本类型
     filename_format = r"(\d{4}_\d{2}_\d{2})-.+\..+"  # 文件名的正则表达式，默认为 年_月_日-标题.后缀 可以更改日期等的规则，但捕获组只能有一个而且是日期。
     github_webhook_secret_path = os.path.join(os.path.dirname(__file__), "secret.txt")
     repo_path = os.path.dirname(__file__)
