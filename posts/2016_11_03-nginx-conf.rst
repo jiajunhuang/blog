@@ -136,7 +136,7 @@ nginx配置
 nginx 常用配置文件
 ------------------
 
--  静态文件web服务器
+- 静态文件web服务器
 
 .. code:: nginx
 
@@ -146,6 +146,6 @@ nginx 常用配置文件
         autoindex on;
     }
 
- .. [#] https://openresty.org/download/agentzh-nginx-tutorials-zhcn.html
+.. [#] https://openresty.org/download/agentzh-nginx-tutorials-zhcn.html
 
- .. [#] http://www.nginxguts.com/2011/01/phases/
+.. [#] http://www.nginxguts.com/2011/01/phases/

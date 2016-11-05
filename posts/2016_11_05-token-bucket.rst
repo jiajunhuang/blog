@@ -81,6 +81,6 @@ celery外链里但是写上了注释的代码(稍微做了一些改动)：
 3，如果要消耗的令牌数量大于现有的令牌数量，则返回失败。
 
 
-.. [#] `https://en.wikipedia.org/wiki/Token_bucket`_
+.. [#] https://en.wikipedia.org/wiki/Token_bucket
 
-.. [#] `http://code.activestate.com/recipes/511490/`_
+.. [#] http://code.activestate.com/recipes/511490/
