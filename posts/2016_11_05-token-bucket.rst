@@ -3,9 +3,9 @@ Token Bucket 算法
 
 最近在看celery代码，看到worker的代码，发现了tocket bucket算法，自己之前还一直
 在想像有些API对调用次数有限制是怎么做到的，看完才发现，原来是这么朴素的算法。
-真是无知，无知啊。嗯，以后要多读读源码。 `维基百科链接点我`__ 。
+真是无知，无知啊。嗯，以后要多读读源码。
 
-`celery外链里但是写上了注释的代码`__ (稍微做了一些改动)：
+celery外链里但是写上了注释的代码(稍微做了一些改动)：
 
 .. code:: python
 
@@ -76,10 +76,11 @@ Token Bucket 算法
 1，初始化的时候，指定了桶的大小和每秒钟放入令牌的速率
 
 2，每次消耗令牌的时候，都会计算，上次消耗到本次消耗之间产生了多少令牌，如果产生
-   令牌的数量超过了容量，则丢弃多余的令牌。
+令牌的数量超过了容量，则丢弃多余的令牌。
+
 3，如果要消耗的令牌数量大于现有的令牌数量，则返回失败。
 
 
-.. _`维基百科链接点我`: https://en.wikipedia.org/wiki/Token_bucket
+.. [#] `https://en.wikipedia.org/wiki/Token_bucket`_
 
-.. _`celery外链里但是写上了注释的代码`: http://code.activestate.com/recipes/511490/
+.. [#] `http://code.activestate.com/recipes/511490/`_
