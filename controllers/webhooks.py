@@ -16,6 +16,9 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
 
     def post(self):
         if not os.path.exists(Config().github_webhook_secret_path):
+            self.write({
+                "error": "secret.txt not set"
+            })
             raise tornado.web.HTTPError(500, "secret.txt does not exists")
 
         data = self.request.body
@@ -27,10 +30,10 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
         origin = repo.remotes.origin
         origin.pull()
 
-        for submodule in repo.submodules:
-            submodule.update(init=True)
+        # 更新目录
+        Config().reload_catalog()
 
-        # 然后重启进程
+        # 然后重启进程，因为有可能更新的是项目代码而非博客
         tornado.autoreload.start()
 
     def _validate_signature(self, data):

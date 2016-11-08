@@ -1,13 +1,16 @@
 # coding: utf-8
 
-import os
 import logging
 
 import tornado.web
 import tornado.ioloop
 import tornado.autoreload
 
-from config import Config
+from config import (
+    ARTICLE_IMG_PATH,
+    STATIC_PATH,
+    TEMPLATE_PATH,
+)
 from controllers.aboutme import AboutMeHandler
 from controllers.index import IndexHandler
 from controllers.article import ArticleHandler
@@ -23,23 +26,17 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", IndexHandler),
-            (r"/article/img/(.+)", tornado.web.StaticFileHandler, {"path": Config().article_img_path}),
+            (r"/article/img/(.+)", tornado.web.StaticFileHandler, {"path": ARTICLE_IMG_PATH}),
             (r"/article/(.+)\.html/?", ArticleHandler),
             (r"/aboutme\.rst\.html/?", AboutMeHandler),
             (r"/webhooks/?", GithubWebHooksHandler),
         ]
         settings = {
-            "template_path": Config().template_path,
-            "static_path": Config().static_path,
+            "template_path": TEMPLATE_PATH,
+            "static_path": STATIC_PATH,
             "cookie_secret": "cfHo1VmQ8z9kut.wMVwympjbM",
             "debug": options.debug,
         }
-        tornado.autoreload.watch(settings["template_path"])  # reload when layout changes
-        if os.path.exists(Config().posts_path):
-            tornado.autoreload.watch(Config().posts_path)
-            settings.update({
-                "autoreload": True,
-            })
         tornado.web.Application.__init__(self, handlers, **settings)
 
 
