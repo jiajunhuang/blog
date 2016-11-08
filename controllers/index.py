@@ -2,10 +2,13 @@
 
 import tornado.web
 
-from config import Config
-from utils.gen_catalog import Catalog
+from config import (
+    ARTICLE_IMG_PATH,
+    TOP_PART,
+    Config,
+)
 
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("index.html", top_part=Config().top_part, catalog=Catalog(), article_url=Config().article_url)
+        self.render("index.html", top_part=TOP_PART, catalog=Config().catalog, article_url=Config.article_url)
