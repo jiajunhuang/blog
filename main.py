@@ -40,7 +40,7 @@ POST_IMG_PATH = os.path.join(POSTS_PATH, "img")
 TPL_PATH = os.path.join(PROJ_PATH, "templates")
 STATIC_PATH = os.path.join(PROJ_PATH, "static")
 SECRET_TXT_PATH = os.path.join(PROJ_PATH, "secret.txt")
-MAIN_FILE_PATH = os.path.join(PROJ_PATH, "main.py")
+MAIN_FILE_PATH = os.path.join(PROJ_PATH, __file__)
 
 
 # utils
