@@ -7,12 +7,12 @@
   更新内存中缓存的目录，重启当前tornado进程
 """
 
-import glob
 import hashlib
 import hmac
 import logging
 import operator
 import os
+import re
 import subprocess
 import sys
 
@@ -34,9 +34,8 @@ parse_command_line()
 
 # constants
 USE_REDIS = False
-
 ONE_HOUR = 3600  # s
-
+FILE_FORMAT = r"(\d{4}_\d{2}_\d{2})-.+\..+"  # 文件名的正则表达式，默认为 年_月_日-标题.后缀 可以更改日期等的规则，但捕获组只能有一个而且是日期。
 PROJ_PATH = os.path.dirname(__file__)
 
 MAIN_FILE_PATH = os.path.join(PROJ_PATH, __file__)
@@ -66,15 +65,16 @@ HEADER = dict(
 
 # utils
 def gen_catalog():
+    r = re.compile(FILE_FORMAT)
     catalog = []
-    for fullpath in glob.glob("%s/[0-9]*.rst" % ARTICLE_PATH):
-        with open(fullpath) as f:
-            title = f.readline()
-        _, filename = fullpath.split("/")
-        date, _ = filename.split("-")
-        date = date.replace("_", "-")
-
-        catalog.append((title, date, filename))
+    for filename in os.listdir(ARTICLE_PATH):
+        result = r.match(filename)
+        if result:
+            date = result.group(1)
+            with open(os.path.join(ARTICLE_PATH, filename)) as f:
+                date = date.replace("_", "-")
+                title = f.readline()
+                catalog.append((title, date, filename))
 
     return sorted(catalog, key=operator.itemgetter(1), reverse=True)
 
