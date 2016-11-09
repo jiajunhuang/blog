@@ -34,6 +34,7 @@ parse_command_line()
 
 # constants
 USE_REDIS = False
+REDIS_HASH_KEY = "jiajunsblog"
 ONE_HOUR = 3600  # s
 FILE_FORMAT = r"(\d{4}_\d{2}_\d{2})-.+\..+"  # 文件名的正则表达式，默认为 年_月_日-标题.后缀 可以更改日期等的规则，但捕获组只能有一个而且是日期。
 PROJ_PATH = os.path.dirname(__file__)
@@ -96,6 +97,10 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
         )
         self.application.CATALOG = gen_catalog()
 
+        # remove all cache articles in redis
+        if USE_REDIS:
+            CACHE_SYSTEM.delete(REDIS_HASH_KEY)
+
     def __validate_signature(self, data):
         sha_name, signature = self.request.headers.get('X-Hub-Signature').split('=')
         if sha_name != 'sha1':
@@ -129,11 +134,11 @@ class ArticleHandler(tornado.web.RequestHandler):
             raise tornado.web.HTTPError(404)
 
         if USE_REDIS:
-            if CACHE_SYSTEM.get(filename):
-                html_body = CACHE_SYSTEM.get(filename)
+            if CACHE_SYSTEM.hexists(REDIS_HASH_KEY, filename):
+                html_body = CACHE_SYSTEM.hget(REDIS_HASH_KEY, filename)
             else:
                 html_body = self.__article_content(filename)
-                CACHE_SYSTEM.set(filename, html_body, ex=ONE_HOUR)
+                CACHE_SYSTEM.hset(REDIS_HASH_KEY, filename, html_body)
         else:
             html_body = self.__article_content(filename)
 
@@ -191,9 +196,12 @@ if __name__ == "__main__":
             USE_REDIS = True
             CACHE_SYSTEM = redis.StrictRedis(connection_pool=redis.ConnectionPool())
         except ImportError:
+            logging.error("please run `pip install redis` first, fallback to disable redis")
             USE_REDIS = False
 
     app = Application()
     app.listen(options.port)
-    logging.warn("server has been listen at 127.0.0.1:%s with debug set to %s." % (options.port, options.debug))
+    logging.warn(
+        "server has been listen at 127.0.0.1:%s with debug set to %s and redis set to %s." % (options.port, options.debug, USE_REDIS)
+    )
     tornado.ioloop.IOLoop.current().start()
