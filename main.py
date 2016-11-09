@@ -5,9 +5,6 @@
 - 当请求文件时，提取出文件名并且尝试读取文件，生成html
 - 当推送代码到Github时，由Github发出Webhook请求，响应请求并且拉取最新代码
   更新内存中缓存的目录，重启当前tornado进程
-
-TODO:
-    增加redis缓存支持，使博客响应更快
 """
 
 import glob
@@ -32,10 +29,14 @@ from tornado.options import (
 )
 define("debug", default=False, type=bool, help="debug is set to True if this option is set")
 define("port", default=8080, type=int, help="port=8080")
-# define("redis", default=False, type=bool, help="use redis as cache system")
+define("redis", default=False, type=bool, help="use redis as cache system")
 parse_command_line()
 
 # constants
+USE_REDIS = False
+
+ONE_HOUR = 3600  # s
+
 PROJ_PATH = os.path.dirname(__file__)
 
 MAIN_FILE_PATH = os.path.join(PROJ_PATH, __file__)
@@ -127,10 +128,20 @@ class ArticleHandler(tornado.web.RequestHandler):
         if not os.path.exists(self.__article_path(filename)):
             raise tornado.web.HTTPError(404)
 
-        with open(self.__article_path(filename)) as f:
-            html_body = publish_parts(f.read(), writer_name="html")["html_body"]
+        if USE_REDIS:
+            if CACHE_SYSTEM.get(filename):
+                html_body = CACHE_SYSTEM.get(filename)
+            else:
+                html_body = self.__article_content(filename)
+                CACHE_SYSTEM.set(filename, html_body, ex=ONE_HOUR)
+        else:
+            html_body = self.__article_content(filename)
 
         self.render("article.html", top_part=HEADER, article=html_body)
+
+    def __article_content(self, filename):
+        with open(self.__article_path(filename)) as f:
+            return publish_parts(f.read(), writer_name="html")["html_body"]
 
     def __article_path(self, filename):
         return os.path.join(ARTICLE_PATH, filename)
@@ -174,6 +185,14 @@ class Application(tornado.web.Application):
 
 
 if __name__ == "__main__":
+    if options.redis:
+        try:
+            import redis
+            USE_REDIS = True
+            CACHE_SYSTEM = redis.StrictRedis(connection_pool=redis.ConnectionPool())
+        except ImportError:
+            USE_REDIS = False
+
     app = Application()
     app.listen(options.port)
     logging.warn("server has been listen at 127.0.0.1:%s with debug set to %s." % (options.port, options.debug))
