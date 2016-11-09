@@ -85,7 +85,7 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
         self.finish()
 
     def post(self):
-        if not self.__validate_signature(self, self.request.body):
+        if not self.__validate_signature(self.request.body):
             logging.error("github signature not match")
             raise tornado.web.HTTPError(400, "the given signature is invalid")
 
