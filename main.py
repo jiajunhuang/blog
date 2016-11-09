@@ -36,7 +36,6 @@ parse_command_line()
 # constants
 USE_REDIS = False
 REDIS_HASH_KEY = "jiajunsblog"
-ONE_HOUR = 3600  # s
 FILE_FORMAT = r"(\d{4}_\d{2}_\d{2})-.+\..+"  # 文件名的正则表达式，默认为 年_月_日-标题.后缀 可以更改日期等的规则，但捕获组只能有一个而且是日期。
 PROJ_PATH = os.path.dirname(__file__)
 
