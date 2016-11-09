@@ -29,7 +29,7 @@ from tornado.options import (
 )
 define("debug", default=False, type=bool, help="debug is set to True if this option is set")
 define("port", default=8080, type=int, help="port=8080")
-define("redis", default=False, type=bool, help="use redis as cache system")
+define("redis", default=True, type=bool, help="use redis as cache system")
 parse_command_line()
 
 # constants
