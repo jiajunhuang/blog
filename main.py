@@ -196,7 +196,7 @@ if __name__ == "__main__":
             USE_REDIS = True
             CACHE_SYSTEM = redis.StrictRedis(connection_pool=redis.ConnectionPool())
         except ImportError:
-            logging.error("please run `pip install redis` first, fallback to disable redis")
+            logging.exception("please run `pip install redis` first, fallback to disable redis")
             USE_REDIS = False
 
     app = Application()
