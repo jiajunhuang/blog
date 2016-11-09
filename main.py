@@ -4,7 +4,8 @@
 - 从articles目录读取文件，生成目录，并将目录缓存在内存中
 - 当请求文件时，提取出文件名并且尝试读取文件，生成html
 - 当推送代码到Github时，由Github发出Webhook请求，响应请求并且拉取最新代码
-  更新内存中缓存的目录，重启当前tornado进程
+  更新内存中缓存的目录，重启当前tornado进程，删除redis中的缓存
+- redis作为cache系统，默认开启，以加快访问速度，减少I/O
 """
 
 import hashlib
@@ -196,7 +197,7 @@ if __name__ == "__main__":
             USE_REDIS = True
             CACHE_SYSTEM = redis.StrictRedis(connection_pool=redis.ConnectionPool())
         except ImportError:
-            logging.exception("please run `pip install redis` first, fallback to disable redis")
+            logging.error("please run `pip(3) install redis` first, fallback to disable redis")
             USE_REDIS = False
 
     app = Application()
