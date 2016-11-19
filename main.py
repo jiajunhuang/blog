@@ -172,13 +172,11 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/", IndexHandler),
             (r"/aboutme\.rst\.html/?", AboutMeHandler),
-            (r"/article/img/(.+)", tornado.web.StaticFileHandler, {"path": ARTICLE_IMG_PATH}),
             (r"/article/(.+)\.html/?", ArticleHandler),
             (r"/webhooks/?", GithubWebHooksHandler),
         ]
         settings = {
             "template_path": TPL_PATH,
-            "static_path": STATIC_PATH,
             "cookie_secret": "b6c20d57-958c-40ee-be9b-5a0f71a86285",
             "debug": options.debug,
         }
