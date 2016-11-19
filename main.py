@@ -177,6 +177,7 @@ class Application(tornado.web.Application):
         ]
         settings = {
             "template_path": TPL_PATH,
+            "static_path": STATIC_PATH,
             "cookie_secret": "b6c20d57-958c-40ee-be9b-5a0f71a86285",
             "debug": options.debug,
         }
