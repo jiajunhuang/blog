@@ -92,7 +92,7 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
 
         # run git pull, we do not use GitPython anymore.
         subprocess.Popen(
-            "git -C %s pull" % PROJ_PATH,
+            "git -C %s pull --rebase" % PROJ_PATH,
             shell=True
         )
         self.application.CATALOG = gen_catalog()
