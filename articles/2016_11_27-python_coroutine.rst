@@ -81,10 +81,8 @@ I/O多路复用
 -------------
 
 这个时候我们的老前辈们就有新办法了，好，我们翻开《UNIX环境高级编程》，里面有
-专门讲select的，看完这个之后，我们来看看 ``Python 3`` 提供的 ``selectors``
-模块。
-
-`https://docs.python.org/3/library/selectors.html#selectors.BaseSelector.register`__
+专门讲select的，看完这个之后，我们来看看 ``Python 3`` 提供的
+`selectors 模块 <https://docs.python.org/3/library/selectors.html#selectors.BaseSelector.register>`_
 
 我们把上面的代码改改：
 
