@@ -50,6 +50,9 @@
     text-indent: 2rem;
 }
 
+.document tt {
+    background-color: #B4F183;
+}
 .document .code {
     background-color: #D0F5A9;
 }
