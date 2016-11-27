@@ -40,3 +40,16 @@
 .reference {
     word-break: break-all;
 }
+
+.document blockquote {
+    padding-left: 2rem;
+    background-color: #F2F5A9;
+}
+
+.document p {
+    text-indent: 2rem;
+}
+
+.document .code {
+    background-color: #D0F5A9;
+}
