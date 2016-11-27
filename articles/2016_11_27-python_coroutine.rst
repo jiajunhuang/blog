@@ -136,7 +136,7 @@ I/O多路复用
 
 .. code:: bash
 
-	root@arch tests: python client.py
+    root@arch tests: python client.py
     HTTP/1.1 200 OK
     Content-Type: text/html; charset=UTF-8
     Etag: "7b4758d4baa20873585b9597c7cb9ace2d690ab8"
@@ -411,33 +411,7 @@ callback函数，其中有一个callback就是执行上面的 ``step`` ，借此
     end = time.time()
     print("use time: %.1f second(s)" % (end - start))
 
-不过执行时间好像不太对：
-
-.. code:: bash
-
-    root@arch tests: python client.py
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=UTF-8
-    Etag: "7b4758d4baa20873585b9597c7cb9ace2d690ab8"
-    Server: TornadoServer/4.4.2
-    Content-Length: 13
-    Date: Sun, 27 Nov 2016 15:11:04 GMT
-
-    Hello, world
-
-    HTTP/1.1 200 OK
-    Content-Type: text/html; charset=UTF-8
-    Etag: "7b4758d4baa20873585b9597c7cb9ace2d690ab8"
-    Server: TornadoServer/4.4.2
-    Content-Length: 13
-    Date: Sun, 27 Nov 2016 15:11:05 GMT
-
-    Hello, world
-
-    use time: 2.0 second(s)
-
-所以又变成了阻塞版本的？没错，在执行 ``sock.connect`` ， ``sock.recv``
-和 ``sock.send`` 的时候，都是阻塞执行的，这个时候我们需要把socket设置
+另外， ``sock.connect`` 是阻塞的，这个时候我们需要把socket设置
 成非阻塞的。 ``socket.setblocking(False)`` 可以把它设置成非阻塞的。
 
 .. code:: python
