@@ -117,10 +117,11 @@ class GithubWebHooksHandler(tornado.web.RequestHandler):
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
+        catalog = self.application.CATALOG  # it's a list
         self.render(
             "index.html",
             top_part=HEADER,
-            catalog=self.application.CATALOG,
+            catalog=catalog,
             article_url=self.__article_url,
         )
 
