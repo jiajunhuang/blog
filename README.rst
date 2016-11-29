@@ -11,7 +11,7 @@ Jiajun's Blog
 目录
 ---------
 
-- 2016/11/27 - `借助coroutine用同步的语法写异步 <articles/2016_11_27-python_coroutine.rst>`__
+- 2016/11/27 - `借助coroutine用同步的语法写异步 <articles/2016_11_27-python_coroutine.md>`__
 - 2016/11/26 - `我不理解asyncio <articles/2016_11_26-i_dont_understand_asyncio_too.rst>`__
 - 2016/11/21 - `Python3函数参数中的星号 <articles/2016_11_21-py3k_asterisk.rst>`__
 - 2016/11/08 - `使用Git Hooks <articles/2016_11_08-use_git_hooks.rst>`__
