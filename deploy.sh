@@ -5,3 +5,5 @@ python gen_catalog.py
 git add .
 
 git commit $@
+
+git push
