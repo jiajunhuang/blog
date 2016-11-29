@@ -4,6 +4,6 @@ python gen_catalog.py
 
 git add .
 
-git commit $@
+git commit -m "new post"
 
 git push
