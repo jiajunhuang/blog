@@ -1,3 +1,0 @@
-docutils
-tornado
-Pygments
