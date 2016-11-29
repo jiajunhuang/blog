@@ -44,4 +44,4 @@
 
 --------------------------------------------
 
-`CC-BY <http://opendefinition.org/licenses/cc-by/>`__
+[CC-BY](http://opendefinition.org/licenses/cc-by/)

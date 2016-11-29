@@ -197,38 +197,36 @@ Out[10]: generator
 
 那如果我们想通过yield来抹平回调函数把原本一个函数切分成两个函数的缝隙呢？ 函数执行的一个缺点就是执行完之后，函数中的变量状态就丢失了。
 
-注：我们简单说一下Python的VM，Python是有自己的指令的，就跟x86的cpu有 自己的指令一样。我们来简单看一下：
+    > 注：我们简单说一下Python的VM，Python是有自己的指令的，就跟x86的cpu有 自己的指令一样。我们来简单看一下：
 
-```python
-In [17]: def foo():
-    ...:     bar()
-    ...:
+    In [17]: def foo():
+        ...:     bar()
+        ...:
 
-In [18]: def bar():
-    ...:     pass
-    ...:
+    In [18]: def bar():
+        ...:     pass
+        ...:
 
-In [19]: import dis
+    In [19]: import dis
 
-In [20]: dis.dis(foo)
-2           0 LOAD_GLOBAL              0 (bar)
-            3 CALL_FUNCTION            0 (0 positional, 0 keyword pair)
-            6 POP_TOP
-            7 LOAD_CONST               0 (None)
-            10 RETURN_VALUE
+    In [20]: dis.dis(foo)
+    2           0 LOAD_GLOBAL              0 (bar)
+                3 CALL_FUNCTION            0 (0 positional, 0 keyword pair)
+                6 POP_TOP
+                7 LOAD_CONST               0 (None)
+                10 RETURN_VALUE
 
-In [21]: dis.dis(bar)
-2           0 LOAD_CONST               0 (None)
-            3 RETURN_VALUE
-```
+    In [21]: dis.dis(bar)
+    2           0 LOAD_CONST               0 (None)
+                3 RETURN_VALUE
 
-首先执行foo函数的时候，会由其它函数把环境准备好，把回退指针准备好，然后 调用。
+    首先执行foo函数的时候，会由其它函数把环境准备好，把回退指针准备好，然后 调用。
 
-- `LOAD_GLOBAL` 首先从global()里加载bar函数
-- `CALL_FUNCTION` 会调用该函数
-- `POP_TOP` 会把该函数的栈清掉
-- `LOAD_CONST` 把None加载到栈顶，因为这是foo函数的默认返回值
-- `RETURN_VALUE` 把None返回
+    - `LOAD_GLOBAL` 首先从global()里加载bar函数
+    - `CALL_FUNCTION` 会调用该函数
+    - `POP_TOP` 会把该函数的栈清掉
+    - `LOAD_CONST` 把None加载到栈顶，因为这是foo函数的默认返回值
+    - `RETURN_VALUE` 把None返回
 
 其实我们可以直接把一系列的函数存到 `selector.register` 的data里，但是我们 把它抽出来，就跟ES6里的 `Promise` 一样，我们管它叫 `Future` 。就是一个 普通的类，用来保存回调函数和执行结果的。
 

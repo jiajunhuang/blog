@@ -54,7 +54,7 @@ def gen_catalog():
         # append LICENSE
         f.write("\n")
         f.write("--------------------------------------------\n\n")
-        f.write("`CC-BY <http://opendefinition.org/licenses/cc-by/>`__\n")
+        f.write("[CC-BY](http://opendefinition.org/licenses/cc-by/)\n")
 
 
 if __name__ == "__main__":
