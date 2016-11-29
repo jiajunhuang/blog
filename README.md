@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2016/11/29 - [Python的yield关键字](articles/2016_11_29-python_yield.md)
 - 2016/11/27 - [借助coroutine用同步的语法写异步](articles/2016_11_27-python_coroutine.md)
 - 2016/11/26 - [我不理解asyncio](articles/2016_11_26-i_dont_understand_asyncio_too.rst)
 - 2016/11/21 - [Python3函数参数中的星号](articles/2016_11_21-py3k_asterisk.rst)
