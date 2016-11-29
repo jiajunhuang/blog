@@ -5,7 +5,7 @@ import re
 import operator
 
 POSTS_DIR = "articles"
-README_FILENAME = "./README.rst"
+README_FILENAME = "./README.md"
 
 
 def gen_catalog():
@@ -29,21 +29,21 @@ def gen_catalog():
         f.truncate()
 
         # write title, aboutme
-        f.write("Jiajun's Blog\n================\n\n")
+        f.write("# Jiajun's Blog\n\n")
         f.write("会当凌绝顶，一览众山小。\n\n")
-        f.write("关于我\n------------\n\n")
+        f.write("## 关于我\n")
         f.write(
-            "`点我 <{posts_dir}/aboutme.rst>`__\n\n".format(
+            "[点我]({posts_dir}/aboutme.md)\n\n".format(
                 posts_dir=POSTS_DIR,
             )
         )
-        f.write("目录\n---------\n\n")
+        f.write("## 目录\n\n")
 
         # write catalog
         for item in catalog:
             title, date, filename = item
             f.write(
-                "- {date} - `{title} <{posts_dir}/{filename}>`__\n".format(
+                "- {date} - [{title}]({posts_dir}/{filename})\n".format(
                     date=date,
                     title=title,
                     posts_dir=POSTS_DIR,
