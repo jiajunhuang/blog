@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2016/12/06 - [MongoDB 的一些坑](articles/2016_12_06-mongodb.md)
 - 2016/11/29 - [Python的yield关键字](articles/2016_11_29-python_yield.md)
 - 2016/11/27 - [借助coroutine用同步的语法写异步](articles/2016_11_27-python_coroutine.md)
 - 2016/11/26 - [我不理解asyncio](articles/2016_11_26-i_dont_understand_asyncio_too.rst)
