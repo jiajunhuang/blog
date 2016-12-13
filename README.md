@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2016/12/09 - [Python零碎小知识](articles/2016_12_09-python.md)
 - 2016/12/07 - [工作总结](articles/2016_12_07-work.md)
 - 2016/12/07 - [Python和单元测试](articles/2016_12_07-python_unittest.md)
 - 2016/12/06 - [Python 的继承](articles/2016_12_06-python_c3_mro.md)
