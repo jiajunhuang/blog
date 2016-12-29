@@ -7,7 +7,9 @@
 
 ## 目录
 
+- 2016/12/31 - [2016年就要结束了，2017年就要开始啦！](articles/2016_12_31-2016_is_over_and_2017_is_coming.md)
 - 2016/12/29 - [unittest 源代码阅读](articles/2016_12_29-unittest_source_code.md)
+- 2016/12/26 - [APUEv3](articles/2016_12_26-apue_v3.md)
 - 2016/12/22 - [Mock源码阅读](articles/2016_12_22-mock_source_code.md)
 - 2016/12/16 - [Thinking in Python](articles/2016_12_16-thinking_in_python.md)
 - 2016/12/15 - [我的代码进CPython标准库啦](articles/2016_12_15-my_code_in_python_stdlib.md)
