@@ -95,3 +95,14 @@ cmp(1, 2) = -1
 
 贴这个出来，主要是平时写惯了 `if...else...` 固化了思维，突然看到这个有点
 眼前一亮的感觉。。。
+
+- fnmatch 这是在看unittest源代码的时候翻到的，c里面也有这个函数，`man fnmatch` 一下就知道，主要是用unix下shell的通配符来匹配，文档在 https://docs.python.org/2/library/fnmatch.html
+
+```python
+import fnmatch
+import os
+
+for file in os.listdir('.'):
+    if fnmatch.fnmatch(file, '*.txt'):
+        print file
+```

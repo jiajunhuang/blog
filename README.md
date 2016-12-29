@@ -10,7 +10,7 @@
 - 2016/12/22 - [Mock源码阅读](articles/2016_12_22-mock_source_code.md)
 - 2016/12/16 - [Thinking in Python](articles/2016_12_16-thinking_in_python.md)
 - 2016/12/15 - [我的代码进CPython标准库啦](articles/2016_12_15-my_code_in_python_stdlib.md)
-- 2016/12/09 - [Python零碎小知识](articles/2016_12_09-python.md)
+- 2016/12/09 - [Python零碎小知识](articles/2016_12_09-python_fragments.md)
 - 2016/12/07 - [工作总结](articles/2016_12_07-work.md)
 - 2016/12/07 - [Python和单元测试](articles/2016_12_07-python_unittest.md)
 - 2016/12/06 - [Python 的继承](articles/2016_12_06-python_c3_mro.md)
