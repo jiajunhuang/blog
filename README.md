@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2017/01/02 - [重读完APUE，自己写一个I/O多路复用的echo server daemon](articles/2017_01_02-write_a_io_multiplexing_echo_server_daemon.md)
 - 2016/12/31 - [2016年就要结束了，2017年就要开始啦！](articles/2016_12_31-2016_is_over_and_2017_is_coming.md)
 - 2016/12/29 - [unittest 源代码阅读](articles/2016_12_29-unittest_source_code.md)
 - 2016/12/26 - [APUEv3](articles/2016_12_26-apue_v3.md)
