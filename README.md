@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2017/01/21 - [设计模式（1）](articles/2017_01_21-head_first_design_patterns.md)
 - 2017/01/15 - [Cython! Python和C两个世界的交叉点](articles/2017_01_15-cython_rocks.md)
 - 2017/01/09 - [socketserver 源码阅读](articles/2017_01_09-socketserver_source_code.md)
 - 2017/01/08 - [functools 源码分析](articles/2017_01_08-functools_source_code.md)
