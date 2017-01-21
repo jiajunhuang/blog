@@ -58,11 +58,13 @@ gua gua...
 然后是Java版本：
 
 ```java
+// Sound.java
 public interface Sound {
     public void sound();
 
 }
 
+// Animal.java
 public abstract class Animal {
     abstract void sound();
 
@@ -71,18 +73,21 @@ public abstract class Animal {
     }
 }
 
+// Dig.java
 public class Dog extends Animal implements Sound {
     public void sound() {
         System.out.println("wang wang...");
     }
 }
 
+// Duck.java
 public class Duck extends Animal implements Sound {
     public void sound() {
         System.out.println("gua gua...");
     }
 }
 
+// Main.java
 public class Main {
     public static void main(String[] args) {
         Animal animal;
