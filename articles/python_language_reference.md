@@ -56,3 +56,136 @@ Python中每个对象都有自己的id，类型和值。
 - 从理论上来讲，副作用例如打开一个文件，当此文件没有引用时是会被Python垃圾回收
 的，但是由于gc无法做出保证（例如Python开启了DEBUG模式，所有的对象都会被一个
 双链表链着，这个时候引用计数就不为0），所以最好还是自己显式关闭。
+
+## Execution model
+
+- Python程序由 code blocks 组成，block是Python执行代码的最小单元，block分为：
+
+    - module
+    - function body
+    - class definition
+    - 交互模式下每次输入的命令都是一个block
+    - 每一个script file
+    - `$ python -c 'print("hello")'` 中的命令也是一个block
+    - 传递给 `eval()` 和 `exec()` 的字符串也是一个block，但是这两个函数作用域规则有些特殊，会跳过LEGB中的E，也就是闭包。
+
+每个block都在一个 execution frame 里执行。
+
+- name binding
+
+    - 给函数传参数
+    - import语句
+    - 类和函数定义
+    - 赋值语句
+    - for语句的后面一个 `for i in ...`
+    - with语句的as后面 `with open(...) as ...`
+    - except后面的as
+    - `from ... import *` 绑定所有非下划线开头的名字到当前命名空间
+    - del 也是，虽然它的作用是删除绑定
+
+只要出现了上述的binding，Python就认为这个变量名所指向的变量在当前的block里，所以：
+
+```python
+In [1]: foo = "hello"
+
+In [2]: def print_foo():
+   ...:     print(foo)
+   ...:     foo = "world"
+   ...:
+
+In [3]: print_foo()
+---------------------------------------------------------------------------
+UnboundLocalError                         Traceback (most recent call last)
+<ipython-input-3-c80be14760b6> in <module>()
+----> 1 print_foo()
+
+<ipython-input-2-afc4cd9aff75> in print_foo()
+      1 def print_foo():
+----> 2     print(foo)
+      3     foo = "world"
+      4
+
+UnboundLocalError: local variable 'foo' referenced before assignment
+
+In [4]:
+```
+
+- "The global statement has the same scope as a name binding operation in
+the same block. If the nearest enclosing scope for a free variable contains
+a global statement, the free variable is treated as a global."
+
+没看懂，来自：https://docs.python.org/3.6/reference/executionmodel.html
+
+- 类定义的变量作用域局限于类内，而不会扩展至方法和表达式，generator里，所以：
+
+```python
+In [1]: class Foo:
+   ...:     hello = "hello"
+   ...:     def foo(self):
+   ...:         print(hello)
+   ...:
+
+In [2]: Foo().foo()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-2-6c4f5adc4d1e> in <module>()
+----> 1 Foo().foo()
+
+<ipython-input-1-029db0d572c9> in foo(self)
+      2     hello = "hello"
+      3     def foo(self):
+----> 4         print(hello)
+      5
+
+NameError: name 'hello' is not defined
+
+In [3]: class Foo:
+   ...:     a = 32
+   ...:     b = [a + i for i in range(10)]
+   ...:
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-3-395876c62295> in <module>()
+----> 1 class Foo:
+      2     a = 32
+      3     b = [a + i for i in range(10)]
+      4
+
+<ipython-input-3-395876c62295> in Foo()
+      1 class Foo:
+      2     a = 32
+----> 3     b = [a + i for i in range(10)]
+      4
+
+<ipython-input-3-395876c62295> in <listcomp>(.0)
+      1 class Foo:
+      2     a = 32
+----> 3     b = [a + i for i in range(10)]
+      4
+
+NameError: name 'a' is not defined
+
+In [4]:
+```
+
+- 闭包内的变量（free variables）的值是在运行时确定的：
+
+```python
+In [1]: foo = "hello"
+
+In [2]: def f():
+   ...:     print(foo)
+   ...:
+
+In [3]: f()
+hello
+
+In [4]: foo = "world"
+
+In [5]: f()
+world
+
+In [6]:
+```
+
+## The import system
