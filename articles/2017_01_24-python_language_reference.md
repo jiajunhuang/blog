@@ -11,7 +11,7 @@ Python程序没有实际意义，Python程序认定的是 `NEWLINE`。
 而缩进对于Python有非常重要的意义。所以推荐在自己用的解释器里都把tab键替换成
 4个空格（或者自己想要的空格数）。
 
-```python
+```ipython
 >>> def foo():
 ...     print("hello")  # 1 tab here
 ...     print("world")  # 4 spaces here
@@ -25,7 +25,7 @@ IndentationError: unindent does not match any outer indentation level
 
     - 显式join：使用`\`
 
-    ```python
+    ```ipython
     >>> if True\
     ... and False:
     ...     print("False")
@@ -35,7 +35,7 @@ IndentationError: unindent does not match any outer indentation level
 
     - 隐式join：在小括号，中括号，大括号中的行都会被合并成逻辑行（只有一个NEWLINE）
 
-    ```python
+    ```ipython
     >>> (
         ... "hello"
         ... "world"
@@ -85,7 +85,7 @@ Python中每个对象都有自己的id，类型和值。
 
 只要出现了上述的binding，Python就认为这个变量名所指向的变量在当前的block里，所以：
 
-```python
+```ipython
 In [1]: foo = "hello"
 
 In [2]: def print_foo():
@@ -118,7 +118,7 @@ a global statement, the free variable is treated as a global."
 
 - 类定义的变量作用域局限于类内，而不会扩展至方法和表达式，generator里，所以：
 
-```python
+```ipython
 In [1]: class Foo:
    ...:     hello = "hello"
    ...:     def foo(self):
@@ -170,7 +170,7 @@ In [4]:
 
 - 闭包内的变量（free variables）的值是在运行时确定的：
 
-```python
+```ipython
 In [1]: foo = "hello"
 
 In [2]: def f():
@@ -189,3 +189,46 @@ In [6]:
 ```
 
 ## The import system
+
+- `import` 语句包含两个部分
+
+    - `__import__` 搜寻指定名称的包
+    - 然后将 `__import__` 返回值在语句所在的scope里binding成那个名字
+
+- 导入的时候，会根据点号依次导入，而且会首先搜寻 `sys.modules`，例如：
+
+```ipython
+In [1]: import sys
+
+In [2]: sys.modules['tornado']
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-2-36f3d84239fe> in <module>()
+----> 1 sys.modules['tornado']
+
+KeyError: 'tornado'
+
+In [3]: sys.modules['tornado.web']
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+<ipython-input-3-f1a34b2734fb> in <module>()
+----> 1 sys.modules['tornado.web']
+
+KeyError: 'tornado.web'
+
+In [4]: import tornado.web
+
+In [5]: tornado
+Out[5]: <module 'tornado' from '/usr/local/lib/python3.5/dist-packages/tornado/__init__.py'>
+
+In [6]: tornado.web
+Out[6]: <module 'tornado.web' from '/usr/local/lib/python3.5/dist-packages/tornado/web.py'>
+
+In [7]: sys.modules['tornado']
+Out[7]: <module 'tornado' from '/usr/local/lib/python3.5/dist-packages/tornado/__init__.py'>
+
+In [8]: sys.modules['tornado.web']
+Out[8]: <module 'tornado.web' from '/usr/local/lib/python3.5/dist-packages/tornado/web.py'>
+
+In [9]:
+```

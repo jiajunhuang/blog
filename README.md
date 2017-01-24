@@ -7,6 +7,7 @@
 
 ## 目录
 
+- 2017/01/24 - [再读 Python Language Reference](articles/2017_01_24-python_language_reference.md)
 - 2017/01/22 - [设计模式（2）](articles/2017_01_22-head_first_design_patterns_2.md)
 - 2017/01/21 - [设计模式（1）](articles/2017_01_21-head_first_design_patterns.md)
 - 2017/01/15 - [Cython! Python和C两个世界的交叉点](articles/2017_01_15-cython_rocks.md)
