@@ -53,8 +53,8 @@ if __name__ == "__main__":
     readme_headers = [
         "# Jiajun's Blog",
         "会当凌绝顶，一览众山小。",
-        "## [关于我](articles/aboutme.md)",
-        "## [Leetcode](leetcode/leetcode.md)",
+        "- [关于我](articles/aboutme.md)",
+        "- [Leetcode](leetcode/leetcode.md)",
         "## 目录",
     ]
     readme_footers = [
