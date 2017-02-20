@@ -58,6 +58,7 @@ if __name__ == "__main__":
         "## 目录",
     ]
     readme_footers = [
+        "\n",
         "--------------------------------------------",
         "[CC-BY](http://opendefinition.org/licenses/cc-by/)",
     ]
@@ -73,6 +74,7 @@ if __name__ == "__main__":
         "# Leetcode in Golang, Python",
     ]
     leetcode_footers = [
+        "\n",
         "--------------------------------------------",
         "[CC-BY](http://opendefinition.org/licenses/cc-by/)",
     ]
