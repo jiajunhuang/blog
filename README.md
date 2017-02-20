@@ -2,9 +2,9 @@
 
 会当凌绝顶，一览众山小。
 
-## 关于我
+## [关于我](articles/aboutme.md)
 
-[点我](articles/aboutme.md)
+## [Leetcode](leetcode/leetcode.md)
 
 ## 目录
 
