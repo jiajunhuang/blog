@@ -5,7 +5,7 @@ import re
 import operator
 
 
-def gen_catalog(posts_dir, output_file, headers, footers):
+def gen_catalog(posts_dir, output_file, headers, footers, relative_path):
     # e.g. 2014_06_17-use_cron.rst, 2014_06_17-use_cron.md
     r = re.compile(r"(\d{4}_\d{2}_\d{2})-.+\..+")
 
@@ -35,10 +35,10 @@ def gen_catalog(posts_dir, output_file, headers, footers):
         for item in catalog:
             title, date, filename = item
             f.write(
-                "- {date} - [{title}]({posts_dir}/{filename})\n".format(
+                "- {date} - [{title}]({relative_path}/{filename})\n".format(
                     date=date,
                     title=title,
-                    posts_dir=posts_dir,
+                    relative_path=relative_path,
                     filename=filename,
                 )
             )
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         "# Jiajun's Blog",
         "会当凌绝顶，一览众山小。",
         "- [关于我](articles/aboutme.md)",
-        "- [Leetcode](leetcode/leetcode.md)",
+        "- [Leetcode](leetcode/index.md)",
         "## 目录",
     ]
     readme_footers = [
@@ -67,6 +67,7 @@ if __name__ == "__main__":
         "./README.md",
         readme_headers,
         readme_footers,
+        "articles",
     )
 
     # leetcode.md
@@ -80,7 +81,8 @@ if __name__ == "__main__":
     ]
     gen_catalog(
         "leetcode",
-        "./leetcode/leetcode.md",
+        "./leetcode/index.md",
         leetcode_headers,
         leetcode_footers,
+        "."
     )

@@ -1,6 +1,6 @@
 # Leetcode in Golang, Python
 
-- 2017/02/20 - [461. Hamming Distance](leetcode/2017_02_20-461_hamming_distance.md)
+- 2017/02/20 - [461. Hamming Distance](./2017_02_20-461_hamming_distance.md)
 
 
 
