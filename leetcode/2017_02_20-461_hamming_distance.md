@@ -56,5 +56,5 @@ if __name__ == "__main__":
 
 -------
 
-- [Go](./code/code/461.hamming_distance.go)
-- [Python](./code/code/461.hamming_distance.py)
+- [Go](./code/461.hamming_distance.go)
+- [Python](./code/461.hamming_distance.py)
