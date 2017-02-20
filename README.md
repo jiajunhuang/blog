@@ -3,6 +3,7 @@
 会当凌绝顶，一览众山小。
 
 ## 关于我
+
 [点我](articles/aboutme.md)
 
 ## 目录
@@ -65,7 +66,7 @@
 - 2014/09/07 - [征服C指针笔记 - 数组和指针的微妙关系](articles/2014_09_07-pointer_and_array_in_c.rst)
 - 2014/08/22 - [关于文件权限的摘记](articles/2014_08_22-unix_file_permissions.rst)
 - 2014/06/17 - [用crontab完成自动化](articles/2014_06_17-use_cron.rst)
-
 --------------------------------------------
 
 [CC-BY](http://opendefinition.org/licenses/cc-by/)
+
