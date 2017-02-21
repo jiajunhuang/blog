@@ -54,7 +54,7 @@ if __name__ == "__main__":
         "# Jiajun's Blog",
         "会当凌绝顶，一览众山小。",
         "- [关于我](articles/aboutme.md)",
-        "- [Leetcode](leetcode/index.md)",
+        "- [Leetcode](leetcode/README.md)",
         "## 目录",
     ]
     readme_footers = [
@@ -81,7 +81,7 @@ if __name__ == "__main__":
     ]
     gen_catalog(
         "leetcode",
-        "./leetcode/index.md",
+        "./leetcode/README.md",
         leetcode_headers,
         leetcode_footers,
         "."

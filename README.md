@@ -4,7 +4,7 @@
 
 - [关于我](articles/aboutme.md)
 
-- [Leetcode](leetcode/index.md)
+- [Leetcode](leetcode/README.md)
 
 ## 目录
 
