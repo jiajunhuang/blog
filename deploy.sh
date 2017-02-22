@@ -4,6 +4,6 @@ python gen_catalog.py
 
 git add .
 
-git commit -m "new post"
+git commit -m "new post on `pwd`"
 
 git push
