@@ -9,6 +9,7 @@
 ## 目录
 
 - 2017/03/02 - [MapReduce](articles/2017_03_02-map_reduce.md)
+- 2017/03/02 - [GFS](articles/2017_03_02-gfs.md)
 - 2017/02/24 - [一起来做贼：Goroutine原理和Work stealing](articles/2017_02_24-goroutine_and_work_stealing.md)
 - 2017/02/15 - [Go语言的defer, panic和recover](articles/2017_02_15-go_defer_panic_and_recover.md)
 - 2017/01/24 - [再读vim help](articles/2017_01_24-vim_manual.md)
