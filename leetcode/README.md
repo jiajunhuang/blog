@@ -1,5 +1,6 @@
 # Leetcode in Golang, Python
 
+- 2017/03/03 - [520. Detect Capital](./2017_03_03-520_detect_capital.md)
 - 2017/03/02 - [292. Nim Game](./2017_03_02-292_nim_game.md)
 - 2017/03/01 - [485. Max Consecutive Ones](./2017_03_01-485_max_consecutive_ones.md)
 - 2017/02/28 - [463. Island Perimeter](./2017_02_28-463.island_perimeter.md)
