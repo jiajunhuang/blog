@@ -8,6 +8,7 @@
 
 ## 目录
 
+- 2017/03/06 - [Golang Comparable Types](articles/2017_03_06-golang_comparable_types.md)
 - 2017/03/02 - [MapReduce](articles/2017_03_02-map_reduce.md)
 - 2017/03/02 - [GFS](articles/2017_03_02-gfs.md)
 - 2017/02/24 - [一起来做贼：Goroutine原理和Work stealing](articles/2017_02_24-goroutine_and_work_stealing.md)
