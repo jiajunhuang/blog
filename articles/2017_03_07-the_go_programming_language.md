@@ -1,6 +1,6 @@
 # 《The Go Programming Language》
 
-![](img/img/the_go_programming_language.jpg)
+![](img/the_go_programming_language.jpg)
 
 花了大概四天，每天下午4-5个小时，把整本书读完了。
 
