@@ -8,6 +8,7 @@
 
 ## 目录
 
+- 2017/03/07 - [《The Go Programming Language》](articles/2017_03_07-the_go_programming_language.md)
 - 2017/03/06 - [Golang Comparable Types](articles/2017_03_06-golang_comparable_types.md)
 - 2017/03/02 - [MapReduce](articles/2017_03_02-map_reduce.md)
 - 2017/03/02 - [GFS](articles/2017_03_02-gfs.md)
