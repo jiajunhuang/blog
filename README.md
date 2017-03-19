@@ -55,7 +55,6 @@
 - 2016/03/05 - [Python零碎知识汇总](articles/2016_03_05-python_fragmentary_knowledge.rst)
 - 2016/02/06 - [C语言的位操作](articles/2016_02_06-bitwise_operation.rst)
 - 2016/01/25 - [分治](articles/2016_01_25-divide_and_conqure.rst)
-- 2015/12/30 - [RST大迁移](articles/2015_12_30-move_to_rst.rst)
 - 2015/12/05 - [关于python的decorator和descriptor](articles/2015_12_05-python_descriptor_and_decorator.rst)
 - 2015/10/09 - [程序设计实践笔记](articles/2015_10_09-notes_on_the_practice_of_programming.rst)
 - 2015/09/05 - [Thinking Recursively](articles/2015_09_05-thinking_recursively.rst)
