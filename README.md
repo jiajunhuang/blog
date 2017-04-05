@@ -4,8 +4,6 @@
 
 - [关于我](articles/aboutme.md)
 
-- [Leetcode](leetcode/README.md)
-
 ## 目录
 
 - 2017/03/29 - [Raft](articles/2017_03_29-raft.md)
