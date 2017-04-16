@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/04/16 - [Python字符串格式化](articles/2017_04_16-python_string_format.md)
 - 2017/04/08 - [Gunicorn](articles/2017_04_08-gunicorn.md)
 - 2017/03/29 - [Raft](articles/2017_03_29-raft.md)
 - 2017/03/07 - [《The Go Programming Language》](articles/2017_03_07-the_go_programming_language.md)
