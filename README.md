@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/04/19 - [从源码看Python的descriptor](articles/2017_04_19-python_descriptor_from_source_code.md)
 - 2017/04/16 - [Python字符串格式化](articles/2017_04_16-python_string_format.md)
 - 2017/04/08 - [Gunicorn](articles/2017_04_08-gunicorn.md)
 - 2017/03/29 - [Raft](articles/2017_03_29-raft.md)
