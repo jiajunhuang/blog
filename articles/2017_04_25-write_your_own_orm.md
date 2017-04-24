@@ -63,3 +63,13 @@ class Session:
 session = Session()
 print(session.query(User).filter(User.id == 1))
 ```
+
+运行结果：
+
+```bash
+jiajun@debian test: python3 orm.py
+DEBUG:root:creating class <class '__main__.Base'>, args ('User', (), {'__qualname__': 'User', '__tablename__': 'user', 'id': <__main__.Column object at 0x7f8174b107b8>, 'passwd': <__main__.Column object at 0x7f8174b10940>, 'name': <__main__.Column object at 0x7f8174b10828>, '__module__': '__main__'}), kwargs {}
+DEBUG:root:returning Queryable(<class '__main__.User'>)
+DEBUG:root:__eq__ of <__main__.Column object at 0x7f8174b107b8> && 1
+select * from user where id = 1
+```
