@@ -76,7 +76,7 @@ if __name__ == "__main__":
     leetcode_footers = [
         "\n",
         "--------------------------------------------",
-        "[CC-BY](http://opendefinition.org/licenses/cc-by/)",
+        "禁止转载",
     ]
     gen_catalog(
         "leetcode",
