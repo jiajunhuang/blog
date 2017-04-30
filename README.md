@@ -76,5 +76,5 @@
 
 --------------------------------------------
 
-[CC-BY](http://opendefinition.org/licenses/cc-by/)
+禁止转载
 

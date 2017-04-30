@@ -59,7 +59,7 @@ if __name__ == "__main__":
     readme_footers = [
         "\n",
         "--------------------------------------------",
-        "[CC-BY](http://opendefinition.org/licenses/cc-by/)",
+        "禁止转载",
     ]
     gen_catalog(
         "articles",
