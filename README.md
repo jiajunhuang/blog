@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/05/12 - [Golang的short variable declaration](articles/2017_05_12-golang_short_variable_declaration.md)
 - 2017/04/26 - [Greenlet和Stackless Python](articles/2017_04_26-greenlet.md)
 - 2017/04/25 - [写一个简单的ORM](articles/2017_04_25-write_your_own_orm.md)
 - 2017/04/19 - [从源码看Python的descriptor](articles/2017_04_19-python_descriptor_from_source_code.md)
