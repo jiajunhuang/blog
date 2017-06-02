@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/06/02 - [自己写个搜索引擎](articles/2017_06_02-write_yourself_a_simple_search_engine.md)
 - 2017/05/24 - [HTTP 路由的两种常见设计形式](articles/2017_05_24-http_router_design.md)
 - 2017/05/12 - [Golang的short variable declaration](articles/2017_05_12-golang_short_variable_declaration.md)
 - 2017/04/26 - [Greenlet和Stackless Python](articles/2017_04_26-greenlet.md)
