@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/06/22 - [ansible是个好东西](articles/2017_06_22-ansible.md)
 - 2017/06/04 - [Redis 命令总览](articles/2017_06_04-redis_commands.md)
 - 2017/06/02 - [自己写个搜索引擎](articles/2017_06_02-write_yourself_a_simple_search_engine.md)
 - 2017/05/24 - [HTTP 路由的两种常见设计形式](articles/2017_05_24-http_router_design.md)
