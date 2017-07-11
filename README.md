@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/07/11 - [Golang的log库](articles/2017_07_11-golang_log.md)
 - 2017/07/02 - [毕业后一年](articles/2017_07_02-one_year_after_graduate.md)
 - 2017/06/22 - [ansible是个好东西](articles/2017_06_22-ansible.md)
 - 2017/06/04 - [Redis 命令总览](articles/2017_06_04-redis_commands.md)
