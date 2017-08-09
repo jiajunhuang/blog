@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/08/09 - [Lua Manual 阅读笔记](articles/2017_08_09-lua_manual.md)
 - 2017/07/27 - [Golang Map实现](articles/2017_07_27-golang_map.md)
 - 2017/07/26 - [MySQL 零碎](articles/2017_07_26-mysql.md)
 - 2017/07/18 - [Golang slice 实现](articles/2017_07_18-golang_slice.md)
