@@ -209,3 +209,61 @@ $ luajit t.lua
 ```
 
 > 坑啊,table支持空洞额...
+
+- 每次遇到local关键字，都会新建一个变量。如果在for循环里local的话，就会新建
+循环次数个变量。
+
+- metatables
+
+lua中每个值都有metatable，其中的key称为events，值称为metamethods. 每个events
+的名字都是两个下划线开头，例如 `__add`。主要包括以下方法：
+
+    - add +
+    - sub -
+    - mul *
+    - div /
+    - mod %
+    - pow ^
+    - unm -负号
+    - concat .. 字符连接号
+    - len # 号
+    - eq `==`
+    - lt <
+    - le <=
+    - index `table[key]`
+    - newindex `table[key] = value`
+    - call
+
+此外，thread，function和userdata这三种类型的对象还有一个table与之相关，叫做
+encironment。thread的环境变量在thread内共享，userdata和c函数在c函数内共享。
+非嵌套lua函数和创建的thread共享，嵌套的lua函数和嵌套的lua函数共享。
+
+lua thread级别的envrionment table就是全局变量。可以通过 `getfenv` 和 `setfenv`
+获取和修改。
+
+- coroutine 内置coroutine算是lua的一个特色了
+
+    - `coroutine.create` 返回新创建的coroutine的handle
+    - `coroutine.resume` 开始执行coroutine
+    - `coroutine.yield` 交出执行权
+    - `coroutine.wrap` 返回一个函数，每次调用都会执行到上一个yield的地方
+
+```lua
+local newThread = coroutine.wrap(function()
+    print("hello")
+    local a = coroutine.yield()
+    print(a)
+end)
+
+newThread()
+newThread("haha")
+```
+
+- [C-API](http://www.lua.org/manual/5.1/manual.html#3) 和 [和C交互的库](http://www.lua.org/manual/5.1/manual.html#4)
+略过。
+
+- [标准库](http://www.lua.org/manual/5.1/manual.html#5) 略过。
+
+- lua中 `x:foo()` 相当于 `x.foo(x)`，是一种语法糖。
+
+- lua的index从1开始。
