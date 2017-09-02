@@ -15,7 +15,6 @@
 - 2017/07/11 - [Golang的log库](https://jiajunhuang.com/articles/2017_07_11-golang_log.md.html)
 - 2017/07/02 - [毕业后一年](https://jiajunhuang.com/articles/2017_07_02-one_year_after_graduate.md.html)
 - 2017/06/22 - [ansible是个好东西](https://jiajunhuang.com/articles/2017_06_22-ansible.md.html)
-- 2017/06/04 - [Redis 命令总览](https://jiajunhuang.com/articles/2017_06_04-redis_commands.md.html)
 - 2017/06/02 - [自己写个搜索引擎](https://jiajunhuang.com/articles/2017_06_02-write_yourself_a_simple_search_engine.md.html)
 - 2017/05/24 - [HTTP 路由的两种常见设计形式](https://jiajunhuang.com/articles/2017_05_24-http_router_design.md.html)
 - 2017/05/12 - [Golang的short variable declaration](https://jiajunhuang.com/articles/2017_05_12-golang_short_variable_declaration.md.html)
