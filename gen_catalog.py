@@ -35,7 +35,7 @@ def gen_catalog(posts_dir, output_file, headers, footers, relative_path):
         for item in catalog:
             title, date, filename = item
             f.write(
-                "- {date} - [{title}]({relative_path}/{filename})\n".format(
+                "- {date} - [{title}](https://jiajunhuang.com/{relative_path}/{filename}.html)\n".format(
                     date=date,
                     title=title,
                     relative_path=relative_path,
