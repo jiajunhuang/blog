@@ -1,0 +1,18 @@
+- hosts: linode
+  remote_user: root
+  tasks:
+    - name: generate README.md
+      local_action: shell python gen_catalog.py
+
+    - name: commit and push to github
+      local_action: shell git add . && git commit -m "new post at `date`" && `command -v proxychains 2>&1` git push
+
+    - name: sync articles
+      synchronize:
+        src: ./articles/
+        dest: /data/articles/
+        recursive: yes
+        delete: yes
+
+    - name: reload blog process
+      shell: supervisorctl update && supervisorctl restart blog

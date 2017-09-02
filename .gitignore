@@ -4,3 +4,4 @@ secret.txt
 __pycache__
 *.py[co]
 tags
+hosts
