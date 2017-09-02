@@ -14,7 +14,7 @@
         recursive: yes
         delete: yes
         rsync_opts:
-          - "--chmod=F644"
+          - "--chown=www-data"
 
     - name: reload blog process
       shell: supervisorctl update && supervisorctl restart blog
