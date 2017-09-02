@@ -13,7 +13,8 @@
         dest: /data/articles/
         recursive: yes
         delete: yes
-        mode: 0555
+        rsync_opts:
+          - "--chmod=F644"
 
     - name: reload blog process
       shell: supervisorctl update && supervisorctl restart blog
