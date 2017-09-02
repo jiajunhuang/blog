@@ -5,7 +5,7 @@
       local_action: shell python gen_catalog.py
 
     - name: commit and push to github
-      local_action: shell git add . && git commit -m "sync at `date`" && `command -v proxychains 2>&1` git push
+      local_action: shell git add . && git commit -m "sync at `date`" && `command -v proxychains 2>&1` git push || true
 
     - name: sync articles
       synchronize:
