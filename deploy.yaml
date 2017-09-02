@@ -13,7 +13,7 @@
         dest: /data/articles/
         recursive: yes
         delete: yes
-        owner: www-data
+        mode: 0555
 
     - name: reload blog process
       shell: supervisorctl update && supervisorctl restart blog
