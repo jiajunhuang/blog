@@ -4,11 +4,13 @@
 
 这个系列主要分为五个部分：
 
-1. [从递归说起](#)
-1. [从命令式语言进行抽象（TODO）](#)
-1. [Haskell初步：语法(TODO)](#)
-1. [Haskell进阶：Moniod, Applicative, Monad(TODO)](#)
-1. [实战：Haskell和JSON(TODO)](#)
+```
+从递归说起
+从命令式语言进行抽象
+Haskell初步：语法
+Haskell进阶：Moniod, Applicative, Monad
+实战：Haskell和JSON
+```
 
 虽然我们最终的目标是初窥 `Haskell` ，但是就我本人的学习经历来说，日常是学习命令式
 编程为主，相信绝大部分同学也是一样，而不是先学会了函数式编程之后才开始学习命令式编程。
