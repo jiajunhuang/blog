@@ -249,16 +249,118 @@ Prelude> [i + j | i <- [0..9], j <- [0..1], i `mod` 2 == 0]
 
 是不是感觉很像？
 
-## 模式匹配，guards
+## 模式匹配
 
-## if, else, let, where
+我们在命令式语言中接触的最多的表示分支的方式，估计就是 `if ... else ...` 了。
+只不过在不同的语言中，表述也不一样，表现形式也略有不同，例如 `if...then...`，
+例如 `switch...case...`。其实就是决策树的分支表现形式。在Haskell中其实也有
+这样的东西，我们先来看第一种，模式匹配，为了好好的和模式匹配玩耍，我们要先和
+List玩耍。我们来看看List的几个常见的操作：`head`, `tail`。
+
+先看看类型：
+
+```haskell
+Prelude> :t head
+head :: [a] -> a
+Prelude> :t tail
+tail :: [a] -> [a]
+```
+
+我们就这样猜测吧：`head` 是取出List中的第一个元素，而 `tail` 是取出除了第一个元素
+的其他所有剩余元素。
+
+我们新建 `MyList.hs` 然后把类型填进去：
+
+```haskell
+head :: [a] -> a
+tail :: [a] -> [a]
+```
+
+然后填上实现：
+
+```haskell
+head :: [a] -> a
+head [] = 
+head (x:_) = x
+
+tail :: [a] -> [a]
+tail [] = []
+tail (_:xs) = xs
+```
+
+然后我们去ghci里执行一下：
+
+```bash
+Prelude> :l MyList.hs 
+[1 of 1] Compiling Main             ( MyList.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> head []
+
+<interactive>:2:1: error:
+    Ambiguous occurrence ‘head’
+    It could refer to either ‘Prelude.head’,
+                             imported from ‘Prelude’ at MyList.hs:1:1
+                             (and originally defined in ‘GHC.List’)
+                          or ‘Main.head’, defined at MyList.hs:2:1
+*Main> head [1, 2, 3]
+
+<interactive>:3:1: error:
+    Ambiguous occurrence ‘head’
+    It could refer to either ‘Prelude.head’,
+                             imported from ‘Prelude’ at MyList.hs:1:1
+                             (and originally defined in ‘GHC.List’)
+                          or ‘Main.head’, defined at MyList.hs:2:1
+*Main> 
+```
+
+嗯。。。看报错是说我们定义的head函数和标准库Prelude预先加载定义的名字冲突了，
+如果写过Python我们可以参考看有没有类似 `import as` 的功能，所以我们搜一下：
+
+http://lmgtfy.com/?q=haskell+import+as
+
+不过我试了一下，在ghci中这么干并不行。所以只能用一种比较老土的方法，就是把函数
+名字给改了。
+
+```haskell
+Prelude> :l MyList.hs 
+[1 of 1] Compiling Main             ( MyList.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> myHead []
+*** Exception: bad operation on empty list
+CallStack (from HasCallStack):
+  error, called at MyList.hs:2:13 in main:Main
+*Main> myHead [1, 2, 3, 4]
+1
+*Main> myTail [1, 2, 3, 4]
+[2,3,4]
+*Main> 
+```
+
+要注意Haskell和Golang中有一点比较相像，那就是首字符大小写有不同的意义。
+
+模式匹配就是把某个参数，强行拆解，看能不能匹配上该行的拆解形式，如果能，那么就执行
+后面的代码，要不然就跳到下一个模式里去。
+
+## if, else, let, where, guard
+
+TODO
 
 ## Haskell的pure所在和如何递归的写程序
 
+TODO
+
 ## 高阶
+
+TODO
 
 ## 模块
 
+TODO
+
 ## 自己创建类型和TypeClass
 
+TODO
+
 ## 总结
+
+TODO
