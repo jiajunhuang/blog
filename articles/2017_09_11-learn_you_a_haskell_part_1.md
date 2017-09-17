@@ -6,7 +6,7 @@
 
 - [从递归说起](#)
 - [从命令式语言进行抽象](./2017_09_17-learn_you_a_haskell_part_2.md.html)
-- [Haskell初步：语法](#)
+- [Haskell初步：语法](./2017_09_18-learn_you_a_haskell_part_3.md.html)
 - [Haskell进阶：Moniod, Applicative, Monad](#)
 - [实战：Haskell和JSON](#)
 
