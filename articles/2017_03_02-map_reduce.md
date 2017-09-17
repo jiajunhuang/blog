@@ -1,8 +1,6 @@
-# MapReduce
+# MapReduce 论文阅读
 
 > MIT 6.824
-
-## 论文阅读笔记
 
 - Users specify a map function that processes a key/value pair to generate a
 set of intermediate key/value pairs, and a reduce function that merges all

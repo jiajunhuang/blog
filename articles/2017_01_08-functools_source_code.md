@@ -1,4 +1,4 @@
-# functools 源码分析
+# functools 源码阅读
 
 functools主要包括这几个东西: `wraps`, `partial`, `lru_cache`, 还有一些内置
 帮助函数例如 `c3_mro`。我们主要看上面三个：

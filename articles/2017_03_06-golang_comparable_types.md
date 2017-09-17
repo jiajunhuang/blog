@@ -1,4 +1,4 @@
-# Golang Comparable Types
+# 什么是 Golang Comparable Types
 
 Golang 中有很多时候要用到comparable types，例如比较struct的时候，例如map里的
 key。弄清楚有哪些类型是comparable的非常重要。

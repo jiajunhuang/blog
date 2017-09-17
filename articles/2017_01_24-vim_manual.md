@@ -1,4 +1,4 @@
-# 再读vim help
+# 再读vim help：vim小技巧
 
 - `ZZ` 相当于 `<Esc>:wq`
 

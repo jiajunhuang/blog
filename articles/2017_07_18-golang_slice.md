@@ -1,4 +1,4 @@
-# Golang slice 实现
+# Golang slice 源码阅读
 
 翻Golang代码：
 
