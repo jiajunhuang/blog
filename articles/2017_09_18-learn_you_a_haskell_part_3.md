@@ -343,11 +343,158 @@ CallStack (from HasCallStack):
 
 ## if, else, let, where, guard
 
-TODO
+在平时的编程中我们经常要干的事情就是做判断，如果那么，要不然就怎样。那么为什么
+Haskell作为一门函数式编程不能脱离这些呢？说好的函数式编程和命令式编程不一样呢？
+是啊，函数式编程应该是描述这是什么，而不是具体怎么做。其实这两者并不冲突，例如
+模式匹配其实也是一种分支，不过模式匹配要更加强大。接下来我们看看Haskell中的分支
+是怎么表达的。
+
+```haskell
+biggerThan100 :: Int -> Bool
+biggerThan100 x = if x > 100 then True else False
+```
+
+和我们往日所写的其实差不多，所以就不赘述了。
+
+接下来我们介绍一种新的写法，guard。有中文翻译成守卫表达式，不过我还是更喜欢直接
+用英文。把上面的改成guard会是这样：
+
+```haskell
+biggerThan100' :: Int -> Bool
+biggerThan100' x
+    | x > 100 = True
+    | otherwise = False
+```
+
+有两点需要注意，第一，最后一个参数后面是 `|` 而不是 `=`，第二，otherwise相当于
+switch语句里的 `default`。
+
+平时我们定义函数和变量都是在最外层定义，然后函数里引用，那么有没有更小的作用域呢？
+有，我们看看 `let` 和 `where` 的示例。
+
+```haskell
+printHello :: String -> String
+printHello x = let finalPrint = "Hello! " ++ x in finalPrint
+
+printHello' :: String -> String
+printHello' x = finalPrint
+    where finalPrint = "Hello! " ++ x
+```
+
+执行一下：
+
+```haskell
+Prelude> :l LetWhere.hs 
+[1 of 1] Compiling Main             ( LetWhere.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> printHello "World"
+"Hello! World"
+*Main> printHello' "World"
+"Hello! World"
+*Main> 
+```
 
 ## Haskell的pure所在和如何递归的写程序
 
-TODO
+有没有发现到目前为止我们都没有真正的简单的原始的写一个 `HelloWorld` 出来呢？而是
+一直在写一些 `String -> String` 啊 `Char -> String -> Bool` 的函数呢？为什么Haskell中
+这么多这样的函数（最少到目前我们接触的为止）？因为Haskell有一个很大的特点是pure。
+什么是纯函数？就是无论在什么情况下，只要给定输入，那么输出一定是同样的。那什么是
+不纯的函数？举个例子，网络IO，硬盘IO，标准输出也是。我们暂时可以这样想像：凡是
+和现实世界接触的东西，都是不纯的，凡是可以抽象成数学理论可以解释的，都是纯的。
+
+Haskell把不纯的东西也做了抽象，叫做Monad，你可以把它理解成一个盒子，就是我们以前
+所说的黑盒子，它把不纯的东西包在里面，并且提供一些接口来操作它。这些我们会在下一篇
+看到。
+
+接下来我们将要看看如何递归的写程序，和第一篇一样，我们简单地来看看如何递归的遍历
+列表。现在我们有一个列表 `[1, 3, 2, 5, 6]`，我们想要将偶数过滤掉，只留下奇数。
+但是我们不能用for循环。列表，如果用递归的方式去看，就是一个表头+一个列表，拿
+`[1, 3, 2, 5, 6]`来看，就是 `1` 和 `[3, 2, 5, 6]`。在Haskell中我们可以这样写：
+`1:[3, 2, 5, 6]`，其中 `:` 是列表连接符，读作 `Cons`。我们可以看看它的类型：
+
+```haskell
+Prelude> :t (:)
+(:) :: a -> [a] -> [a]
+```
+
+很显然，要过滤偶数，我们可以这样写：
+
+```haskell
+filterEven :: [Int] -> [Int]
+filterEven [] = []
+filterEven (x:xs) = if x `mod` 2 == 0 then filterEven xs else x:filterEven xs
+
+filterEven' :: [Int] -> [Int]
+filterEven' [] = []
+filterEven' (x:xs)
+    | x `mod` 2 == 0 = filterEven' xs
+    | otherwise = x:filterEven' xs
+
+
+-- 把判断是否是偶数抽离出来
+isEven :: Int -> Bool
+isEven x = x `mod` 2 == 0
+
+filterEven'' :: [Int] -> [Int]
+filterEven'' [] = []
+filterEven'' (x:xs)
+    | isEven x = filterEven'' xs
+    | otherwise = x:filterEven'' xs
+```
+
+执行一下：
+
+```haskell
+Prelude> :l FilterEven.hs 
+[1 of 1] Compiling Main             ( FilterEven.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> filterEven [1, 3, 2, 5, 6]
+[1,3,5]
+*Main> filterEven' [1, 3, 2, 5, 6]
+[1,3,5]
+*Main> filterEven'' [1, 3, 2, 5, 6]
+[1,3,5]
+*Main>
+```
+
+我们其实就是顺着递归的思路去写代码，如何过滤偶数呢？就是我们把列表看成是一个
+元素+一个列表的结构，我们每次都看当前元素是否是偶数，如果是，那么就忽略，直接
+考虑下一个列表，要不然的话，我们要把现在这个元素追加到最前面，然后才开始考虑下一个
+列表。
+
+此外，在写示例的时候我犯了一个错误，就是忘记了写边界条件：
+
+```haskell
+filterEven :: [Int] -> [Int]
+filterEven (x:xs) = if x `mod` 2 == 0 then filterEven xs else x:filterEven xs
+```
+
+结果运行就会报错：
+
+```haskell
+Prelude> :l FilterEven.hs 
+[1 of 1] Compiling Main             ( FilterEven.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> filterEven [1, 3, 2, 5, 6]
+[1,3,5*** Exception: FilterEven.hs:2:1-77: Non-exhaustive patterns in function filterEven
+
+*Main>
+```
+
+为什么呢？初看你可能觉得这是因为ghci就像python解释器一样，执行到了对应的报错然后才
+处理。这么说的话，似乎也对，其实真正的原因是因为Haskell是一门惰性语言，英文的说法
+叫做 `lazy`。`lazy`?
+
+```python
+def iter_array(array):
+    for i in array:
+        yield i
+```
+
+什么叫做lazy呢？就是延迟计算，在Python中可以是迭代器，也可以是重写 `__call__`来
+造成延迟计算，或者类似的手法。其核心思想就是，并不是一开始就计算好，而是等到真正
+要用的时候才去计算。
 
 ## 高阶
 
