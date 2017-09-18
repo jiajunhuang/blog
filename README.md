@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/09/19 - [XMonad 配置教程](https://jiajunhuang.com/articles/2017_09_19-xmonad.md.html)
 - 2017/09/18 - [一步一步学Haskell（三）：Haskell语法](https://jiajunhuang.com/articles/2017_09_18-learn_you_a_haskell_part_3.md.html)
 - 2017/09/17 - [一步一步学Haskell（二）：从命令式语言进行抽象](https://jiajunhuang.com/articles/2017_09_17-learn_you_a_haskell_part_2.md.html)
 - 2017/09/11 - [一步一步学Haskell（一）：从递归说起](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
