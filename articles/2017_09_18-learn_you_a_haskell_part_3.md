@@ -496,18 +496,92 @@ def iter_array(array):
 造成延迟计算，或者类似的手法。其核心思想就是，并不是一开始就计算好，而是等到真正
 要用的时候才去计算。
 
-## 高阶
+## [高阶函数](http://learnyouahaskell.com/higher-order-functions)
 
-TODO
+> Haskell functions can take functions as parameters and return functions as return values. A function that does either of those is called a higher order function. 
+
+所谓的高阶函数其实就是能接受函数作为参数，或者返回一个函数作为结果的函数。举个例子，map函数，map的类型为：
+
+```haskell
+Prelude> :t map
+map :: (a -> b) -> [a] -> [b]
+```
+
+map接受一个函数 `a->b`，然后接受一个列表 `[a]`，返回一个列表 `[b]`。我们可以看看示例：
+
+```haskell
+Prelude> map (+1) [1..5]
+[2,3,4,5,6]
+```
 
 ## 模块
 
-TODO
+什么是模块呢？模块就是一组函数或者数据类型。是一种集合，Haskell中的模块用 `module` 关键字声明。我们常用的模块例如预先导入的 `Prelude`，例如 `Data.List`, `Data.Map`等。我们可以把上面的 MyList.hs 包装成一个模块。
+
+```haskell
+module MyList (
+      myInit
+    , myTail
+    ) where
+
+myInit :: [a] -> a
+myInit [] = error "cannot operate on empty list"
+myInit (x:xs) = x
+
+myTail :: [a] -> [a]
+myTail [] = error "cannot operate on empty list"
+myTail (x:xs) = xs
+```
+
+然后在导入的时候，可以有如下写法：
+
+```haskell
+import XMonad.Util.Run (spawnPipe)
+import qualified Data.Map as M
+```
+
+第一个是类似于Python中 `from xxx import yyy` 的写法，只引入模块中的部分。
+第二个是类似于Python中 `import xxx as yyy` 的写法，引入模块，但是创建别名。
 
 ## 自己创建类型和TypeClass
 
-TODO
+Haskell中还有一个关键字是 `data`。是用来创建我们的类型的。
+
+```haskell
+data Bool = False | True 
+```
+
+左边的 `Bool` 是类型(type)，右边的用 `|` 分隔的叫做 `value constructors`。有的需要带值，有的不需要。例如上面的Bool就不需要，而Maybe则需要：
+
+```haskell
+data Maybe a = Nothing | Just a
+```
+
+此处左边的a叫做 `type parameter`。而Maybe叫做 `type constructor`。为什么又有一个新名字而不是也叫type呢？因为 `Maybe`不是一个具体的类型，而像 `Maybe Int` 才是。
+
+```haskell
+Prelude> :t Nothing
+Nothing :: Maybe a
+Prelude> :t Just 1
+Just 1 :: Num a => Maybe a
+Prelude> :t Just "haha"
+Just "haha" :: Maybe [Char]
+```
+
+可能看到这里还比较迷糊，但是在之后我们看到Monad的时候，就知道为什么要把这些分得这么清楚了。把有共同特征的一类事物提取出来就是抽象。
+对于具体类型例如 `Bool`，是一种类型。而像 `Maybe` 这样需要接受一个具体类型才能产生出一个具体类型的类型，就是另一种类型了。
+
+我们可以把Maybe看作是一个盒子，这个盒子需要填充一个东西，才算是一个有意义的盒子，否则
+知识一个空荡荡的i空盒子。对于这样的想象成盒子的想法，我们在后面学习Monad的时候还会用到。
 
 ## 总结
 
-TODO
+在这一篇中我们简略的过了一下Haskell的基本语法，学习一门新语言首先要把基本的语法搞懂，然后更重要的是拿基本语法开始开发，
+然后不断的搜索，写，看资料，查文档，写。这样才能更快的掌握一门语言。
+
+参考资料：
+
+[Learn You a Haskell For Great Good](http://learnyouahaskell.com/chapters)
+[Haskell WikiBook](https://en.wikibooks.org/wiki/Haskell)
+[一步一步学Haskell（一）：从递归说起](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
+[一步一步学Haskell（二）：从命令式语言进行抽象](https://jiajunhuang.com/articles/2017_09_17-learn_you_a_haskell_part_2.md.html)
