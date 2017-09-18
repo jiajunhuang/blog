@@ -581,7 +581,7 @@ Just "haha" :: Maybe [Char]
 
 参考资料：
 
-[Learn You a Haskell For Great Good](http://learnyouahaskell.com/chapters)
-[Haskell WikiBook](https://en.wikibooks.org/wiki/Haskell)
-[一步一步学Haskell（一）：从递归说起](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
-[一步一步学Haskell（二）：从命令式语言进行抽象](https://jiajunhuang.com/articles/2017_09_17-learn_you_a_haskell_part_2.md.html)
+- [Learn You a Haskell For Great Good](http://learnyouahaskell.com/chapters)
+- [Haskell WikiBook](https://en.wikibooks.org/wiki/Haskell)
+- [一步一步学Haskell（一）：从递归说起](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
+- [一步一步学Haskell（二）：从命令式语言进行抽象](https://jiajunhuang.com/articles/2017_09_17-learn_you_a_haskell_part_2.md.html)
