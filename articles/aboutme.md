@@ -7,7 +7,7 @@
 2012年开始玩Linux，算是一个老菜鸟了 :) 编辑器主要是用 `Neovim`，桌面环境一般是 `ArchLinux + XMonad`
 或者 `Debian Testing + XMonad`。
 
-个人认为把复杂的东西用平易近人的方式描述出来是一种很重要的能里，并且一直都在锻炼
+个人认为把复杂的东西用平易近人的方式描述出来是一种很重要的能力，并且一直都在锻炼
 这种能力，下面是我写的一些科普性的系列文章：
 
 - [从零构建TCP](https://jiajunhuang.com/articles/2017_08_12-tcp_ip.md.html)
