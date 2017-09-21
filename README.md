@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/09/21 - [OAuth2 为什么需要 Authorization Code?](https://jiajunhuang.com/articles/2017_09_21-oauth2.md.html)
 - 2017/09/20 - [任务队列怎么写？python rq源码分析](https://jiajunhuang.com/articles/2017_09_20-task_queue_python_rq.md.html)
 - 2017/09/19 - [XMonad 配置教程](https://jiajunhuang.com/articles/2017_09_19-xmonad.md.html)
 - 2017/09/18 - [一步一步学Haskell（三）：Haskell语法](https://jiajunhuang.com/articles/2017_09_18-learn_you_a_haskell_part_3.md.html)
