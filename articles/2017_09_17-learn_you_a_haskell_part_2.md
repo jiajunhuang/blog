@@ -7,7 +7,7 @@
 - [从递归说起](./2017_09_11-learn_you_a_haskell_part_1.md.html)
 - [从命令式语言进行抽象](#)
 - [Haskell初步：语法](./2017_09_18-learn_you_a_haskell_part_3.md.html)
-- [Haskell进阶：Moniod, Applicative, Monad](#)
+- [Haskell进阶：Monoid, Applicative, Monad](./2017_09_25-learn_you_a_haskell_part_4.md.html)
 - [实战：Haskell和JSON](#)
 
 ## 从移动端推送看什么是抽象以及如何抽象
