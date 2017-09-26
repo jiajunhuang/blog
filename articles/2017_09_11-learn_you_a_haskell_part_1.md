@@ -8,7 +8,7 @@
 - [从命令式语言进行抽象](./2017_09_17-learn_you_a_haskell_part_2.md.html)
 - [Haskell初步：语法](./2017_09_18-learn_you_a_haskell_part_3.md.html)
 - [Haskell进阶：Monoid, Applicative, Monad](./2017_09_25-learn_you_a_haskell_part_4.md.html)
-- [实战：Haskell和JSON](#)
+- [实战：Haskell和JSON](./2017_09_26-learn_you_a_haskell_part_5.md.html)
 
 虽然我们最终的目标是初窥 `Haskell` ，但是就我本人的学习经历来说，日常是学习命令式
 编程为主，相信绝大部分同学也是一样，而不是先学会了函数式编程之后才开始学习命令式编程。
