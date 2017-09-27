@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/09/27 - [Haskell: infixl, infixr, infix](https://jiajunhuang.com/articles/2017_09_27-haskell_infix.md.html)
 - 2017/09/26 - [一步一步学Haskell（五）：处理JSON](https://jiajunhuang.com/articles/2017_09_26-learn_you_a_haskell_part_5.md.html)
 - 2017/09/25 - [一步一步学Haskell（四）：Monoid, Applicative, Monad](https://jiajunhuang.com/articles/2017_09_25-learn_you_a_haskell_part_4.md.html)
 - 2017/09/22 - [HTTPS 的详细流程](https://jiajunhuang.com/articles/2017_09_22-https_processes.md.html)
