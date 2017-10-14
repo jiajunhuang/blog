@@ -6,7 +6,7 @@
 
 ## 目录
 
-- 2017/10/14 - [Web开发系(二)：HTTP协议](https://jiajunhuang.com/articles/2017_10_14-web_dev_part2.md.html)
+- 2017/10/14 - [Web开发系列(二)：HTTP协议](https://jiajunhuang.com/articles/2017_10_14-web_dev_part2.md.html)
 - 2017/10/13 - [Web开发系列(一)：从输入网址到最后，这个过程经历了什么？](https://jiajunhuang.com/articles/2017_10_13-web_dev_part1.md.html)
 - 2017/10/11 - [SNI: 让Nginx在一个IP上使用多个证书](https://jiajunhuang.com/articles/2017_10_11-sni.md.html)
 - 2017/09/27 - [Haskell: infixl, infixr, infix](https://jiajunhuang.com/articles/2017_09_27-haskell_infix.md.html)

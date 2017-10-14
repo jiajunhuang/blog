@@ -1,4 +1,4 @@
-# Web开发系(二)：HTTP协议
+# Web开发系列(二)：HTTP协议
 
 在上一次我们介绍TCP协议的最后([点这里](https://jiajunhuang.com/articles/2017_08_12-tcp_ip.md.html))，我们简单的
 看了一下HTTP协议大概长什么样：当我们输入 `GET / HTTP/1.1` 回车之后，终端里便回显出服务器所返回的内容。今天我们
