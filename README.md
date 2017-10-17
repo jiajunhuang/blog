@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/10/17 - [Web开发系列(五)：form, json, xml](https://jiajunhuang.com/articles/2017_10_17-web_dev_part5.md.html)
 - 2017/10/16 - [Web开发系列(四)：Flask, Tornado和WSGI](https://jiajunhuang.com/articles/2017_10_16-web_dev_part4.md.html)
 - 2017/10/15 - [Web开发系列(三)：什么是HTML,CSS,JS？](https://jiajunhuang.com/articles/2017_10_15-web_dev_part3.md.html)
 - 2017/10/14 - [Web开发系列(二)：HTTP协议](https://jiajunhuang.com/articles/2017_10_14-web_dev_part2.md.html)
