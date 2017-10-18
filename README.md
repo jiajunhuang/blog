@@ -6,6 +6,8 @@
 
 ## 目录
 
+- 2017/10/18 - [Web开发系列(八)：单点故障，负载均衡](https://jiajunhuang.com/articles/2017_10_18-web_dev_part8.md.html)
+- 2017/10/18 - [Web开发系列(七)：缓存，CDN](https://jiajunhuang.com/articles/2017_10_18-web_dev_part7.md.html)
 - 2017/10/18 - [Web开发系列(六)：关系型数据库，ORM](https://jiajunhuang.com/articles/2017_10_18-web_dev_part6.md.html)
 - 2017/10/18 - [Nginx 请求匹配规则](https://jiajunhuang.com/articles/2017_10_18-nginx_request_handle.md.html)
 - 2017/10/17 - [Web开发系列(五)：form, json, xml](https://jiajunhuang.com/articles/2017_10_17-web_dev_part5.md.html)
