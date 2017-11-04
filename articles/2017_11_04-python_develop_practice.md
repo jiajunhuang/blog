@@ -42,6 +42,9 @@
 
 - 使用Docker容器部署,必须设置CPU和内存上限,且不得与所在机器内存大小相同或非常接近.
 
+- 数据库(MySQL)使用 `utf8mb4`(而不是`utf8`)作为默认的字符集, 因为MySQL的`utf8`不是我们平日里所说的utf8,它只能利用
+最多三个字节,因此无法使用存储emoji
+
 ## 目前发现的可以改善的地方
 
 - [x] session可以和request脱离,手动 `session = Session()` 而非 `app.before_request`
