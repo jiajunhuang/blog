@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/11/04 - [Python开发实践经验](https://jiajunhuang.com/articles/2017_11_04-python_develop_practice.md.html)
 - 2017/10/25 - [Golang实现平滑重启(优雅重启)](https://jiajunhuang.com/articles/2017_10_25-golang_graceful_restart.md.html)
 - 2017/10/24 - [traefik 教程](https://jiajunhuang.com/articles/2017_10_24-traefik.md.html)
 - 2017/10/19 - [Web开发简介系列](https://jiajunhuang.com/articles/2017_10_19-web_dev_series.md.html)
