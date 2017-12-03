@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/12/02 - [算法导论阅读笔记 --- 排序算法](https://jiajunhuang.com/articles/2017_12_02-algorithms_sorting.md.html)
 - 2017/11/29 - [短链系统的实现](https://jiajunhuang.com/articles/2017_11_29-short_url.md.html)
 - 2017/11/29 - [Git HTTPS 如何保存密码](https://jiajunhuang.com/articles/2017_11_29-git_credential_store.md.html)
 - 2017/11/13 - [程序员修炼之道 阅读笔记](https://jiajunhuang.com/articles/2017_11_13-the_programmatic_programmer.md.html)
