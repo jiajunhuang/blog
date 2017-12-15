@@ -2,6 +2,8 @@
 
 > 头条是个人用来分享在互联网上看到的好文或者好站的 :) 每天一篇
 
+- 2017-12-15 https://www.hiredintech.com/courses/system-design
+
 - 2017-12-14 今天是第一天，分享一些自己存在书签和RSS里的网站：
 
     - https://tech.meituan.com/ 经常会有一些架构类、性能类、设计类文章，值得一看
