@@ -2,7 +2,7 @@
 
 > 头条是个人用来分享在互联网上看到的好文或者好站的 :) 每天一篇
 
-- 2017-12-17 https://support.google.com/webmasters/answer/7451184?utm_source=wanqu.co&utm_campaign=Wanqu+Daily&utm_medium=ios Google官方SEO教程
+- 2017-12-17 https://support.google.com/webmasters/answer/7451184 Google官方SEO教程
 
 - 2017-12-16 https://dev.mysql.com/doc/refman/5.7/en/explain-output.html 看懂EXPLAIN的输出，就已经踏出SQL优化的一大步了 :)
 
