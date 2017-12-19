@@ -2,6 +2,11 @@
 
 > 头条是个人用来分享在互联网上看到的好文或者好站的 :) 每天一篇
 
+- 2017-12-19
+
+    - https://12factor.net/ 算是一些最佳实践吧
+    - https://engineeringblog.yelp.com/2017/11/code-review-guidelines.html 代码review指南，如何review代码，需要注意什么
+
 - 2017-12-18 http://horicky.blogspot.jp/2010/10/scalable-system-design-patterns.html 可扩展性系统设计模式，值得一看 :)
 
 - 2017-12-17 https://support.google.com/webmasters/answer/7451184 Google官方SEO教程
