@@ -1,6 +1,11 @@
 # 头条
 
-> 头条是个人用来分享在互联网上看到的好文或者好站的 :) 每天一篇
+> 头条是个人用来分享在互联网上看到的好文或者好站的 :) ~~~~每天一篇~~ 每周分享
+
+- 2017-12-21 https://neil.fraser.name/writing/sync/ Google Doc如何完成协同编辑的？
+
+- 2017-12-20 http://repository.cmu.edu/cgi/viewcontent.cgi?article=2112&context=compsci 一篇关于CDN的论文，主要是概览了一下
+CDN咋工作的，不过可能论文有点老
 
 - 2017-12-19
 
