@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2017/12/30 - [Golang 分布式异步任务队列 Machinery 教程](https://jiajunhuang.com/articles/2017_12_30-golang_task_queue.md.html)
 - 2017/12/27 - [使用geohash完成地理距离计算](https://jiajunhuang.com/articles/2017_12_27-geohash.md.html)
 - 2017/12/20 - [2018年就要到了，这一年都做了什么呢？](https://jiajunhuang.com/articles/2017_12_20-2017_is_over_and_2018_is_coming.md.html)
 - 2017/12/02 - [算法导论阅读笔记 --- 排序算法](https://jiajunhuang.com/articles/2017_12_02-algorithms_sorting.md.html)
