@@ -43,7 +43,6 @@
 - 2017/09/11 - [一步一步学Haskell（一）：从递归说起](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
 - 2017/09/03 - [Vim插件推荐(2017)](https://jiajunhuang.com/articles/2017_09_03-2017_vim_plugins.md.html)
 - 2017/09/02 - [从零构建TCP/IP协议（二）连接，断开与拥塞控制](https://jiajunhuang.com/articles/2017_09_02-tcp_ip_part2.md.html)
-- 2017/08/12 - [从零构建TCP/IP协议（这次叫PCT协议）](https://jiajunhuang.com/articles/2017_08_12-tcp_ip.md.html)
 - 2017/08/09 - [Lua Manual 阅读笔记](https://jiajunhuang.com/articles/2017_08_09-lua_manual.md.html)
 - 2017/07/27 - [Golang Map 源码阅读](https://jiajunhuang.com/articles/2017_07_27-golang_map.md.html)
 - 2017/07/26 - [MySQL 零碎知识 - MySQL必知必会](https://jiajunhuang.com/articles/2017_07_26-mysql.md.html)
