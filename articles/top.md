@@ -2,6 +2,8 @@
 
 > 头条是个人用来分享在互联网上看到的好文或者好站的 :) 
 
+- 2018-01-02 http://www.ardendertat.com/2012/01/11/implementing-search-engines/ 自己写一个搜索引擎。搜索引擎最核心的数据结构就是倒排索引。当然还涉及很多其他知识点。
+
 - 2017-12-31 https://book.douban.com/subject/1261560/ 2017年最后一天，分享一本非常好的书籍：《国富论》
 
 - 2017-12-21 https://neil.fraser.name/writing/sync/ Google Doc如何完成协同编辑的？
