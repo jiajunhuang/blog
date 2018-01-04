@@ -158,12 +158,12 @@ In [2]: %timeit fib3(20)
 
 接下来我们框定一下解题步骤，或者说总结一下上面我们解题的思路：
 
-1. 定义子问题：前缀型(比如"hello"分解为'h' + "ello")，后缀型(比如"hello"分解为"hell" + 'o')还是子序列型(比如"hello"分解为
+- 定义子问题：前缀型(比如"hello"分解为'h' + "ello")，后缀型(比如"hello"分解为"hell" + 'o')还是子序列型(比如"hello"分解为
   "he"和"llo")？
-2. 猜测其中最可能的一种
-3. 开始对2进行尝试
-4. 递归计算并且保存结果
-5. 原问题得到解决，或者方法行不通，则跳到2尝试另一种
+- 猜测其中最可能的一种
+- 开始对2进行尝试
+- 递归计算并且保存结果
+- 原问题得到解决，或者方法行不通，则跳到2尝试另一种
 
 上面的介绍中，我们的思路似乎一气呵成，但是实际解题中，我们的想法可能会有很多种，而有可能很多种都是动态规划并且都能得出
 结果，所以这里我们进行一些解题步骤的框定。其中最重要的步骤就是第二步，猜测。而且我们需要不停的猜测，如果这一种不行，
@@ -250,9 +250,9 @@ In [2]: %timeit fib3(20)
 
 尾注中包括一些基本概念和资料，其中包括 Leetcode[^3] 中动态规划类的题目，和 MIT的算法公开课[^4]等。希望对大家都有所帮助。
 
-[^1]: https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-[^2]: https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97
-[^3]: Leetcode动态规划练习题：https://leetcode.com/tag/dynamic-programming/
-[^4]: MIT算法公开课：https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=19&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
-[^5]: C程序设计的抽象思维：https://book.douban.com/subject/10754300/
-[^6]: 背包九讲：https://github.com/tianyicui/pack
+- https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
+- https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97
+- Leetcode动态规划练习题：https://leetcode.com/tag/dynamic-programming/
+- MIT算法公开课：https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=19&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+- C程序设计的抽象思维：https://book.douban.com/subject/10754300/
+- 背包九讲：https://github.com/tianyicui/pack
