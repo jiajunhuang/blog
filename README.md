@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/01/22 - [Go性能优化](https://jiajunhuang.com/articles/2018_01_22-golang_optimization.md.html)
 - 2018/01/08 - [(关系型)数据库优化总结](https://jiajunhuang.com/articles/2018_01_08-db_optimizations.md.html)
 - 2018/01/04 - [动态规划民科教程](https://jiajunhuang.com/articles/2018_01_04-dynamic_programming.md.html)
 - 2017/12/30 - [Golang 分布式异步任务队列 Machinery 教程](https://jiajunhuang.com/articles/2017_12_30-golang_task_queue.md.html)
