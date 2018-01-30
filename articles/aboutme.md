@@ -1,11 +1,11 @@
 # About Me
 
-我是 `Jiajun Huang`，2016年毕业于[江西财经大学](http://www.jxufe.cn/) 软件工程专业。
+我是 `Jiajun Huang`，2016年毕业于软件工程专业。
 
-现在在万科物业任后端开发工程师，工作上用的最多的是 `Python` 和 `Golang`，平时也玩玩 `Haskell`。
+目前主攻Web后端和中间件，工作上用的最多的是 `Python` 和 `Golang`，平时也玩玩 `Haskell`和`C`。
 
-2012年开始玩Linux，算是一个老菜鸟了 :) 编辑器主要是用 `Neovim`，桌面环境一般是 `ArchLinux + XMonad`
-或者 `Debian Testing + XMonad`。
+2012年开始玩Linux，编辑器主要是用 `Neovim`，桌面环境一般是 `ArchLinux + XMonad`
+和 `Debian Testing + XMonad`。
 
 个人认为把复杂的东西用平易近人的方式描述出来是一种很重要的能力，并且一直都在锻炼
 这种能力，下面是我写的一些科普性的系列文章：
@@ -19,6 +19,7 @@
 ## 个人作品
 
 - [blog](https://github.com/jiajunhuang/blog): 博客源码
+- [guard](https://github.com/jiajunhuang/guard)：高性能通用型熔断器
 - [obito](https://github.com/jiajunhuang/obito): 开箱即用的iOS推送服务
 - [storm](https://github.com/jiajunhuang/storm): class-based view的高性能异步web框架
 - [toq](https://github.com/jiajunhuang/toq): 分布式任务队列
