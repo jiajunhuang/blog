@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/01/31 - [Golang的一些坑](https://jiajunhuang.com/articles/2018_01_31-golang_traps.md.html)
 - 2018/01/30 - [GC 垃圾回收](https://jiajunhuang.com/articles/2018_01_30-gc.md.html)
 - 2018/01/28 - [设计一个路由](https://jiajunhuang.com/articles/2018_01_28-router_design.md.html)
 - 2018/01/22 - [Go性能优化](https://jiajunhuang.com/articles/2018_01_22-golang_optimization.md.html)
