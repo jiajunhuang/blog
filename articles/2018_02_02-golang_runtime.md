@@ -2,10 +2,10 @@
 
 > 只想简单地写写，就不写的太复杂了。注释都在: https://github.com/jiajunhuang/go
 
-1. Go的编译方式是静态编译，把runtime直接编译到最终的可执行文件里。首先我们把代码考过来，然后编译出 `go` 这个可执行文件
+- Go的编译方式是静态编译，把runtime直接编译到最终的可执行文件里。首先我们把代码考过来，然后编译出 `go` 这个可执行文件
 出来。
 
-2. 编写以下代码，然后用我们自己编译出来的go来编译出一个二进制文件。注意要带调试信息并且禁止优化的，要不然不方便看。
+- 编写以下代码，然后用我们自己编译出来的go来编译出一个二进制文件。注意要带调试信息并且禁止优化的，要不然不方便看。
 
 ```go
 package main
@@ -61,7 +61,7 @@ Breakpoint 2 at 0x44c2b0: file /home/jiajun/Code/go/src/runtime/asm_amd64.s, lin
 发现跳到了 `rt0_go`，不过gdb直接打断点发现打不出来，于是就在同一个文件里尝试搜索。
 发现在： https://github.com/jiajunhuang/go/blob/67a58c5a2401e89fd4f688e8f70fd3be9506cea5/src/runtime/asm_amd64.s#L87
 
-3. 继续跟踪，发现有标签，最后到了 `ok` 这个标签。
+- 继续跟踪，发现有标签，最后到了 `ok` 这个标签。
 
 ```bash
 (gdb) b runtime.g0
@@ -104,15 +104,15 @@ DATA    runtime·mainPC+0(SB)/8,$runtime·main(SB)
 
 所以应该是 `runtime.mainPC` 作为入口点，由 `runtime.newproc` 来执行进入。
 
-4. 需要提前把我读到的知识剧透，方便读者理解。
+- 需要提前把我读到的知识剧透，方便读者理解。
 
-- Go的runtime中，M是 `Machine`，代表操作系统的线程
-- P是 `Processor`，意思是逻辑处理器，在最初的版本里是没有P的
-- G是 `Goroutine`。是Go中执行任务的单元，也是coroutine中的最小个体。
-- 在最初的版本里没有P，所以`M`和`G`是 M:N。历史原因不是特别了解，不过我猜测引入P的原因是，当M执行系统调用或者cgo代码
-而阻塞时，如果没有P的存在，那么该M上的所有G就无法执行。而引入P之后，可以把该M上的P摘掉，放到别的M上执行。
+    - Go的runtime中，M是 `Machine`，代表操作系统的线程
+    - P是 `Processor`，意思是逻辑处理器，在最初的版本里是没有P的
+    - G是 `Goroutine`。是Go中执行任务的单元，也是coroutine中的最小个体。
+    - 在最初的版本里没有P，所以`M`和`G`是 M:N。历史原因不是特别了解，不过我猜测引入P的原因是，当M执行系统调用或者cgo代码
+    而阻塞时，如果没有P的存在，那么该M上的所有G就无法执行。而引入P之后，可以把该M上的P摘掉，放到别的M上执行。
 
-5. coroutine又称微线程，协程，纤程等。原因是，线程是操作系统调度的最小单位，而coroutine则是用户态的 "线程"。线程的
+- coroutine又称微线程，协程，纤程等。原因是，线程是操作系统调度的最小单位，而coroutine则是用户态的 "线程"。线程的
 创建，销毁，切换代价非常的高。通过线程池无法解决c10k问题，而 I/O多路复用+回调的方式写起来又比较反人类，所以有协程
 这么一个东西。在用户态，以同步的方式写异步。通过某些关键字主动让出执行权限，而后等到 I/O 事件准备好时，再切换回来。
 
@@ -122,7 +122,7 @@ DATA    runtime·mainPC+0(SB)/8,$runtime·main(SB)
 
 所以有了Go这种，在语言层面实现异步的方式(gevent其实与此十分类似)。
 
-6. `newproc` 执行 `systemstack` 函数。这个函数的作用是在系统栈中调用给定的函数 fn。看他的注释：
+- `newproc` 执行 `systemstack` 函数。这个函数的作用是在系统栈中调用给定的函数 fn。看他的注释：
 
 ```go
 // systemstack runs fn on a system stack.
@@ -151,7 +151,7 @@ func systemstack(fn func())
 而 `newproc` 给 `systemstack` 传的参数便是 `newproc1`。而 `newproc1` 做的事情就是新建一个Goroutine丢到队列里。而执行的fn
 就是 `runtime.mainPC`，就是 `runtime.main`
 
-7. 接下来读到 `runtime.main`，没多远就执行了一个
+- 接下来读到 `runtime.main`，没多远就执行了一个
 
 ```go
 151     systemstack(func() {                                                                         
@@ -163,12 +163,12 @@ func systemstack(fn func())
 
 然后执行
 
-- `runtime_init`。这个是动态生成的。
-- `gcenable` 启动gc
-- `main_init` 动态生成的。
-- `main_main` 就是我们 `main` 包里的main函数了。
-- 通过for循环确保 `&runningPanicDefers` 为0才退出。
-- `exit` 退出。
+    - `runtime_init`。这个是动态生成的。
+    - `gcenable` 启动gc
+    - `main_init` 动态生成的。
+    - `main_main` 就是我们 `main` 包里的main函数了。
+    - 通过for循环确保 `&runningPanicDefers` 为0才退出。
+    - `exit` 退出。
 
 > `_init` 的函数都是动态生成的，顺序与 `import` 顺序不一定一致，但是被依赖的包的init完了才会init当前文件。
 
@@ -178,32 +178,32 @@ func systemstack(fn func())
 
 --------------------------------------------------------------------------------------------------------------
 
-8. tcmalloc. tcmalloc是 `thread cache malloc` 的简写，看完之后暗自觉得，大神就是大神。。。设计非常漂亮。
+- tcmalloc. tcmalloc是 `thread cache malloc` 的简写，看完之后暗自觉得，大神就是大神。。。设计非常漂亮。
 
-- https://github.com/gperftools/gperftools
-- https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Thread-caching_malloc_(tcmalloc)
+    - https://github.com/gperftools/gperftools
+    - https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Thread-caching_malloc_(tcmalloc)
 
-9. `schedinit` 里有整个调度器初始化的代码：
+- `schedinit` 里有整个调度器初始化的代码：
 
 https://github.com/jiajunhuang/go/blob/67a58c5a2401e89fd4f688e8f70fd3be9506cea5/src/runtime/proc.go#L508
 
-10. `findrunnable` 中实现了work stealing:
+- `findrunnable` 中实现了work stealing:
 
-- 检查是否处于GC态
-- 检查本地有没有可执行的G
-- 检查全局队列有没有可执行的G
-- 检查网络I/O有没有可以恢复执行的G
-- 去别的队列里偷
-- 还是没有，就把自己挂起
+    - 检查是否处于GC态
+    - 检查本地有没有可执行的G
+    - 检查全局队列有没有可执行的G
+    - 检查网络I/O有没有可以恢复执行的G
+    - 去别的队列里偷
+    - 还是没有，就把自己挂起
 
-11. runtime里最重要的几个文件：
+- runtime里最重要的几个文件：
 
-- `runtime1.go` 初始化时的检测
-- `runtime2.go` 初始化等
-- `proc.go` 调度，work stealing等
-- `mheap.go` 和 `malloc.go` 内存分配相关实现
+    - `runtime1.go` 初始化时的检测
+    - `runtime2.go` 初始化等
+    - `proc.go` 调度，work stealing等
+    - `mheap.go` 和 `malloc.go` 内存分配相关实现
 
-12. 如何实现协程？可以看看我的这个项目：
+- 如何实现协程？可以看看我的这个项目：
 
 https://github.com/jiajunhuang/storm
 
