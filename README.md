@@ -7,6 +7,7 @@
 ## 目录
 
 - 2018/02/24 - [Redis源码阅读一：sds](https://jiajunhuang.com/articles/2018_02_24-redis_source_code_sds.md.html)
+- 2018/02/24 - [Redis源码阅读三：哈希表](https://jiajunhuang.com/articles/2018_02_24-redis_source_code_hash_table.md.html)
 - 2018/02/24 - [Redis源码阅读二：双链表](https://jiajunhuang.com/articles/2018_02_24-redis_source_code_doubly_linked_list.md.html)
 - 2018/02/02 - [Golang runtime 源码分析](https://jiajunhuang.com/articles/2018_02_02-golang_runtime.md.html)
 - 2018/01/31 - [Golang的一些坑](https://jiajunhuang.com/articles/2018_01_31-golang_traps.md.html)
