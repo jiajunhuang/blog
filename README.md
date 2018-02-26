@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/02/26 - [软件开发之禅---大事化小，各个击破](https://jiajunhuang.com/articles/2018_02_26-zen_of_dev.md.html)
 - 2018/02/25 - [程序员的自我修养：链接，装载与库 阅读笔记](https://jiajunhuang.com/articles/2018_02_25-linker_loader.md.html)
 - 2018/02/24 - [Redis源码阅读一：sds](https://jiajunhuang.com/articles/2018_02_24-redis_source_code_sds.md.html)
 - 2018/02/24 - [Redis源码阅读三：哈希表](https://jiajunhuang.com/articles/2018_02_24-redis_source_code_hash_table.md.html)
