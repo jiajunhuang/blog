@@ -23,6 +23,10 @@
 - [obito](https://github.com/jiajunhuang/obito): 开箱即用的iOS推送服务
 - [storm](https://github.com/jiajunhuang/storm): class-based view的高性能异步web框架
 - [toq](https://github.com/jiajunhuang/toq): 分布式任务队列
+- [cup](https://github.com/jiajunhuang/cup): 容器/container
+- [yakv](https://github.com/jiajunhuang/yakv): K-V服务器
+
+更多请见：https://github.com/jiajunhuang?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=
 
 ## 我的联系方式:
 
