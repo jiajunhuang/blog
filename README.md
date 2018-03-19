@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/03/19 - [Prometheus 数据类型](https://jiajunhuang.com/articles/2018_03_19-prometheus.md.html)
 - 2018/03/16 - [Gin源码阅读](https://jiajunhuang.com/articles/2018_03_16-gin_source_code.md.html)
 - 2018/03/10 - [作为面试官得到的经验](https://jiajunhuang.com/articles/2018_03_10-interview.md.html)
 - 2018/03/09 - [自己写一个容器](https://jiajunhuang.com/articles/2018_03_09-write_you_a_container.md.html)
