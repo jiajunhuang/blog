@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/04/10 - [Golang和Thrift](https://jiajunhuang.com/articles/2018_04_10-golang_thrift.md.html)
 - 2018/04/05 - [折腾Kubernetes](https://jiajunhuang.com/articles/2018_04_05-kubernetes.md.html)
 - 2018/04/03 - [协程(coroutine)](https://jiajunhuang.com/articles/2018_04_03-coroutine.md.html)
 - 2018/03/29 - [goroutine 切换的时候发生了什么？](https://jiajunhuang.com/articles/2018_03_29-goroutine_schedule.md.html)
