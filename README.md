@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/04/12 - [容器时代的日志处理](https://jiajunhuang.com/articles/2018_04_12-docker_logging.md.html)
 - 2018/04/10 - [Golang和Thrift](https://jiajunhuang.com/articles/2018_04_10-golang_thrift.md.html)
 - 2018/04/05 - [折腾Kubernetes](https://jiajunhuang.com/articles/2018_04_05-kubernetes.md.html)
 - 2018/04/03 - [协程(coroutine)](https://jiajunhuang.com/articles/2018_04_03-coroutine.md.html)
