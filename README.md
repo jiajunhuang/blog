@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/05/17 - [High Performance MySQL阅读笔记](https://jiajunhuang.com/articles/2018_05_17-high_performance_mysql.md.html)
 - 2018/05/15 - [MySQL EXPLAIN中的filesort是什么？](https://jiajunhuang.com/articles/2018_05_15-mysql_filesort.md.html)
 - 2018/05/13 - [数据库索引设计与优化](https://jiajunhuang.com/articles/2018_05_13-mysql_index.md.html)
 - 2018/05/08 - [如何调试？](https://jiajunhuang.com/articles/2018_05_08-how_to_debug.md.html)
