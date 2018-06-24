@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/06/24 - [Linux低电量自动关机](https://jiajunhuang.com/articles/2018_06_24-linux_shutdown_when_bat_is_low.md.html)
 - 2018/06/15 - [CGO简明教程](https://jiajunhuang.com/articles/2018_06_15-cgo.md.html)
 - 2018/05/22 - [求值策略：Applicative Order vs Normal Order](https://jiajunhuang.com/articles/2018_05_22-evaluation_strategy.md.html)
 - 2018/05/17 - [High Performance MySQL阅读笔记](https://jiajunhuang.com/articles/2018_05_17-high_performance_mysql.md.html)
