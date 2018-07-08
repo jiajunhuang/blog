@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/07/08 - [设计一个分布式块存储](https://jiajunhuang.com/articles/2018_07_08-design_a_chunked_distributed_file_system.md.html)
 - 2018/06/24 - [Linux低电量自动关机](https://jiajunhuang.com/articles/2018_06_24-linux_shutdown_when_bat_is_low.md.html)
 - 2018/06/15 - [CGO简明教程](https://jiajunhuang.com/articles/2018_06_15-cgo.md.html)
 - 2018/05/22 - [求值策略：Applicative Order vs Normal Order](https://jiajunhuang.com/articles/2018_05_22-evaluation_strategy.md.html)
