@@ -25,6 +25,7 @@
 - [toq](https://github.com/jiajunhuang/toq): 分布式任务队列
 - [cup](https://github.com/jiajunhuang/cup): 容器/container
 - [yakv](https://github.com/jiajunhuang/yakv): K-V服务器
+- [hfs](https://github.com/jiajunhuang/hfs): 分布式块文件系统
 
 更多请见[这里](https://github.com/jiajunhuang?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=)
 
