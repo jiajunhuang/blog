@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/07/22 - [我心目中的配置中心应该怎么做？](https://jiajunhuang.com/articles/2018_07_22-config_center.md.html)
 - 2018/07/18 - [设计一个HTTP网关](https://jiajunhuang.com/articles/2018_07_18-design_a_gateway.md.html)
 - 2018/07/08 - [设计一个分布式块存储](https://jiajunhuang.com/articles/2018_07_08-design_a_chunked_distributed_file_system.md.html)
 - 2018/06/24 - [Linux低电量自动关机](https://jiajunhuang.com/articles/2018_06_24-linux_shutdown_when_bat_is_low.md.html)
