@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/08/12 - [Python dataclass 源码阅读](https://jiajunhuang.com/articles/2018_08_12-python_dataclasses.md.html)
 - 2018/08/08 - [gRPC-gateway 源码阅读](https://jiajunhuang.com/articles/2018_08_08-grpc_gateway_source_code.md.html)
 - 2018/08/04 - [如何阅读源代码](https://jiajunhuang.com/articles/2018_08_04-how_to_read_source_code.md.html)
 - 2018/07/22 - [我心目中的配置中心应该怎么做？](https://jiajunhuang.com/articles/2018_07_22-config_center.md.html)
