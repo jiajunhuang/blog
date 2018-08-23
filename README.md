@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/08/23 - [Golang defer中修改返回值](https://jiajunhuang.com/articles/2018_08_23-go_defer_named_return_values.md.html)
 - 2018/08/12 - [Python dataclass 源码阅读](https://jiajunhuang.com/articles/2018_08_12-python_dataclasses.md.html)
 - 2018/08/08 - [gRPC-gateway 源码阅读](https://jiajunhuang.com/articles/2018_08_08-grpc_gateway_source_code.md.html)
 - 2018/08/04 - [如何阅读源代码](https://jiajunhuang.com/articles/2018_08_04-how_to_read_source_code.md.html)
