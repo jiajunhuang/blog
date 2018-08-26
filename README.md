@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2018/08/26 - [一个血气方刚的故事-运营究竟在做什么？](https://jiajunhuang.com/articles/2018_08_26-about_traffic.md.html)
 - 2018/08/24 - [Python中实现单例模式的n种方式和原理](https://jiajunhuang.com/articles/2018_08_24-python_singleton.md.html)
 - 2018/08/23 - [Golang defer中修改返回值](https://jiajunhuang.com/articles/2018_08_23-go_defer_named_return_values.md.html)
 - 2018/08/12 - [Python dataclass 源码阅读](https://jiajunhuang.com/articles/2018_08_12-python_dataclasses.md.html)
