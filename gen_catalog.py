@@ -70,20 +70,3 @@ if __name__ == "__main__":
         readme_footers,
         "articles",
     )
-
-    # leetcode.md
-    leetcode_headers = [
-        "# Leetcode in Golang, Python",
-    ]
-    leetcode_footers = [
-        "\n",
-        "--------------------------------------------",
-        "禁止转载",
-    ]
-    gen_catalog(
-        "leetcode",
-        "./leetcode/README.md",
-        leetcode_headers,
-        leetcode_footers,
-        "."
-    )
