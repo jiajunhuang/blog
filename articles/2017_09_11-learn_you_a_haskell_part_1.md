@@ -1,4 +1,4 @@
-# 一步一步学Haskell（一）：从递归说起
+# Haskell简明教程（一）：从递归说起
 
 > 这一系列是我学习 `Learn You a Haskell For Great Good` 之后，总结，编写的学习笔记。
 

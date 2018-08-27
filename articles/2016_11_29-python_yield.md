@@ -1,4 +1,4 @@
-# Python的yield关键字
+# Python的yield关键字有什么作用？
 
 我是从 `python 2.7` 开始接触的，要说python的各种历史，我还真的说不出来。
 不过好在有 `peps` 记录了python的发展和进化。今天我们来挖挖 `yield` 的

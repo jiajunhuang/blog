@@ -1,4 +1,4 @@
-# Golang runtime 源码分析
+# Golang runtime 源码阅读
 
 > 只想简单地写写，就不写的太复杂了。注释都在: https://github.com/jiajunhuang/go
 

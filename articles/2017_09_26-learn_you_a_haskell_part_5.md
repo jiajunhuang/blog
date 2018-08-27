@@ -1,4 +1,4 @@
-# 一步一步学Haskell（五）：处理JSON
+# Haskell简明教程（五）：处理JSON
 
 > 这一系列是我学习 `Learn You a Haskell For Great Good` 之后，总结，编写的学习笔记。
 

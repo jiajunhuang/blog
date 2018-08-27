@@ -1,4 +1,4 @@
-# Golang log库 源码实现
+# Golang log库 源码阅读
 
 Golang的log库。。。还是太简单，简单瞄了一下实现，差不多就是这样：
 
