@@ -4,6 +4,10 @@
 
 - [关于我](articles/aboutme.md)
 
+- 微信联系我
+
+![](./articles/img/wechat_qrcode.png)
+
 ## 目录
 
 - 2018/08/26 - [一个血气方刚的故事-运营究竟在做什么？](https://jiajunhuang.com/articles/2018_08_26-about_traffic.md.html)
