@@ -10,6 +10,7 @@
 
 ## 目录
 
+- 2018/08/28 - [macOS ansible 遇到 rsync: --chown=www-data: unknown option](https://jiajunhuang.com/articles/2018_08_28-mac_rsync_unknow_option.md.html)
 - 2018/08/28 - [How to implement fork syscall in Golang?](https://jiajunhuang.com/articles/2018_08_28-how_does_golang_implement_fork_syscall.md.html)
 - 2018/08/26 - [关于运营的思考-运营要怎么做？](https://jiajunhuang.com/articles/2018_08_26-about_traffic.md.html)
 - 2018/08/24 - [Python中实现单例模式的n种方式和原理](https://jiajunhuang.com/articles/2018_08_24-python_singleton.md.html)
