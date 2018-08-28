@@ -10,7 +10,7 @@
 
 ## 目录
 
-- 2018/08/28 - [How to implement `fork` syscall in Golang?](https://jiajunhuang.com/articles/2018_08_28-how_does_golang_implement_fork_syscall.md.html)
+- 2018/08/28 - [How to implement fork syscall in Golang?](https://jiajunhuang.com/articles/2018_08_28-how_does_golang_implement_fork_syscall.md.html)
 - 2018/08/26 - [关于运营的思考-运营要怎么做？](https://jiajunhuang.com/articles/2018_08_26-about_traffic.md.html)
 - 2018/08/24 - [Python中实现单例模式的n种方式和原理](https://jiajunhuang.com/articles/2018_08_24-python_singleton.md.html)
 - 2018/08/23 - [Golang defer中修改返回值](https://jiajunhuang.com/articles/2018_08_23-go_defer_named_return_values.md.html)
