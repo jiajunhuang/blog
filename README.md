@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2018/09/01 - [为什么我选择放弃运营微信公众号？](https://jiajunhuang.com/articles/2018_09_01-why_i_give_up_wechat_public_account.md.html)
+- 2018/09/01 - [Vim打开很慢，怎么找出最慢的插件？怎么解决？](https://jiajunhuang.com/articles/2018_09_01-vim_speed_up.md.html)
 - 2018/09/01 - [ArchLinux 怎么降级 package ？](https://jiajunhuang.com/articles/2018_09_01-archlinux_downgrade_package.md.html)
 - 2018/08/29 - [Web后端工程师进阶指南(2018)](https://jiajunhuang.com/articles/2018_08_29-become_a_better_programmer.md.html)
 - 2018/08/28 - [macOS ansible 遇到 rsync: --chown=www-data: unknown option](https://jiajunhuang.com/articles/2018_08_28-mac_rsync_unknow_option.md.html)
