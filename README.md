@@ -2,11 +2,11 @@
 
 会当凌绝顶，一览众山小。
 
-- [关于我](articles/aboutme.md)
+- [关于我](https://jiajunhuang.com/aboutme)
 
-- 微信联系我
+- 欢迎订阅Telegram Channel：分享后端相关的精选文章
 
-![](./articles/img/wechat_qrcode.png)
+https://t.me/jiajunhuangcom
 
 ## 目录
 
