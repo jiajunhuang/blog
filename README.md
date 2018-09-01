@@ -10,6 +10,7 @@
 
 ## 目录
 
+- 2018/09/01 - [为什么我选择放弃运营微信公众号？](https://jiajunhuang.com/articles/2018_09_01-why_i_give_up_wechat_public_account.md.html)
 - 2018/08/29 - [Web后端工程师进阶指南(2018)](https://jiajunhuang.com/articles/2018_08_29-become_a_better_programmer.md.html)
 - 2018/08/28 - [macOS ansible 遇到 rsync: --chown=www-data: unknown option](https://jiajunhuang.com/articles/2018_08_28-mac_rsync_unknow_option.md.html)
 - 2018/08/28 - [How to implement fork syscall in Golang?](https://jiajunhuang.com/articles/2018_08_28-how_does_golang_implement_fork_syscall.md.html)
