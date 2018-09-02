@@ -164,8 +164,29 @@ class URLShare(Base, BaseMixin):
     comment = Column(String(512))
 ```
 
-当然上面的代码里 `config.py` 里的内容我就不贴出来了，毕竟为了简单方便，我直接吧token和数据库URL写到了代码里，在实际
-工作上，这是 **不好** 的习惯，请不要学，谢谢。
+~~当然上面的代码里 `config.py` 里的内容我就不贴出来了，毕竟为了简单方便，我直接吧token和数据库URL写到了代码里，在实际
+工作上，这是 **不好** 的习惯，请不要学，谢谢。~~ 有网友提醒说其实把 `config.py` 的涉密内容删掉就可以了，也对：
+
+```python
+class Config:
+    def __init__(self):
+        self.SQLALCHEMY_DB_URI = "sqlite:////tmp/tgbot.db"  # 举个例子，这样。还是要修改成具体你的SQLite文件的路径
+        self.SQLALCHEMY_ECHO = False
+        self.TGBOTTOKEN = "你从BotFather那里申请来的token"
+
+
+config = Config()
+```
+
+在第一次使用之前，需要初始化数据库schema，如果不想生成migration的话，就配置好 `config.py` 之后保存一个 `gen.py`：
+
+```python
+from models import Base, engine
+
+Base.metadata.create_all(engine)
+```
+
+执行一下就可以了。
 
 数据库用的是SQLite。为啥不用MySQL或者PG？答：为啥要用大炮打蚊子？而且，SQLite没有你想象中的那么弱。
 
