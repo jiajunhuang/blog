@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/09/03 - [Go Module 简明教程](https://jiajunhuang.com/articles/2018_09_03-go_module.md.html)
 - 2018/09/02 - [写了一个Telegram Bot：自动化分享高质量内容](https://jiajunhuang.com/articles/2018_09_02-write_a_tgbot.md.html)
 - 2018/09/01 - [为什么我选择放弃运营微信公众号？](https://jiajunhuang.com/articles/2018_09_01-why_i_give_up_wechat_public_account.md.html)
 - 2018/09/01 - [Vim打开很慢，怎么找出最慢的插件？怎么解决？](https://jiajunhuang.com/articles/2018_09_01-vim_speed_up.md.html)
