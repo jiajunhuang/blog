@@ -10,8 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/09/07 - [Go的custom import path](https://jiajunhuang.com/articles/2018_09_07-go_custom_import_path.md.html)
 - 2018/09/06 - [如何挖掘二级子域名？](https://jiajunhuang.com/articles/2018_09_06-how_to_dig_subdomain.md.html)
-- 2018/09/06 - [Go的custom import path](https://jiajunhuang.com/articles/2018_09_06-go_custom_import_path.md.html)
 - 2018/09/03 - [Go Module 简明教程](https://jiajunhuang.com/articles/2018_09_03-go_module.md.html)
 - 2018/09/02 - [写了一个Telegram Bot：自动化分享高质量内容](https://jiajunhuang.com/articles/2018_09_02-write_a_tgbot.md.html)
 - 2018/09/01 - [为什么我选择放弃运营微信公众号？](https://jiajunhuang.com/articles/2018_09_01-why_i_give_up_wechat_public_account.md.html)
