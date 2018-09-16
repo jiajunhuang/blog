@@ -21,7 +21,7 @@
 将整个软件区分为两块，一个是master，中文常叫做主，另一个是slave，中文常叫做从。例如：Nginx就使用了这种模式，因此master
 可以方便的管理多个slave。
 
-![master slave pattern](./img/software_arch_master_slave.ong)
+![master slave pattern](./img/software_arch_master_slave.png)
 
 ## 管道模式
 
