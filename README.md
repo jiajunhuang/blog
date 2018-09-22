@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/09/22 - [To B(usiness) 和 To C(ustomer)](https://jiajunhuang.com/articles/2018_09_22-to_b_to_c.md.html)
 - 2018/09/16 - [Cookie 中的secure和httponly属性](https://jiajunhuang.com/articles/2018_09_16-cookie_secure_httponly.md.html)
 - 2018/09/16 - [常见的软件架构套路](https://jiajunhuang.com/articles/2018_09_16-common_software_archtecture_pattern.md.html)
 - 2018/09/10 - [Google Ads使用体验](https://jiajunhuang.com/articles/2018_09_10-google_ads.md.html)
