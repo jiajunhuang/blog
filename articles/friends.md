@@ -4,3 +4,4 @@
 - [敬维的博客](https://jingwei.link/)
 - [莫回首的博客](https://lailin.xyz/)
 - [Yiran的博客](https://zdyxry.github.io/)
+- [HopeHook's Blog](http://hopehook.com/)
