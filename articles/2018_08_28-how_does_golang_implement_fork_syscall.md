@@ -1,5 +1,7 @@
 # How to implement fork syscall in Golang?
 
+[中文版](https://jiajunhuang.com/articles/2018_03_08-golang_fork.md.html)
+
 ref: https://github.com/moby/moby/tree/master/pkg/reexec
 
 We don't have a `fork` syscall in Golang, we have:

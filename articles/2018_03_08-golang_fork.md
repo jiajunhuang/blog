@@ -1,5 +1,7 @@
 # Golang中实现典型的fork调用
 
+[English Version](https://jiajunhuang.com/articles/2018_08_28-how_does_golang_implement_fork_syscall.md.html)
+
 https://github.com/moby/moby/tree/master/pkg/reexec
 
 Golang中没有提供 `fork` 调用，只有
