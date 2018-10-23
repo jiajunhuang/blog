@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/10/23 - [高性能MySQL笔记第一章](https://jiajunhuang.com/articles/2018_10_23-high_performance_mysql_chap1.md.html)
 - 2018/10/21 - [面试的一些技巧](https://jiajunhuang.com/articles/2018_10_21-interview_techniques.md.html)
 - 2018/10/13 - [HTTP/2 简介](https://jiajunhuang.com/articles/2018_10_13-http2.md.html)
 - 2018/09/24 - [独立运营博客一年的一些数据分享](https://jiajunhuang.com/articles/2018_09_24-blogging_one_year.md.html)
