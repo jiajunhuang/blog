@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/02 - [常见的索引方式](https://jiajunhuang.com/articles/2018_11_02-index.md.html)
 - 2018/11/01 - [Golang 实践经验](https://jiajunhuang.com/articles/2018_11_01-golang_practice.md.html)
 - 2018/10/23 - [高性能MySQL笔记第一章](https://jiajunhuang.com/articles/2018_10_23-high_performance_mysql_chap1.md.html)
 - 2018/10/21 - [面试的一些技巧](https://jiajunhuang.com/articles/2018_10_21-interview_techniques.md.html)
