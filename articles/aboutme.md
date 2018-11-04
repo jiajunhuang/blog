@@ -17,7 +17,6 @@
 - 邮件: `gansteed(at, you know)gmail.com`
 - Github: https://github.com/jiajunhuang
 - Telegram Channel: https://t.me/jiajunhuangcom
-- 微信：![wechat](https://jiajunhuang.com/static/img/wechat.jpg)
 
 ## 个人作品
 
