@@ -10,11 +10,11 @@
     - name: sync articles
       synchronize:
         src: ./articles/
-        dest: /data/blog/articles/
+        dest: /data/newblog/articles/
         recursive: yes
         delete: yes
         rsync_opts:
           - "--chown=www-data"
 
     - name: reload blog process
-      shell: supervisorctl update && supervisorctl restart blog
+      shell: supervisorctl update && supervisorctl restart newblog
