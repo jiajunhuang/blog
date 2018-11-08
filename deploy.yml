@@ -16,5 +16,5 @@
         rsync_opts:
           - "--chown=www-data"
 
-    - name: reload blog process
-      shell: supervisorctl update && supervisorctl restart newblog
+    - name: reload newblog process
+      shell: supervisorctl update && supervisorctl restart newblog-web
