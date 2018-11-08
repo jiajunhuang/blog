@@ -10,7 +10,7 @@
     - name: sync articles
       synchronize:
         src: ./articles/
-        dest: /data/newblog/articles/
+        dest: /data/newblog/code/articles/
         recursive: yes
         delete: yes
         rsync_opts:
