@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/09 - [把网站去掉CSS之后](https://jiajunhuang.com/articles/2018_11_09-drop_css.md.html)
 - 2018/11/07 - [处理并发的方式](https://jiajunhuang.com/articles/2018_11_07-concurrency.md.html)
 - 2018/11/02 - [常见的索引方式](https://jiajunhuang.com/articles/2018_11_02-index.md.html)
 - 2018/11/01 - [Golang 实践经验](https://jiajunhuang.com/articles/2018_11_01-golang_practice.md.html)
