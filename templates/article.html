@@ -1,28 +1,13 @@
 {% extends "base.html" %}
 
 {% block resource %}
-<link rel="stylesheet" type="text/css" href="/static/style.min.css" />
-<style>
-.codehilite {
-    width: auto;
-    overflow-x: auto;
-}
-
-@media (min-width: 768px) {
-    img {
-        max-width: 768px;
-    }
-}
-@media (max-width: 768px) {
-    img {
-        max-width: 100%;
-    }
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/static/styles.min.css" />
 {% endblock %}
 
 {% block content %}
 {{ content | safe }}
+
+<br />
 
 <div id="disqus_thread"></div>
 <script>
