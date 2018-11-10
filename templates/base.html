@@ -1,0 +1,43 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>{% if title %} {{ title }} - {% endif %}Jiajun的编程随想</title>
+        {% block resource %}
+        {% endblock %}
+        <!-- Google Adsense -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6941340661228088",
+            enable_page_level_ads: true
+        });
+        </script>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79619009-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+
+            gtag('config', 'UA-79619009-1');
+        </script>
+    </head>
+    <body style="word-wrap:break-word;font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;">
+        <h3 style="display:inline-block"><a href="/">首页</a></h3>
+        <h3 style="display:inline-block">/ </h3>
+        <h3 style="display:inline-block"><a href="/friends">友情链接</a></h3>
+        <h3 style="display:inline-block">/ </h3>
+        <h3 style="display:inline-block"><a href="https://github.com/jiajunhuang">我的Github</a></h3>
+        <h3 style="display:inline-block">/ </h3>
+        <h3 style="display:inline-block"><a href="/aboutme">关于我</a></h3>
+
+        <hr />
+
+        {% block content %}
+        {% endblock %}
+
+        <br/>
+    </body>
+</html>

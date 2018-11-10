@@ -7,14 +7,20 @@
     - name: commit and push to github
       local_action: shell git add . && git commit -m "sync at `date`" && `command -v proxychains 2>&1` git push || true
 
-    - name: sync articles
+    - name: sync code & articles
       synchronize:
-        src: ./articles/
-        dest: /data/newblog/code/articles/
+        src: ./
+        dest: /data/blog/code/
         recursive: yes
         delete: yes
         rsync_opts:
           - "--chown=www-data"
+          - "--exclude=.git"
 
-    - name: reload newblog process
-      shell: supervisorctl update && supervisorctl restart newblog-web
+    - name: pip install -r requirements.txt
+      shell: /data/blog/env/bin/pip install -r requirements.txt
+      args:
+        chdir: /data/blog/code/
+
+    - name: reload blog process
+      shell: supervisorctl update && supervisorctl restart blog:*

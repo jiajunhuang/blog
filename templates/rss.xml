@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Jiajun的编程随想</title>
+        <link>https://jiajunhuang.com</link>
+        <description>Jiajun的编程随想</description>
+
+        {% for title, date, filename in articles %}
+            <item>
+                <title>{{ title }}</title>
+                <link>https://jiajunhuang.com/articles/{{ filename }}.html</link>
+                <description>{{ title }}</description>
+            </item>
+        {% endfor %}
+
+    </channel>
+</rss>
+

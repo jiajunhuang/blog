@@ -1,8 +1,4 @@
-_site
-.sass-cache
-secret.txt
-__pycache__
-*.py[co]
-tags
-hosts
+/articles/
+__pycache__/
+*.pyc
 *.retry

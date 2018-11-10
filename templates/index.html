@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    {% for title, date, filename in articles %}
+        <li style="font-size: 1.2rem;"><a href="/articles/{{filename}}.html">{{ title }} - {{ date }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
