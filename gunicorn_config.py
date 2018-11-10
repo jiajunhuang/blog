@@ -6,4 +6,4 @@ loglevel = 'info'
 capture_output = True
 errorlog = "-"
 
-bind = "0.0.0.0:10010"
+bind = "127.0.0.1:10010"
