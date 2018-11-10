@@ -23,21 +23,42 @@
 
             gtag('config', 'UA-79619009-1');
         </script>
+        <style>
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            word-wrap: break-word;
+            font-family: Monoca, Consolas, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        }
+
+        .header h3 {
+            display: inline-block;
+        }
+        </style>
     </head>
-    <body style="word-wrap:break-word;font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;">
-        <h3 style="display:inline-block"><a href="/">首页</a></h3>
-        <h3 style="display:inline-block">/ </h3>
-        <h3 style="display:inline-block"><a href="/friends">友情链接</a></h3>
-        <h3 style="display:inline-block">/ </h3>
-        <h3 style="display:inline-block"><a href="https://github.com/jiajunhuang">我的Github</a></h3>
-        <h3 style="display:inline-block">/ </h3>
-        <h3 style="display:inline-block"><a href="/aboutme">关于我</a></h3>
+    <body>
+        <div class="header">
+            <h3><a href="/">首页</a></h3>
+            <h3>/ </h3>
+            <h3><a href="/friends">友情链接</a></h3>
+            <h3>/ </h3>
+            <h3><a href="https://github.com/jiajunhuang">我的Github</a></h3>
+            <h3>/ </h3>
+            <h3><a href="/aboutme">关于我</a></h3>
+        </div>
 
         <hr />
 
-        {% block content %}
-        {% endblock %}
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
 
         <br/>
+        <div class="footer">
+            <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2018, All Rights Reserved。转载务必注明出处。</p>
+        </div>
     </body>
 </html>
