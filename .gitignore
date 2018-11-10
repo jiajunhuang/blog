@@ -1,4 +1,3 @@
-/articles/
 __pycache__/
 *.pyc
 *.retry
