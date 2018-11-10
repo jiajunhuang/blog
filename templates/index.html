@@ -3,7 +3,7 @@
 {% block content %}
 <ul>
     {% for title, date, filename in articles %}
-        <li style="font-size: 1.2rem;"><a href="/articles/{{filename}}.html">{{ title }} - {{ date }}</a></li>
+        <li style="font-size: 1.2rem;">{{ date }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}
