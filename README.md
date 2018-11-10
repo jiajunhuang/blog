@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/11 - [人生如戏，全靠演技 -- 《日常生活中的自我呈现》读后感](https://jiajunhuang.com/articles/2018_11_11-the_presentation_of_self_in_everyday_life.md.html)
 - 2018/11/10 - [数据库事务](https://jiajunhuang.com/articles/2018_11_10-transaction.md.html)
 - 2018/11/10 - [Golang的反射](https://jiajunhuang.com/articles/2018_11_10-golang_reflection.md.html)
 - 2018/11/09 - [把网站去掉CSS之后](https://jiajunhuang.com/articles/2018_11_09-drop_css.md.html)
