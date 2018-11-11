@@ -66,6 +66,9 @@ def friends():
 @app.route("/articles/<filename>")
 @handle_exception
 def article(filename):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
     filename = filename[:-5]  # remove `.html`
     title, content = read_article(filename)
     return render_template("article.html", title=title, content=content)
