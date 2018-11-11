@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jiajunhuang.com/</loc>
+        <lastmod>{% if articles %} {{ articles[0][1] }} {% endif %}</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+
+    {% for title, date, filename in articles %}
+        <url>
+            <loc>https://jiajunhuang.com/articles/{{ filename }}.html</loc>
+            <lastmod>{{ date }}</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+    {% endfor %}
+</urlset>

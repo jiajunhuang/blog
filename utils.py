@@ -1,5 +1,6 @@
 import re
 import os
+import datetime
 
 
 def load_articles(posts_dir):  # it's a little duplicate with function in `gen_catalog.py`...
@@ -15,6 +16,6 @@ def load_articles(posts_dir):  # it's a little duplicate with function in `gen_c
                 title = f.readline().strip()
                 if filename.split(".")[-1] == "md":
                     title = title.lstrip("# ")
-            articles.append((title, date, filename))
+            articles.append((title, datetime.datetime.strptime(date, "%Y/%m/%d"), filename))
 
     return articles

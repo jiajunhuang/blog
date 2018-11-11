@@ -3,7 +3,7 @@
 {% block content %}
 <ul>
     {% for title, date, filename in articles %}
-        <li>{{ date }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
+        <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

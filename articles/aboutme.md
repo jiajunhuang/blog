@@ -10,7 +10,7 @@
 - [一步一步学习Haskell](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
 - [Web开发简介](https://jiajunhuang.com/articles/2017_10_19-web_dev_series.md.html)
 
-更多的文章请访问 [主页](https://jiajunhuang.com/)
+更多的文章请访问 [主页](https://jiajunhuang.com/)。此外还可以[订阅RSS](https://jiajunhuang.com/rss)。
 
 ## 我的联系方式:
 

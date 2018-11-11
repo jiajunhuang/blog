@@ -1,5 +1,4 @@
 import functools
-import re
 import os
 
 from flask import (
@@ -95,5 +94,12 @@ def favicon():
 @app.route("/rss")
 def rss():
     response = make_response(render_template("rss.xml", articles=articles))
+    response.headers['Content-Type'] = 'application/xml'
+    return response
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    response = make_response(render_template("sitemap.xml", articles=articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
