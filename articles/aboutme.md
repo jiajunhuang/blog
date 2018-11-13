@@ -10,13 +10,18 @@
 - [一步一步学习Haskell](https://jiajunhuang.com/articles/2017_09_11-learn_you_a_haskell_part_1.md.html)
 - [Web开发简介](https://jiajunhuang.com/articles/2017_10_19-web_dev_series.md.html)
 
-更多的文章请访问 [主页](https://jiajunhuang.com/)。此外还可以[订阅RSS](https://jiajunhuang.com/rss)。
+更多的文章请访问 [主页](https://jiajunhuang.com/)。
+
+## 订阅博客
+
+- [订阅RSS](https://jiajunhuang.com/rss)
+- [订阅Telegram Channel](https://t.me/jiajunhuangcom)
 
 ## 我的联系方式:
 
 - 邮件: `gansteed(at, you know)gmail.com`
 - Github: https://github.com/jiajunhuang
-- Telegram Channel: https://t.me/jiajunhuangcom
+- Telegram: https://t.me/jiajunhuang
 
 ## 个人作品
 
@@ -26,7 +31,6 @@
 - [storm](https://github.com/jiajunhuang/storm): class-based view的高性能异步web框架
 - [toq](https://github.com/jiajunhuang/toq): 分布式任务队列
 - [cup](https://github.com/jiajunhuang/cup): 容器/container
-- [yakv](https://github.com/jiajunhuang/yakv): K-V服务器
 - [hfs](https://github.com/jiajunhuang/hfs): 分布式块文件系统
 
 更多的作品请访问 [我的Github](https://github.com/jiajunhuang?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=)
