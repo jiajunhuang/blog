@@ -28,6 +28,8 @@ func XXXHandler() {
 所以正确的方法应该是，遵循MVC。把数据库操作封装到M里，例如，model层这样写：
 
 ```go
+var db sql.DB // 不暴露db出去，把db限制在model这个包里
+
 type User struct{}
 
 func GetUserByID(id uint32) (*User, error) {
