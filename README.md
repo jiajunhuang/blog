@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/15 - [避免全局变量](https://jiajunhuang.com/articles/2018_11_15-avoid_global_states.md.html)
 - 2018/11/13 - [Go的unsafe包](https://jiajunhuang.com/articles/2018_11_13-golang_package_unsafe.md.html)
 - 2018/11/12 - [Golang中实现禁止拷贝](https://jiajunhuang.com/articles/2018_11_12-golang_nocopy.md.html)
 - 2018/11/11 - [人生如戏，全靠演技 -- 《日常生活中的自我呈现》读后感](https://jiajunhuang.com/articles/2018_11_11-the_presentation_of_self_in_everyday_life.md.html)
