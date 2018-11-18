@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/16 - [Raft论文阅读笔记](https://jiajunhuang.com/articles/2018_11_16-raft.md.html)
 - 2018/11/16 - [Go访问私有变量](https://jiajunhuang.com/articles/2018_11_16-go_private_variable.md.html)
 - 2018/11/15 - [避免全局变量](https://jiajunhuang.com/articles/2018_11_15-avoid_global_states.md.html)
 - 2018/11/13 - [Go的unsafe包](https://jiajunhuang.com/articles/2018_11_13-golang_package_unsafe.md.html)
