@@ -313,7 +313,7 @@ $ curl -v -L http://127.0.0.1:9121/my-key -XPUT -d hello
 
 下图是服务端的日志输出：
 
-![raft example](./articles/img/raftexample.png)
+![raft example](./img/raftexample.png)
 
 可以看出来，顺序是先调用了 `s.proposeC <-` 然后 `received from rc.proposeC`，然后raft对消息进行处理，把它还原成函数调用，就是：
 
