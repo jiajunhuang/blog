@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/20 - [etcd源码阅读（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
 - 2018/11/18 - [虚拟机里的Ubuntu sudo时卡住](https://jiajunhuang.com/articles/2018_11_18-ubuntu_sudo_hang.md.html)
 - 2018/11/16 - [Raft论文阅读笔记](https://jiajunhuang.com/articles/2018_11_16-raft.md.html)
 - 2018/11/16 - [Go访问私有变量](https://jiajunhuang.com/articles/2018_11_16-go_private_variable.md.html)
