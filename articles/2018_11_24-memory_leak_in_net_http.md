@@ -7,6 +7,8 @@
 Recently we've get stuck with a problem that we're serving file download service in Go, but the service is killed by server because of
 [OOM](https://en.wikipedia.org/wiki/Out_of_memory), so we decide to dig out the reason.
 
+> we are: [@jiajunhuang](/), [@lailin](https://lailin.xyz/)
+
 Code in server is like this:
 
 ```go
