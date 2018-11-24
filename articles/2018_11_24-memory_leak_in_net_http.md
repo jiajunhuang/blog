@@ -170,9 +170,11 @@ func (b *Writer) Write(p []byte) (nn int, err error) {
 - Do not use Golang `net/http` to serve files
 - I've create a [PR](https://github.com/golang/go/pull/28936) to make sure server will close the connection after it write
 all the data, but I'm not sure will it be merged.
+- Write files in chunk, instead of read large files into memory
 
 -----
 
 - https://en.wikipedia.org/wiki/Out_of_memory
 - https://tools.ietf.org/html/rfc2616
 - https://github.com/golang/go/pull/28936
+- https://www.reddit.com/r/golang/comments/9zuoc5/memory_leak_in_nethttp/
