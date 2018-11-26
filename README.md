@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/11/26 - [干了这碗叔本华牌毒鸡汤 --- 《人生的智慧》](https://jiajunhuang.com/articles/2018_11_26-the_wisdom_of_life_on_human_nature.md.html)
 - 2018/11/24 - [Memory leak in net/http](https://jiajunhuang.com/articles/2018_11_24-memory_leak_in_net_http.md.html)
 - 2018/11/24 - [etcd源码阅读（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
 - 2018/11/22 - [etcd源码阅读（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
