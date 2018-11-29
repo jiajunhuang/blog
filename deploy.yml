@@ -1,4 +1,4 @@
-- hosts: linode
+- hosts: alilihk
   remote_user: root
   tasks:
     - name: generate README.md
