@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2018/12/31 - [再见，2018，你好，2019](https://jiajunhuang.com/articles/2018_12_31-bye_2018_hi_2019.md.html)
 - 2018/12/01 - [Go类型嵌套](https://jiajunhuang.com/articles/2018_12_01-go_embedding.md.html)
 - 2018/11/28 - [etcd源码阅读（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)
 - 2018/11/27 - [etcd源码阅读（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
