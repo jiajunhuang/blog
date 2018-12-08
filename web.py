@@ -49,8 +49,8 @@ def index():
     return render_template("index.html", articles=articles[:32])  # magic number here...
 
 
-@app.route("/all")
-def all():
+@app.route("/archive")
+def archive():
     return render_template("index.html", articles=articles)
 
 
