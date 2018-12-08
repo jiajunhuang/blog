@@ -4,6 +4,10 @@
 
 > https://www.youtube.com/watch?v=CBYhVcO4WgI&list=PL11qn6zM2Y3bMZdChxEqHKaCaKUjwItGL
 
+----
+
+第一课
+
 - 成功创业的四个要素：
 
     - 好的idea
@@ -21,3 +25,5 @@
 - 创业的时候必须重视用户反馈
 - focus on growth
 - 也许你需要的是一个能实现自己梦想的地方，这不一定是自己去创业
+
+----
