@@ -5,5 +5,7 @@
     {% for title, date, filename in articles %}
         <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
     {% endfor %}
+
+    <a href="/all">>>> 查看全部</a>
 </ul>
 {% endblock %}
