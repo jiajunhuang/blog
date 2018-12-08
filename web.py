@@ -56,6 +56,13 @@ def aboutme():
     return render_template("article.html", title=title, content=content)
 
 
+@app.route("/interview")
+@handle_exception
+def interview():
+    title, content = read_article("interview.md")
+    return render_template("article.html", title=title, content=content)
+
+
 @app.route("/friends")
 @handle_exception
 def friends():
