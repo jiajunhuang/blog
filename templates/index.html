@@ -6,6 +6,8 @@
         <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
     {% endfor %}
 
-    <a href="/archive">>>> 查看全部</a>
+    {% if show_all %}
+        <a href="/archive">>>> 查看全部</a>
+    {% endif %}
 </ul>
 {% endblock %}
