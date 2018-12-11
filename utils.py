@@ -3,7 +3,7 @@ import os
 import datetime
 
 
-def load_articles(posts_dir):  # it's a little duplicate with function in `gen_catalog.py`...
+def load_mds(posts_dir):  # it's a little duplicate with function in `gen_catalog.py`...
     # e.g. 2014_06_17-use_cron.rst, 2014_06_17-use_cron.md
     r = re.compile(r"(\d{4}_\d{2}_\d{2})-.+\..+")
 

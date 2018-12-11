@@ -1,10 +1,10 @@
 # coding: utf-8
 
-from utils import load_articles
+from utils import load_mds
 
 
 def gen_catalog(posts_dir, output_file, headers, footers, relative_path):
-    articles = load_articles("./articles")
+    articles = load_mds("./articles")
 
     with open(output_file, "w+") as f:
         # clear all the contents in file

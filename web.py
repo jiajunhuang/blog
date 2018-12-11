@@ -11,7 +11,7 @@ from flask import (
 import markdown
 import sentry_sdk
 
-from utils import load_articles
+from utils import load_mds
 
 
 if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice in here...
@@ -21,11 +21,20 @@ if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice 
 app = Flask(__name__)
 
 
-articles = load_articles("./articles")
+articles = load_mds("./articles")
+hackers = load_mds("./hackers")
 
 
 def read_article(filename):
-    with open("./articles/" + filename) as f:
+    return read_md("./articles", filename)
+
+
+def read_hacker(filename):
+    return read_md("./hackers", filename)
+
+
+def read_md(directory, filename):
+    with open(os.path.join(directory, filename)) as f:
         title = f.readline()
         content = title + f.read()
 
@@ -47,6 +56,11 @@ def handle_exception(func):
 @app.route("/")
 def index():
     return render_template("index.html", articles=articles[:32], show_all=True)  # magic number here...
+
+
+@app.route("/hackers")
+def hackers_index():
+    return render_template("hackers_index.html", title="独立黑客", articles=hackers)
 
 
 @app.route("/archive")
@@ -86,6 +100,17 @@ def article(filename):
     return render_template("article.html", title=title, content=content)
 
 
+@app.route("/hackers/<filename>")
+@handle_exception
+def hacker(filename):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
+    filename = filename[:-5]  # remove `.html`
+    title, content = read_hacker(filename)
+    return render_template("article.html", title=title, content=content)
+
+
 @app.route("/404")
 def not_found():
     return render_template("404.html")
@@ -94,6 +119,11 @@ def not_found():
 @app.route('/articles/img/<path:path>')
 def serve_articles_img(path):
     return send_from_directory('articles/img', path)
+
+
+@app.route('/hackers/img/<path:path>')
+def serve_hackers_img(path):
+    return send_from_directory('hackers/img', path)
 
 
 @app.route('/static/<path:path>')

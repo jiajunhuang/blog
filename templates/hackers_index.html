@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>独立黑客</h2>
+<p>独立黑客是指不依靠公司的独立开发者，这里是收集到的一些案例，希望能够给大家（也包括我自己）一些启发。</p>
+
+<ul>
+    {% for title, date, filename in articles %}
+        <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/hackers/{{filename}}.html">{{ title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
