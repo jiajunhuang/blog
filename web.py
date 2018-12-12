@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 
 articles = load_mds("./articles")
-hackers = load_mds("./hackers")
+hackers = load_mds("./hackers", title_prefix="独立黑客: ")
 
 
 def read_article(filename):
@@ -138,7 +138,8 @@ def favicon():
 
 @app.route("/rss")
 def rss():
-    response = make_response(render_template("rss.xml", articles=articles))
+    all_articles = sorted(articles + hackers, key=lambda i: (i[1], i[0], i[2]), reverse=True)
+    response = make_response(render_template("rss.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
 
