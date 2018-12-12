@@ -3,7 +3,7 @@
 from utils import load_mds
 
 
-def gen_catalog(posts_dir, output_file, headers, footers, relative_path):
+def gen_catalog(posts_dir, output_file, headers, footers):
     articles = load_mds("./articles")
 
     with open(output_file, "w+") as f:
@@ -15,12 +15,12 @@ def gen_catalog(posts_dir, output_file, headers, footers, relative_path):
             f.write("\n\n")
 
         # write catalog
-        for title, date, filename in articles:
+        for title, date, filename, path in articles:
             f.write(
-                "- {date} - [{title}](https://jiajunhuang.com/{relative_path}/{filename}.html)\n".format(
+                "- {date} - [{title}](https://jiajunhuang.com/{path}/{filename}.html)\n".format(
                     date=date.strftime("%Y/%m/%d"),
                     title=title,
-                    relative_path=relative_path,
+                    path=path,
                     filename=filename,
                 )
             )
@@ -50,5 +50,4 @@ if __name__ == "__main__":
         "./README.md",
         readme_headers,
         readme_footers,
-        "articles",
     )

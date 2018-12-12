@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 
 articles = load_mds("./articles")
-hackers = load_mds("./hackers", title_prefix="独立黑客: ")
+hackers = load_mds("./hackers", title_prefix="独立黑客: ", path="hackers")
 
 
 def read_article(filename):

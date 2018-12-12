@@ -2,8 +2,8 @@
 
 {% block content %}
 <ul>
-    {% for title, date, filename in articles %}
-        <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/articles/{{filename}}.html">{{ title }}</a></li>
+    {% for title, date, filename, path in articles %}
+    <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/{{ path }}/{{filename}}.html">{{ title }}</a></li>
     {% endfor %}
 
     {% if show_all %}

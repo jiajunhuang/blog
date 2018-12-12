@@ -5,10 +5,10 @@
         <link>https://jiajunhuang.com</link>
         <description>Jiajun的编程随想</description>
 
-        {% for title, _, filename in articles %}
+        {% for title, _, filename, path in articles %}
             <item>
                 <title>{{ title }}</title>
-                <link>https://jiajunhuang.com/articles/{{ filename }}.html</link>
+                <link>https://jiajunhuang.com/{{ path }}/{{ filename }}.html</link>
                 <description>{{ title }}</description>
             </item>
         {% endfor %}
