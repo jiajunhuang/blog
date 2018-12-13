@@ -24,3 +24,7 @@
         - `int send(int socket, char *message, int msg_len, int flags)`
         - `int recv(int socket, char *buffer, int buf_len, int flags)`
     - 最后，使用 `close` 关闭socket
+
+- 衡量网络性能的两个指标：带宽(bandwidth/throughput)，延迟(latency/delay)。
+
+![network performance](./img/network_performance.png)
