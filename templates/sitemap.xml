@@ -6,9 +6,9 @@
         <changefreq>daily</changefreq>
     </url>
 
-    {% for title, date, filename in articles %}
+    {% for title, date, filename, path in articles %}
         <url>
-            <loc>https://jiajunhuang.com/articles/{{ filename }}.html</loc>
+            <loc>https://jiajunhuang.com/{{ path }}/{{ filename }}.html</loc>
             <lastmod>{{ date }}</lastmod>
             <changefreq>monthly</changefreq>
         </url>
