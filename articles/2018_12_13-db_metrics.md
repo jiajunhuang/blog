@@ -6,17 +6,17 @@
 
 - `Slow_queries` 是慢查询的数量。具体的慢查询，还需要开慢查询日志(https://dev.mysql.com/doc/refman/5.7/en/slow-query-log.html)：
 
-    ```
-    mysql root@192.168.175.132:(none)> show variables  like '%slow_query_log%';
-    +---------------------+--------------------------------+
-    | Variable_name       | Value                          |
-    +---------------------+--------------------------------+
-    | slow_query_log      | OFF                            |
-    | slow_query_log_file | /var/lib/mysql/ubuntu-slow.log |
-    +---------------------+--------------------------------+
-    2 rows in set
-    Time: 0.017s
-    ```
+```
+mysql root@192.168.175.132:(none)> show variables  like '%slow_query_log%';
++---------------------+--------------------------------+
+| Variable_name       | Value                          |
++---------------------+--------------------------------+
+| slow_query_log      | OFF                            |
+| slow_query_log_file | /var/lib/mysql/ubuntu-slow.log |
++---------------------+--------------------------------+
+2 rows in set
+Time: 0.017s
+```
 
 - `Innodb_row_lock_current_waits` 是InnoDB当前被等待的行锁的数量
 - `Threads_connected` 和 `Threads_created` 是当前打开的线程数和总共创建的线程数
