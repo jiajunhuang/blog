@@ -28,3 +28,5 @@
 - 衡量网络性能的两个指标：带宽(bandwidth/throughput)，延迟(latency/delay)。
 
 ![network performance](./img/network_performance.png)
+
+- 网络设计者面临的五个问题：编码/解码，分帧，错误检测，可靠交付，多样性传播(access mediation)
