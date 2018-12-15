@@ -1,7 +1,5 @@
 # Y Combinator《如何创业》笔记
 
-> http://open.163.com/special/opencourse/startup.html
-
 > https://www.bilibili.com/video/av6612058/?p=2
 
 > https://www.youtube.com/watch?v=CBYhVcO4WgI&list=PL11qn6zM2Y3bMZdChxEqHKaCaKUjwItGL
@@ -86,3 +84,14 @@
 
 - 软件也是：第一印象非常重要
 - 经营产品就跟经营感情一样
+
+---
+
+第八课
+
+- MVP快速验证，快速行动, 不要嫌弃小规模生意
+- 找到第一位顾客，把顾客变成支持者，开发合适的产品
+- 与顾客交流
+    - 自己亲身当客服
+    - 主动询问已经流失的客服
+    - 社区，社交等地方
