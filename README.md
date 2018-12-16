@@ -22,7 +22,6 @@ https://t.me/jiajunhuangcom
 - 2018/11/24 - [Memory leak in net/http](https://jiajunhuang.com/articles/2018_11_24-memory_leak_in_net_http.md.html)
 - 2018/11/24 - [etcd源码阅读（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
 - 2018/11/22 - [etcd源码阅读（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
-- 2018/11/20 - [面向甩锅编程](https://jiajunhuang.com/articles/2018_11_20-works_on_me_programming.md.html)
 - 2018/11/20 - [etcd源码阅读（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
 - 2018/11/18 - [虚拟机里的Ubuntu sudo时卡住](https://jiajunhuang.com/articles/2018_11_18-ubuntu_sudo_hang.md.html)
 - 2018/11/16 - [Raft论文阅读笔记](https://jiajunhuang.com/articles/2018_11_16-raft.md.html)
