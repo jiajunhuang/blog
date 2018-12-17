@@ -30,3 +30,12 @@
 ![network performance](./img/network_performance.png)
 
 - 网络设计者面临的五个问题：编码/解码，分帧，错误检测，可靠交付，多样性传播(access mediation)
+
+- 可靠性交付：靠ACK。有两种模式：
+    - stop and wait
+
+    ![stop and wait](./img/stop_and_wait.png)
+
+    - 滑动窗口
+
+    ![sliding window](./img/sliding_window.png)
