@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2018/12/31 - [再见，2018，你好，2019](https://jiajunhuang.com/articles/2018_12_31-bye_2018_hi_2019.md.html)
+- 2018/12/22 - [Docker组件介绍（一）：runc和containerd](https://jiajunhuang.com/articles/2018_12_22-docker_components.md.html)
 - 2018/12/16 - [Prometheus MySQL Exporter源码阅读](https://jiajunhuang.com/articles/2018_12_16-prometheus_mysqld_exporter.md.html)
 - 2018/12/13 - [MySQL性能指标](https://jiajunhuang.com/articles/2018_12_13-db_metrics.md.html)
 - 2018/12/12 - [使用Dropbox来备份服务器文件](https://jiajunhuang.com/articles/2018_12_12-use_dropbox_to_backup_server.md.html)
