@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2018/12/31 - [再见，2018，你好，2019](https://jiajunhuang.com/articles/2018_12_31-bye_2018_hi_2019.md.html)
+- 2018/12/26 - [删除分区表](https://jiajunhuang.com/articles/2018_12_26-delete_disk_partition_table.md.html)
 - 2018/12/24 - [YouCompleteMe ycmd server SHUTDOWN 和 pyenv的问题](https://jiajunhuang.com/articles/2018_12_24-ycm_pyenv.md.html)
 - 2018/12/24 - [Docker组件介绍（二）：shim, docker-init和docker-proxy](https://jiajunhuang.com/articles/2018_12_24-docker_components_part2.md.html)
 - 2018/12/22 - [Docker组件介绍（一）：runc和containerd](https://jiajunhuang.com/articles/2018_12_22-docker_components.md.html)
