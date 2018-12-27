@@ -69,46 +69,46 @@ jiajun@ubuntu:~/playoverlay$
     - 最后的 `./merged/` 就是最终可以看到的overlay目录，我们在这里面操作，所有的操作都会保存在upper这个文件夹里
 - 如果我们直接删除lower2里的文件会怎样呢？
 
-    ```bash
-    jiajun@ubuntu:~/playoverlay$ tree
-    .
-    ├── lower1
-    │   └── l1.txt
-    ├── lower2
-    │   └── l2.txt
-    ├── lower3
-    │   └── l3.txt
-    ├── merged
-    │   ├── hahahahhha
-    │   ├── l2.txt
-    │   └── l3.txt
-    ├── upper
-    │   ├── hahahahhha
-    │   └── l1.txt
-    └── work
-        └── work [error opening dir]
+```bash
+jiajun@ubuntu:~/playoverlay$ tree
+.
+├── lower1
+│   └── l1.txt
+├── lower2
+│   └── l2.txt
+├── lower3
+│   └── l3.txt
+├── merged
+│   ├── hahahahhha
+│   ├── l2.txt
+│   └── l3.txt
+├── upper
+│   ├── hahahahhha
+│   └── l1.txt
+└── work
+    └── work [error opening dir]
 
-    7 directories, 8 files
-    jiajun@ubuntu:~/playoverlay$ rm lower2/l2.txt
-    jiajun@ubuntu:~/playoverlay$ tree
-    .
-    ├── lower1
-    │   └── l1.txt
-    ├── lower2
-    ├── lower3
-    │   └── l3.txt
-    ├── merged
-    │   ├── hahahahhha
-    │   └── l3.txt
-    ├── upper
-    │   ├── hahahahhha
-    │   └── l1.txt
-    └── work
-        └── work [error opening dir]
+7 directories, 8 files
+jiajun@ubuntu:~/playoverlay$ rm lower2/l2.txt
+jiajun@ubuntu:~/playoverlay$ tree
+.
+├── lower1
+│   └── l1.txt
+├── lower2
+├── lower3
+│   └── l3.txt
+├── merged
+│   ├── hahahahhha
+│   └── l3.txt
+├── upper
+│   ├── hahahahhha
+│   └── l1.txt
+└── work
+    └── work [error opening dir]
 
-    7 directories, 6 files
-    jiajun@ubuntu:~/playoverlay$
-    ```
+7 directories, 6 files
+jiajun@ubuntu:~/playoverlay$
+```
 
     当然是上边就看不到了。
 
