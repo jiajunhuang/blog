@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/01/13 - [聊一聊goroutine](https://jiajunhuang.com/articles/2019_01_13-goroutine.md.html)
 - 2019/01/12 - [使用autossh实现内网穿透](https://jiajunhuang.com/articles/2019_01_12-autossh.md.html)
 - 2019/01/07 - [Linux线程内存模型](https://jiajunhuang.com/articles/2019_01_07-linux_thread_mem_layout.md.html)
 - 2019/01/03 - [关闭手机通知，修复碎片化的生活](https://jiajunhuang.com/articles/2019_01_03-drop_notifications.md.html)
