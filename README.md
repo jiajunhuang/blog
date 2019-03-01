@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/03/03 - [读《影响力》](https://jiajunhuang.com/articles/2019_03_03-influence.md.html)
 - 2019/03/01 - [读《自控力》](https://jiajunhuang.com/articles/2019_03_01-self_control.md.html)
 - 2019/02/27 - [Containerd简明教程](https://jiajunhuang.com/articles/2019_02_27-containerd_tutorial.md.html)
 - 2019/02/26 - [软件设计套路之推拉模式](https://jiajunhuang.com/articles/2019_02_26-push_pull_system.md.html)
