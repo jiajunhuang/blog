@@ -23,6 +23,7 @@ app = Flask(__name__)
 
 articles = load_mds("./articles")
 hackers = load_mds("./hackers", title_prefix="独立黑客: ", path="hackers")
+jobs = load_mds("./jobs", path="jobs")
 
 
 def read_article(filename):
@@ -31,6 +32,9 @@ def read_article(filename):
 
 def read_hacker(filename):
     return read_md("./hackers", filename)
+
+def read_job(filename):
+    return read_md("./jobs", filename)
 
 
 def read_md(directory, filename):
@@ -61,6 +65,11 @@ def index():
 @app.route("/hackers")
 def hackers_index():
     return render_template("hackers_index.html", title="独立黑客", articles=hackers)
+
+
+@app.route("/jobs")
+def jobs_index():
+    return render_template("jobs_index.html", title="招聘", articles=jobs)
 
 
 @app.route("/archive")
@@ -101,6 +110,17 @@ def hacker(filename):
 
     filename = filename[:-5]  # remove `.html`
     title, content = read_hacker(filename)
+    return render_template("article.html", title=title, content=content)
+
+
+@app.route("/jobs/<filename>")
+@handle_exception
+def job(filename):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
+    filename = filename[:-5]  # remove `.html`
+    title, content = read_job(filename)
     return render_template("article.html", title=title, content=content)
 
 
