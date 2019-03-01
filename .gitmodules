@@ -1,0 +1,3 @@
+[submodule "jobs"]
+	path = jobs
+	url = git@github.com:jiajunhuang/jobs.git
