@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/03/12 - [一个想当然的bug](https://jiajunhuang.com/articles/2019_03_12-golang_strings_split.md.html)
 - 2019/03/06 - [读《稀缺》](https://jiajunhuang.com/articles/2019_03_06-scarcity.md.html)
 - 2019/03/03 - [读《影响力》](https://jiajunhuang.com/articles/2019_03_03-influence.md.html)
 - 2019/03/01 - [读《自控力》](https://jiajunhuang.com/articles/2019_03_01-self_control.md.html)
