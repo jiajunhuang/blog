@@ -37,3 +37,31 @@ l: []
 
 - 我想当然的以为 `"".split(",")` 的结果会是一个空list
 - go的 `fmt.Printf` 真是一个大坑，空字符串你为啥不给我打出来？`[""]` 才是正确的打印方式呀！
+
+## 解决方案
+
+使用 `%#v` 替代 `%+v`:
+
+```bash
+$ cat main.go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	l := strings.Split("", ",")
+	if len(l) > 0 {
+		fmt.Printf("l: %#v\n", l)
+	}
+}
+$ go run main.go
+l: []string{""}
+```
+
+---
+
+- https://github.com/golang/go/issues/11139
+- https://golang.org/pkg/fmt/?m=all#hdr-Printing
