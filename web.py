@@ -13,25 +13,18 @@ import sentry_sdk
 
 from utils import load_mds
 
-
 if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice in here...
     sentry_sdk.init(os.getenv("SENTRY_DSN"))
 
-
 app = Flask(__name__)
 
-
 articles = load_mds("./articles")
-hackers = load_mds("./hackers", title_prefix="独立黑客: ", path="hackers")
 jobs = load_mds("./jobs", path="jobs")
 
 
 def read_article(filename):
     return read_md("./articles", filename)
 
-
-def read_hacker(filename):
-    return read_md("./hackers", filename)
 
 def read_job(filename):
     return read_md("./jobs", filename)
@@ -44,7 +37,9 @@ def read_md(directory, filename):
 
         title = title.lstrip("#").strip()
 
-        return title, markdown.markdown(content, extensions=["extra", "codehilite", "mdx_linkify"])
+        return title, markdown.markdown(
+            content, extensions=["extra", "codehilite", "mdx_linkify"],
+        )
 
 
 def handle_exception(func):
@@ -54,17 +49,13 @@ def handle_exception(func):
             return func(*args, **kwargs)
         except FileNotFoundError:
             return redirect("/404")
+
     return inner
 
 
 @app.route("/")
 def index():
     return render_template("index.html", articles=articles[:32], show_all=True)  # magic number here...
-
-
-@app.route("/hackers")
-def hackers_index():
-    return render_template("hackers_index.html", title="独立黑客", articles=hackers)
 
 
 @app.route("/jobs")
@@ -102,17 +93,6 @@ def article(filename):
     return render_template("article.html", title=title, content=content)
 
 
-@app.route("/hackers/<filename>")
-@handle_exception
-def hacker(filename):
-    if len(filename) < 6:  # `.html`
-        return redirect("/404")
-
-    filename = filename[:-5]  # remove `.html`
-    title, content = read_hacker(filename)
-    return render_template("article.html", title=title, content=content)
-
-
 @app.route("/jobs/<filename>")
 @handle_exception
 def job(filename):
@@ -134,11 +114,6 @@ def serve_articles_img(path):
     return send_from_directory('articles/img', path)
 
 
-@app.route('/hackers/img/<path:path>')
-def serve_hackers_img(path):
-    return send_from_directory('hackers/img', path)
-
-
 @app.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
@@ -151,7 +126,7 @@ def favicon():
 
 @app.route("/rss")
 def rss():
-    all_articles = sorted(articles + hackers, key=lambda i: (i[1], i[0], i[2]), reverse=True)
+    all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
     response = make_response(render_template("rss.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
@@ -160,6 +135,7 @@ def rss():
 @app.route("/sitemap.xml")
 def sitemap():
     all_articles = sorted(articles + hackers, key=lambda i: (i[1], i[0], i[2]), reverse=True)
-    response = make_response(render_template("sitemap.xml", articles=all_articles))
+    response = make_response(
+        render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
