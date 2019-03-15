@@ -20,6 +20,7 @@ app = Flask(__name__)
 
 articles = load_mds("./articles")
 jobs = load_mds("./jobs", path="jobs")
+all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
 
 
 def read_article(filename):
@@ -68,6 +69,15 @@ def archive():
     return render_template("index.html", articles=articles)
 
 
+def render_post(filename, template_name, load_post_func):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
+    filename = filename[:-5]  # remove `.html`
+    title, content = load_post_func(filename)
+    return render_template(template_name, title=title, content=content)
+
+
 @app.route("/aboutme")
 @handle_exception
 def aboutme():
@@ -85,23 +95,13 @@ def friends():
 @app.route("/articles/<filename>")
 @handle_exception
 def article(filename):
-    if len(filename) < 6:  # `.html`
-        return redirect("/404")
-
-    filename = filename[:-5]  # remove `.html`
-    title, content = read_article(filename)
-    return render_template("article.html", title=title, content=content)
+    return render_post(filename, "article.html", read_article)
 
 
 @app.route("/jobs/<filename>")
 @handle_exception
 def job(filename):
-    if len(filename) < 6:  # `.html`
-        return redirect("/404")
-
-    filename = filename[:-5]  # remove `.html`
-    title, content = read_job(filename)
-    return render_template("article.html", title=title, content=content)
+    return render_post(filename, "article.html", read_job)
 
 
 @app.route("/404")
@@ -126,7 +126,6 @@ def favicon():
 
 @app.route("/rss")
 def rss():
-    all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
     response = make_response(render_template("rss.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
@@ -134,8 +133,6 @@ def rss():
 
 @app.route("/sitemap.xml")
 def sitemap():
-    all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
-    response = make_response(
-        render_template("sitemap.xml", articles=all_articles))
+    response = make_response(render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
