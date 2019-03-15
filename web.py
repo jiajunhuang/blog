@@ -134,7 +134,7 @@ def rss():
 
 @app.route("/sitemap.xml")
 def sitemap():
-    all_articles = sorted(articles + hackers, key=lambda i: (i[1], i[0], i[2]), reverse=True)
+    all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
     response = make_response(
         render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
