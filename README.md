@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/01 - [Swagger? 不好用](https://jiajunhuang.com/articles/2019_04_01-swagger_i_dislike.md.html)
 - 2019/03/24 - [读《毛泽东选集》](https://jiajunhuang.com/articles/2019_03_24-mao.md.html)
 - 2019/03/19 - [GORM源码阅读](https://jiajunhuang.com/articles/2019_03_19-gorm.md.html)
 - 2019/03/16 - [随想](https://jiajunhuang.com/articles/2019_03_16-tittle_tattle.md.html)
