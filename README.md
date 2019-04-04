@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/03 - [使用btrfs组建RAID1](https://jiajunhuang.com/articles/2019_04_03-btrfs_raid1.md.html)
 - 2019/04/01 - [Swagger? 不好用](https://jiajunhuang.com/articles/2019_04_01-swagger_i_dislike.md.html)
 - 2019/03/29 - [Golang/Python最佳实践](https://jiajunhuang.com/articles/2019_03_29-python_golang_best_practice.md.html)
 - 2019/03/24 - [读《毛泽东选集》](https://jiajunhuang.com/articles/2019_03_24-mao.md.html)
