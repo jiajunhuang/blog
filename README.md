@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/06 - [使用shairport-sync搭建airplay音频服务器](https://jiajunhuang.com/articles/2019_04_06-shairport_sync.md.html)
+- 2019/04/06 - [搭建aria2服务器](https://jiajunhuang.com/articles/2019_04_06-aria2.md.html)
 - 2019/04/05 - [VirtManager Windows自适应屏幕](https://jiajunhuang.com/articles/2019_04_05-virt_manager_win.md.html)
 - 2019/04/03 - [使用btrfs组建RAID1](https://jiajunhuang.com/articles/2019_04_03-btrfs_raid1.md.html)
 - 2019/04/01 - [Swagger? 不好用](https://jiajunhuang.com/articles/2019_04_01-swagger_i_dislike.md.html)
