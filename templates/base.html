@@ -1,83 +1,75 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#FFFFFF"/>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
-        <title>{% if title %} {{ title }} - {% endif %}Jiajun的编程随想</title>
-        {% block resource %}
-        {% endblock %}
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79619009-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)};
-            gtag('js', new Date());
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            gtag('config', 'UA-79619009-1');
-        </script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+        {% block include_css %}{% endblock %}
+
+        <title>{% block title %}{% endblock %}</title>
         <style>
-        @media (min-width: 768px) {
-            body {
-                margin: 0 5rem;
-            }
-
-            img {
-                max-width: 768px;
-            }
+        img {
+            max-width: 100%;
         }
-
-        @media (max-width: 768px) {
-            img {
-                max-width: 100%;
-            }
-        }
-
         a {
-            text-decoration: none;
-        }
-
-        body {
-            word-wrap: break-word;
-            font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-        }
-
-        .header h3 {
-            display: inline-block;
-        }
-
-        blockquote {
-            background: #f8f8f8;
-            border-left: 0.5rem solid #ccc;
-            padding: 0rem 0.5rem;
+            word-break: break-all;
         }
         </style>
     </head>
     <body>
-        <img src="/static/avatar.png" style="display:none" /> <!-- for wechat share -->
+        <div class="container">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="/">Jiajun的编程随想</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <div class="header">
-            <h3><a href="/">首页</a></h3>
-            <h3>/ </h3>
-            <h3><a href="/friends">友链</a></h3>
-            <h3>/ </h3>
-            <h3><a href="https://share.jiajunhuang.com">分享</a></h3>
-            <h3>/ </h3>
-            <h3><a style="color:red" href="/jobs">内推</a></h3>
-            <h3>/ </h3>
-            <h3><a href="/aboutme">关于</a></h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">首页</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/friends">友链</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://share.jiajunhuang.com">分享</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/jobs">内推</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aboutme">关于</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <main role="main" class="container">
+                <div id="body" class="row">
+                    <div class="col-md-12">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <span class="text-muted">
+                    <a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2019, All Rights Reserved。转载务必注明出处。博客使用<a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=e9yq98ni">阿里云</a>托管。
+                </span>
+            </footer>
         </div>
 
-        <hr />
-
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-        </div>
-
-        <hr />
-        <div class="footer">
-            <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2019, All Rights Reserved。转载务必注明出处。博客使用<a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=e9yq98ni">阿里云</a>托管。</p>
-        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.slim.min.js" />
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/esm/popper.min.js" />
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" />
+        {% block include_js %}{% endblock %}
     </body>
 </html>
