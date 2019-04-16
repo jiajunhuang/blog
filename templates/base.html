@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
         {% block include_css %}{% endblock %}
 
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% if title %}{{ title }} - {% endif %}Jiajun的编程随想</title>
         <style>
         img {
             max-width: 100%;
