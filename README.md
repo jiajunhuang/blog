@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/17 - [读《超级运营术》- 如何做社区？](https://jiajunhuang.com/articles/2019_04_17-chaojiyunyingshu.md.html)
 - 2019/04/06 - [使用shairport-sync搭建airplay音频服务器](https://jiajunhuang.com/articles/2019_04_06-shairport_sync.md.html)
 - 2019/04/06 - [搭建aria2服务器](https://jiajunhuang.com/articles/2019_04_06-aria2.md.html)
 - 2019/04/05 - [VirtManager Windows自适应屏幕](https://jiajunhuang.com/articles/2019_04_05-virt_manager_win.md.html)
