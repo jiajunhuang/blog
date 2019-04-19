@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/18 - [Python RQ(Redis Queue)添加gevent支持](https://jiajunhuang.com/articles/2019_04_18-python_rq_gevent.md.html)
 - 2019/04/17 - [技术人，光有技术是不行的](https://jiajunhuang.com/articles/2019_04_17-tech_only_is_bad.md.html)
 - 2019/04/17 - [读《超级运营术》- 如何做社区？](https://jiajunhuang.com/articles/2019_04_17-chaojiyunyingshu.md.html)
 - 2019/04/06 - [使用shairport-sync搭建airplay音频服务器](https://jiajunhuang.com/articles/2019_04_06-shairport_sync.md.html)
