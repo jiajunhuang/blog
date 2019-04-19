@@ -56,7 +56,7 @@ def handle_exception(func):
 
 @app.route("/")
 def index():
-    return render_template("index.html", articles=articles[:32], show_all=True)  # magic number here...
+    return render_template("index.html", articles=articles[:50], show_all=True)  # magic number here...
 
 
 @app.route("/jobs")
