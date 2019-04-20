@@ -7,6 +7,7 @@ from flask import (
     redirect,
     send_from_directory,
     make_response,
+    request,
 )
 import markdown
 import sentry_sdk
@@ -136,3 +137,8 @@ def sitemap():
     response = make_response(render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
     return response
+
+
+@app.route("/search", methods=["POST"])
+def search():
+    return redirect("https://www.google.com/search?q=site:jiajunhuang.com " + request.form.get("search"))
