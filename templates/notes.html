@@ -3,8 +3,6 @@
 {% block content %}
 <h1>随想</h1>
 
-<hr />
-
 <ul class="list-group list-group-flush">
     {% for note in notes %}
     <li class="list-group-item">{{ note["content"] }}({{ note["updated_at"] }})</li>
