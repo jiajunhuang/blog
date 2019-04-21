@@ -1,7 +1,9 @@
+{% extends "base.html" %}
+
 {% block content %}
 <ul class="list-group list-group-flush">
     {% for note in notes %}
-    <li class="list-group-item">note["content"] - note["updated-at"]</li>
+    <li class="list-group-item">{{ note["content"] }} - {{ note["updated_at"] }}</li>
     {% endfor %}
 </ul>
 {% endblock %}
