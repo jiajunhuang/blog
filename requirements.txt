@@ -5,3 +5,4 @@ markdown==3.0.1
 pygments==2.2.0
 sentry-sdk==0.5.3
 mdx_linkify==1.1
+requests==2.21.0

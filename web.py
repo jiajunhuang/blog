@@ -11,8 +11,10 @@ from flask import (
 )
 import markdown
 import sentry_sdk
+import requests
 
 from utils import load_mds
+from config import config
 
 if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice in here...
     sentry_sdk.init(os.getenv("SENTRY_DSN"))
@@ -142,3 +144,10 @@ def sitemap():
 @app.route("/search", methods=["POST"])
 def search():
     return redirect("https://www.google.com/search?q=site:jiajunhuang.com " + request.form.get("search"))
+
+
+@app.route("/notes")
+def notes():
+    resp = requests.get(config.NOTES_URL).json()
+    notes = resp["notes"] if resp else []
+    return render_template("notes.html", notes=notes)
