@@ -150,4 +150,4 @@ def search():
 def notes():
     resp = requests.get(config.NOTES_URL).json()
     notes = resp["notes"] if resp else []
-    return render_template("notes.html", notes=notes)
+    return render_template("notes.html", title="随想", notes=notes)
