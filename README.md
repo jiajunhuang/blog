@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/04/23 - [Nginx设置Referer来防止盗图](https://jiajunhuang.com/articles/2019_04_23-nginx_referer.md.html)
 - 2019/04/20 - [Graphviz dot简明教程](https://jiajunhuang.com/articles/2019_04_20-graphviz_dot.md.html)
 - 2019/04/19 - [jQuery简明教程](https://jiajunhuang.com/articles/2019_04_19-jquery.md.html)
 - 2019/04/18 - [Python RQ(Redis Queue)添加gevent支持](https://jiajunhuang.com/articles/2019_04_18-python_rq_gevent.md.html)
