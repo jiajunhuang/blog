@@ -1,4 +1,4 @@
-# 聊一聊goroutine
+# 杂谈
 
 Golang，除去繁琐的 `if err != nil` 之外，写起来还是非常爽的。而goroutine作为Golang的 core feature，就是能让我们爽的根本原因之一，仔细的了解一下goroutine，怎么来说都不为过。所以，聊一聊goroutine，希望能给读者带来一些启发。
 

@@ -35,7 +35,7 @@ https://t.me/jiajunhuangcom
 - 2019/02/27 - [Containerd简明教程](https://jiajunhuang.com/articles/2019_02_27-containerd_tutorial.md.html)
 - 2019/02/26 - [软件设计套路之推拉模式](https://jiajunhuang.com/articles/2019_02_26-push_pull_system.md.html)
 - 2019/01/30 - [记一次Golang TLS编程踩坑](https://jiajunhuang.com/articles/2019_01_30-golang_tls.md.html)
-- 2019/01/13 - [聊一聊goroutine](https://jiajunhuang.com/articles/2019_01_13-goroutine.md.html)
+- 2019/01/13 - [杂谈](https://jiajunhuang.com/articles/2019_01_13-goroutine.md.html)
 - 2019/01/12 - [使用autossh实现内网穿透](https://jiajunhuang.com/articles/2019_01_12-autossh.md.html)
 - 2019/01/07 - [Linux线程内存模型](https://jiajunhuang.com/articles/2019_01_07-linux_thread_mem_layout.md.html)
 - 2019/01/03 - [关闭手机通知，修复碎片化的生活](https://jiajunhuang.com/articles/2019_01_03-drop_notifications.md.html)
