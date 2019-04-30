@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://jiajunhuang.com/</loc>
-        <lastmod>{% if articles %} {{ articles[0][1] }} {% endif %}</lastmod>
+        <lastmod>{% if articles %}{{ articles[0][1].strftime("%Y-%m-%d") }}{% endif %}</lastmod>
         <changefreq>daily</changefreq>
     </url>
 

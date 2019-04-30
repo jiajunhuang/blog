@@ -151,3 +151,7 @@ def notes():
     resp = requests.get(config.NOTES_URL).json()
     notes = resp["notes"] if resp else []
     return render_template("notes.html", title="随想", notes=notes)
+
+
+if __name__ == "__main__":
+    app.run("127.0.0.1", port=5000)
