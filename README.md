@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/05/07 - [在KVM里安装Minikube](https://jiajunhuang.com/articles/2019_05_07-minikube_kvm.md.html)
 - 2019/04/29 - [搞定面试中的系统设计题](https://jiajunhuang.com/articles/2019_04_29-system_design.md.html)
 - 2019/04/25 - [Crontab + Sendmail实现定时任务并且通知](https://jiajunhuang.com/articles/2019_04_25-crontab_sendmail.md.html)
 - 2019/04/23 - [Nginx设置Referer来防止盗图](https://jiajunhuang.com/articles/2019_04_23-nginx_referer.md.html)
