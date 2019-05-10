@@ -62,9 +62,6 @@
                                 <a class="nav-link" href="/friends">友链</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://pythoncn.club">Python中文社区</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/jobs">内推</a>
                             </li>
                             <li class="nav-item">
@@ -80,8 +77,25 @@
 
             <main role="main" class="container">
                 <div id="body" class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         {% block content %}{% endblock %}
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <!--<img src="..." class="card-img-top" alt="...">-->
+                            <div class="card-body">
+                                <h5 class="card-title">Jiajun的编程随想</h5>
+                                <p class="card-text">后端编程, Python, Golang, PostgreSQL, MySQL, Redis</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="https://pythoncn.club">Python 中文社区</a></li>
+                                <li class="list-group-item"><a href="https://jiajunhuang.com/tutorial/golang/index.md">Go 语言教程</a></li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="https://t.me/jiajunhuangcom" class="card-link">Telegram 订阅</a>
+                                <a href="/rss" class="card-link">RSS 订阅</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
