@@ -1,3 +1,6 @@
 [submodule "jobs"]
 	path = jobs
 	url = git@github.com:jiajunhuang/jobs.git
+[submodule "tutorial/golang"]
+	path = tutorial/golang
+	url = https://git.jiajunhuang.com/tutorial/golang

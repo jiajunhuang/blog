@@ -31,12 +31,21 @@ def page_not_found(e):
     return redirect("/404")
 
 
+@app.errorhandler(500)
+def internal_server_error(e):
+    return redirect("/500")
+
+
 def read_article(filename):
     return read_md("./articles", filename)
 
 
 def read_job(filename):
     return read_md("./jobs", filename)
+
+
+def read_tutorial(lang, filename):
+    return read_md("./tutorial/{}".format(lang), filename)
 
 
 def read_md(directory, filename):
@@ -49,6 +58,15 @@ def read_md(directory, filename):
         return title, markdown.markdown(
             content, extensions=["extra", "codehilite", "mdx_linkify"],
         )
+
+
+def render_post(filename, template_name, load_post_func):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
+    filename = filename[:-5]  # remove `.html`
+    title, content = load_post_func(filename)
+    return render_template(template_name, title=title, content=content)
 
 
 def handle_exception(func):
@@ -77,15 +95,6 @@ def archive():
     return render_template("index.html", articles=articles)
 
 
-def render_post(filename, template_name, load_post_func):
-    if len(filename) < 6:  # `.html`
-        return redirect("/404")
-
-    filename = filename[:-5]  # remove `.html`
-    title, content = load_post_func(filename)
-    return render_template(template_name, title=title, content=content)
-
-
 @app.route("/aboutme")
 @handle_exception
 def aboutme():
@@ -112,9 +121,20 @@ def job(filename):
     return render_post(filename, "article.html", read_job)
 
 
+@app.route("/tutorial/<lang>/<filename>")
+@handle_exception
+def tutorial(lang, filename):
+    return render_post(filename, "article.html", functools.partial(read_tutorial, lang=lang))
+
+
 @app.route("/404")
 def not_found():
     return render_template("404.html")
+
+
+@app.route("/500")
+def server_error():
+    return render_template("500.html")
 
 
 @app.route('/articles/img/<path:path>')
