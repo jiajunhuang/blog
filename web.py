@@ -45,7 +45,7 @@ def read_job(filename):
 
 
 def read_tutorial(lang, filename):
-    return read_md("./tutorial/{}".format(lang), filename)
+    return read_md(os.path.join("tutorial", lang), filename)
 
 
 def read_md(directory, filename):
@@ -121,10 +121,12 @@ def job(filename):
     return render_post(filename, "article.html", read_job)
 
 
-@app.route("/tutorial/<lang>/<filename>")
+@app.route("/tutorial/<path:lang>/<filename>")
 @handle_exception
 def tutorial(lang, filename):
-    return render_post(filename, "article.html", functools.partial(read_tutorial, lang=lang))
+    return render_post(
+        filename, "article.html", functools.partial(read_tutorial, lang),
+    )
 
 
 @app.route("/404")
@@ -140,6 +142,11 @@ def server_error():
 @app.route('/articles/img/<path:path>')
 def serve_articles_img(path):
     return send_from_directory('articles/img', path)
+
+
+@app.route("/tutorial/<path:lang>/img/<path:path>")
+def serve_tutorial_img(lang, path):
+    return send_from_directory(os.path.join("tutorial", lang, "img"), path)
 
 
 @app.route('/static/<path:path>')
