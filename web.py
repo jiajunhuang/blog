@@ -60,11 +60,12 @@ def read_md(directory, filename):
         )
 
 
-def render_post(filename, template_name, load_post_func):
-    if len(filename) < 6:  # `.html`
-        return redirect("/404")
+def render_post(filename, template_name, load_post_func, trim_html_suffix=True):
+    if trim_html_suffix:
+        if len(filename) < 6:  # `.html`
+            return redirect("/404")
 
-    filename = filename[:-5]  # remove `.html`
+        filename = filename[:-5]  # remove `.html`
     title, content = load_post_func(filename)
     return render_template(template_name, title=title, content=content)
 
@@ -125,7 +126,7 @@ def job(filename):
 @handle_exception
 def tutorial(lang, filename):
     return render_post(
-        filename, "article.html", functools.partial(read_tutorial, lang),
+        filename, "article.html", functools.partial(read_tutorial, lang), trim_html_suffix=False,
     )
 
 
