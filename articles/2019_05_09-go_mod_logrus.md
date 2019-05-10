@@ -9,7 +9,7 @@ parsing go.mod: unexpected module path "github.com/sirupsen/logrus"
 ...
 ```
 
-原因就是，sirupsen老大哥的名字从 `sirupsen` 变成了 `sirupsen`，而go的库写的是包的URL路径。
+原因就是，sirupsen 老大哥的名字从 `Sirupsen` 变成了 `sirupsen`，而go的库写的是包的URL路径。
 当依赖的依赖使用的是老版本的时候，就要找不到这个包了。解决方案是在 `go.mod` 最后加上：
 
 ```go
