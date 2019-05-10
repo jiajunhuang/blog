@@ -26,6 +26,11 @@ jobs = load_mds("./jobs", path="jobs")
 all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect("/404")
+
+
 def read_article(filename):
     return read_md("./articles", filename)
 
