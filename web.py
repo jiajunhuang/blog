@@ -106,15 +106,15 @@ def archive():
 @app.route("/aboutme")
 @handle_exception
 def aboutme():
-    title, content = read_article("aboutme.md")
-    return render_template("article.html", title=title, content=content)
+    title, content, description = read_article("aboutme.md")
+    return render_template("article.html", title=title, content=content, description=description)
 
 
 @app.route("/friends")
 @handle_exception
 def friends():
-    title, content = read_article("friends.md")
-    return render_template("article.html", title=title, content=content)
+    title, content, description = read_article("friends.md")
+    return render_template("article.html", title=title, content=content, description=description)
 
 
 @app.route("/articles/<filename>")
