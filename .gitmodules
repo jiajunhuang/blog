@@ -4,3 +4,9 @@
 [submodule "tutorial/golang"]
 	path = tutorial/golang
 	url = https://git.jiajunhuang.com/tutorial/golang
+[submodule "tutorial/python"]
+	path = tutorial/python
+	url = https://git.jiajunhuang.com/tutorial/python
+[submodule "tutorial/testing"]
+	path = tutorial/testing
+	url = https://git.jiajunhuang.com/tutorial/testing
