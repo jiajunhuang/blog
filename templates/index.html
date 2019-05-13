@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block include_meta %}
+<meta name="Description" content="Jiajun的编程随想，主要记录和分享高并发后端编程、源码阅读以及入门教程(Golang, Python, 自动化测试等)">
+{% endblock %}
+
 {% block content %}
 <ul class="list-group ml-2">
     {% for title, date, filename, path in articles %}
