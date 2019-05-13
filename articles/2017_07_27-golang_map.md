@@ -141,7 +141,11 @@ func mapaccess1(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer {
 }
 ```
 
-还有一个 `mapaccess2` 不知道是干啥的。`mapaccessK` 说是给iter用的。
+~~还有一个 `mapaccess2` 不知道是干啥的。~~
+> 2019.05.13 更新: 据网友 [@rongfeixu](https://disqus.com/by/rongfeixu/) 回复，`mapaccess1` 用于 `v := map["bla"]`
+> `mapaccess2` 用于 `v, ok := map["bla"]` 这种形式。
+
+`mapaccessK` 说是给iter用的。
 接下来看看赋值操作，赋值操作其实就是先查找，找到了覆盖，没找到新建：
 
 ```go
