@@ -25,6 +25,12 @@ articles = load_mds("./articles")
 jobs = load_mds("./jobs", path="jobs")
 all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
 
+SUBTITLE_MAP = {
+    "golang": "Golang 教程",
+    "python": "Python 教程",
+    "testing": "自动化测试 教程",
+}
+
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -60,14 +66,14 @@ def read_md(directory, filename):
         )
 
 
-def render_post(filename, template_name, load_post_func, trim_html_suffix=True):
+def render_post(filename, template_name, load_post_func, trim_html_suffix=True, subtitle=None):
     if trim_html_suffix:
         if len(filename) < 6:  # `.html`
             return redirect("/404")
 
         filename = filename[:-5]  # remove `.html`
     title, content = load_post_func(filename)
-    return render_template(template_name, title=title, content=content)
+    return render_template(template_name, title=title, subtitle=subtitle, content=content)
 
 
 def handle_exception(func):
@@ -125,8 +131,10 @@ def job(filename):
 @app.route("/tutorial/<path:lang>/<filename>")
 @handle_exception
 def tutorial(lang, filename):
+    subtitle = SUBTITLE_MAP.get(lang, "")
+
     return render_post(
-        filename, "article.html", functools.partial(read_tutorial, lang), trim_html_suffix=False,
+        filename, "article.html", functools.partial(read_tutorial, lang), trim_html_suffix=False, subtitle=subtitle,
     )
 
 
