@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block include_meta %}
+<meta name="Description" content="{{ description }}">
+{% endblock %}
+
 {% block include_css %}
 <link rel="stylesheet" type="text/css" href="/static/styles.min.css" />
 {% endblock %}

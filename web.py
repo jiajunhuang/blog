@@ -57,13 +57,14 @@ def read_tutorial(lang, filename):
 def read_md(directory, filename):
     with open(os.path.join(directory, filename)) as f:
         title = f.readline()
-        content = title + f.read()
+        body = f.read()
+        content = title + body
 
         title = title.lstrip("#").strip()
+        description = body[:140]
+        content = markdown.markdown(content, extensions=["extra", "codehilite", "mdx_linkify"])
 
-        return title, markdown.markdown(
-            content, extensions=["extra", "codehilite", "mdx_linkify"],
-        )
+        return title, content, description
 
 
 def render_post(filename, template_name, load_post_func, trim_html_suffix=True, subtitle=None):
@@ -72,8 +73,8 @@ def render_post(filename, template_name, load_post_func, trim_html_suffix=True, 
             return redirect("/404")
 
         filename = filename[:-5]  # remove `.html`
-    title, content = load_post_func(filename)
-    return render_template(template_name, title=title, subtitle=subtitle, content=content)
+    title, content, description = load_post_func(filename)
+    return render_template(template_name, title=title, subtitle=subtitle, content=content, description=description)
 
 
 def handle_exception(func):
@@ -179,6 +180,13 @@ def rss():
 def sitemap():
     response = make_response(render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
+    return response
+
+
+@app.route("/robots.txt")
+def robots():
+    response = make_response(render_template("robots.txt"))
+    response.headers['Content-Type'] = 'text/plain'
     return response
 
 
