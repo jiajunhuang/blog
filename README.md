@@ -10,7 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2019/05/12 - [密码技术简明教程(一)](https://jiajunhuang.com/articles/2019_05_12-crypto.md.html)
+- 2019/05/14 - [密码技术简明教程(二)：散列、消息认证码和数字签名](https://jiajunhuang.com/articles/2019_05_14-crypto_part2.md.html)
+- 2019/05/12 - [密码技术简明教程(一)：对称加密和非对称加密](https://jiajunhuang.com/articles/2019_05_12-crypto.md.html)
 - 2019/05/10 - [Kubernetes 笔记](https://jiajunhuang.com/articles/2019_05_10-kubernetes_tutorial.md.html)
 - 2019/05/09 - [go mod 和 logrus 路径大小写的问题](https://jiajunhuang.com/articles/2019_05_09-go_mod_logrus.md.html)
 - 2019/05/08 - [Flask自动加载Blueprint](https://jiajunhuang.com/articles/2019_05_08-flask_load_bp_automaticly.md.html)
