@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/05/18 - [Python Requests 简明教程](https://jiajunhuang.com/articles/2019_05_18-requests.md.html)
 - 2019/05/15 - [密码技术简明教程(三)：证书和TLS](https://jiajunhuang.com/articles/2019_05_15-crypto_part3.md.html)
 - 2019/05/14 - [SEO学习笔记](https://jiajunhuang.com/articles/2019_05_14-seo.md.html)
 - 2019/05/14 - [密码技术简明教程(二)：散列、消息认证码和数字签名](https://jiajunhuang.com/articles/2019_05_14-crypto_part2.md.html)
