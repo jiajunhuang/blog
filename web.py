@@ -1,6 +1,6 @@
 import functools
 import os
-import bisect
+import random
 
 from flask import (
     Flask,
@@ -76,14 +76,17 @@ def read_md(directory, filename):
         return title, content, description
 
 
-def render_post(filename, template_name, load_post_func, trim_html_suffix=True, subtitle=None):
+def render_post(filename, template_name, load_post_func, trim_html_suffix=True, subtitle=None, recommendations=None):
     if trim_html_suffix:
         if len(filename) < 6:  # `.html`
             return redirect("/404")
 
         filename = filename[:-5]  # remove `.html`
     title, content, description = load_post_func(filename)
-    return render_template(template_name, title=title, subtitle=subtitle, content=content, description=description)
+    return render_template(
+        template_name,
+        title=title, subtitle=subtitle, content=content, description=description, recommendations=recommendations,
+    )
 
 
 def handle_exception(func):
@@ -124,7 +127,9 @@ def friends():
 @app.route("/articles/<filename>")
 @handle_exception
 def article(filename):
-    return render_post(filename, "article.html", read_article)
+    recommendations = set([i for i in random.choices(all_articles, k=8)])
+
+    return render_post(filename, "article.html", read_article, recommendations=recommendations)
 
 
 @app.route("/jobs/<filename>")

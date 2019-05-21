@@ -11,6 +11,18 @@
 {% block content %}
 {{ content | safe }}
 
+{% if recommendations %}
+<hr />
+<h3>更多文章</h3>
+
+<ul class="list-group ml-4">
+    {% for title, date, filename, path in recommendations %}
+    <li>{{ date.strftime("%Y/%m/%d") }} - <a href="/{{ path }}/{{filename}}.html">{{ title }}</a></li>
+    {% endfor %}
+</ul>
+<hr />
+{% endif %}
+
 <div id="disqus_thread"></div>
 <script>
 /**
