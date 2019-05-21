@@ -127,7 +127,7 @@ def friends():
 @app.route("/articles/<filename>")
 @handle_exception
 def article(filename):
-    recommendations = set([i for i in random.choices(all_articles, k=8)])
+    recommendations = set(random.choices(all_articles, k=8))
 
     return render_post(filename, "article.html", read_article, recommendations=recommendations)
 
