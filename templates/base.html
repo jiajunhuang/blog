@@ -73,9 +73,6 @@
                                 <a class="nav-link" href="/friends">友链</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/jobs">内推</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/notes">随想</a>
                             </li>
                             <li class="nav-item">
@@ -130,6 +127,16 @@
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <h5 class="card-title">标签</h5>
+                                <span class="d-block">
+                                    {% for word, count in get_words() %}
+                                    <a href="/word?word={{ word }}" class="badge badge-light" style="font-size:0.8rem">{{ word }}({{ count }})</a>
+                                    {% endfor %}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

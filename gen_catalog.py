@@ -4,7 +4,7 @@ from utils import load_mds
 
 
 def gen_catalog(posts_dir, output_file, headers, footers):
-    articles = load_mds("./articles")
+    articles, _ = load_mds("./articles")
 
     with open(output_file, "w+") as f:
         # clear all the contents in file

@@ -1,5 +1,6 @@
 import functools
 import os
+import bisect
 
 from flask import (
     Flask,
@@ -21,8 +22,8 @@ if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice 
 
 app = Flask(__name__)
 
-articles = load_mds("./articles")
-jobs = load_mds("./jobs", path="jobs")
+articles, words = load_mds("./articles")
+# title, datetime, filename, folder
 all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
 
 SUBTITLE_MAP = {
@@ -30,6 +31,14 @@ SUBTITLE_MAP = {
     "python": "Python 教程",
     "testing": "自动化测试 教程",
 }
+
+
+def get_words(top=35):
+    return words.most_common(top)
+
+
+# functions can be executed in jinja
+app.jinja_env.globals.update(get_words=get_words)
 
 
 @app.errorhandler(404)
@@ -91,11 +100,6 @@ def handle_exception(func):
 @app.route("/")
 def index():
     return render_template("index.html", articles=articles[:50], total_count=len(articles))  # magic number here...
-
-
-@app.route("/jobs")
-def jobs_index():
-    return render_template("jobs_index.html", title="招聘", articles=jobs)
 
 
 @app.route("/archive")
@@ -188,6 +192,11 @@ def robots():
     response = make_response(render_template("robots.txt"))
     response.headers['Content-Type'] = 'text/plain'
     return response
+
+
+@app.route("/word")
+def search_word():
+    return redirect("https://www.google.com/search?q=site:jiajunhuang.com " + request.args.get("word", ""))
 
 
 @app.route("/search", methods=["POST"])
