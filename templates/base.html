@@ -4,15 +4,22 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="theme-color" content="#317EFB"/>
+        <!-- iOS -->
+        <meta name="apple-mobile-web-app-title" content="Jiajun的编程随想">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-status-bar-style" content="#F8F9FA">
+        <!-- Android -->
+        <link rel="shortcut icon" href="/static/apple-touch-icon.png">
+        <meta name="theme-color" content="#F8F9FA"/>
         {% block include_meta %}{% endblock %}
 
         <!-- Bootstrap CSS -->
+        <link rel="apple-touch-icon" href="/static/apple-touch-icon.png"/>
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
         {% block include_css %}{% endblock %}
 
         <title>
-            {% if title %}{{ title }}{% else %}首页{% endif %}{% if subtitle %} - {{ subtitle }}{% endif %} - Jiajun的编程随想
+            {% if title %}{{ title }}{% endif %}{% if subtitle %} - {{ subtitle }}{% endif %} - Jiajun的编程随想
         </title>
         <style>
             img {
