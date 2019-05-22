@@ -117,6 +117,13 @@ def aboutme():
     return render_template("article.html", title=title, content=content, description=description)
 
 
+@app.route("/projects")
+@handle_exception
+def projects():
+    title, content, description = read_article("projects.md")
+    return render_template("article.html", title=title, content=content, description=description)
+
+
 @app.route("/friends")
 @handle_exception
 def friends():

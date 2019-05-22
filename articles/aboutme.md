@@ -25,14 +25,6 @@
 - Github: https://github.com/jiajunhuang
 - Telegram: https://t.me/jiajunhuang
 
-## 个人作品
+## 个人项目
 
-- [blog](https://github.com/jiajunhuang/blog): 博客源码
-- [guard](https://github.com/jiajunhuang/guard)：高性能通用型熔断器
-- [obito](https://github.com/jiajunhuang/obito): 开箱即用的iOS推送服务
-- [storm](https://github.com/jiajunhuang/storm): class-based view的高性能异步web框架
-- [toq](https://github.com/jiajunhuang/toq): 分布式任务队列
-- [cup](https://github.com/jiajunhuang/cup): 容器/container
-- [hfs](https://github.com/jiajunhuang/hfs): 分布式块文件系统
-
-更多的作品请访问 [我的Github](https://github.com/jiajunhuang?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=)
+[请看这里](https://jiajunhuang.com/projects)
