@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/05/29 - [Python中的新式类(new style class)和老式类(old style class)](https://jiajunhuang.com/articles/2019_05_29-python_old_new_style_class.md.html)
 - 2019/05/18 - [Python Requests 简明教程](https://jiajunhuang.com/articles/2019_05_18-requests.md.html)
 - 2019/05/15 - [密码技术简明教程(三)：证书和TLS](https://jiajunhuang.com/articles/2019_05_15-crypto_part3.md.html)
 - 2019/05/14 - [SEO学习笔记](https://jiajunhuang.com/articles/2019_05_14-seo.md.html)
