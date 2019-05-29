@@ -1,4 +1,4 @@
-# etcd源码阅读（三）：wal
+# etcd源码阅读与分析（三）：wal
 
 今天来看看WAL(Write-Ahead Logging)。这是数据库中保证数据持久化的常用技术，即每次真正操作数据之前，先往磁盘上追加一条日志，由于日志
 是追加的，也就是顺序写，而不是随机写，所以写入性能还是很高的。这样做的目的是，如果在写入磁盘之前发生崩溃，那么数据肯定是没有写入
@@ -138,3 +138,13 @@ WAL就看到这。
 ---
 
 - WAL: https://en.wikipedia.org/wiki/Write-ahead_logging
+
+---
+
+### etcd源码阅读与分析系列文章
+
+- [etcd源码阅读与分析（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
+- [etcd源码阅读与分析（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
+- [etcd源码阅读与分析（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
+- [etcd源码阅读与分析（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
+- [etcd源码阅读与分析（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)

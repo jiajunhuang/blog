@@ -288,6 +288,13 @@ my_busybox_sleep_demo    docker.io/library/busybox:latest    io.containerd.runti
 
 ---
 
+## 系列文章
+
+- [Docker组件介绍（一）：runc和containerd](https://jiajunhuang.com/articles/2018_12_22-docker_components.md.html)
+- [Docker组件介绍（二）：shim, docker-init和docker-proxy](https://jiajunhuang.com/articles/2018_12_24-docker_components_part2.md.html)
+
+---
+
 - https://hackernoon.com/docker-containerd-standalone-runtimes-heres-what-you-should-know-b834ef155426
 - http://alexander.holbreich.org/docker-components-explained/
 - https://github.com/opencontainers/runc

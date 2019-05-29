@@ -1,4 +1,4 @@
-# Redis源码阅读一：sds
+# Redis源码阅读与分析一：sds
 
 - sds的定义： `typedef char *sds;`。所以sds是指向一个C字符串的指针。
 

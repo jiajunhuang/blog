@@ -19,7 +19,7 @@
 以下是知识扩展部分：
 
 - 知识扩展：http2
-- 知识扩展：单元测试，mock：[单元测试和Mock](https://jiajunhuang.com/articles/2016_12_07-python_unittest.md.html) [Mock源码阅读](https://jiajunhuang.com/articles/2016_12_22-mock_source_code.md.html)
+- 知识扩展：单元测试，mock：[单元测试和Mock](https://jiajunhuang.com/articles/2016_12_07-python_unittest.md.html) [Mock源码阅读与分析](https://jiajunhuang.com/articles/2016_12_22-mock_source_code.md.html)
 - 知识扩展：微服务
 - 知识扩展：web安全之SQL注入，跨域问题
 - 知识扩展：OAuth2

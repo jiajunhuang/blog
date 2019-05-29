@@ -1,7 +1,7 @@
 # Python RQ(Redis Queue)添加gevent支持
 
 python-rq简单好用，但缺点是，默认的实现是使用fork的模式，关于这点可以看
-[python-rq源码分析](https://jiajunhuang.com/articles/2017_09_20-task_queue_python_rq.md.html) 。
+[python-rq源码阅读与分析](https://jiajunhuang.com/articles/2017_09_20-task_queue_python_rq.md.html) 。
 
 所以我们要对他进行改造，每次执行任务，我们就使用一个coroutine。gevent的文档中这样写道：
 

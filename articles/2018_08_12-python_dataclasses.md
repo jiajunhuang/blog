@@ -1,4 +1,4 @@
-# Python dataclass 源码阅读
+# Python dataclass 源码阅读与分析
 
 ## 先来看看如何使用
 
@@ -27,7 +27,7 @@ Out[5]: BarDataClass(name='jhon', num=1)
 
 没有dataclass之前，主要都是如1中使用，或者是使用namedtuple，但是现在有了dataclass就方便了。但是这玩意儿强制使用type signature。
 
-## 源码阅读
+## 源码阅读与分析
 
 当然，宇宙惯例，直接去看 `dataclass` 装饰器怎么实现的。
 
@@ -251,4 +251,4 @@ def _set_new_attribute(cls, name, value):
 
 而 `_init_fn` 做的事情就是初始化了。
 
-实现的细节比较繁杂，但是原理还是挺简单的。这篇源码分析就到这了。
+实现的细节比较繁杂，但是原理还是挺简单的。这篇源码阅读与分析就到这了。

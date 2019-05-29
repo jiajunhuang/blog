@@ -1,4 +1,4 @@
-# etcd源码阅读（四）：lease
+# etcd源码阅读与分析（四）：lease
 
 lease是租约，类似于Redis中的TTL(Time To Live)。可以看一下怎么使用lease：
 
@@ -270,3 +270,13 @@ etcdserver/server.go
 果然，`etcdserver/server.go` 作为调用者对它进行处理。
 
 最后，需要提到的是，lease也会进行持久化的，并且新建lessort的时候会优先看是否能从已有持久化的文件中恢复。
+
+---
+
+### etcd源码阅读与分析系列文章
+
+- [etcd源码阅读与分析（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
+- [etcd源码阅读与分析（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
+- [etcd源码阅读与分析（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
+- [etcd源码阅读与分析（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
+- [etcd源码阅读与分析（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)

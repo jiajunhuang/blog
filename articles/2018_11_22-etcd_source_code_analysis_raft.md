@@ -1,4 +1,4 @@
-# etcd源码阅读（二）：raft
+# etcd源码阅读与分析（二）：raft
 
 今天讲的是 `raft` 这个文件夹下的内容。我觉得etcd的代码写得不够好，当然，也有可能是因为我外行，不过这只是我的感受，不喜勿喷。
 
@@ -209,7 +209,7 @@ node.go
 ```
 
 我看 `node.go` 427行最可疑，就点进去看了一下，还真是！这叫基于瞎猜的代码阅读法。。。其实很多人读代码一开始都是东看看西看看，
-自顶向下嘛，但是难免会有思路断开的时候，这种时候呢，继续多看看，自然到后边就会连起来。但是很多写源码分析的人不会写出来，
+自顶向下嘛，但是难免会有思路断开的时候，这种时候呢，继续多看看，自然到后边就会连起来。但是很多写源码阅读与分析的人不会写出来，
 我这可是说了大实话了。
 
 ```go
@@ -308,3 +308,13 @@ for {
 ```
 
 原来，是这样的。真的是有点绕啊。好了，这一篇分析就到这里了，其他的细节等我继续更新吧 :)
+
+---
+
+### etcd源码阅读与分析系列文章
+
+- [etcd源码阅读与分析（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
+- [etcd源码阅读与分析（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
+- [etcd源码阅读与分析（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
+- [etcd源码阅读与分析（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
+- [etcd源码阅读与分析（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)

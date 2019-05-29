@@ -1,5 +1,7 @@
 # Golang实现平滑重启(优雅重启)
 
+> 平滑重启，也叫优雅重启，热重启，平滑升级，热升级，热更新等等。
+
 最近在看traefik的源代码, 看到其中有一个功能是平滑重启, 不过他是通过一个叫做 [graceful](https://github.com/tylerb/graceful)
 的库来做到的, 是在HTTP Server的层级. 于是我探索了一下方案, 在TCP层级做了一个demo出来.
 
@@ -86,7 +88,7 @@ func (srv *Server) shutdown(shutdown chan chan struct{}, kill chan struct{}) {
 引号呢? 因为在关闭服务器端的监听和下一次for循环重新执行到 `srv.ListenAndServe()` 之间的这一段时间间隙, 很有可能会有新的
 连接到来却因为服务器端没有监听而连接失败. 所以这个实现和我们直接执行 `sudo systemctl restart nginx` 是类似的.
 
-更详细的traefik源码分析我会另外再写一篇博客来分析, 这里就此打住. 接下来来看一下简单的在TCP层面实现平滑重启的服务器.
+更详细的traefik源码阅读与分析我会另外再写一篇博客来分析, 这里就此打住. 接下来来看一下简单的在TCP层面实现平滑重启的服务器.
 
 ## TCP平滑重启
 

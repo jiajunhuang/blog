@@ -1,4 +1,4 @@
-# Golang slice 源码阅读
+# Golang slice 源码阅读与分析
 
 翻Golang代码：
 

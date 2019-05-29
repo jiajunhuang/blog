@@ -1,4 +1,4 @@
-# 任务队列怎么写？python rq源码分析
+# 任务队列怎么写？python rq源码阅读与分析
 
 rq的意思是 Redis Queue。这个项目和redis是强结合的，此外还有一个重度依赖是pickle。
 这是这个项目很简单的原因之一。

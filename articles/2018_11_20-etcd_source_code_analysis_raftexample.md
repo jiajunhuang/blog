@@ -1,4 +1,4 @@
-# etcd源码阅读（一）：raftexample
+# etcd源码阅读与分析（一）：raftexample
 
 > 开始读etcd的源代码，今天首先来看的是 raftexample，这是一个基于 raft 的简单内存KV，希望通过 raftexample 能对 etcd 有一个大概的认识。
 
@@ -367,3 +367,13 @@ func (h *httpKVAPI) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 好了，到此为止我们就知道etcd大概是怎么一个工作法，这篇博客到此结束。
 
 接下来我们会继续探索真正的etcd里的各个细节。
+
+---
+
+### etcd源码阅读与分析系列文章
+
+- [etcd源码阅读与分析（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
+- [etcd源码阅读与分析（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
+- [etcd源码阅读与分析（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
+- [etcd源码阅读与分析（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
+- [etcd源码阅读与分析（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)

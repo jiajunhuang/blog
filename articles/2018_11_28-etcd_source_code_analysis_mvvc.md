@@ -1,4 +1,4 @@
-# etcd源码阅读（五）：mvcc
+# etcd源码阅读与分析（五）：mvcc
 
 [MVCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control) 是数据库中常见的一种并发控制的方式，即保存数据的多个版本，在同一个事务里，
 应用所见的版本是一致的。
@@ -221,3 +221,13 @@ func (tw *storeTxnWrite) put(key, value []byte, leaseID lease.LeaseID) {
 之后我们再看mvcc实现里的其他特性，例如watch是怎么实现的，实际上这玩意儿存储的时候，是有序存储的。
 
 好了。这一节就看到这里了。
+
+---
+
+### etcd源码阅读与分析系列文章
+
+- [etcd源码阅读与分析（一）：raftexample](https://jiajunhuang.com/articles/2018_11_20-etcd_source_code_analysis_raftexample.md.html)
+- [etcd源码阅读与分析（二）：raft](https://jiajunhuang.com/articles/2018_11_22-etcd_source_code_analysis_raft.md.html)
+- [etcd源码阅读与分析（三）：wal](https://jiajunhuang.com/articles/2018_11_24-etcd_source_code_analysis_wal.md.html)
+- [etcd源码阅读与分析（四）：lease](https://jiajunhuang.com/articles/2018_11_27-etcd_source_code_analysis_lease.md.html)
+- [etcd源码阅读与分析（五）：mvcc](https://jiajunhuang.com/articles/2018_11_28-etcd_source_code_analysis_mvvc.md.html)
