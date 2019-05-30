@@ -4,10 +4,6 @@
 <meta name="Description" content="{{ description }}">
 {% endblock %}
 
-{% block include_css %}
-<link rel="stylesheet" type="text/css" href="/static/styles.min.css" />
-{% endblock %}
-
 {% block content %}
 {{ content | safe }}
 
@@ -41,4 +37,8 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
+{% endblock %}
+
+{% block include_js %}
+<link rel="stylesheet" type="text/css" href="/static/styles.min.css" />
 {% endblock %}
