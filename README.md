@@ -10,7 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2019/05/31 - [试试nomad](https://jiajunhuang.com/articles/2019_05_31-nomad.md.html)
+- 2019/05/31 - [nomad简明教程](https://jiajunhuang.com/articles/2019_05_31-nomad.md.html)
 - 2019/05/30 - [Ubuntu 18.04 dhcp更换新IP](https://jiajunhuang.com/articles/2019_05_30-ubuntu_1804_dhcp_new_ip.md.html)
 - 2019/05/29 - [Python中的新式类(new style class)和老式类(old style class)](https://jiajunhuang.com/articles/2019_05_29-python_old_new_style_class.md.html)
 - 2019/05/18 - [Python Requests 简明教程](https://jiajunhuang.com/articles/2019_05_18-requests.md.html)

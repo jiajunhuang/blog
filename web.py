@@ -71,7 +71,7 @@ def read_md(directory, filename):
 
         title = title.lstrip("#").strip()
         description = "{}...".format(body[:140])
-        content = markdown.markdown(content, extensions=["extra", "codehilite", "mdx_linkify"])
+        content = markdown.markdown(content, extensions=["extra", "tables", "codehilite", "mdx_linkify"])
 
         return title, content, description
 
