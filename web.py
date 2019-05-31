@@ -131,12 +131,24 @@ def friends():
     return render_template("article.html", title=title, content=content, description=description)
 
 
-@app.route("/articles/<filename>")
+@app.route("/articles/<path:filename>")
 @handle_exception
 def article(filename):
     recommendations = set(random.choices(all_articles, k=8))
 
     return render_post(filename, "article.html", read_article, recommendations=recommendations)
+
+
+@app.route("/articles/<path:filename>/raw")
+@handle_exception
+def article_raw(filename):
+    if len(filename) < 6:  # `.html`
+        return redirect("/404")
+
+    filename = filename[:-5]  # remove `.html`
+
+    with open(os.path.join("articles", filename)) as f:
+        return f.read()
 
 
 @app.route("/jobs/<filename>")
