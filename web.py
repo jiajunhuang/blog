@@ -9,6 +9,7 @@ from flask import (
     send_from_directory,
     make_response,
     request,
+    Response,
 )
 import markdown
 import sentry_sdk
@@ -148,7 +149,7 @@ def article_raw(filename):
     filename = filename[:-5]  # remove `.html`
 
     with open(os.path.join("articles", filename)) as f:
-        return f.read()
+        return Response(f.read(), mimetype='text/plain')
 
 
 @app.route("/jobs/<filename>")
