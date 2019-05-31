@@ -239,12 +239,10 @@ def notes():
 @app.route("/reward")
 def reward():
     user_agent = request.user_agent.string
-    if "MicroMessenger" in user_agent:
-        return redirect(config.WECHAT_PAY_URL)
-    elif "AlipayClient" in user_agent:
+    if "AlipayClient" in user_agent:
         return redirect(config.ALIPAY_URL)
     else:
-        return redirect("/404")
+        return redirect(config.WECHAT_PAY_URL)
 
 
 if __name__ == "__main__":
