@@ -5,3 +5,4 @@
 - [莫回首的博客](https://lailin.xyz/)
 - [Yiran的博客](https://zdyxry.github.io/)
 - [HopeHook's Blog](http://hopehook.com/)
+- [程序员DD](http://blog.didispace.com/)
