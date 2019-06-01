@@ -17,3 +17,6 @@ def reward():
     else:
         return redirect(config.ALIPAY_URL)
 ```
+
+然后我们再生成一个二维码，内容是 `https://jiajunhuang.com/reward`，这样子别人扫码就会跳转到这个URL，然后我们根据 `UserAgent`
+进行跳转，大功告成！
