@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/06/01 - [从Chrome切换到Firefox](https://jiajunhuang.com/articles/2019_06_01-from_chrome_to_firefox.md.html)
 - 2019/05/31 - [Linux下当笔记本合上盖子之后只使用扩展显示器](https://jiajunhuang.com/articles/2019_05_31-turnoff_screen_when_lid_is_closed.md.html)
 - 2019/05/31 - [nomad简明教程](https://jiajunhuang.com/articles/2019_05_31-nomad.md.html)
 - 2019/05/30 - [Ubuntu 18.04 dhcp更换新IP](https://jiajunhuang.com/articles/2019_05_30-ubuntu_1804_dhcp_new_ip.md.html)
