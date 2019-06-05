@@ -1,4 +1,4 @@
-- hosts: alilihk
+- hosts: blog
   remote_user: root
   tasks:
     - name: generate README.md
