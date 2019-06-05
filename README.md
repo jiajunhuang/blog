@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/06/06 - [socks5 协议详解](https://jiajunhuang.com/articles/2019_06_06-socks5.md.html)
+- 2019/06/04 - [开启HSTS(HTTP Strict Transport Security)](https://jiajunhuang.com/articles/2019_06_04-hsts.md.html)
 - 2019/06/01 - [从Chrome切换到Firefox](https://jiajunhuang.com/articles/2019_06_01-from_chrome_to_firefox.md.html)
 - 2019/06/01 - [网络乞讨之合并支付宝和微信的收款二维码](https://jiajunhuang.com/articles/2019_06_01-combine_wechat_alipay.md.html)
 - 2019/05/31 - [Linux下当笔记本合上盖子之后只使用扩展显示器](https://jiajunhuang.com/articles/2019_05_31-turnoff_screen_when_lid_is_closed.md.html)
