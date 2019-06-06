@@ -229,13 +229,6 @@ def search():
     return redirect("https://www.google.com/search?q=site:jiajunhuang.com " + request.form.get("search"))
 
 
-@app.route("/notes")
-def notes():
-    resp = requests.get(config.NOTES_URL).json()
-    notes = resp["notes"] if resp else []
-    return render_template("notes.html", title="随想", notes=notes)
-
-
 @app.route("/reward")
 def reward():
     user_agent = request.user_agent.string
