@@ -27,6 +27,4 @@
 - Github: https://github.com/jiajunhuang
 - Telegram: https://t.me/jiajunhuang
 
-## 个人项目
-
-[请看这里](https://jiajunhuang.com/projects)
+[个人作品请看这里](https://jiajunhuang.com/projects)
