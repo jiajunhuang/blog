@@ -13,10 +13,14 @@ from flask import (
 )
 import markdown
 import sentry_sdk
-import requests
 
 from utils import load_mds
 from config import config
+from models import (
+    get_session,
+    Issue,
+    Note,
+)
 
 if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice in here...
     sentry_sdk.init(os.getenv("SENTRY_DSN"))
@@ -166,6 +170,20 @@ def tutorial(lang, filename):
     return render_post(
         filename, "article.html", functools.partial(read_tutorial, lang), trim_html_suffix=False, subtitle=subtitle,
     )
+
+
+@app.route("/notes")
+def notes():
+    with get_session() as s:
+        notes = Note.get_all(s)
+        return render_template("notes.html", notes=notes)
+
+
+@app.route("/sharing")
+def sharing():
+    with get_session() as s:
+        issues = Issue.get_all(s)
+        return render_template("sharing.html", issues=issues)
 
 
 @app.route("/404")
