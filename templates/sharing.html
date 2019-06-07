@@ -6,7 +6,7 @@
 <ul class="list-group list-group-flush">
     {% for issue in issues %}
     <a id={{ issue.id }} href="{{ issue.url }}">
-        <li class="list-group-item">{{ issue["content"] }}</li>
+        <li class="list-group-item">#{{ issue.id }} {{ issue["content"] }}</li>
     </a>
     {% endfor %}
 </ul>
