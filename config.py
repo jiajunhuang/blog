@@ -10,6 +10,7 @@ class Config:
         self.SHARE_BOT_URL = os.getenv("SHARE_BOT_URL", "http://127.0.0.1:5000/sharing")
         self.SHARE_BOT_TOKEN = os.getenv("SHARE_BOT_TOKEN", "")
         self.NOTE_BOT_TOKEN = os.getenv("NOTE_BOT_TOKEN", "")
+        self.SENTRY_DSN = os.getenv("SENTRY_DSN", "")
 
 
 config = Config()

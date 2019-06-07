@@ -1,3 +1,4 @@
+import logging
 import functools
 import os
 import random
@@ -13,6 +14,7 @@ from flask import (
 )
 import markdown
 import sentry_sdk
+from sentry_sdk.integrations.flask import FlaskIntegration
 
 from utils import load_mds
 from config import config
@@ -22,10 +24,15 @@ from models import (
     Note,
 )
 
-if os.getenv("SENTRY_DSN"):  # if dsn := os.getenv("xxx"); dsn != "" {} is nice in here...
-    sentry_sdk.init(os.getenv("SENTRY_DSN"))
-
 app = Flask(__name__)
+logging.basicConfig(level=logging.INFO)
+
+if config.SENTRY_DSN:
+    logging.info("integrated sentry...")
+    sentry_sdk.init(
+        dsn=config.SENTRY_DSN,
+        integrations=[FlaskIntegration()]
+    )
 
 articles, words = load_mds("./articles")
 # title, datetime, filename, folder
