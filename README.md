@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/06/08 - [从XMonad迁移到i3](https://jiajunhuang.com/articles/2019_06_08-migrate_from_xmonad_to_i3wm.md.html)
 - 2019/06/06 - [socks5 协议详解](https://jiajunhuang.com/articles/2019_06_06-socks5.md.html)
 - 2019/06/06 - [服务器IP被ban学到的经验](https://jiajunhuang.com/articles/2019_06_06-ip_ban.md.html)
 - 2019/06/04 - [开启HSTS(HTTP Strict Transport Security)](https://jiajunhuang.com/articles/2019_06_04-hsts.md.html)
