@@ -10,6 +10,7 @@ digraph {
     client -> frps[label="2. 客户端请求frps"];
     frps -> frpc[label="3. frps告知frpc有新请求，需建立连接"];
     frpc -> frps[label="4. 收到frps请求，建立新连接"];
+    frpc -> server[label="4. 收到frps请求，同时与真正的内容服务器建立连接"];
     frps -> client[label="5. frps将frpc和client的流量互相转发"];
     frps -> frpc[label="5. frps将frpc和client的流量互相转发"];
 }
