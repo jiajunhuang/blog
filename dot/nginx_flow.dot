@@ -1,0 +1,13 @@
+digraph {
+    label="Nginx流量走向示意图";
+
+    node[shape="box", style="rounded"]
+       client; server;
+    node[shape="diamond", style=""]
+       nginx;
+
+    client -> nginx[label="1. 客户端请求Nginx"];
+    nginx -> server[label="2. Nginx请求内容服务器"];
+    server -> nginx[label="3. 内容服务器返回响应"];
+    nginx -> client[label="4. Nginx将响应发给客户端"]
+}

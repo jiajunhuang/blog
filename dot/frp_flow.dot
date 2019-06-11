@@ -1,0 +1,15 @@
+digraph {
+    label="frp流量走向示意图";
+
+    node[shape="box", style="rounded"]
+       client; server;
+    node[shape="diamond", style=""]
+       frps; frpc;
+
+    frpc -> frps[label="1. frpc启动后向frps注册"];
+    client -> frps[label="2. 客户端请求frps"];
+    frps -> frpc[label="3. frps告知frpc有新请求，需建立连接"];
+    frpc -> frps[label="4. 收到frps请求，建立新连接"];
+    frps -> client[label="5. frps将frpc和client的流量互相转发"];
+    frps -> frpc[label="5. frps将frpc和client的流量互相转发"];
+}
