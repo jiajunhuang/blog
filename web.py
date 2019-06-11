@@ -244,6 +244,13 @@ def robots():
     return response
 
 
+@app.route("/ads.txt")
+def ads():
+    response = make_response(render_template("ads.txt"))
+    response.headers['Content-Type'] = 'text/plain'
+    return response
+
+
 @app.route("/word")
 def search_word():
     return redirect("https://www.google.com/search?q=site:jiajunhuang.com " + request.args.get("word", ""))
