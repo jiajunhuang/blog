@@ -129,6 +129,13 @@ def aboutme():
     return render_template("article.html", title=title, content=content, description=description)
 
 
+@app.route("/natproxy")
+@handle_exception
+def natproxy():
+    title, content, description = read_article("natproxy.md")
+    return render_template("article.html", title=title, content=content, description=description)
+
+
 @app.route("/projects")
 @handle_exception
 def projects():
