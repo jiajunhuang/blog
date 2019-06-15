@@ -129,6 +129,17 @@ Server: nginx/1.16.0
 
 大功告成！通过这个公网地址，我们已经访问了在本地的HTTP服务。
 
+### 设置为允许和拒绝远程连接
+
+v0.0.9 之后版本的natproxy可以设置为允许和拒绝远程连接，使用如下：
+
+```bash
+jiajun@idea ~ $ natproxy -token='b1c69eba0770434192666f980fcafa1e' -disconnect
+2019/06/15 14:44:48 通知服务器将本客户端设置为断开连接结果: %!s(<nil>)
+jiajun@idea ~ $ natproxy -token='b1c69eba0770434192666f980fcafa1e' -connect
+2019/06/15 14:44:55 通知服务器将本客户端设置为正常连接结果: %!s(<nil>)
+```
+
 ### 使用systemd开机自启
 
 编辑 `/etc/systemd/system/natproxy.service`:
