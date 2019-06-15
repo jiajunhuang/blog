@@ -1,4 +1,4 @@
-# NatProxy
+# NatProxy - 方便、快捷、免费的内网穿透工具
 
 NatProxy是一个方便、快捷的内网穿透工具，借助natproxy，你可以远程访问在家里的电脑。例如，通过NatProxy你可以做到：
 
