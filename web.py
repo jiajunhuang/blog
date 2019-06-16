@@ -193,11 +193,12 @@ def notes():
         return render_template("notes.html", notes=notes)
 
 
-@app.route("/sharing")
-def sharing():
+@app.route("/sharing", defaults={'all': False})
+@app.route("/sharing/<all>")
+def sharing(all):
     with get_session() as s:
-        issues = Issue.get_all(s)
-        return render_template("sharing.html", issues=issues)
+        issues = Issue.get_all(s) if all else Issue.get_latest_sharing(s)
+        return render_template("sharing.html", issues=issues, show_all=all)
 
 
 @app.route("/404")

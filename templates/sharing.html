@@ -9,6 +9,9 @@
         <li class="list-group-item">#{{ issue.id }} {{ issue["content"] }}</li>
     </a>
     {% endfor %}
+    {% if not show_all %}
+    <li class="list-group-item"><a href="/sharing/all">查看全部</a></li>
+    {% endif %}
 </ul>
 
 <div id="disqus_thread"></div>

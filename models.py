@@ -69,6 +69,10 @@ class Issue(Base, BaseMixin):
     content = Column(String, nullable=False, default="", doc="内容")
     url = Column(String, default="", doc="链接")
 
+    @classmethod
+    def get_latest_sharing(cls, session, limit=30):
+        return session.query(cls).order_by(cls.id.desc()).limit(limit).all()
+
 
 class Note(Base, BaseMixin):
     __tablename__ = "note"
