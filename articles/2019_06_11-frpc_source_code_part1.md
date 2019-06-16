@@ -65,6 +65,8 @@ remote_port = 6001
 
 这一篇文章中，我们了解了frp的一些概念和流程。下一篇我们会深入到代码看一下一个TCP代理是怎么工作的。
 
+2019.06.19：第二篇请戳 [这里](https://jiajunhuang.com/articles/2019_06_19-frp_source_code_part2.md.html)
+
 ---
 
 参考资料：
