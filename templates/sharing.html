@@ -8,8 +8,9 @@
 <ul class="list-group list-group-flush">
     {% for issue in issues %}
     <div class="row">
-        <a id={{ issue.id }} href="#{{ issue.id }}">#{{ issue.id }}</a>
-        <a><li class="list-group-item">{{ issue["content"] }}</li></a>
+        <li class="list-group-item">
+            <a id={{ issue.id }} href="#{{ issue.id }}">#{{ issue.id }}</a><a>{{ issue["content"] }}</a>
+        </li>
     </div>
     {% endfor %}
     {% if not show_all %}
