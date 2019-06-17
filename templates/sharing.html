@@ -9,7 +9,7 @@
     {% for issue in issues %}
     <div class="row">
         <li class="list-group-item">
-            <a id={{ issue.id }} href="#{{ issue.id }}">#{{ issue.id }}</a><a href="{{ issue.url }}">{{ issue.content }}</a>
+            <a id={{ issue.id }} href="#{{ issue.id }}">#{{ issue.id }}</a><a href="{{ issue.url }}"> {{ issue.content }}</a>
         </li>
     </div>
     {% endfor %}
