@@ -47,18 +47,18 @@ func (a, b int) int {
 
 - 把这个匿名函数赋值给一个变量
 
-    ```go
-    var x = func(a, b int) int { return a + b }
-    x(1, 2)
-    ```
+```go
+var x = func(a, b int) int { return a + b }
+x(1, 2)
+```
 
 - 把这个匿名函数直接当做参数传给 `go` 关键字
 
-    ```go
-    go func(a, b int) {
-        fmt.Println(a + b)
-    }()
-    ```
+```go
+go func(a, b int) {
+    fmt.Println(a + b)
+}()
+```
 ---
 
 - 上一篇：[容器类型](./composite_types.md)
