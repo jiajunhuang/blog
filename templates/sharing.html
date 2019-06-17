@@ -7,11 +7,11 @@
 
 <ul class="list-group list-group-flush">
     {% for issue in issues %}
-    <div class="row">
-        <li class="list-group-item">
+    <li class="list-group-item">
+        <div class="row">
             <a id={{ issue.id }} href="#{{ issue.id }}">#{{ issue.id }}</a><a href="{{ issue.url }}"> {{ issue.content }}</a>
-        </li>
-    </div>
+        </div>
+    </li>
     {% endfor %}
     {% if not show_all %}
     <li class="list-group-item"><a href="/sharing/all">查看全部</a></li>
