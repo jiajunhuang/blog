@@ -167,9 +167,6 @@ func (b *Writer) Write(p []byte) (nn int, err error) {
 
 ## How to solve it
 
-- Do not use Golang `net/http` to serve files
-- I've create a [PR](https://github.com/golang/go/pull/28936) to make sure server will close the connection after it write
-all the data, but I'm not sure will it be merged.
 - Write files in chunk, instead of read large files into memory
 
 -----
