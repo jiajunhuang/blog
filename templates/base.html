@@ -105,13 +105,6 @@
                         {% block content %}{% endblock %}
                     </div>
                     <div class="col-md-3">
-                        <div class="card">
-                            <img src="/static/reward.png" class="card-img-top" alt="微信和支付宝打赏二维码">
-                            <div class="card-body">
-                                <h5 class="card-title">微信|支付宝打赏💰</h5>
-                                <p class="card-text">难道你真的没有想过要鼓励一下吗？</p>
-                            </div>
-                        </div>
                         <div class="card mt-2">
                             <img src="/static/wechat.png" class="card-img-top" alt="微信二维码">
                             <div class="card-body">
@@ -120,15 +113,9 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <a href="https://jiajunhuang.com/tutorial/golang/index.md">
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQUSURBVGhD7ZnbS1RBHMft8hhU7733Uv9AL0alpe66vmyXh+hKQgrR5SHSWCsFsSIhyKBIyDKTLvTQDTIpMKI9u3PWSySle84qmbfVyrWM2un3O87R9TTWMX9DBn7hi7vnzMznOzNnZnfWtHnNa47Ix6LLvJHYNg8zaj26EfTqRreHmWPgT15mdIFbvLp5Hd4f9EViq0W1fy9/a+8SCHUGw0JA7tYe3WzysFieaEa9cprN5V5mXsKRBScgQI2Pda0dfy8P6cqR2K0cFr2FbVptAQNnU2DpBA1fdcKhE993tnbxp71xPjgyYrkRXue3dU8ph3ZbDg2PYLXA0glGpx8bz9i9j2fuP2CBMFTv5xGeSCSmuA+u4T07kJtyWZdv8Iw9+aKO0SewdIJFOIiNbwBIVs0dC4Qj6gxluwHujYdxV86jdfCMA0dEHQUdgEVaZAeyPQgjWFBQwAsLC38JNgD3ZlpuwhHzmMDSCtbBZpiJDhuEwTCUmw64KQdtx5EhcGoE+/w9G4gL0RnI9pMPk4+Q23Iwy50Co04AMm0g7iK4EJ2hcMGmLmK35XArFRh1gi1udBI4vsPgQsRHAd0AI4rXMotP8fXZ2XxdVjbfeLxs2nKpbaEFRp2cQKe36O/4o1Atryjawb3ZmZZPF++wruE9WR3bODgCo04ycKpfhKo510qkxnuyOrbhg3FYYNRJBk71F61UGh79RSuT1rE9JzrwIFxnBf3eUsXH2m/ysTd18PqCdQ3vyepMmJk9AqNOUrDE8Xh8imVlnJ4TM2D7v+/Ay57+KZaVcVp5B3h9/SIZmMq5evQH53yBwNEKwyeDJdUyMKWTWuAyeSfs8LgVyqCUHg2V0nciqZWcx/BjoVNSKKW7Q+esz4xkMFAp8LMXjMgoNjoUKpdCKd0cumh3IC7wsxc0dhIeoaGWcNUVGZTSdeG7D7kWGIZZDwg8nWCb88qglAbGIYGjFzR+VAYlNTPOChy98OcOKZTQcOK7IXD0AsALJ5DczHgucPQCgPELkNgwy28Fjl7Q+IAMSmujX+DoNdMfcP/KzPwqcPTCb4tSKKkV/jIBO0REDqWz0jUAgAonUIGvCRy9cvTYKpiFHxIomXOZ6Rc4NYJ9ukoGpjCssTZ/PV8kUGqE/z2BWWiWBZiNcYfzhGPpAqNWmyJdK7ay9l5ZkL8yM5I+3dgumlcv+Hq9dyRYlqwIN8oDzcC72GvrDKDkKCkT1074oQNJPHSgm0LV7Xks+kwW7g82LrKHrxJa2cQvd6SnsOkEB437k8CSINfKl+L13EjnSngUCuFZvo1rBBbke/A3CPoR/kbhehjvefXoYV/YWJPeyBdzHlgIoa+kdIDuFDadkq8CuQDqg/CP7fCzkehEpbJT2Lzm9Tulpf0E9VxbO56k0TkAAAAASUVORK5CYII=">
-                                        Golang 简明教程
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="https://jiajunhuang.com/tutorial/python/index.md">
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOESURBVGhD7ZhPSBRRHMffzujOqoe6ZCCIh7qoUAgFXaLo0h8o8BB18mAkeBAP6syKiHSKOkR1iKCgDhEhRBAR6c5zZ+0PQXXoHwkG/TFv4aEsCetN3/d2Vrbh7c7s7qxjOF/4srvjvvf7/Hy/efN7SyJFihQJsmPESHUohmnEDHoHr28U3VxQdPoL73/Cc/j8NKabF1WD7iNjY4ozcA1o0NwG0LeKQW2/RiITZHh6kzNDiBq7Ww+geTegL+v0iVi5MKXqU/ulcD6tJlMHnKnCESC6BYxOvxB9spWMPGjG+1f5kMUc0+kpZ6pwBNheAWLQq84lfm3UDVrIuBcuOcPCUS4BvsuQYbONDNCW0lZgzSRQnqMEVkPFkswlwNJar53R7JxZRluCnzEr3ikmCVPlJLCSiKUx/O2kmKgsJdNbscNcFq2BQRfdAJXaKwFurMR3RhMtgqcUqYZ5ONvHyIMHYT8JcGMlTgso38puhz9kQYN0zDAv8HCeCWTi7wWXX/GJZQGr4D4eDzfriAw838xs2Czg/Ait76wkWLBGu00GJhp5PJTILRl0vpHkQQHnqf70RtQ+kwYNzou8EeTh2OOGRn6jyqDzjQT6BZ+XVCO1VxKwcuv0D/wZDdwVMki3OOEI4G/KgN3G9/w1flja41KAgjZn8NpFhiabSunvbZsoKJ1zMliZkcAZZ2hxFXvwuI1nxA3Sd19zhvpStmRqjwH+hQy0kFFChjNFcQEs2+N7GPBT5Oi4ysewR3VN+A+dx3b3Aa+/ZQCVmlmJLgHoJTzAOmXA/xj1LA4wEEvX7AD4V1nQIM0e1m4XgJ7SabsUOt/iPIs6TpMElvaTLGCQxqouIVaN4PMUygKARZ/CuRMY4I/IAgZtJHBbsPkVehQqA8/Zbw8ThPk9xayanQLMr5TkVI8MPOfVSgDwy9itugVUSTJSGwBa8PeeaibA6x1+Z1vx68yq7RA85UhN0kN4qC2XmwB2JvGdcDVk7ub7vfum/n8S8FClJRR6kusqAcDO4bnRyjKJZuwsL51r/1ECVnzl50eAj4proSeQ0U64QQsZCcyjn2nnvzBg3GtxzW+PXy2x6XibG7QkW1qPM1V48nOelRnjvpV0UK+W7OekHuVxTQZZyKj9WTad2ONMsTYkzgWWdhbJZAD4EfW9CPNeZgGege/xm5el63bZ40QchCJFirTuRchfvk2GVHiFhMwAAAAASUVORK5CYII=">
-                                        Python 教程
+                                    <a href="https://tools.jiajunhuang.com">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIZSURBVGhD7ZlBbtNgGERzD2CD4AZV0j3IRYqaqBXn4ADcJksEXAMhKm4CUYEDtP6rWaSPwZInn80mI73lP29kO5v8i1NOmSFn3fbZ8mLzadltf68utndT0hw9n1ev1y+lPy7LN1dP+/E/nWxaNj/O1+snmpGnL/v4d/k8LLvNB83I0z/9P4elX2++3+33+0lo3YeuVbf9pRl5HhX2OHEl9GlGHhY6aSX0aUYeFjppJfRpRh4WOmkl9GlGHhZSuNvtjoJ99GlGHhZS6EaNgX30aUYeFlLoRo2BffRpRh4WUlgNfZqRh4VOWgl9mpGHhU5aCX2akYeFTloJfZqRh4UUuh/mGNhHn2bkYSGFbtQY2EefZuRhIYXV0KcZeVjopJXQpxl5WEih+yyG4HlCn2bkYSGFbuQQPE/o04w8LHTSSujTjDwsdNJK6NOMPCyk0H0mY2AffZqRh4UUulFjYB99mpGHhRRWQ59m5GGhk1ZCn2bkYSGF7rMYgucJfZqRh4UUupFD8DyhTzPysNBJK6FPM/Kw0EkroU8z8rDQSSuhTzPysNBJK6FPM/KwcMp/p798u3nkamhGHhbOjWbkcaVzohl5XOmcaEYeVzrE23fvB3FnhtCMPGNvJt3oQ9yZf1JxxfRw5enKZ6Bd7WpGnnZf+z+uWfsHtz97df1cM45Lu69tV57tlTpZLZvb9uTPu8sX0p9yynRZLO4BQv6aTXHt+l0AAAAASUVORK5CYII=">
+                                        Kindle笔记导出
                                     </a>
                                 </li>
                                 <li class="list-group-item">
@@ -146,10 +133,29 @@
                                 <li class="list-group-item">
                                     <a href="/natproxy" class="card-link">
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVGhD7ZMxTwJBFISv9G/4X6CytZFWahs6GltKYmdvpQkhwYaYYEygvbNjzV3gZ1hYnPfMe4Rbn2SleLskM8nX3U5mdm8yCIKgNNXpXa+6vX6dAp2r/pJjhUszignHCpccfNl8RQUFNFNLUEAztQQFNFNLUEAztQQFNFNLUEAztQQFNFNLUEAztQQFNFNLUCAVOFa4NJOYcKwwFR/VReGqOimaTBzvsF6327N8XW1Uk4hQJsrGMf9W7qpbOTRdLOvLm2FUKMOuRJONY+p6d+68WJefcmAwulNNLaEMkoeyUUaO+1u5K2fycQq3L7RfoZxx3Lb84aZw+0LrFQh/0P5wU7p9ofUK/qD3h0ukdPuC/wq7QfvD/S+P87d6/DA5CjqreQYhg94f7jHcPz2r4UKgs5pnKD+Dni5Wzf91upx+AQiCoIjKsm9GA6j6IhFSdQAAAABJRU5ErkJggg==">
-                                        免费内网穿透工具
+                                        免费内网穿透
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://jiajunhuang.com/tutorial/golang/index.md">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQUSURBVGhD7ZnbS1RBHMft8hhU7733Uv9AL0alpe66vmyXh+hKQgrR5SHSWCsFsSIhyKBIyDKTLvTQDTIpMKI9u3PWSySle84qmbfVyrWM2un3O87R9TTWMX9DBn7hi7vnzMznOzNnZnfWtHnNa47Ix6LLvJHYNg8zaj26EfTqRreHmWPgT15mdIFbvLp5Hd4f9EViq0W1fy9/a+8SCHUGw0JA7tYe3WzysFieaEa9cprN5V5mXsKRBScgQI2Pda0dfy8P6cqR2K0cFr2FbVptAQNnU2DpBA1fdcKhE993tnbxp71xPjgyYrkRXue3dU8ph3ZbDg2PYLXA0glGpx8bz9i9j2fuP2CBMFTv5xGeSCSmuA+u4T07kJtyWZdv8Iw9+aKO0SewdIJFOIiNbwBIVs0dC4Qj6gxluwHujYdxV86jdfCMA0dEHQUdgEVaZAeyPQgjWFBQwAsLC38JNgD3ZlpuwhHzmMDSCtbBZpiJDhuEwTCUmw64KQdtx5EhcGoE+/w9G4gL0RnI9pMPk4+Q23Iwy50Co04AMm0g7iK4EJ2hcMGmLmK35XArFRh1gi1udBI4vsPgQsRHAd0AI4rXMotP8fXZ2XxdVjbfeLxs2nKpbaEFRp2cQKe36O/4o1Atryjawb3ZmZZPF++wruE9WR3bODgCo04ycKpfhKo510qkxnuyOrbhg3FYYNRJBk71F61UGh79RSuT1rE9JzrwIFxnBf3eUsXH2m/ysTd18PqCdQ3vyepMmJk9AqNOUrDE8Xh8imVlnJ4TM2D7v+/Ay57+KZaVcVp5B3h9/SIZmMq5evQH53yBwNEKwyeDJdUyMKWTWuAyeSfs8LgVyqCUHg2V0nciqZWcx/BjoVNSKKW7Q+esz4xkMFAp8LMXjMgoNjoUKpdCKd0cumh3IC7wsxc0dhIeoaGWcNUVGZTSdeG7D7kWGIZZDwg8nWCb88qglAbGIYGjFzR+VAYlNTPOChy98OcOKZTQcOK7IXD0AsALJ5DczHgucPQCgPELkNgwy28Fjl7Q+IAMSmujX+DoNdMfcP/KzPwqcPTCb4tSKKkV/jIBO0REDqWz0jUAgAonUIGvCRy9cvTYKpiFHxIomXOZ6Rc4NYJ9ukoGpjCssTZ/PV8kUGqE/z2BWWiWBZiNcYfzhGPpAqNWmyJdK7ay9l5ZkL8yM5I+3dgumlcv+Hq9dyRYlqwIN8oDzcC72GvrDKDkKCkT1074oQNJPHSgm0LV7Xks+kwW7g82LrKHrxJa2cQvd6SnsOkEB437k8CSINfKl+L13EjnSngUCuFZvo1rBBbke/A3CPoR/kbhehjvefXoYV/YWJPeyBdzHlgIoa+kdIDuFDadkq8CuQDqg/CP7fCzkehEpbJT2Lzm9Tulpf0E9VxbO56k0TkAAAAASUVORK5CYII=">
+                                        Golang 简明教程
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://jiajunhuang.com/tutorial/python/index.md">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOESURBVGhD7ZhPSBRRHMffzujOqoe6ZCCIh7qoUAgFXaLo0h8o8BB18mAkeBAP6syKiHSKOkR1iKCgDhEhRBAR6c5zZ+0PQXXoHwkG/TFv4aEsCetN3/d2Vrbh7c7s7qxjOF/4srvjvvf7/Hy/efN7SyJFihQJsmPESHUohmnEDHoHr28U3VxQdPoL73/Cc/j8NKabF1WD7iNjY4ozcA1o0NwG0LeKQW2/RiITZHh6kzNDiBq7Ww+geTegL+v0iVi5MKXqU/ulcD6tJlMHnKnCESC6BYxOvxB9spWMPGjG+1f5kMUc0+kpZ6pwBNheAWLQq84lfm3UDVrIuBcuOcPCUS4BvsuQYbONDNCW0lZgzSRQnqMEVkPFkswlwNJar53R7JxZRluCnzEr3ikmCVPlJLCSiKUx/O2kmKgsJdNbscNcFq2BQRfdAJXaKwFurMR3RhMtgqcUqYZ5ONvHyIMHYT8JcGMlTgso38puhz9kQYN0zDAv8HCeCWTi7wWXX/GJZQGr4D4eDzfriAw838xs2Czg/Ait76wkWLBGu00GJhp5PJTILRl0vpHkQQHnqf70RtQ+kwYNzou8EeTh2OOGRn6jyqDzjQT6BZ+XVCO1VxKwcuv0D/wZDdwVMki3OOEI4G/KgN3G9/w1flja41KAgjZn8NpFhiabSunvbZsoKJ1zMliZkcAZZ2hxFXvwuI1nxA3Sd19zhvpStmRqjwH+hQy0kFFChjNFcQEs2+N7GPBT5Oi4ysewR3VN+A+dx3b3Aa+/ZQCVmlmJLgHoJTzAOmXA/xj1LA4wEEvX7AD4V1nQIM0e1m4XgJ7SabsUOt/iPIs6TpMElvaTLGCQxqouIVaN4PMUygKARZ/CuRMY4I/IAgZtJHBbsPkVehQqA8/Zbw8ThPk9xayanQLMr5TkVI8MPOfVSgDwy9itugVUSTJSGwBa8PeeaibA6x1+Z1vx68yq7RA85UhN0kN4qC2XmwB2JvGdcDVk7ub7vfum/n8S8FClJRR6kusqAcDO4bnRyjKJZuwsL51r/1ECVnzl50eAj4proSeQ0U64QQsZCcyjn2nnvzBg3GtxzW+PXy2x6XibG7QkW1qPM1V48nOelRnjvpV0UK+W7OekHuVxTQZZyKj9WTad2ONMsTYkzgWWdhbJZAD4EfW9CPNeZgGege/xm5el63bZ40QchCJFirTuRchfvk2GVHiFhMwAAAAASUVORK5CYII=">
+                                        Python 教程
                                     </a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="card mt-2">
+                            <img src="/static/reward.png" class="card-img-top" alt="微信和支付宝打赏二维码">
+                            <div class="card-body">
+                                <h5 class="card-title">微信|支付宝打赏💰</h5>
+                                <p class="card-text">支持我继续创作</p>
+                            </div>
                         </div>
                         <div class="card mt-2">
                             <div class="card-body">
