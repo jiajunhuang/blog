@@ -191,7 +191,6 @@ def tutorial(lang, filename):
 
 
 @app.route("/notes")
-@functools.lru_cache()
 def notes():
     with get_session() as s:
         notes = Note.get_all(s)
@@ -200,7 +199,6 @@ def notes():
 
 @app.route("/sharing", defaults={'all': False})
 @app.route("/sharing/<all>")
-@functools.lru_cache()
 def sharing(all):
     with get_session() as s:
         issues = Issue.get_all(s) if all else Issue.get_latest_sharing(s)
