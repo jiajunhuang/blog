@@ -45,6 +45,7 @@ SUBTITLE_MAP = {
 }
 
 
+@functools.lru_cache()
 def get_words(top=35):
     return words.most_common(top)
 
@@ -113,17 +114,20 @@ def handle_exception(func):
 
 
 @app.route("/")
+@functools.lru_cache()
 def index():
     return render_template("index.html", articles=articles[:80], total_count=len(articles))  # magic number here...
 
 
 @app.route("/archive")
+@functools.lru_cache()
 def archive():
     return render_template("index.html", articles=articles)
 
 
 @app.route("/aboutme")
 @handle_exception
+@functools.lru_cache()
 def aboutme():
     title, content, description = read_article("aboutme.md")
     return render_template("article.html", title=title, content=content, description=description)
@@ -131,6 +135,7 @@ def aboutme():
 
 @app.route("/natproxy")
 @handle_exception
+@functools.lru_cache()
 def natproxy():
     title, content, description = read_article("natproxy.md")
     return render_template("article.html", title=title, content=content, description=description)
@@ -138,6 +143,7 @@ def natproxy():
 
 @app.route("/projects")
 @handle_exception
+@functools.lru_cache()
 def projects():
     title, content, description = read_article("projects.md")
     return render_template("article.html", title=title, content=content, description=description)
@@ -145,6 +151,7 @@ def projects():
 
 @app.route("/friends")
 @handle_exception
+@functools.lru_cache()
 def friends():
     title, content, description = read_article("friends.md")
     return render_template("article.html", title=title, content=content, description=description)
@@ -152,6 +159,7 @@ def friends():
 
 @app.route("/articles/<path:filename>")
 @handle_exception
+@functools.lru_cache()
 def article(filename):
     recommendations = set(random.choices(all_articles, k=8))
 
@@ -160,6 +168,7 @@ def article(filename):
 
 @app.route("/articles/<path:filename>/raw")
 @handle_exception
+@functools.lru_cache()
 def article_raw(filename):
     if len(filename) < 6:  # `.html`
         return redirect("/404")
@@ -170,14 +179,9 @@ def article_raw(filename):
         return Response(f.read(), mimetype='text/plain')
 
 
-@app.route("/jobs/<filename>")
-@handle_exception
-def job(filename):
-    return render_post(filename, "article.html", read_job)
-
-
 @app.route("/tutorial/<path:lang>/<filename>")
 @handle_exception
+@functools.lru_cache()
 def tutorial(lang, filename):
     subtitle = SUBTITLE_MAP.get(lang, "")
 
@@ -187,6 +191,7 @@ def tutorial(lang, filename):
 
 
 @app.route("/notes")
+@functools.lru_cache()
 def notes():
     with get_session() as s:
         notes = Note.get_all(s)
@@ -195,6 +200,7 @@ def notes():
 
 @app.route("/sharing", defaults={'all': False})
 @app.route("/sharing/<all>")
+@functools.lru_cache()
 def sharing(all):
     with get_session() as s:
         issues = Issue.get_all(s) if all else Issue.get_latest_sharing(s)
@@ -202,11 +208,13 @@ def sharing(all):
 
 
 @app.route("/404")
+@functools.lru_cache()
 def not_found():
     return render_template("404.html")
 
 
 @app.route("/500")
+@functools.lru_cache()
 def server_error():
     return render_template("500.html")
 
@@ -232,6 +240,7 @@ def favicon():
 
 
 @app.route("/rss")
+@functools.lru_cache()
 def rss():
     response = make_response(render_template("rss.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
@@ -239,6 +248,7 @@ def rss():
 
 
 @app.route("/sitemap.xml")
+@functools.lru_cache()
 def sitemap():
     response = make_response(render_template("sitemap.xml", articles=all_articles))
     response.headers['Content-Type'] = 'application/xml'
@@ -246,6 +256,7 @@ def sitemap():
 
 
 @app.route("/robots.txt")
+@functools.lru_cache()
 def robots():
     response = make_response(render_template("robots.txt"))
     response.headers['Content-Type'] = 'text/plain'
@@ -253,6 +264,7 @@ def robots():
 
 
 @app.route("/ads.txt")
+@functools.lru_cache()
 def ads():
     response = make_response(render_template("ads.txt"))
     response.headers['Content-Type'] = 'text/plain'
