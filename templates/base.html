@@ -162,7 +162,7 @@
                                 <h5 class="card-title">标签</h5>
                                 <span class="d-block">
                                     {% for word, count in get_words() %}
-                                    <a href="/word?word={{ word }}" class="badge badge-light" style="font-size:0.8rem">{{ word }}({{ count }})</a>
+                                    <a rel="noreferrer" href="/word?word={{ word }}" class="badge badge-light" style="font-size:0.8rem">{{ word }}({{ count }})</a>
                                     {% endfor %}
                                 </span>
                             </div>
