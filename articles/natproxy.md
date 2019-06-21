@@ -129,6 +129,9 @@ Server: nginx/1.16.0
 
 大功告成！通过这个公网地址，我们已经访问了在本地的HTTP服务。
 
+natproxy为了安全，不会长期监听在同一个端口。如果当前连接断开，那么会重新分配一个端口进行监听。你可以访问
+`https://tools.jiajunhuang.com/api/v1/natproxy/user/<你的token>` 来查看分配的地址。
+
 ### 设置为允许和拒绝远程连接
 
 v0.0.9 之后版本的natproxy可以设置为允许和拒绝远程连接，使用如下：
