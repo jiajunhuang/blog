@@ -14,7 +14,10 @@
 - [密码技术简明教程](https://jiajunhuang.com/articles/2019_05_12-crypto.md.html)
 - [Golang(Go 语言)简明教程](https://jiajunhuang.com/tutorial/golang/index.md)
 
-更多的文章请访问 [主页](https://jiajunhuang.com/)。 **请不要找我写书和录课，我没有此类计划**。
+更多的文章请访问 [主页](https://jiajunhuang.com/)。
+
+- **请不要找我写书和录课，我没有此类计划**。
+- 你可以转载本站的文章，但是要注明文章作者和原文链接。
 
 ## 订阅博客
 
