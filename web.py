@@ -41,7 +41,6 @@ all_articles = sorted(articles, key=lambda i: (i[1], i[0], i[2]), reverse=True)
 SUBTITLE_MAP = {
     "golang": "Golang 教程",
     "python": "Python 教程",
-    "testing": "自动化测试 教程",
 }
 
 
@@ -130,22 +129,6 @@ def archive():
 @functools.lru_cache()
 def aboutme():
     title, content, description = read_article("aboutme.md")
-    return render_template("article.html", title=title, content=content, description=description)
-
-
-@app.route("/natproxy")
-@handle_exception
-@functools.lru_cache()
-def natproxy():
-    title, content, description = read_article("natproxy.md")
-    return render_template("article.html", title=title, content=content, description=description)
-
-
-@app.route("/projects")
-@handle_exception
-@functools.lru_cache()
-def projects():
-    title, content, description = read_article("projects.md")
     return render_template("article.html", title=title, content=content, description=description)
 
 
