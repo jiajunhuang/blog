@@ -25,10 +25,7 @@
             img {
                 max-width: 100%;
             }
-            p {
-                word-break: break-all;
-            }
-            a {
+            p, a {
                 word-break: break-all;
             }
             blockquote {
@@ -38,6 +35,12 @@
             }
             blockquote p {
                 margin: 1rem;
+            }
+
+            .reward img, p {
+                display: block;
+                margin: auto;
+                text-align: center;
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -106,10 +109,13 @@
                     </div>
                     <div class="col-md-3">
                         <div class="card mt-2">
-                            <img src="/static/wechat.png" class="card-img-top" alt="微信二维码">
+                            <img src="/static/mp.jpg" class="card-img-top" alt="微信公众号">
                             <div class="card-body">
-                                <h5 class="card-title">微信交流群</h5>
-                                <p class="card-text">高并发后端编程, 源码阅读, 技术分享(扫码加我入群)</p>
+                                <h5 class="card-title">微信公众号</h5>
+                            </div>
+                            <img src="/static/wechat.png" class="card-img-top" alt="微信交流群">
+                            <div class="card-body">
+                                <h5 class="card-title">微信交流群(备注加群)</h5>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
@@ -131,12 +137,6 @@
                                     </a>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="/natproxy" class="card-link">
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVGhD7ZMxTwJBFISv9G/4X6CytZFWahs6GltKYmdvpQkhwYaYYEygvbNjzV3gZ1hYnPfMe4Rbn2SleLskM8nX3U5mdm8yCIKgNNXpXa+6vX6dAp2r/pJjhUszignHCpccfNl8RQUFNFNLUEAztQQFNFNLUEAztQQFNFNLUEAztQQFNFNLUEAztQQFNFNLUCAVOFa4NJOYcKwwFR/VReGqOimaTBzvsF6327N8XW1Uk4hQJsrGMf9W7qpbOTRdLOvLm2FUKMOuRJONY+p6d+68WJefcmAwulNNLaEMkoeyUUaO+1u5K2fycQq3L7RfoZxx3Lb84aZw+0LrFQh/0P5wU7p9ofUK/qD3h0ukdPuC/wq7QfvD/S+P87d6/DA5CjqreQYhg94f7jHcPz2r4UKgs5pnKD+Dni5Wzf91upx+AQiCoIjKsm9GA6j6IhFSdQAAAABJRU5ErkJggg==">
-                                        免费内网穿透
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
                                     <a href="https://jiajunhuang.com/tutorial/golang/index.md">
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQUSURBVGhD7ZnbS1RBHMft8hhU7733Uv9AL0alpe66vmyXh+hKQgrR5SHSWCsFsSIhyKBIyDKTLvTQDTIpMKI9u3PWSySle84qmbfVyrWM2un3O87R9TTWMX9DBn7hi7vnzMznOzNnZnfWtHnNa47Ix6LLvJHYNg8zaj26EfTqRreHmWPgT15mdIFbvLp5Hd4f9EViq0W1fy9/a+8SCHUGw0JA7tYe3WzysFieaEa9cprN5V5mXsKRBScgQI2Pda0dfy8P6cqR2K0cFr2FbVptAQNnU2DpBA1fdcKhE993tnbxp71xPjgyYrkRXue3dU8ph3ZbDg2PYLXA0glGpx8bz9i9j2fuP2CBMFTv5xGeSCSmuA+u4T07kJtyWZdv8Iw9+aKO0SewdIJFOIiNbwBIVs0dC4Qj6gxluwHujYdxV86jdfCMA0dEHQUdgEVaZAeyPQgjWFBQwAsLC38JNgD3ZlpuwhHzmMDSCtbBZpiJDhuEwTCUmw64KQdtx5EhcGoE+/w9G4gL0RnI9pMPk4+Q23Iwy50Co04AMm0g7iK4EJ2hcMGmLmK35XArFRh1gi1udBI4vsPgQsRHAd0AI4rXMotP8fXZ2XxdVjbfeLxs2nKpbaEFRp2cQKe36O/4o1Atryjawb3ZmZZPF++wruE9WR3bODgCo04ycKpfhKo510qkxnuyOrbhg3FYYNRJBk71F61UGh79RSuT1rE9JzrwIFxnBf3eUsXH2m/ysTd18PqCdQ3vyepMmJk9AqNOUrDE8Xh8imVlnJ4TM2D7v+/Ay57+KZaVcVp5B3h9/SIZmMq5evQH53yBwNEKwyeDJdUyMKWTWuAyeSfs8LgVyqCUHg2V0nciqZWcx/BjoVNSKKW7Q+esz4xkMFAp8LMXjMgoNjoUKpdCKd0cumh3IC7wsxc0dhIeoaGWcNUVGZTSdeG7D7kWGIZZDwg8nWCb88qglAbGIYGjFzR+VAYlNTPOChy98OcOKZTQcOK7IXD0AsALJ5DczHgucPQCgPELkNgwy28Fjl7Q+IAMSmujX+DoNdMfcP/KzPwqcPTCb4tSKKkV/jIBO0REDqWz0jUAgAonUIGvCRy9cvTYKpiFHxIomXOZ6Rc4NYJ9ukoGpjCssTZ/PV8kUGqE/z2BWWiWBZiNcYfzhGPpAqNWmyJdK7ay9l5ZkL8yM5I+3dgumlcv+Hq9dyRYlqwIN8oDzcC72GvrDKDkKCkT1074oQNJPHSgm0LV7Xks+kwW7g82LrKHrxJa2cQvd6SnsOkEB437k8CSINfKl+L13EjnSngUCuFZvo1rBBbke/A3CPoR/kbhehjvefXoYV/YWJPeyBdzHlgIoa+kdIDuFDadkq8CuQDqg/CP7fCzkehEpbJT2Lzm9Tulpf0E9VxbO56k0TkAAAAASUVORK5CYII=">
                                         Golang 简明教程
@@ -149,13 +149,6 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="card mt-2">
-                            <img src="/static/reward.png" class="card-img-top" alt="微信和支付宝打赏二维码">
-                            <div class="card-body">
-                                <h5 class="card-title">微信|支付宝打赏💰</h5>
-                                <p class="card-text">支持我继续创作</p>
-                            </div>
                         </div>
                         <div class="card mt-2">
                             <div class="card-body">
