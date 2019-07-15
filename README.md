@@ -10,14 +10,15 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2019/07/13 - [后端工程师学前端（五）：SASS](https://jiajunhuang.com/articles/2019_07_13-learn_front_end_5.md.html)
-- 2019/07/10 - [后端工程师学前端（四）：CSS进阶(盒子模型)](https://jiajunhuang.com/articles/2019_07_10-learn_front_end_4.md.html)
+- 2019/07/15 - [读《远见-如何规划职业生涯3大阶段》](https://jiajunhuang.com/articles/2019_07_15-the_long_view.md.html)
+- 2019/07/13 - [后端工程师学前端(五): SASS](https://jiajunhuang.com/articles/2019_07_13-learn_front_end_5.md.html)
+- 2019/07/10 - [后端工程师学前端(四): CSS进阶(盒子模型)](https://jiajunhuang.com/articles/2019_07_10-learn_front_end_4.md.html)
 - 2019/07/06 - [读《投资中最简单的事》](https://jiajunhuang.com/articles/2019_07_06-the_simple_things_in_investment.md.html)
-- 2019/07/04 - [后端工程师学前端（三）：CSS进阶(特指度、单位和字体族)](https://jiajunhuang.com/articles/2019_07_04-learn_front_end_3.md.html)
-- 2019/07/02 - [后端工程师学前端（二）：CSS基础知识(规则与选择器)](https://jiajunhuang.com/articles/2019_07_02-learn_front_end_2.md.html)
+- 2019/07/04 - [后端工程师学前端(三): CSS进阶(特指度、单位和字体族)](https://jiajunhuang.com/articles/2019_07_04-learn_front_end_3.md.html)
+- 2019/07/02 - [后端工程师学前端(二): CSS基础知识(规则与选择器)](https://jiajunhuang.com/articles/2019_07_02-learn_front_end_2.md.html)
 - 2019/06/25 - [Swift语法笔记](https://jiajunhuang.com/articles/2019_06_25-swift.md.html)
 - 2019/06/23 - [读《管理的实践》](https://jiajunhuang.com/articles/2019_06_23-the_practice_of_management.md.html)
-- 2019/06/23 - [后端工程师学前端（一）：HTML](https://jiajunhuang.com/articles/2019_06_23-learn_front_end.md.html)
+- 2019/06/23 - [后端工程师学前端(一): HTML](https://jiajunhuang.com/articles/2019_06_23-learn_front_end.md.html)
 - 2019/06/19 - [frp 源码阅读与分析(二)：TCP内网穿透的实现](https://jiajunhuang.com/articles/2019_06_19-frp_source_code_part2.md.html)
 - 2019/06/15 - [五天不用微信 - 爽得很](https://jiajunhuang.com/articles/2019_06_15-leave_wechat_for_5_days.md.html)
 - 2019/06/11 - [frp 源码阅读与分析(一)：流程和概念](https://jiajunhuang.com/articles/2019_06_11-frpc_source_code_part1.md.html)
