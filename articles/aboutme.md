@@ -29,5 +29,3 @@
 - 邮件: `gansteed(at, you know)gmail.com`
 - Github: https://github.com/jiajunhuang
 - Telegram: https://t.me/jiajunhuang
-
-[个人作品请看这里](https://jiajunhuang.com/projects)
