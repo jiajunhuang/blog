@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/07/20 - [Linux高分屏支持](https://jiajunhuang.com/articles/2019_07_20-linux_hidpi.md.html)
 - 2019/07/18 - [终于离职了，开心！](https://jiajunhuang.com/articles/2019_07_18-happy_time.md.html)
 - 2019/07/16 - [GCC默认的头文件搜索路径](https://jiajunhuang.com/articles/2019_07_16-gcc_header_path.md.html)
 - 2019/07/15 - [读《远见-如何规划职业生涯3大阶段》](https://jiajunhuang.com/articles/2019_07_15-the_long_view.md.html)
