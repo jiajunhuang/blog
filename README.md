@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/08/01 - [C, Go, Python的错误处理和异常机制杂谈](https://jiajunhuang.com/articles/2019_08_01-error_handling.md.html)
 - 2019/07/29 - [好的命名是最好的文档](https://jiajunhuang.com/articles/2019_07_29-name_is_the_best_doc.md.html)
 - 2019/07/24 - [读《系统之美：决策者的系统思考》](https://jiajunhuang.com/articles/2019_07_24-thinking_in_systems_a_primer.md.html)
 - 2019/07/20 - [Linux高分屏支持](https://jiajunhuang.com/articles/2019_07_20-linux_hidpi.md.html)
