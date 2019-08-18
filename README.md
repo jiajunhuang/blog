@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/08/18 - [代码的坏味道](https://jiajunhuang.com/articles/2019_08_18-code_with_bad_taste.md.html)
 - 2019/08/05 - [消息分帧(字符串设计或协议设计)的两种形式](https://jiajunhuang.com/articles/2019_08_05-message_framing.md.html)
 - 2019/08/01 - [C, Go, Python的错误处理和异常机制杂谈](https://jiajunhuang.com/articles/2019_08_01-error_handling.md.html)
 - 2019/07/29 - [好的命名是最好的文档](https://jiajunhuang.com/articles/2019_07_29-name_is_the_best_doc.md.html)
