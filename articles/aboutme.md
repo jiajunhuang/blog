@@ -9,8 +9,7 @@
 
 - 写过 [高性能熔断器](https://github.com/jiajunhuang/guard) ，单机QPS可达22k/s
 - 写过基于UVLoop和Cython的 [高性能Web框架](https://github.com/jiajunhuang/storm)，单机QPS可达13k/s
-- 为Python解释器贡献过代码，虽然几次都是修bug
-- 为Sanic和Cython贡献过代码，虽然也是修bug
+- 为Python解释器, Sanic, Cython等多个开源项目贡献过代码，虽然都是修bug
 
 工作上主要有：
 
