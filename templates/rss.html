@@ -5,14 +5,13 @@
         <link>https://jiajunhuang.com</link>
         <description>Jiajun的编程随想</description>
 
-        {% for title, _, filename, path in articles %}
+        {{ range $article := .articles }}
             <item>
-                <title>{{ title }}</title>
-                <link>https://jiajunhuang.com/{{ path }}/{{ filename }}.html</link>
-                <description>{{ title }}</description>
+                <title>{{ .Title }}</title>
+                <link>https://jiajunhuang.com/{{ .DirName }}/{{ .Filename }}.html</link>
+                <description>{{ .Title }}</description>
             </item>
-        {% endfor %}
+        {{ end }}
 
     </channel>
 </rss>
-

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {{ range $article := .articles }}
+        <item>
+            <title>{{ .Title }}</title>
+            <description>{{ .Title }}</description>
+        </item>
+        <url>
+            <link>https://jiajunhuang.com/{{ .DirName }}/{{ .Filename }}.html</link>
+            <lastmod>{{ .Date }}</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+    {{ end }}
+</urlset>

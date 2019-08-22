@@ -1,5 +1,30 @@
-{{ block "header.tpl" . }}{{ end }}
+{{ block "header.html" . }}{{ end }}
 
 {{ .content }}
 
-{{ block "footer.tpl" . }}{{ end }}
+<hr />
+<div class="reward">
+    <img src="/static/reward.png" alt="支付宝和微信赞赏">
+    <strong><p>你的赞赏是我写作的动力😍(支持支付宝和微信)</p></strong>
+</div>
+<hr />
+
+<div id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+ */
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://blog-fhukwbah7t.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+{{ block "footer.html" . }}{{ end }}
