@@ -48,3 +48,19 @@ func (d *Dao) GetAllNotes() []Note {
 
 	return notes
 }
+
+func (d *Dao) AddSharing(url string) {
+	tx := db.MustBegin()
+	tx.MustExec("")
+	tx.Commit()
+}
+
+func (d *Dao) CommentLatestSharing(comment string) {
+	tx := db.MustBegin()
+	tx.MustExec("")
+	tx.Commit()
+}
+
+func (d *Dao) AddNote(content string) {
+
+}
