@@ -1,7 +1,15 @@
-{{ block "header.tpl" . }}{{ end }}
+{{ block "header.html" . }}{{ end }}
 
 <ul class="list-group ml-2">
-哈哈哈
-</ul>
+{{ range $article := .articles }}
+    <li>{{ .Date }} - <a href="/{{ .DirName }}/{{ .Filename }}.html">{{ .Title }}</a></li>
+{{ end }}
 
-{{ block "footer.tpl" . }}{{ end }}
+{{ if .totalCount }}
+<li class="list-unstyled">
+    <a href="/archive">>>> 查看全部(共{{ .totalCount }}篇文章)</a>
+</li>
+</ul>
+{{ end }}
+
+{{ block "footer.html" . }}{{ end }}
