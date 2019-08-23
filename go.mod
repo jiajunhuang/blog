@@ -3,6 +3,9 @@ module github.com/jiajunhuang/blog
 go 1.12
 
 require (
+	github.com/certifi/gocertifi v0.0.0-20190506164543-d2eda7129713 // indirect
+	github.com/getsentry/raven-go v0.2.0
+	github.com/gin-contrib/sentry v0.0.0-20190528141903-48a399dfd39f
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.4.0
 	github.com/golang/protobuf v1.3.2 // indirect
@@ -23,7 +26,7 @@ require (
 	golang.org/x/crypto v0.0.0-20190820162420-60c769a6c586 // indirect
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7 // indirect
 	golang.org/x/text v0.3.2 // indirect
-	golang.org/x/tools v0.0.0-20190822000311-fc82fb2afd64 // indirect
+	golang.org/x/tools v0.0.0-20190822191935-b1e2c8edcefd // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/tucnak/telebot.v2 v2.0.0-20190415090633-8c1c512262f2
 )

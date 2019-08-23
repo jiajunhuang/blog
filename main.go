@@ -11,6 +11,8 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/getsentry/raven-go"
+	"github.com/gin-contrib/sentry"
 	"github.com/gin-gonic/gin"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/mattn/go-sqlite3"
@@ -27,6 +29,11 @@ var (
 
 	db *sqlx.DB
 )
+
+// InitSentry 初始化sentry
+func InitSentry() {
+	raven.SetDSN(os.Getenv("SENTRY_DSN"))
+}
 
 // InitializeDB 初始化数据库连接
 func InitializeDB() {
@@ -244,11 +251,12 @@ func main() {
 	//go startSharingBot()
 
 	InitializeDB()
+	InitSentry()
 
 	r := gin.New()
 
 	r.Use(gin.Logger())
-	r.Use(gin.Recovery())
+	r.Use(sentry.Recovery(raven.DefaultClient, false))
 
 	r.LoadHTMLGlob("templates/*.html")
 	r.Static("/static", "./static")
@@ -271,5 +279,5 @@ func main() {
 	r.GET("/tutorial/:category/:filename", TutorialHandler)
 	r.NoRoute(func(c *gin.Context) { c.Redirect(http.StatusFound, "/404") })
 
-	r.Run(":8080")
+	r.Run("127.0.0.1:8080")
 }
