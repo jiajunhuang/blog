@@ -21,7 +21,9 @@
 - [并发编程](./concurrency.md)
 - [go tools](./go_tool.md)
 
-- 首先我们需要打开[Go语言的官网下载地址](https://golang.org/dl/)，点击红框处进行下载：
+
+
+首先我们需要打开[Go语言的官网下载地址](https://golang.org/dl/)，点击红框处进行下载：
 
     ![Golang Download](./img/golang_dl_windows.png)
 
