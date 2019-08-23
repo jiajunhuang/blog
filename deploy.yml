@@ -21,4 +21,4 @@
           - "--exclude=.git"
 
     - name: reload blog process
-      shell: supervisorctl update && supervisorctl restart blog:*
+      shell: supervisorctl update && supervisorctl restart blog
