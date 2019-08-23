@@ -254,6 +254,8 @@ func main() {
 	r.Static("/static", "./static")
 	//r.Static("/articles/img", "./articles/img")
 	r.StaticFile("/favicon.ico", "./static/favicon.ico")
+	r.StaticFile("/robots.txt", "./static/robots.txt")
+	r.StaticFile("/ads.txt", "./static/ads.txt")
 
 	r.GET("/", IndexHandler)
 	r.GET("/404", NotFoundHandler)
