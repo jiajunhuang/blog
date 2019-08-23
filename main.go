@@ -247,8 +247,8 @@ func main() {
 	defer logger.Sync() // flushes buffer, if any
 
 	// telegram bot
-	//go startNoteBot()
-	//go startSharingBot()
+	go startNoteBot()
+	go startSharingBot()
 
 	InitializeDB()
 	InitSentry()
