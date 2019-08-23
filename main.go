@@ -28,6 +28,7 @@ var (
 	db *sqlx.DB
 )
 
+// InitializeDB 初始化数据库连接
 func InitializeDB() {
 	var err error
 
@@ -44,6 +45,8 @@ type Article struct {
 	Filename string
 	DirName  string
 }
+
+// Articles 文章列表
 type Articles []Article
 
 func (a Articles) Len() int      { return len(a) }
@@ -57,6 +60,7 @@ func (a Articles) Less(i, j int) bool {
 	return false
 }
 
+// ReadTitle 把标题读出来
 func ReadTitle(path string) string {
 	file, err := os.Open(path)
 	if err != nil {
@@ -73,6 +77,7 @@ func ReadTitle(path string) string {
 	return title
 }
 
+// LoadArticle 把文章的元信息读出来
 func LoadArticle(dirname, filename string) *Article {
 	match := filenameRegex.FindStringSubmatch(filename)
 	if len(match) != 2 {
@@ -112,6 +117,7 @@ func LoadMDs(dirname string) Articles {
 	return articles
 }
 
+// IndexHandler 首页
 func IndexHandler(c *gin.Context) {
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
@@ -121,6 +127,7 @@ func IndexHandler(c *gin.Context) {
 	)
 }
 
+// ArchiveHandler 全部文章
 func ArchiveHandler(c *gin.Context) {
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
@@ -146,22 +153,27 @@ func renderArticle(c *gin.Context, status int, path string) {
 	)
 }
 
+// ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, c.Request.URL.Path)
 }
 
+// AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "./articles/aboutme.md")
 }
 
+// FriendsHandler 友链
 func FriendsHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "./articles/friends.md")
 }
 
+// NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "./articles/404.md")
 }
 
+// AllSharingHandler 所有分享
 func AllSharingHandler(c *gin.Context) {
 	sharing := dao.GetAllSharing()
 
@@ -172,6 +184,7 @@ func AllSharingHandler(c *gin.Context) {
 	)
 }
 
+// SharingHandler 分享
 func SharingHandler(c *gin.Context) {
 	sharing := dao.GetSharingWithLimit(20)
 
@@ -183,6 +196,7 @@ func SharingHandler(c *gin.Context) {
 	)
 }
 
+// NotesHandler 随想
 func NotesHandler(c *gin.Context) {
 	notes := dao.GetAllNotes()
 
@@ -193,15 +207,18 @@ func NotesHandler(c *gin.Context) {
 	)
 }
 
+// RSSHandler RSS
 func RSSHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
 		http.StatusOK, "rss.html", gin.H{
-			"articles": articles,
+			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
+			"articles":  articles,
 		},
 	)
 }
 
+// SiteMapHandler sitemap
 func SiteMapHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
@@ -211,6 +228,7 @@ func SiteMapHandler(c *gin.Context) {
 	)
 }
 
+// TutorialHandler 教程
 func TutorialHandler(c *gin.Context) {
 	category := c.Param("category")
 	filename := c.Param("filename")
@@ -222,12 +240,15 @@ func main() {
 	defer logger.Sync() // flushes buffer, if any
 
 	// telegram bot
-	go startNoteBot()
-	go startSharingBot()
+	//go startNoteBot()
+	//go startSharingBot()
 
 	InitializeDB()
 
 	r := gin.New()
+
+	r.Use(gin.Logger())
+	r.Use(gin.Recovery())
 
 	r.LoadHTMLGlob("templates/*.html")
 	r.Static("/static", "./static")
