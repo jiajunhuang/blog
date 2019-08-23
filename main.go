@@ -28,6 +28,8 @@ var (
 	articles      = LoadMDs("articles")
 
 	db *sqlx.DB
+
+	categoryMap = map[string]string{"golang": "Golang简明教程", "python": "Python教程"}
 )
 
 // InitSentry 初始化sentry
@@ -67,8 +69,18 @@ func (a Articles) Less(i, j int) bool {
 	return false
 }
 
+func getFilePath(path string) string {
+	suffix := ".html"
+	if strings.HasSuffix(path, suffix) {
+		path = path[:len(path)-len(suffix)]
+	}
+	return "./" + path
+}
+
 // ReadTitle 把标题读出来
 func ReadTitle(path string) string {
+	path = getFilePath(path)
+
 	file, err := os.Open(path)
 	if err != nil {
 		sugar.Errorf("failed to read file(%s): %s", path, err)
@@ -143,10 +155,11 @@ func ArchiveHandler(c *gin.Context) {
 	)
 }
 
-func renderArticle(c *gin.Context, status int, path string) {
-	path = strings.TrimRight(path, ".html")
-	content, err := ioutil.ReadFile("./" + path)
+func renderArticle(c *gin.Context, status int, path string, subtitle string) {
+	path = getFilePath(path)
+	content, err := ioutil.ReadFile(path)
 	if err != nil {
+		sugar.Errorf("failed to read file %s: %s", path, err)
 		c.Redirect(http.StatusFound, "/404")
 		return
 	}
@@ -158,29 +171,31 @@ func renderArticle(c *gin.Context, status int, path string) {
 
 	c.HTML(
 		status, "article.html", gin.H{
-			"content": template.HTML(content),
+			"content":  template.HTML(content),
+			"title":    ReadTitle(path),
+			"subtitle": subtitle,
 		},
 	)
 }
 
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, c.Request.URL.Path)
+	renderArticle(c, http.StatusOK, c.Request.URL.Path, "")
 }
 
 // AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/aboutme.md")
+	renderArticle(c, http.StatusOK, "articles/aboutme.md", "")
 }
 
 // FriendsHandler 友链
 func FriendsHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/friends.md")
+	renderArticle(c, http.StatusOK, "articles/friends.md", "")
 }
 
 // NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/404.md")
+	renderArticle(c, http.StatusOK, "articles/404.md", "")
 }
 
 // AllSharingHandler 所有分享
@@ -244,7 +259,7 @@ func TutorialHandler(c *gin.Context) {
 	category := c.Param("category")
 	filename := c.Param("filename")
 
-	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename))
+	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), categoryMap[category])
 }
 
 // SearchHandler 搜索
