@@ -9,7 +9,7 @@ import (
 
 func startSharingBot() {
 	b, err := tb.NewBot(tb.Settings{
-		Token:  os.Getenv("SHARING_TGBOT_TOKEN"),
+		Token:  os.Getenv("SHARE_TGBOT_TOKEN"),
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 

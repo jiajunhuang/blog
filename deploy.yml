@@ -7,6 +7,9 @@
     - name: commit and push to github
       local_action: shell git add . && git commit -m "sync at `date`" && git push || true
 
+    - name: compile blog binary
+      local_action: shell go build -o blog
+
     - name: sync code & articles
       synchronize:
         src: ./
@@ -16,11 +19,6 @@
         rsync_opts:
           - "--chown=www-data"
           - "--exclude=.git"
-
-    - name: pip install -r requirements.txt
-      shell: /data/blog/env/bin/pip install -r requirements.txt
-      args:
-        chdir: /data/blog/code/
 
     - name: reload blog process
       shell: supervisorctl update && supervisorctl restart blog:*
