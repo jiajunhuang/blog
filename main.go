@@ -243,6 +243,27 @@ func TutorialHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, fmt.Sprintf("./tutorial/%s/%s", category, filename))
 }
 
+// SearchHandler 搜索
+func SearchHandler(c *gin.Context) {
+	word := c.PostForm("search")
+
+	c.Redirect(
+		http.StatusFound,
+		"https://www.google.com/search?q=site:jiajunhuang.com "+word,
+	)
+}
+
+// RewardHandler 扫码赞赏
+func RewardHandler(c *gin.Context) {
+	userAgent := c.Request.UserAgent()
+	if strings.Contains(userAgent, "MicroMessenger") {
+		c.Redirect(http.StatusFound, os.Getenv("WECHAT_PAY_URL"))
+		return
+	}
+
+	c.Redirect(http.StatusFound, os.Getenv("ALIPAY_URL"))
+}
+
 func main() {
 	defer logger.Sync() // flushes buffer, if any
 
@@ -277,6 +298,8 @@ func main() {
 	r.GET("/rss", RSSHandler)
 	r.GET("/sitemap.xml", SiteMapHandler)
 	r.GET("/tutorial/:category/:filename", TutorialHandler)
+	r.GET("/reward", RewardHandler)
+	r.POST("/search", SearchHandler)
 	r.NoRoute(func(c *gin.Context) { c.Redirect(http.StatusFound, "/404") })
 
 	r.Run("127.0.0.1:8080")

@@ -54,6 +54,14 @@ func (d *Dao) GetAllNotes() []Note {
 	return notes
 }
 
+// GetLatestSharing 获取最后一条分享
+func (d *Dao) GetLatestSharing() (Sharing, error) {
+	var sharing Sharing
+	err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DEST LIMIT 1")
+
+	return sharing, err
+}
+
 // AddSharing 增加一条分享
 func (d *Dao) AddSharing(url string) error {
 	tx := db.MustBegin()

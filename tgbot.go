@@ -1,10 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"time"
 
 	tb "gopkg.in/tucnak/telebot.v2"
+)
+
+var (
+	sharingURL = os.Getenv("SHARE_BOT_URL")
 )
 
 func startSharingBot() {
@@ -24,8 +29,19 @@ func startSharingBot() {
 			return
 		}
 
-		dao.CommentLatestSharing(m.Text)
-		b.Send(m.Sender, "commented")
+		err := dao.CommentLatestSharing(m.Text)
+		b.Send(m.Sender, fmt.Sprintf("commented with error: %s", err))
+
+		// 如果没有出错，就发到channel
+		if err == nil {
+			latestSharing, err := dao.GetLatestSharing()
+			if err != nil {
+				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				return
+			}
+			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
+			b.Send(&tb.User{Username: "jiajunhuangcom"}, msg)
+		}
 	})
 	b.Handle(tb.OnText, func(m *tb.Message) {
 		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
