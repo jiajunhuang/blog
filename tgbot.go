@@ -10,6 +10,7 @@ import (
 func startSharingBot() {
 	b, err := tb.NewBot(tb.Settings{
 		Token:  os.Getenv("SHARE_TGBOT_TOKEN"),
+		URL:    "https://api.telegram.org",
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 
@@ -41,6 +42,7 @@ func startSharingBot() {
 func startNoteBot() {
 	b, err := tb.NewBot(tb.Settings{
 		Token:  os.Getenv("NOTE_TGBOT_TOKEN"),
+		URL:    "https://api.telegram.org",
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 
