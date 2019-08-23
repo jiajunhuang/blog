@@ -25,7 +25,7 @@ var (
 	sugar     = logger.Sugar()
 
 	filenameRegex = regexp.MustCompile(`(\d{4}_\d{2}_\d{2})-.+\..+`)
-	articles      = LoadMDs("./articles")
+	articles      = LoadMDs("articles")
 
 	db *sqlx.DB
 )
@@ -92,7 +92,7 @@ func LoadArticle(dirname, filename string) *Article {
 	}
 
 	dateString := match[1]
-	filepath := fmt.Sprintf("%s/%s", dirname, filename)
+	filepath := fmt.Sprintf("./%s/%s", dirname, filename)
 	title := ReadTitle(filepath)
 
 	return &Article{
@@ -167,17 +167,17 @@ func ArticleHandler(c *gin.Context) {
 
 // AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "./articles/aboutme.md")
+	renderArticle(c, http.StatusOK, "articles/aboutme.md")
 }
 
 // FriendsHandler 友链
 func FriendsHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "./articles/friends.md")
+	renderArticle(c, http.StatusOK, "articles/friends.md")
 }
 
 // NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "./articles/404.md")
+	renderArticle(c, http.StatusOK, "articles/404.md")
 }
 
 // AllSharingHandler 所有分享
@@ -230,7 +230,8 @@ func SiteMapHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
 		http.StatusOK, "sitemap.html", gin.H{
-			"articles": articles,
+			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
+			"articles":  articles,
 		},
 	)
 }
@@ -240,7 +241,7 @@ func TutorialHandler(c *gin.Context) {
 	category := c.Param("category")
 	filename := c.Param("filename")
 
-	renderArticle(c, http.StatusOK, fmt.Sprintf("./tutorial/%s/%s", category, filename))
+	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename))
 }
 
 // SearchHandler 搜索
@@ -281,7 +282,8 @@ func main() {
 
 	r.LoadHTMLGlob("templates/*.html")
 	r.Static("/static", "./static")
-	//r.Static("/articles/img", "./articles/img")
+	//r.Static("/tutorial/:lang/img/", "./tutorial/:lang/img")  # 然而不支持
+	//r.Static("/articles/img", "./articles/img")  # 然而有冲突
 	r.StaticFile("/favicon.ico", "./static/favicon.ico")
 	r.StaticFile("/robots.txt", "./static/robots.txt")
 	r.StaticFile("/ads.txt", "./static/ads.txt")
