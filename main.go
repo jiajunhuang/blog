@@ -151,7 +151,10 @@ func renderArticle(c *gin.Context, status int, path string) {
 		return
 	}
 
-	content = blackfriday.Run(content)
+	content = blackfriday.Run(
+		content,
+		blackfriday.WithExtensions(blackfriday.FencedCode),
+	)
 
 	c.HTML(
 		status, "article.html", gin.H{
