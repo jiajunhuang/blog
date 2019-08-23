@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/08/23 - [Golang的template(模板引擎)简明教程](https://jiajunhuang.com/articles/2019_08_23-golang_html_template.md.html)
 - 2019/08/21 - [毕业三年，一路走来](https://jiajunhuang.com/articles/2019_08_21-three_years_after_graduate.md.html)
 - 2019/08/18 - [代码的坏味道](https://jiajunhuang.com/articles/2019_08_18-code_with_bad_taste.md.html)
 - 2019/08/05 - [消息分帧(字符串设计或协议设计)的两种形式](https://jiajunhuang.com/articles/2019_08_05-message_framing.md.html)
