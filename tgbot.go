@@ -47,7 +47,16 @@ func startSharingBot() {
 			}
 			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
 
-			b.Send(&Channel{}, msg)
+			channel, err := b.ChatByID("jiajunhuangcom")
+			if err != nil {
+				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				return
+			}
+			_, err = b.Send(channel, msg)
+			if err != nil {
+				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				return
+			}
 		}
 	})
 	b.Handle(tb.OnText, func(m *tb.Message) {
