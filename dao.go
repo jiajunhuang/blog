@@ -76,7 +76,9 @@ func (d *Dao) CommentLatestSharing(comment string) error {
 
 	tx := db.MustBegin()
 
-	tx.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1")
+	if err := tx.Get(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1"); err != nil {
+		return err
+	}
 	tx.MustExec("UPDATE issue SET content=$1, updated_at=$2 WHERE id = $3", comment, time.Now(), sharing.ID)
 	return tx.Commit()
 }

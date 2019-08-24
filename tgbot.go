@@ -29,28 +29,28 @@ func startSharingBot() {
 			return
 		}
 
-		err := dao.CommentLatestSharing(m.Text)
-		b.Send(m.Sender, fmt.Sprintf("commented with error: %s", err))
+		if err := dao.CommentLatestSharing(m.Text); err != nil {
+			b.Send(m.Sender, fmt.Sprintf("failed to comment: %s", err))
+			return
+		}
 
 		// 如果没有出错，就发到channel
-		if err == nil {
-			latestSharing, err := dao.GetLatestSharing()
-			if err != nil {
-				sugar.Errorf("failed to send to channel: %s", err)
-				return
-			}
-			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
+		latestSharing, err := dao.GetLatestSharing()
+		if err != nil {
+			sugar.Errorf("failed to send to channel: %s", err)
+			return
+		}
+		msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
 
-			channel, err := b.ChatByID("@jiajunhuangcom")
-			if err != nil {
-				sugar.Errorf("failed to send to channel: %s", err)
-				return
-			}
-			_, err = b.Send(channel, msg)
-			if err != nil {
-				sugar.Errorf("failed to send to channel: %s", err)
-				return
-			}
+		channel, err := b.ChatByID("@jiajunhuangcom")
+		if err != nil {
+			sugar.Errorf("failed to send to channel: %s", err)
+			return
+		}
+		_, err = b.Send(channel, msg)
+		if err != nil {
+			sugar.Errorf("failed to send to channel: %s", err)
+			return
 		}
 	})
 	b.Handle(tb.OnText, func(m *tb.Message) {
