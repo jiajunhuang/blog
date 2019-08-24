@@ -12,12 +12,6 @@ var (
 	sharingURL = os.Getenv("SHARE_BOT_URL")
 )
 
-type Channel struct{}
-
-func (c *Channel) Recipient() string {
-	return "jiajunhuangcom"
-}
-
 func startSharingBot() {
 	b, err := tb.NewBot(tb.Settings{
 		Token:  os.Getenv("SHARE_TGBOT_TOKEN"),
@@ -47,7 +41,7 @@ func startSharingBot() {
 			}
 			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
 
-			channel, err := b.ChatByID("jiajunhuangcom")
+			channel, err := b.ChatByID("@jiajunhuangcom")
 			if err != nil {
 				sugar.Errorf("failed to send to channel: %s", err)
 				return
