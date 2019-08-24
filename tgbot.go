@@ -40,7 +40,11 @@ func startSharingBot() {
 				return
 			}
 			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
-			b.Send(&tb.User{Username: "jiajunhuangcom"}, msg)
+			channel := tb.Chat{
+				Type:     tb.ChatChannel,
+				Username: "jiajunhuangcom",
+			}
+			b.Send(&channel, msg)
 		}
 	})
 	b.Handle(tb.OnText, func(m *tb.Message) {
