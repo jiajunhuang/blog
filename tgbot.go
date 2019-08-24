@@ -29,7 +29,7 @@ func startSharingBot() {
 			return
 		}
 
-		if err := dao.CommentLatestSharing(m.Text); err != nil {
+		if err := dao.CommentLatestSharing(m.Payload); err != nil {
 			b.Send(m.Sender, fmt.Sprintf("failed to comment: %s", err))
 			return
 		}
