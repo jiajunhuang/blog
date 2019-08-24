@@ -42,19 +42,19 @@ func startSharingBot() {
 		if err == nil {
 			latestSharing, err := dao.GetLatestSharing()
 			if err != nil {
-				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				sugar.Errorf("failed to send to channel: %s", err)
 				return
 			}
 			msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
 
 			channel, err := b.ChatByID("jiajunhuangcom")
 			if err != nil {
-				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				sugar.Errorf("failed to send to channel: %s", err)
 				return
 			}
 			_, err = b.Send(channel, msg)
 			if err != nil {
-				b.Send(m.Sender, fmt.Sprintf("failed to send to channel: %s", err))
+				sugar.Errorf("failed to send to channel: %s", err)
 				return
 			}
 		}
