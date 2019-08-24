@@ -66,7 +66,7 @@ func (d *Dao) GetLatestSharing() (Sharing, error) {
 func (d *Dao) AddSharing(url string) error {
 	tx := db.MustBegin()
 	now := time.Now()
-	tx.MustExec("INSERT INTO issue(url, created_at, updated_at) VALUES ($1, $2, $3)", url, now, now)
+	tx.MustExec("INSERT INTO issue(url, content, created_at, updated_at) VALUES ($1, '', $2, $3)", url, now, now)
 	return tx.Commit()
 }
 
