@@ -26,7 +26,7 @@
 
 - 加强知识深度：知识深度不仅仅在系统设计题中体现，包括此前的技术面试题都会考察
 - 加强知识广度：了解常见工具的特性和什么场景适合，例如MySQL/PG、Redis。了解常见的业务场景特点，例如：论坛一般来说都是读多写少，而日志服务则是写多读少。
-- 了解常见的软件架构模式，参考：https://jiajunhuang.com/articles/2018_09_16-common_software_archtecture_pattern.md.html
+- 了解常见的软件架构模式，参考 [这里](https://jiajunhuang.com/articles/2018_09_16-common_software_archtecture_pattern.md.html)
 
 ## 如何解决系统设计题
 
