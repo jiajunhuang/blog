@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/08/30 - [选择合适的技术栈](https://jiajunhuang.com/articles/2019_08_30-choose_properly_tech.md.html)
 - 2019/08/23 - [Golang的template(模板引擎)简明教程](https://jiajunhuang.com/articles/2019_08_23-golang_html_template.md.html)
 - 2019/08/21 - [毕业三年，一路走来](https://jiajunhuang.com/articles/2019_08_21-three_years_after_graduate.md.html)
 - 2019/08/18 - [代码的坏味道](https://jiajunhuang.com/articles/2019_08_18-code_with_bad_taste.md.html)
