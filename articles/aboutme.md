@@ -39,5 +39,5 @@
 
 - 微信: 请看右边二维码(不回答编程问题)
 - 邮件: `gansteed(at, you know)gmail.com`
-- Github: https://github.com/jiajunhuang
-- Telegram: https://t.me/jiajunhuang
+- Github: [https://github.com/jiajunhuang](https://github.com/jiajunhuang)
+- Telegram: [https://t.me/jiajunhuang](https://t.me/jiajunhuang)

@@ -14,7 +14,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
         <title>
             {{ if .title }}{{ .title }} - {{ end }}{{ if .subtitle }}{{ .subtitle }} - {{ end }}Jiajun的编程随想
@@ -78,12 +78,6 @@
 
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="/">首页</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/jiajunhuang/blog">Github</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/sharing">分享</a>
                             </li>
                             <li class="nav-item">
@@ -92,6 +86,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/friends">友链</a>
                             </li>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    工具
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="https://tiku.jiajunhuang.com">面试题库</a>
+                                    <a class="dropdown-item" href="https://tools.jiajunhuang.com">Kindle笔记导出</a>
+                                    </div>
+                                </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/aboutme">关于</a>
                             </li>
