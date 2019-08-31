@@ -16,6 +16,14 @@
         <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
         <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- meta -->
+        {{ if .keywords }}
+        <meta name="keywords" content="{{ .keywords }}">
+        {{ end }}
+        {{ if .description }}
+        <meta name="description" content="{{ .description }}">
+        {{ end }}
+
         <title>
             {{ if .title }}{{ .title }} - {{ end }}{{ if .subtitle }}{{ .subtitle }} - {{ end }}Jiajun的编程随想
         </title>

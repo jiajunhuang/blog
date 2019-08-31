@@ -140,8 +140,10 @@ func LoadMDs(dirname string) Articles {
 func IndexHandler(c *gin.Context) {
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
-			"articles":   articles[:80],
-			"totalCount": len(articles),
+			"articles":    articles[:80],
+			"totalCount":  len(articles),
+			"keywords":    "Golang,Python,Go语言,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
+			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/软件工程/源码阅读与分析",
 		},
 	)
 }
@@ -150,7 +152,9 @@ func IndexHandler(c *gin.Context) {
 func ArchiveHandler(c *gin.Context) {
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
-			"articles": articles,
+			"articles":    articles,
+			"keywords":    "Golang,Python,Go语言,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
+			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/软件工程/源码阅读与分析",
 		},
 	)
 }
