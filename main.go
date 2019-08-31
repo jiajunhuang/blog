@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"io/ioutil"
+	"math/rand"
 	"net/http"
 	"os"
 	"regexp"
@@ -67,6 +68,16 @@ func (a Articles) Less(i, j int) bool {
 	}
 
 	return false
+}
+func (a Articles) RandomN(n int) Articles {
+	if n <= 0 {
+		return nil
+	}
+
+	length := len(a)
+
+	pos := rand.Intn(length - n)
+	return a[pos : pos+n]
 }
 
 func getFilePath(path string) string {
@@ -159,7 +170,7 @@ func ArchiveHandler(c *gin.Context) {
 	)
 }
 
-func renderArticle(c *gin.Context, status int, path string, subtitle string) {
+func renderArticle(c *gin.Context, status int, path string, subtitle string, randomN int) {
 	path = getFilePath(path)
 	content, err := ioutil.ReadFile(path)
 	if err != nil {
@@ -173,33 +184,36 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string) {
 		blackfriday.WithExtensions(blackfriday.FencedCode),
 	)
 
+	recommends := articles.RandomN(randomN)
+
 	c.HTML(
 		status, "article.html", gin.H{
-			"content":  template.HTML(content),
-			"title":    ReadTitle(path),
-			"subtitle": subtitle,
+			"content":    template.HTML(content),
+			"title":      ReadTitle(path),
+			"subtitle":   subtitle,
+			"recommends": recommends,
 		},
 	)
 }
 
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, c.Request.URL.Path, "")
+	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 5)
 }
 
 // AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/aboutme.md", "")
+	renderArticle(c, http.StatusOK, "articles/aboutme.md", "", 0)
 }
 
 // FriendsHandler 友链
 func FriendsHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/friends.md", "")
+	renderArticle(c, http.StatusOK, "articles/friends.md", "", 0)
 }
 
 // NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/404.md", "")
+	renderArticle(c, http.StatusOK, "articles/404.md", "", 0)
 }
 
 // AllSharingHandler 所有分享
@@ -263,7 +277,7 @@ func TutorialHandler(c *gin.Context) {
 	category := c.Param("category")
 	filename := c.Param("filename")
 
-	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), categoryMap[category])
+	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), categoryMap[category], 0)
 }
 
 // SearchHandler 搜索

@@ -2,6 +2,13 @@
 
 {{ .content }}
 
+<hr />
+<h5>更多文章</h5>
+{{ range $recommend := .recommends }}
+    <li style="margin-left:2.5rem"><a href="/{{ .DirName }}/{{ .Filename }}.html">{{ .Title }}</a></li>
+{{ end }}
+<hr />
+
 <br />
 <div id="disqus_thread"></div>
 <script>
