@@ -198,7 +198,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 5)
+	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 10)
 }
 
 // AboutMeHandler 关于我
