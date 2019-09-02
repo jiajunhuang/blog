@@ -29,6 +29,8 @@ google.golang.org/genproto v0.0.0-20190404172233-64821d5d2107
 google.golang.org/grpc v1.19.0
 ```
 
+顺带，还要设置环境变量 `GRPC_GO_REQUIRE_HANDSHAKE=off`。
+
 over...
 
 ---
