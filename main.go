@@ -30,7 +30,11 @@ var (
 
 	db *sqlx.DB
 
-	categoryMap = map[string]string{"golang": "Golang简明教程", "python": "Python教程"}
+	categoryMap = map[string]string{
+		"golang":         "Golang简明教程",
+		"python":         "Python教程",
+		"data_structure": "数据结构在实际项目中的使用",
+	}
 )
 
 // InitSentry 初始化sentry
