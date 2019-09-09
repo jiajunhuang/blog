@@ -9,18 +9,17 @@
 由于种种数据结构的典型应用不同，因此本系列中，我们将涉及到Python，Go和C三种语言，还有一点点汇编知识，但是对此不要感觉到
 害怕，他们之间的语法并不会相差太大，基本上C语言家族的语言都很类似，相信大家放下心中的恐惧之后可以轻松理解代码的意思。
 
-本系列分为十三篇，分别介绍了13种数据结构在实际项目中的使用：
+本系列分为12篇，分别介绍了12种数据结构在实际项目中的使用：
 
-- array和list
-- linked list
-- map或dict
-- stack
-- queue
-- heap
-- set
-- zset
-- bitmap
-- hyperloglog
-- stream
+- [数组(array)](./array.md)
+- 链表(linked list)
+- 字典(map或dict)
+- 栈(stack)
+- 队列(queue)
+- 大小堆(heap)
+- 集合(set(hashset, treeset))
+- 有序集合(树的实现和跳跃表实现，参考redis)
+- 位图(bitmap)
+- hyperloglog(参考redis)
 - radix tree或trie
 - b tree 和 b+ tree
