@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/09/11 - [zerotier简明教程](https://jiajunhuang.com/articles/2019_09_11-zerotier.md.html)
 - 2019/09/04 - [提取kindle笔记](https://jiajunhuang.com/articles/2019_09_04-kindle_highlights.md.html)
 - 2019/09/02 - [一个Golang gRPC握手错误的坑](https://jiajunhuang.com/articles/2019_09_02-go_grpc_handshake.md.html)
 - 2019/08/31 - [Golang(Go语言)爬虫框架colly简明教程及源码阅读与分析](https://jiajunhuang.com/articles/2019_08_31-go_colly.md.html)
