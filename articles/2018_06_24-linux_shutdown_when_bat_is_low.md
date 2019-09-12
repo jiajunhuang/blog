@@ -1,5 +1,19 @@
 # Linux低电量自动关机
 
+2019.09.12更新：
+
+可以直接使用自带的UPower，编辑 `/etc/UPower/UPower.conf`：
+
+```
+PercentageLow=40
+PercentageCritical=30
+PercentageAction=20
+```
+
+然后重启一下，这样低电量的时候就会自动关机，笔记本就相当于有一个UPS。
+
+---
+
 最近住所电不稳定，经常突然之间就断电了，虽然我的是笔记本，但是也不一定能挨到来电，这样下去过不了多久笔记本里的SSD就要挂比
 的节奏啊。
 
