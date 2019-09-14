@@ -1,7 +1,7 @@
 # 位图
 
 bitmap，就是传说中的位图，同样，在常见的互联网业务代码中很少看它的身影，但是在操作系统、网络驱动等软件中无处不是位图的
-使用。
+使用，其实在Redis中有对bitmap的直接操作，不过很少会用到。
 
 ## 位图的使用
 
@@ -44,7 +44,7 @@ b & (^(1 << 2))
 
 看图：
 
-![取消第三个bit](./img/bitmap_remove_3rd_bit.png)
+![取消第三个bit](./img/bitmap_nil_value.png)
 
 其原理是，首先同样计算出 `1 << 2 = 0b00000100`，然后进行位取反，得到 `0b11111011`，然后再进行与操作，按位取反的操作是对于
 每一个bit，原来是1，就设置成0，原来是0，就设置成1。而与操作则是，只要有一个是0，那么就会设置成0，只有两个都是1的情况，才会
@@ -135,6 +135,15 @@ after set perm: 1
 after set perm: 1001
 ```
 
+还有一个例子，就是Redis中对bitmap的操作。这个就留给读者去探索了，文档在 [此处](https://redis.io/topics/data-types-intro#bitmaps)
+
 ## 总结
 
 在这个篇章里我们看了一下位图的结构和使用，并且结合一个权限的例子看了在实际业务中我们怎么使用bitmap。
+
+---
+
+参考资料：
+
+- [Redis bitmap](https://redis.io/topics/data-types-intro#bitmaps)
+- [维基百科 bitmap](https://en.wikipedia.org/wiki/Bit_array)

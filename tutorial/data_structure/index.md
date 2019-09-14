@@ -12,6 +12,7 @@
 本系列分为12篇，分别介绍了12种数据结构在实际项目中的使用：
 
 - [数组(array)](./array.md)
+- [位图(bitmap)](./bitmap.md)
 - 链表(linked list)
 - 字典(map或dict)
 - 栈(stack)
@@ -19,7 +20,6 @@
 - 大小堆(heap)
 - 集合(set(hashset, treeset))
 - 有序集合(树的实现和跳跃表实现，参考redis)
-- 位图(bitmap)
 - hyperloglog(参考redis)
 - radix tree或trie
 - b tree 和 b+ tree
