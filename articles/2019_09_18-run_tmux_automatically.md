@@ -1,4 +1,4 @@
-# 让你的ssh时自动运行tmux
+# ssh时自动运行tmux
 
 tmux，终端复用神器，之前我一直用byobu，它是tmux的封装，我看了一下源代码，其实就是一堆的bash脚本+python脚本。因为一些
 byobu的bug，我选择使用原生tmux，但是有一个问题，就是以前执行tmux的时候，是在 `~/.bashrc` 里加上：
