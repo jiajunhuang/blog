@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/09/23 - [搭建samba服务器](https://jiajunhuang.com/articles/2019_09_23-samba.md.html)
+- 2019/09/23 - [QT5使用GTK主题](https://jiajunhuang.com/articles/2019_09_23-qt5_gtk_theme.md.html)
 - 2019/09/18 - [ssh时自动运行tmux](https://jiajunhuang.com/articles/2019_09_18-run_tmux_automatically.md.html)
 - 2019/09/14 - [ufw简明教程](https://jiajunhuang.com/articles/2019_09_14-ufw.md.html)
 - 2019/09/11 - [zerotier简明教程](https://jiajunhuang.com/articles/2019_09_11-zerotier.md.html)
