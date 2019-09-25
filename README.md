@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/09/26 - [关于ORM的思考](https://jiajunhuang.com/articles/2019_09_26-orm.md.html)
 - 2019/09/25 - [MySQL指定使用索引(使用索引提示)](https://jiajunhuang.com/articles/2019_09_25-mysql_use_index.md.html)
 - 2019/09/23 - [搭建samba服务器](https://jiajunhuang.com/articles/2019_09_23-samba.md.html)
 - 2019/09/23 - [QT5使用GTK主题](https://jiajunhuang.com/articles/2019_09_23-qt5_gtk_theme.md.html)
