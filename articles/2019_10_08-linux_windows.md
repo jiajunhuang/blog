@@ -139,3 +139,11 @@ Windows 虚拟机可能会占用比较多的CPU和内存的，可以进行如下
 - 切记要安装NetKVM和virtio等驱动
 - 使用spice以获得更好的图形性能
 - Windows中关闭搜索索引
+
+---
+
+参考资料：
+
+- [virtio 驱动介绍](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/)
+- [virtio-win.iso下载](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso)
+- [spice-guest-tools.exe下载](https://www.spice-space.org/download/binaries/spice-guest-tools/)
