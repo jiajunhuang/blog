@@ -46,6 +46,24 @@
 Python中的list是链表实现吗？不是。事实上，Python中的list是用数组实现的：
 
 ```c
+typedef struct {
+    PyObject_VAR_HEAD
+    /* Vector of pointers to list elements.  list[0] is ob_item[0], etc. */
+    PyObject **ob_item;
+
+    /* ob_item contains space for 'allocated' elements.  The number
+     * currently in use is ob_size.
+     * Invariants:
+     *     0 <= ob_size <= allocated
+     *     len(list) == ob_size
+     *     ob_item == NULL implies ob_size == allocated == 0
+     * list.sort() temporarily sets allocated to -1 to detect mutations.
+     *
+     * Items must normally not be NULL, except during construction when
+     * the list is not yet visible outside the function that builds it.
+     */
+    Py_ssize_t allocated;
+} PyListObject;
 ```
 
 这也就意味着，list的追加性能很高，因为只要在变长数组的最后，追加一个元素即可，但是，如果是在最左侧
@@ -54,9 +72,90 @@ Python中的list是链表实现吗？不是。事实上，Python中的list是用
 此类的操作，会推荐使用 `deque`，`deque` 就是用链表实现的。
 
 ```c
+/* collections module implementation of a deque() datatype
+   Written and maintained by Raymond D. Hettinger <python@rcn.com>
+*/
+
+/* The block length may be set to any number over 1.  Larger numbers
+ * reduce the number of calls to the memory allocator, give faster
+ * indexing and rotation, and reduce the link to data overhead ratio.
+ * Making the block length a power of two speeds-up the modulo
+ * and division calculations in deque_item() and deque_ass_item().
+ */
+
+#define BLOCKLEN 64
+#define CENTER ((BLOCKLEN - 1) / 2)
+
+/* Data for deque objects is stored in a doubly-linked list of fixed
+ * length blocks.  This assures that appends or pops never move any
+ * other data elements besides the one being appended or popped.
+ *
+ * Another advantage is that it completely avoids use of realloc(),
+ * resulting in more predictable performance.
+ *
+ * Textbook implementations of doubly-linked lists store one datum
+ * per link, but that gives them a 200% memory overhead (a prev and
+ * next link for each datum) and it costs one malloc() call per data
+ * element.  By using fixed-length blocks, the link to data ratio is
+ * significantly improved and there are proportionally fewer calls
+ * to malloc() and free().  The data blocks of consecutive pointers
+ * also improve cache locality.
+ *
+ * The list of blocks is never empty, so d.leftblock and d.rightblock
+ * are never equal to NULL.  The list is not circular.
+ *
+ * A deque d's first element is at d.leftblock[leftindex]
+ * and its last element is at d.rightblock[rightindex].
+ *
+ * Unlike Python slice indices, these indices are inclusive on both
+ * ends.  This makes the algorithms for left and right operations
+ * more symmetrical and it simplifies the design.
+ *
+ * The indices, d.leftindex and d.rightindex are always in the range:
+ *     0 <= index < BLOCKLEN
+ *
+ * And their exact relationship is:
+ *     (d.leftindex + d.len - 1) % BLOCKLEN == d.rightindex
+ *
+ * Whenever d.leftblock == d.rightblock, then:
+ *     d.leftindex + d.len - 1 == d.rightindex
+ *
+ * However, when d.leftblock != d.rightblock, the d.leftindex and
+ * d.rightindex become indices into distinct blocks and either may
+ * be larger than the other.
+ *
+ * Empty deques have:
+ *     d.len == 0
+ *     d.leftblock == d.rightblock
+ *     d.leftindex == CENTER + 1
+ *     d.rightindex == CENTER
+ *
+ * Checking for d.len == 0 is the intended way to see whether d is empty.
+ */
+
+typedef struct BLOCK {
+    struct BLOCK *leftlink;
+    PyObject *data[BLOCKLEN];
+    struct BLOCK *rightlink;
+} block;
+
+typedef struct {
+    PyObject_VAR_HEAD
+    block *leftblock;
+    block *rightblock;
+    Py_ssize_t leftindex;       /* 0 <= leftindex < BLOCKLEN */
+    Py_ssize_t rightindex;      /* 0 <= rightindex < BLOCKLEN */
+    size_t state;               /* incremented whenever the indices move */
+    Py_ssize_t maxlen;          /* maxlen is -1 for unbounded deques */
+    PyObject *weakreflist;
+} dequeobject;
 ```
 
-可以看出来，`deque` 是一个双链表，每当(TODO)。。。
+可以看出来，`deque` 是一个双链表，如注释所说，`deque` 的实现是用链表把多个block串起来。经典的教科书式实现是一个元素
+一个节点，这样有一个缺点就是双链表存储前后节点所用的空间占比过高，`deque` 把数据存在一个block里，然后用链表把block
+串起来。这样，当需要从左侧或者右侧插入或者弹出一个数据的时候，就可以快速的实现：
+
+![deque pop left]()
 
 ## 总结
 
