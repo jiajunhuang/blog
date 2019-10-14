@@ -34,15 +34,15 @@
 ```python
 class MyHash:
     def __init__(self, size=10):
-        self.__size = size
-        self.__array = [None] * size
+        self.__size = size  # size，你懂的
+        self.__array = [None] * size  # 先申请一个长度为size的list，对应上面我们所说的"数组"，总之是用来存储元素的
 
     def __getitem__(self, key):
-        hash_value = key % self.__size
+        hash_value = key % self.__size  # 取余数，为啥呢？这样可以保证，元素永远都在我们所申请的"数组"里
         return self.__array[hash_value]
 
     def __setitem__(self, key, value):
-        hash_value = key % self.__size
+        hash_value = key % self.__size  # 同上
         self.__array[hash_value] = value
 
     def __str__(self):
