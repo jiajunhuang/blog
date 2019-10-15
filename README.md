@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/10/15 - [将SQLite的数据迁移到MySQL](https://jiajunhuang.com/articles/2019_10_15-grafana_moved_to_mysql.md.html)
 - 2019/10/08 - [Linux托管Windows虚拟机最佳实践](https://jiajunhuang.com/articles/2019_10_08-linux_windows.md.html)
 - 2019/09/29 - [为什么gRPC难以推广](https://jiajunhuang.com/articles/2019_09_29-why_grpc_is_not_popular.md.html)
 - 2019/09/26 - [关于ORM的思考](https://jiajunhuang.com/articles/2019_09_26-orm.md.html)
