@@ -250,9 +250,9 @@ In [2]: %timeit fib3(20)
 
 尾注中包括一些基本概念和资料，其中包括 Leetcode 中动态规划类的题目，和 MIT的算法公开课等。希望对大家都有所帮助。
 
-- https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92
-- https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97
-- Leetcode动态规划练习题：https://leetcode.com/tag/dynamic-programming/
-- MIT算法公开课：https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=19&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
-- C程序设计的抽象思维：https://book.douban.com/subject/10754300/
-- 背包九讲：https://github.com/tianyicui/pack
+- [维基百科-动态规划](https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+- [维基百科-斐波那契数列](https://zh.wikipedia.org/wiki/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97)
+- [Leetcode动态规划练习题](https://leetcode.com/tag/dynamic-programming/)
+- [MIT算法公开课](https://www.youtube.com/watch?v=OQ5jsbhAv_M&index=19&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)
+- [C程序设计的抽象思维](https://book.douban.com/subject/10754300/)
+- [背包九讲](https://github.com/tianyicui/pack)

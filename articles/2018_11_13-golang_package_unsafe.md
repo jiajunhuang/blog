@@ -104,6 +104,6 @@ func s2b(s string) []byte {
 
 ------
 
-- https://golang.org/pkg/unsafe/
-- https://en.wikipedia.org/wiki/Data_structure_alignment
-- https://github.com/valyala/fasthttp/blob/fcaab424cac756cafb79fb3c08b5a1bc6b7d63e7/bytesconv.go#L378:6
+- [unsafe包](https://golang.org/pkg/unsafe/)
+- [wikipedia 数据结构对齐](https://en.wikipedia.org/wiki/Data_structure_alignment)
+- [bytes和str互转](https://github.com/valyala/fasthttp/blob/fcaab424cac756cafb79fb3c08b5a1bc6b7d63e7/bytesconv.go#L378:6)
