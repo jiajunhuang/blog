@@ -27,7 +27,7 @@ done | sqlite3 $DB
 $ ./export_sqlite.sh grafana.db > grafana.sql
 ```
 
-接着改 grafana 的配置文件 `/etc/grafana.ini` 把MySQL中床建好的数据库、用户名、密码写进去：
+接着改 grafana 的配置文件 `/etc/grafana.ini` 把MySQL中创建好的数据库、用户名、密码写进去：
 
 > 如果没有创建好，那么应当先创建一个。
 
@@ -57,4 +57,4 @@ $ mysql -u grafanauser -p -D grafana < grafana.sql
 
 参考资料：
 
-- https://community.grafana.com/t/migrating-grafana-data-to-new-database/2454
+- [https://community.grafana.com/t/migrating-grafana-data-to-new-database/2454](https://community.grafana.com/t/migrating-grafana-data-to-new-database/2454)
