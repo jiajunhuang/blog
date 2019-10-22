@@ -14,7 +14,7 @@
 - [数组(array)](./array.md)
 - [位图(bitmap)](./bitmap.md)
 - [字典(map或dict)](./dict.md)
-- 链表(linked list)
+- [链表(linked list)](./linkedlist.md)
 - 栈(stack)
 - 队列(queue)
 - 大小堆(heap)
