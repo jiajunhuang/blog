@@ -47,7 +47,7 @@ MVCC是多版本控制的意思，粗略来讲，实现方式就是对于每一�
 
 --------
 
-- https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1
-- 《Design Data Intensive Application》
-- https://zh.wikipedia.org/wiki/%E4%BA%8B%E5%8B%99%E9%9A%94%E9%9B%A2#%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB
-- https://en.wikipedia.org/wiki/Multiversion_concurrency_control
+- [数据库事务](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1)
+- [《Design Data Intensive Application》](https://book.douban.com/subject/26197294/)
+- [事务隔离](https://zh.wikipedia.org/wiki/%E4%BA%8B%E5%8B%99%E9%9A%94%E9%9B%A2#%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB)
+- [MVCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control)
