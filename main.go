@@ -202,7 +202,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 10)
+	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 15)
 }
 
 // AboutMeHandler 关于我
@@ -217,7 +217,7 @@ func FriendsHandler(c *gin.Context) {
 
 // NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/404.md", "", 0)
+	renderArticle(c, http.StatusOK, "articles/404.md", "", 20)
 }
 
 // AllSharingHandler 所有分享
