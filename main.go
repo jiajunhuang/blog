@@ -149,7 +149,9 @@ func genVisited(urlPath string) string {
 func getTopVisited(n int) []VisitedArticle {
 	visitedArticles := []VisitedArticle{}
 
-	articles, err := redisClient.ZRangeByScore(zsetKey, &redis.ZRangeBy{Min: "-inf", Max: "+inf", Count: int64(n)}).Result()
+	articles, err := redisClient.ZRevRangeByScore(zsetKey, &redis.ZRangeBy{
+		Min: "-inf", Max: "+inf", Offset: 0, Count: int64(n),
+	}).Result()
 	if err != nil {
 		sugar.Errorf("failed to get top %d visited articles: %s", n, err)
 		return nil
