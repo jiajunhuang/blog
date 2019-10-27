@@ -15,6 +15,7 @@ import (
 	"github.com/getsentry/raven-go"
 	"github.com/gin-contrib/sentry"
 	"github.com/gin-gonic/gin"
+	redis "github.com/go-redis/redis/v7"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/russross/blackfriday"
@@ -29,6 +30,8 @@ var (
 	articles      = LoadMDs("articles")
 
 	db *sqlx.DB
+
+	redisClient *redis.Client
 
 	categoryMap = map[string]string{
 		"golang":         "Golang简明教程",
@@ -50,6 +53,17 @@ func InitializeDB() {
 	if err != nil {
 		sugar.Fatalf("failed to connect to the db: %s", err)
 	}
+}
+
+// InitializeRedis 初始化Redis
+func InitializeRedis() {
+	opt, err := redis.ParseURL(os.Getenv("REDIS_URL"))
+	if err != nil {
+		sugar.Fatalf("failed to connect to redis db: %s", err)
+	}
+
+	// Create client as usually.
+	redisClient = redis.NewClient(opt)
 }
 
 // Article 就是文章
@@ -202,7 +216,12 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, c.Request.URL.Path, "", 15)
+	urlPath := c.Request.URL.Path
+	if _, err := redisClient.ZIncrBy("blogtopn", 1, urlPath).Result(); err != nil {
+		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
+	}
+
+	renderArticle(c, http.StatusOK, urlPath, "", 15)
 }
 
 // AboutMeHandler 关于我
@@ -281,6 +300,11 @@ func TutorialHandler(c *gin.Context) {
 	category := c.Param("category")
 	filename := c.Param("filename")
 
+	urlPath := c.Request.URL.Path
+	if _, err := redisClient.ZIncrBy("blogtopn", 1, urlPath).Result(); err != nil {
+		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
+	}
+
 	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), categoryMap[category], 0)
 }
 
@@ -314,6 +338,7 @@ func main() {
 
 	InitializeDB()
 	InitSentry()
+	InitializeRedis()
 
 	r := gin.New()
 
