@@ -51,6 +51,16 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                本站热门
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                {{ range $topArticle := .topArticles }}
+                                    <li class="list-group-item"><a href="{{ .URLPath }}">{{ .Title }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>

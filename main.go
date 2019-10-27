@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -20,6 +21,10 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/russross/blackfriday"
 	"go.uber.org/zap"
+)
+
+const (
+	zsetKey = "blogtopn"
 )
 
 var (
@@ -125,6 +130,44 @@ func ReadTitle(path string) string {
 	return title
 }
 
+type VisitedArticle struct {
+	URLPath string `json:"url_path"`
+	Title   string `json:"title"`
+}
+
+func genVisited(urlPath string) string {
+	visited := VisitedArticle{URLPath: urlPath, Title: ReadTitle(urlPath)}
+	b, err := json.Marshal(visited)
+	if err != nil {
+		sugar.Errorf("failed to marshal visited %+v: %s", visited, err)
+		return ""
+	}
+
+	return string(b)
+}
+
+func getTopVisited(n int) []VisitedArticle {
+	visitedArticles := []VisitedArticle{}
+
+	articles, err := redisClient.ZRangeByScore(zsetKey, &redis.ZRangeBy{Min: "-inf", Max: "+inf", Count: int64(n)}).Result()
+	if err != nil {
+		sugar.Errorf("failed to get top %d visited articles: %s", n, err)
+		return nil
+	}
+
+	for _, article := range articles {
+		var va VisitedArticle
+		if err := json.Unmarshal([]byte(article), &va); err != nil {
+			sugar.Errorf("failed to unmarshal article: %s", err)
+			continue
+		}
+
+		visitedArticles = append(visitedArticles, va)
+	}
+
+	return visitedArticles
+}
+
 // LoadArticle 把文章的元信息读出来
 func LoadArticle(dirname, filename string) *Article {
 	match := filenameRegex.FindStringSubmatch(filename)
@@ -203,13 +246,15 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 	)
 
 	recommends := articles.RandomN(randomN)
+	topArticles := getTopVisited(20)
 
 	c.HTML(
 		status, "article.html", gin.H{
-			"content":    template.HTML(content),
-			"title":      ReadTitle(path),
-			"subtitle":   subtitle,
-			"recommends": recommends,
+			"content":     template.HTML(content),
+			"title":       ReadTitle(path),
+			"subtitle":    subtitle,
+			"recommends":  recommends,
+			"topArticles": topArticles,
 		},
 	)
 }
@@ -217,7 +262,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
 	urlPath := c.Request.URL.Path
-	if _, err := redisClient.ZIncrBy("blogtopn", 1, urlPath).Result(); err != nil {
+	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath)).Result(); err != nil {
 		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
 	}
 
@@ -301,7 +346,7 @@ func TutorialHandler(c *gin.Context) {
 	filename := c.Param("filename")
 
 	urlPath := c.Request.URL.Path
-	if _, err := redisClient.ZIncrBy("blogtopn", 1, urlPath).Result(); err != nil {
+	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath)).Result(); err != nil {
 		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
 	}
 
