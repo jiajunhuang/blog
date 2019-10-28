@@ -136,7 +136,12 @@ type VisitedArticle struct {
 }
 
 func genVisited(urlPath, subTitle string) string {
-	visited := VisitedArticle{URLPath: urlPath, Title: fmt.Sprintf("%s - %s", ReadTitle(urlPath), subTitle)}
+	title := ReadTitle(urlPath)
+	if subTitle != "" {
+		title += " - " + subTitle
+	}
+
+	visited := VisitedArticle{URLPath: urlPath, Title: title}
 	b, err := json.Marshal(visited)
 	if err != nil {
 		sugar.Errorf("failed to marshal visited %+v: %s", visited, err)
