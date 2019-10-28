@@ -135,8 +135,8 @@ type VisitedArticle struct {
 	Title   string `json:"title"`
 }
 
-func genVisited(urlPath string) string {
-	visited := VisitedArticle{URLPath: urlPath, Title: ReadTitle(urlPath)}
+func genVisited(urlPath, subTitle string) string {
+	visited := VisitedArticle{URLPath: urlPath, Title: fmt.Sprintf("%s - %s", ReadTitle(urlPath), subTitle)}
 	b, err := json.Marshal(visited)
 	if err != nil {
 		sugar.Errorf("failed to marshal visited %+v: %s", visited, err)
@@ -266,7 +266,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
 	urlPath := c.Request.URL.Path
-	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath)).Result(); err != nil {
+	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath, "")).Result(); err != nil {
 		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
 	}
 
@@ -350,11 +350,13 @@ func TutorialHandler(c *gin.Context) {
 	filename := c.Param("filename")
 
 	urlPath := c.Request.URL.Path
-	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath)).Result(); err != nil {
+	subTitle := categoryMap[category]
+
+	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath, subTitle)).Result(); err != nil {
 		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
 	}
 
-	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), categoryMap[category], 0)
+	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), subTitle, 0)
 }
 
 // SearchHandler 搜索
