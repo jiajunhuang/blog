@@ -30,7 +30,7 @@ engine = create_engine(
     echo=bool(config.SQLALCHEMY_ECHO),  # 是不是要把所执行的SQL打印出来，一般用于调试
     pool_size=int(config.SQLALCHEMY_POOL_SIZE),  # 连接池大小
     max_overflow=int(config.SQLALCHEMY_POOL_MAX_SIZE),  # 连接池最大的大小
-    pool_recycle=int(config.SQLALCHEMY_POOL_RECYCLE),  # 多久时间回收连接
+    pool_recycle=int(config.SQLALCHEMY_POOL_RECYCLE),  # 多久时间主动回收连接，见下注释
 )
 Session = sessionmaker(bind=engine)
 Base = declarative_base(engine)
@@ -66,6 +66,8 @@ class User(Base, BaseMixin):
 
 我们注意上面的几点：
 
+- pool_recycle，设置主动回收连接的时长，如果不设置，那么可能会遇到数据库主动断开连接的问题，例如MySQL通常会为连接设置
+最大生命周期为八小时，如果没有通信，那么就会断开连接。因此不设置此选项可能就会遇到 `MySQL has gone away` 的报错。
 - engine，engine是SQLAlchemy 中位于数据库驱动之上的一个抽象概念，它适配了各种数据库驱动，提供了连接池等功能。其用法就是
 如上面例子中，`engine = create_engine(<数据库连接串>)`，数据库连接串的格式是 `dialect+driver://username:password@host:port/database?参数`
 这样的，dialect 可以是 `mysql`, `postgresql`, `oracle`, `mssql`, `sqlite`，后面的 driver 是驱动，比如MySQL的驱动pymysql，
