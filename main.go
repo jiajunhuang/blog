@@ -361,7 +361,7 @@ func TutorialHandler(c *gin.Context) {
 		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
 	}
 
-	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), subTitle, 0)
+	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), subTitle, 15)
 }
 
 // SearchHandler 搜索
