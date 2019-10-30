@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/10/30 - [SQLAlchemy简明教程](https://jiajunhuang.com/articles/2019_10_30-sqlalchemy.md.html)
 - 2019/10/25 - [这些年，我们错过的n个亿](https://jiajunhuang.com/articles/2019_10_25-oh_my_money.md.html)
 - 2019/10/19 - [给Linux用户的FreeBSD快速指南](https://jiajunhuang.com/articles/2019_10_19-freebsd_for_linux_users.md.html)
 - 2019/10/18 - [旧电脑也不能闲着：家用备份方案](https://jiajunhuang.com/articles/2019_10_18-build_your_own_nas.md.html)
