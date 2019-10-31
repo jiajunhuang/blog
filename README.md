@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/10/31 - [使用DNSCrypt](https://jiajunhuang.com/articles/2019_10_31-dnscrypt.md.html)
 - 2019/10/30 - [SQLAlchemy简明教程](https://jiajunhuang.com/articles/2019_10_30-sqlalchemy.md.html)
 - 2019/10/25 - [这些年，我们错过的n个亿](https://jiajunhuang.com/articles/2019_10_25-oh_my_money.md.html)
 - 2019/10/19 - [给Linux用户的FreeBSD快速指南](https://jiajunhuang.com/articles/2019_10_19-freebsd_for_linux_users.md.html)
