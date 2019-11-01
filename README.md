@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/11/01 - [网络编程所需要熟悉的那些函数](https://jiajunhuang.com/articles/2019_11_01-network_programming.md.html)
 - 2019/10/31 - [DNSCrypt简明教程](https://jiajunhuang.com/articles/2019_10_31-dnscrypt.md.html)
 - 2019/10/30 - [SQLAlchemy简明教程](https://jiajunhuang.com/articles/2019_10_30-sqlalchemy.md.html)
 - 2019/10/25 - [这些年，我们错过的n个亿](https://jiajunhuang.com/articles/2019_10_25-oh_my_money.md.html)
