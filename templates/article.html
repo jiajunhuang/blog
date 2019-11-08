@@ -23,6 +23,9 @@
     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
  */
+var disqus_config = function () {
+    this.page.url = window.location.pathname.split(/[?#]/)[0];
+};
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://blog-fhukwbah7t.disqus.com/embed.js';
