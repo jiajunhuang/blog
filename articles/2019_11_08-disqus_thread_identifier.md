@@ -30,3 +30,9 @@ var disqus_config = function () {
 ```
 
 作用就是忽略query string，当然，以前如果是在带query string的情况下评论的话，现在就不会显示出来了。
+
+---
+
+参考资料：
+
+- [Disqus官方指南](https://help.disqus.com/en/articles/1717084-javascript-configuration-variables)
