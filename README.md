@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/11/11 - [为什么我要用Linux作为桌面？](https://jiajunhuang.com/articles/2019_11_11-why_linux_as_desktop.md.html)
 - 2019/11/08 - [disqus获取评论时忽略query string](https://jiajunhuang.com/articles/2019_11_08-disqus_thread_identifier.md.html)
 - 2019/11/06 - [MySQL性能优化指南](https://jiajunhuang.com/articles/2019_11_06-mysql.md.html)
 - 2019/11/01 - [网络编程所需要熟悉的那些函数](https://jiajunhuang.com/articles/2019_11_01-network_programming.md.html)
