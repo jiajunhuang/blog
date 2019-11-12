@@ -92,7 +92,7 @@ func (d *Dao) CommentLatestSharing(comment string) error {
 		sugar.Errorf("failed to get latest sharing: %s", err)
 		return err
 	}
-	tx.MustExec("UPDATE issue SET content=?, updated_at=? WHERE id = ?3", comment, time.Now(), sharing.ID)
+	tx.MustExec("UPDATE issue SET content=?, updated_at=? WHERE id = ?", comment, time.Now(), sharing.ID)
 	return tx.Commit()
 }
 
