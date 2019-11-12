@@ -13,6 +13,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/getsentry/raven-go"
 	"github.com/gin-contrib/sentry"
@@ -82,6 +83,7 @@ type Article struct {
 	Date     string
 	Filename string
 	DirName  string
+	PubDate  time.Time
 }
 
 // Articles 文章列表
@@ -190,15 +192,20 @@ func LoadArticle(dirname, filename string) *Article {
 		return nil
 	}
 
-	dateString := match[1]
+	dateString := strings.Replace(match[1], "_", "-", -1)
 	filepath := fmt.Sprintf("./%s/%s", dirname, filename)
 	title := ReadTitle(filepath)
+	pubDate, err := time.Parse("2006-01-02", dateString)
+	if err != nil {
+		sugar.Panicf("failed to parse date: %s", err)
+	}
 
 	return &Article{
 		Title:    title,
-		Date:     strings.Replace(dateString, "_", "-", -1),
+		Date:     dateString,
 		Filename: filename,
 		DirName:  dirname,
+		PubDate:  pubDate,
 	}
 }
 
