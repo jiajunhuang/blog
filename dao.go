@@ -44,7 +44,7 @@ func (d *Dao) GetAllSharing() []Sharing {
 // GetSharingWithLimit 获取分享
 func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 	var sharing []Sharing
-	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT $1", limit); err != nil {
+	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT ?", limit); err != nil {
 		sugar.Errorf("failed to get latest %d sharing: %s", limit, err)
 		return nil
 	}
@@ -78,7 +78,7 @@ func (d *Dao) GetLatestSharing() (Sharing, error) {
 func (d *Dao) AddSharing(url string) error {
 	tx := db.MustBegin()
 	now := time.Now()
-	tx.MustExec("INSERT INTO issue(url, content, created_at, updated_at) VALUES ($1, '', $2, $3)", url, now, now)
+	tx.MustExec("INSERT INTO issue(url, content, created_at, updated_at) VALUES (?, '', ?, ?)", url, now, now)
 	return tx.Commit()
 }
 
@@ -92,7 +92,7 @@ func (d *Dao) CommentLatestSharing(comment string) error {
 		sugar.Errorf("failed to get latest sharing: %s", err)
 		return err
 	}
-	tx.MustExec("UPDATE issue SET content=$1, updated_at=$2 WHERE id = $3", comment, time.Now(), sharing.ID)
+	tx.MustExec("UPDATE issue SET content=?, updated_at=? WHERE id = ?3", comment, time.Now(), sharing.ID)
 	return tx.Commit()
 }
 
@@ -101,7 +101,7 @@ func (d *Dao) AddNote(content string) error {
 	now := time.Now()
 
 	tx := db.MustBegin()
-	tx.MustExec("INSERT INTO note(content, created_at, updated_at) VALUES($1, $2, $3)", content, now, now)
+	tx.MustExec("INSERT INTO note(content, created_at, updated_at) VALUES(?, ?, ?)", content, now, now)
 
 	return tx.Commit()
 }
