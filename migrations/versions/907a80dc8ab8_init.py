@@ -23,7 +23,7 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.Column('deleted_at', sa.DateTime(), nullable=True),
-    sa.Column('content', sa.String(), nullable=False),
+    sa.Column('content', sa.String(2048), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_issue_deleted_at'), 'issue', ['deleted_at'], unique=False)
@@ -33,7 +33,7 @@ def upgrade():
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.Column('deleted_at', sa.DateTime(), nullable=True),
-    sa.Column('content', sa.String(), nullable=False),
+    sa.Column('content', sa.String(2048), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_note_deleted_at'), 'note', ['deleted_at'], unique=False)

@@ -66,8 +66,8 @@ def get_session():
 class Issue(Base, BaseMixin):
     __tablename__ = "issue"
 
-    content = Column(String, nullable=False, default="", doc="内容")
-    url = Column(String, default="", doc="链接")
+    content = Column(String(2048), nullable=False, default="", doc="内容")
+    url = Column(String(1024), default="", doc="链接")
 
     @classmethod
     def get_latest_sharing(cls, session, limit=30):
@@ -77,4 +77,4 @@ class Issue(Base, BaseMixin):
 class Note(Base, BaseMixin):
     __tablename__ = "note"
 
-    content = Column(String, nullable=False, doc="内容")
+    content = Column(String(2048), nullable=False, doc="内容")
