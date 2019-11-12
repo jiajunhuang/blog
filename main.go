@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"html/template"
 	"io/ioutil"
@@ -43,6 +44,10 @@ var (
 		"python":         "Python教程",
 		"data_structure": "数据结构在实际项目中的使用",
 	}
+
+	// errors
+	ErrNotFound     = errors.New("Article Not Found")
+	ErrFailedToLoad = errors.New("Failed To Load Article")
 )
 
 // InitSentry 初始化sentry
@@ -135,8 +140,12 @@ type VisitedArticle struct {
 	Title   string `json:"title"`
 }
 
-func genVisited(urlPath, subTitle string) string {
+func genVisited(urlPath, subTitle string) (string, error) {
 	title := ReadTitle(urlPath)
+	if title == "" {
+		return "", ErrNotFound
+	}
+
 	if subTitle != "" {
 		title += " - " + subTitle
 	}
@@ -144,11 +153,10 @@ func genVisited(urlPath, subTitle string) string {
 	visited := VisitedArticle{URLPath: urlPath, Title: title}
 	b, err := json.Marshal(visited)
 	if err != nil {
-		sugar.Errorf("failed to marshal visited %+v: %s", visited, err)
-		return ""
+		return "", ErrFailedToLoad
 	}
 
-	return string(b)
+	return string(b), nil
 }
 
 func getTopVisited(n int) []VisitedArticle {
@@ -268,12 +276,20 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 	)
 }
 
+func incrVisited(urlPath, subTitle string) {
+	if visited, err := genVisited(urlPath, subTitle); err != nil {
+		sugar.Errorf("failed to gen visited: %s", err)
+	} else {
+		if _, err := redisClient.ZIncrBy(zsetKey, 1, visited).Result(); err != nil {
+			sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
+		}
+	}
+}
+
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
 	urlPath := c.Request.URL.Path
-	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath, "")).Result(); err != nil {
-		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
-	}
+	incrVisited(urlPath, "")
 
 	renderArticle(c, http.StatusOK, urlPath, "", 15)
 }
@@ -357,9 +373,7 @@ func TutorialHandler(c *gin.Context) {
 	urlPath := c.Request.URL.Path
 	subTitle := categoryMap[category]
 
-	if _, err := redisClient.ZIncrBy(zsetKey, 1, genVisited(urlPath, subTitle)).Result(); err != nil {
-		sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
-	}
+	incrVisited(urlPath, subTitle)
 
 	renderArticle(c, http.StatusOK, fmt.Sprintf("tutorial/%s/%s", category, filename), subTitle, 15)
 }
