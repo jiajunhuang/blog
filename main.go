@@ -19,8 +19,8 @@ import (
 	"github.com/gin-contrib/sentry"
 	"github.com/gin-gonic/gin"
 	redis "github.com/go-redis/redis/v7"
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/russross/blackfriday"
 	"go.uber.org/zap"
 )
@@ -60,7 +60,7 @@ func InitSentry() {
 func InitializeDB() {
 	var err error
 
-	db, err = sqlx.Connect("mysql", os.Getenv("SQLX_URL"))
+	db, err = sqlx.Connect("sqlite3", os.Getenv("SQLX_URL"))
 	if err != nil {
 		sugar.Fatalf("failed to connect to the db: %s", err)
 	}
