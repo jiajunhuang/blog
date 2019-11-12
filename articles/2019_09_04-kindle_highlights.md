@@ -34,4 +34,8 @@ if __name__ == "__main__":
 $ python kindle.py 读书笔记.html
 ```
 
-当然，也可以使用这个 [在线工具](https://tools.jiajunhuang.com) 当然了，其实就是这个脚本的在线版。
+---
+
+2019.11.12注：
+
+网页版已经移除，请使用脚本。先安装Python3，然后pip安装lxml，之后即可执行此脚本。
