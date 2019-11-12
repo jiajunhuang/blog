@@ -33,7 +33,10 @@ type Sharing struct {
 // GetAllSharing 获取所有分享
 func (d *Dao) GetAllSharing() []Sharing {
 	var sharing []Sharing
-	db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC")
+	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC"); err != nil {
+		sugar.Errorf("failed to get all issue: %s", err)
+		return nil
+	}
 
 	return sharing
 }
@@ -41,7 +44,10 @@ func (d *Dao) GetAllSharing() []Sharing {
 // GetSharingWithLimit 获取分享
 func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 	var sharing []Sharing
-	db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT $1", limit)
+	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT $1", limit); err != nil {
+		sugar.Errorf("failed to get latest %d sharing: %s", limit, err)
+		return nil
+	}
 
 	return sharing
 }
@@ -49,7 +55,10 @@ func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 // GetAllNotes 获取所有随想
 func (d *Dao) GetAllNotes() []Note {
 	var notes []Note
-	db.Select(&notes, "SELECT * FROM note ORDER BY updated_at DESC")
+	if err := db.Select(&notes, "SELECT * FROM note ORDER BY updated_at DESC"); err != nil {
+		sugar.Errorf("failed to get all notes: %s", err)
+		return nil
+	}
 
 	return notes
 }
@@ -58,6 +67,9 @@ func (d *Dao) GetAllNotes() []Note {
 func (d *Dao) GetLatestSharing() (Sharing, error) {
 	var sharing Sharing
 	err := db.Get(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1")
+	if err != nil {
+		sugar.Errorf("failed to get latest sharing: %s", err)
+	}
 
 	return sharing, err
 }
@@ -77,6 +89,7 @@ func (d *Dao) CommentLatestSharing(comment string) error {
 	tx := db.MustBegin()
 
 	if err := tx.Get(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1"); err != nil {
+		sugar.Errorf("failed to get latest sharing: %s", err)
 		return err
 	}
 	tx.MustExec("UPDATE issue SET content=$1, updated_at=$2 WHERE id = $3", comment, time.Now(), sharing.ID)
