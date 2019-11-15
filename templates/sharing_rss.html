@@ -1,0 +1,18 @@
+{{ .rssHeader }}
+<rss version="2.0">
+    <channel>
+        <title>Jiajun的编程分享</title>
+        <link>https://jiajunhuang.com/sharing</link>
+        <description>Jiajun的编程分享</description>
+
+        {{ range $sharing := .sharings }}
+            <item>
+                <title>{{ .Content }}</title>
+                <link>https://jiajunhuang.com/sharing#{{ .ID }}</link>
+                <description>{{ .Content }}</description>
+                <pubDate>{{ .UpdatedAt.Format "Mon, 02 Jan 2006 15:04:05 GMT" }}</pubDate>
+            </item>
+        {{ end }}
+
+    </channel>
+</rss>

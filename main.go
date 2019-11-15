@@ -361,6 +361,19 @@ func RSSHandler(c *gin.Context) {
 	)
 }
 
+// SharingRSSHandler RSS for sharing channel
+func SharingRSSHandler(c *gin.Context) {
+	sharings := dao.GetAllSharing()
+
+	c.Header("Content-Type", "application/xml")
+	c.HTML(
+		http.StatusOK, "sharing_rss.html", gin.H{
+			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
+			"sharings":  sharings,
+		},
+	)
+}
+
 // SiteMapHandler sitemap
 func SiteMapHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
