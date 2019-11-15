@@ -451,6 +451,7 @@ func main() {
 	r.GET("/friends", FriendsHandler)
 	r.GET("/sharing", SharingHandler)
 	r.GET("/sharing/all", AllSharingHandler)
+	r.GET("/sharing/rss", SharingRSSHandler)
 	r.GET("/notes", NotesHandler)
 	r.GET("/rss", RSSHandler)
 	r.GET("/sitemap.xml", SiteMapHandler)
