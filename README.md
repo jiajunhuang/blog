@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/11/17 - [使用microk8s快速搭建k8s](https://jiajunhuang.com/articles/2019_11_17-microk8s.md.html)
 - 2019/11/15 - [Python中优雅的处理文件路径](https://jiajunhuang.com/articles/2019_11_15-python_pathlib_path.md.html)
 - 2019/11/14 - [Go语言MySQL时区问题](https://jiajunhuang.com/articles/2019_11_14-golang_mysql_timezone.md.html)
 - 2019/11/13 - [我的技术栈选型](https://jiajunhuang.com/articles/2019_11_13-tech_stack.md.html)
