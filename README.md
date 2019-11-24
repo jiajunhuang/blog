@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2019/11/24 - [欣赏一下K&R两位大神的代码](https://jiajunhuang.com/articles/2019_11_24-code_from_k_and_r.md.html)
 - 2019/11/19 - [MySQL的ON DUPLICATE KEY UPDATE语句](https://jiajunhuang.com/articles/2019_11_19-mysql_duplicate_key_update.md.html)
 - 2019/11/17 - [使用microk8s快速搭建k8s](https://jiajunhuang.com/articles/2019_11_17-microk8s.md.html)
 - 2019/11/15 - [Python中优雅的处理文件路径](https://jiajunhuang.com/articles/2019_11_15-python_pathlib_path.md.html)
