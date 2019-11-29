@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"time"
 )
 
@@ -34,7 +35,7 @@ type Sharing struct {
 func (d *Dao) GetAllSharing() []Sharing {
 	var sharing []Sharing
 	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC"); err != nil {
-		sugar.Errorf("failed to get all issue: %s", err)
+		log.Printf("failed to get all issue: %s", err)
 		return nil
 	}
 
@@ -45,7 +46,7 @@ func (d *Dao) GetAllSharing() []Sharing {
 func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 	var sharing []Sharing
 	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT ?", limit); err != nil {
-		sugar.Errorf("failed to get latest %d sharing: %s", limit, err)
+		log.Printf("failed to get latest %d sharing: %s", limit, err)
 		return nil
 	}
 
@@ -56,7 +57,7 @@ func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 func (d *Dao) GetAllNotes() []Note {
 	var notes []Note
 	if err := db.Select(&notes, "SELECT * FROM note ORDER BY updated_at DESC"); err != nil {
-		sugar.Errorf("failed to get all notes: %s", err)
+		log.Printf("failed to get all notes: %s", err)
 		return nil
 	}
 
@@ -68,7 +69,7 @@ func (d *Dao) GetLatestSharing() (Sharing, error) {
 	var sharing Sharing
 	err := db.Get(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1")
 	if err != nil {
-		sugar.Errorf("failed to get latest sharing: %s", err)
+		log.Printf("failed to get latest sharing: %s", err)
 	}
 
 	return sharing, err
@@ -89,7 +90,7 @@ func (d *Dao) CommentLatestSharing(comment string) error {
 	tx := db.MustBegin()
 
 	if err := tx.Get(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT 1"); err != nil {
-		sugar.Errorf("failed to get latest sharing: %s", err)
+		log.Printf("failed to get latest sharing: %s", err)
 		return err
 	}
 	tx.MustExec("UPDATE issue SET content=?, updated_at=? WHERE id = ?", comment, time.Now(), sharing.ID)

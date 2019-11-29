@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"time"
 
@@ -20,7 +21,7 @@ func startSharingBot() {
 	})
 
 	if err != nil {
-		sugar.Fatalf("failed to start telegram bot: %s", err)
+		log.Fatalf("failed to start telegram bot: %s", err)
 		return
 	}
 
@@ -37,19 +38,19 @@ func startSharingBot() {
 		// 如果没有出错，就发到channel
 		latestSharing, err := dao.GetLatestSharing()
 		if err != nil {
-			sugar.Errorf("failed to send to channel: %s", err)
+			log.Printf("failed to send to channel: %s", err)
 			return
 		}
 		msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
 
 		channel, err := b.ChatByID("@jiajunhuangcom")
 		if err != nil {
-			sugar.Errorf("failed to send to channel: %s", err)
+			log.Printf("failed to send to channel: %s", err)
 			return
 		}
 		_, err = b.Send(channel, msg)
 		if err != nil {
-			sugar.Errorf("failed to send to channel: %s", err)
+			log.Printf("failed to send to channel: %s", err)
 			return
 		}
 	})
@@ -73,7 +74,7 @@ func startNoteBot() {
 	})
 
 	if err != nil {
-		sugar.Fatalf("failed to start telegram bot: %s", err)
+		log.Fatalf("failed to start telegram bot: %s", err)
 		return
 	}
 

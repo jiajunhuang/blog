@@ -6,7 +6,9 @@ import (
 	"errors"
 	"fmt"
 	"html/template"
+	"io"
 	"io/ioutil"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
@@ -22,7 +24,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"github.com/russross/blackfriday"
-	"go.uber.org/zap"
 )
 
 const (
@@ -30,9 +31,6 @@ const (
 )
 
 var (
-	logger, _ = zap.NewProduction()
-	sugar     = logger.Sugar()
-
 	filenameRegex = regexp.MustCompile(`(\d{4}_\d{2}_\d{2})-.+\..+`)
 	articles      = LoadMDs("articles")
 
@@ -62,7 +60,7 @@ func InitializeDB() {
 
 	db, err = sqlx.Connect("mysql", os.Getenv("SQLX_URL"))
 	if err != nil {
-		sugar.Fatalf("failed to connect to the db: %s", err)
+		log.Fatalf("failed to connect to the db: %s", err)
 	}
 }
 
@@ -70,7 +68,7 @@ func InitializeDB() {
 func InitializeRedis() {
 	opt, err := redis.ParseURL(os.Getenv("REDIS_URL"))
 	if err != nil {
-		sugar.Fatalf("failed to connect to redis db: %s", err)
+		log.Fatalf("failed to connect to redis db: %s", err)
 	}
 
 	// Create client as usually.
@@ -79,11 +77,12 @@ func InitializeRedis() {
 
 // Article 就是文章
 type Article struct {
-	Title    string
-	Date     string
-	Filename string
-	DirName  string
-	PubDate  time.Time
+	Title       string
+	Date        string
+	Filename    string
+	DirName     string
+	PubDate     time.Time
+	Description string
 }
 
 // Articles 文章列表
@@ -118,18 +117,44 @@ func getFilePath(path string) string {
 	return "./" + path
 }
 
+// ReadDesc 把简介读出来
+func ReadDesc(path string) string {
+	path = getFilePath(path)
+
+	file, err := os.Open(path)
+	if err != nil {
+		log.Printf("failed to read file(%s): %s", path, err)
+		return ""
+	}
+	reader := bufio.NewReader(file)
+	reader.ReadLine() // 忽略第一行(标题)
+	reader.ReadLine() // 忽略第二行(空行)
+	desc := ""
+	for i := 0; i < 3; i++ {
+		line, _, err := reader.ReadLine()
+		if err != nil && err != io.EOF {
+			log.Printf("failed to read desc of file(%s): %s", path, err)
+			continue
+		}
+		desc += string(line)
+	}
+
+	trimChars := "\n，。：,.:"
+	return strings.TrimRight(strings.TrimLeft(desc, trimChars), trimChars) + "..."
+}
+
 // ReadTitle 把标题读出来
 func ReadTitle(path string) string {
 	path = getFilePath(path)
 
 	file, err := os.Open(path)
 	if err != nil {
-		sugar.Errorf("failed to read file(%s): %s", path, err)
+		log.Printf("failed to read file(%s): %s", path, err)
 		return ""
 	}
 	line, _, err := bufio.NewReader(file).ReadLine()
 	if err != nil {
-		sugar.Errorf("failed to read title of file(%s): %s", path, err)
+		log.Printf("failed to read title of file(%s): %s", path, err)
 		return ""
 	}
 	title := strings.Replace(string(line), "# ", "", -1)
@@ -168,14 +193,14 @@ func getTopVisited(n int) []VisitedArticle {
 		Min: "-inf", Max: "+inf", Offset: 0, Count: int64(n),
 	}).Result()
 	if err != nil {
-		sugar.Errorf("failed to get top %d visited articles: %s", n, err)
+		log.Printf("failed to get top %d visited articles: %s", n, err)
 		return nil
 	}
 
 	for _, article := range articles {
 		var va VisitedArticle
 		if err := json.Unmarshal([]byte(article), &va); err != nil {
-			sugar.Errorf("failed to unmarshal article: %s", err)
+			log.Printf("failed to unmarshal article: %s", err)
 			continue
 		}
 
@@ -197,15 +222,17 @@ func LoadArticle(dirname, filename string) *Article {
 	title := ReadTitle(filepath)
 	pubDate, err := time.Parse("2006-01-02", dateString)
 	if err != nil {
-		sugar.Panicf("failed to parse date: %s", err)
+		log.Panicf("failed to parse date: %s", err)
 	}
+	desc := ReadDesc(filepath)
 
 	return &Article{
-		Title:    title,
-		Date:     dateString,
-		Filename: filename,
-		DirName:  dirname,
-		PubDate:  pubDate,
+		Title:       title,
+		Date:        dateString,
+		Filename:    filename,
+		DirName:     dirname,
+		PubDate:     pubDate,
+		Description: desc,
 	}
 }
 
@@ -213,7 +240,7 @@ func LoadArticle(dirname, filename string) *Article {
 func LoadMDs(dirname string) Articles {
 	files, err := ioutil.ReadDir(dirname)
 	if err != nil {
-		sugar.Fatalf("failed to read dir(%s): %s", dirname, err)
+		log.Fatalf("failed to read dir(%s): %s", dirname, err)
 		return nil
 	}
 
@@ -259,7 +286,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 	path = getFilePath(path)
 	content, err := ioutil.ReadFile(path)
 	if err != nil {
-		sugar.Errorf("failed to read file %s: %s", path, err)
+		log.Printf("failed to read file %s: %s", path, err)
 		c.Redirect(http.StatusFound, "/404")
 		return
 	}
@@ -285,10 +312,10 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 func incrVisited(urlPath, subTitle string) {
 	if visited, err := genVisited(urlPath, subTitle); err != nil {
-		sugar.Errorf("failed to gen visited: %s", err)
+		log.Printf("failed to gen visited: %s", err)
 	} else {
 		if _, err := redisClient.ZIncrBy(zsetKey, 1, visited).Result(); err != nil {
-			sugar.Errorf("failed to incr score of %s: %s", urlPath, err)
+			log.Printf("failed to incr score of %s: %s", urlPath, err)
 		}
 	}
 }
@@ -420,8 +447,6 @@ func RewardHandler(c *gin.Context) {
 }
 
 func main() {
-	defer logger.Sync() // flushes buffer, if any
-
 	// telegram bot
 	go startNoteBot()
 	go startSharingBot()
