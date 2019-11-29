@@ -320,6 +320,11 @@ func incrVisited(urlPath, subTitle string) {
 	}
 }
 
+// PingPongHandler ping pong
+func PingPongHandler(c *gin.Context) {
+	c.JSON(http.StatusOK, nil)
+}
+
 // ArticleHandler 具体文章
 func ArticleHandler(c *gin.Context) {
 	urlPath := c.Request.URL.Path
@@ -469,6 +474,7 @@ func main() {
 	r.StaticFile("/ads.txt", "./static/ads.txt")
 
 	r.GET("/", IndexHandler)
+	r.GET("/ping", PingPongHandler)
 	r.GET("/404", NotFoundHandler)
 	r.GET("/archive", ArchiveHandler)
 	r.GET("/articles/:filepath", ArticleHandler)
