@@ -271,7 +271,6 @@ func IndexHandler(c *gin.Context) {
 			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
 			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Flutter/软件工程/源码阅读与分析",
 			"topArticles": topArticles,
-			"hideTopbar":  c.Query("hide_top_bar"),
 		},
 	)
 }
@@ -283,7 +282,6 @@ func ArchiveHandler(c *gin.Context) {
 			"articles":    articles,
 			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
 			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Flutter/软件工程/源码阅读与分析",
-			"hideTopbar":  c.Query("hide_top_bar"),
 		},
 	)
 }
@@ -312,7 +310,6 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 			"subtitle":    subtitle,
 			"recommends":  recommends,
 			"topArticles": topArticles,
-			"hideTopbar":  c.Query("hide_top_bar"),
 		},
 	)
 }
@@ -361,8 +358,7 @@ func AllSharingHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"sharing":    sharing,
-			"hideTopbar": c.Query("hide_top_bar"),
+			"sharing": sharing,
 		},
 	)
 }
@@ -373,9 +369,8 @@ func SharingHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"sharing":    sharing,
-			"partly":     true,
-			"hideTopbar": c.Query("hide_top_bar"),
+			"sharing": sharing,
+			"partly":  true,
 		},
 	)
 }
@@ -386,8 +381,7 @@ func NotesHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"notes":      notes,
-			"hideTopbar": c.Query("hide_top_bar"),
+			"notes": notes,
 		},
 	)
 }
