@@ -66,6 +66,7 @@
     </head>
     <body>
         <div class="container">
+            {{ if not .hideTopbar }}
             <header class="mb-2">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="/">Jiajun的编程随想</a>
@@ -105,6 +106,7 @@
                     </div>
                 </nav>
             </header>
+            {{ end }}
 
             <main role="main" class="container">
                 <div id="body" class="row">
