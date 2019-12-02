@@ -80,6 +80,9 @@ SQLX_URL="user:abcdefg@(localhost:3306)/blog?parseTime=true"
 SQLX_URL="user:abcdefg@(localhost:3306)/blog?parseTime=true&loc=Local"
 ```
 
+> 注：网友提示，使用loc=Local使用本地机器可能有这么一个坑：多个机器之间不在同一个时区，如果有这种需求，那么就
+> 需要统一时区，使用例如 loc=Asia%2FShanghai 。
+
 ---
 
 参考资料：
