@@ -132,6 +132,8 @@ AppBar({
 
 - `Center` 把它的子组件放在中间。
 
+- `Column` 和 `Row` 分别是列(纵向的叫列)和行(横向的叫行)，他们接受一个 `children` 参数，里面摆放子元素。
+
 - `Text` 是显示文字的组件，常见用法：`Text("Hello World")`，看看它的主要参数：
 
 ```dart
@@ -149,5 +151,23 @@ const Text(
     this.maxLines,
     this.semanticsLabel,
     this.textWidthBasis,
+})
+```
+
+- `SingleChildScrollView` 是一个容器，它可以接受一个子组件，然后当超过屏幕长度或者宽度时，可以滑动。对应一组子组建的，
+应当使用 `ListView`(性能更高)。我个人实验结果，他们的区别似乎在于，`ListView` 不能做其他组件的child，而
+`SingleChildScrollView` 可以。
+
+```dart
+const SingleChildScrollView({
+    Key key,
+    this.scrollDirection = Axis.vertical,  // 元素摆放的方向
+    this.reverse = false,
+    this.padding,
+    bool primary,
+    this.physics,
+    this.controller,
+    this.child, // 比如，放一个Column或者Row在这
+    this.dragStartBehavior = DragStartBehavior.start,
 })
 ```
