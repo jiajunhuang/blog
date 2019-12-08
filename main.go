@@ -337,6 +337,11 @@ func ArticleHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, urlPath, "", 15)
 }
 
+// FlutterHandler 渲染Flutter专页
+func FlutterHandler(c *gin.Context) {
+	renderArticle(c, http.StatusOK, "articles/flutter.md", "", 0)
+}
+
 // AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "articles/aboutme.md", "", 0)
@@ -483,6 +488,7 @@ func main() {
 	r.GET("/archive", ArchiveHandler)
 	r.GET("/articles/:filepath", ArticleHandler)
 	r.GET("/aboutme", AboutMeHandler)
+	r.GET("/flutter", FlutterHandler)
 	r.GET("/friends", FriendsHandler)
 	r.GET("/sharing", SharingHandler)
 	r.GET("/sharing/all", AllSharingHandler)
