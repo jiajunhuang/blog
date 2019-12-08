@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
 效果如下：
 
-![Flutter Hello World](./img/flutter_hello_world.png)
+![Flutter Hello World](/articles/img/flutter_hello_world.png)
 
 ## 组件库
 
