@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2019/12/31 - [2019年就要结束啦！](https://jiajunhuang.com/articles/2019_12_31-hello_2020.md.html)
+- 2019/12/09 - [flutter中使用RESTful接口](https://jiajunhuang.com/articles/2019_12_09-dart_flutter_json.md.html)
 - 2019/12/04 - [Vim YouCompleteMe使用LSP(以dart为例)](https://jiajunhuang.com/articles/2019_12_04-ycm_lsp_dart.md.html)
 - 2019/12/03 - [flutter webview加载时显示进度](https://jiajunhuang.com/articles/2019_12_03-flutter_webview_indicator.md.html)
 - 2019/12/02 - [SQLAlchemy快速更新或插入对象](https://jiajunhuang.com/articles/2019_12_02-sqlalchemy_update_or_insert.md.html)
