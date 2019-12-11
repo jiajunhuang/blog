@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2019/12/31 - [2019年就要结束啦！](https://jiajunhuang.com/articles/2019_12_31-hello_2020.md.html)
+- 2019/12/11 - [Flutter应用启动后检查更新](https://jiajunhuang.com/articles/2019_12_11-flutter_do_sth_after_boot.md.html)
 - 2019/12/10 - [Grafana Gravatar头像显示bug修复](https://jiajunhuang.com/articles/2019_12_10-grafana_gravatar_http_hijack.md.html)
 - 2019/12/09 - [flutter中使用RESTful接口](https://jiajunhuang.com/articles/2019_12_09-dart_flutter_json.md.html)
 - 2019/12/04 - [Vim YouCompleteMe使用LSP(以dart为例)](https://jiajunhuang.com/articles/2019_12_04-ycm_lsp_dart.md.html)
