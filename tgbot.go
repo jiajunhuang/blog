@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 	"time"
 
@@ -11,7 +14,27 @@ import (
 
 var (
 	sharingURL = os.Getenv("SHARE_BOT_URL")
+
+	notifyURL   = os.Getenv("NOTIFY_URL")
+	notifyToken = os.Getenv("NOTIFY_TOKEN")
 )
+
+// sendNotifyToApp 往推送发一个通知
+func sendNotifyToApp() {
+	body := map[string]string{"token": notifyToken, "title": "发布了一篇新的博客", "brief": "请打开App查看", "route": ""}
+	jsonBytes, err := json.Marshal(body)
+	if err != nil {
+		log.Printf("failed to marshal json %+v: %s", body, err)
+		return
+	}
+	resp, err := http.Post(notifyURL, "application/json", bytes.NewReader(jsonBytes))
+	if err != nil {
+		log.Printf("failed to notify system: %s", err)
+		return
+	}
+	defer resp.Body.Close()
+	log.Printf("successfully notify the system")
+}
 
 func startSharingBot() {
 	b, err := tb.NewBot(tb.Settings{
@@ -55,6 +78,12 @@ func startSharingBot() {
 		}
 	})
 	b.Handle(tb.OnText, func(m *tb.Message) {
+		log.Printf("received text message %+v", m)
+		if m.FromChannel() && m.Sender.Username == "ifttt" {
+			sendNotifyToApp()
+			return
+		}
+
 		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
 			return
 		}
