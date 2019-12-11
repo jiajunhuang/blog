@@ -77,13 +77,17 @@ func startSharingBot() {
 			return
 		}
 	})
-	b.Handle(tb.OnText, func(m *tb.Message) {
-		log.Printf("received text message %+v", m)
+	b.Handle(tb.OnChannelPost, func(m *tb.Message) {
+		log.Printf("received channel message %+v", m)
 		if m.FromChannel() && m.Sender.Username == "ifttt" {
+			log.Printf("gonna send request to notify system")
 			sendNotifyToApp()
 			return
 		}
+	})
 
+	b.Handle(tb.OnText, func(m *tb.Message) {
+		log.Printf("received text message %+v", m)
 		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
 			return
 		}
