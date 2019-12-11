@@ -66,6 +66,7 @@
     </head>
     <body>
         <div class="container">
+            {{ if not .isBlogApp }}
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="/">Jiajun的编程随想</a>
@@ -105,11 +106,12 @@
                     </div>
                 </nav>
             </header>
+            {{ end }}
 
             <main role="main" class="container mt-2">
                 <div id="body" class="row">
                     <div class="col-md-9">
-                        {{ if .isBlogApp }}
+                        {{ if not .isBlogApp }}
                             <div class="alert alert-success" role="alert">
                                 <a href="http://jiajunhuang.com/dl/blogapp/android/20191209.apk">Jiajun的编程随想有自己的App啦！基于Flutter构建，点我下载(目前仅支持Android)！</a>
                             </div>
