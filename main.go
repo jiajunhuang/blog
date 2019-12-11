@@ -112,6 +112,15 @@ func (a Articles) RandomN(n int) Articles {
 	return a[pos : pos+n]
 }
 
+func isBlogApp(c *gin.Context) bool {
+	ua := c.GetHeader("User-Agent")
+	if strings.HasPrefix(ua, "BlogApp/") {
+		return true
+	}
+
+	return false
+}
+
 func getFilePath(path string) string {
 	suffix := ".html"
 	if strings.HasSuffix(path, suffix) {
@@ -266,6 +275,7 @@ func IndexHandler(c *gin.Context) {
 	topArticles := getTopVisited(15)
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
+			"isBlogApp":   isBlogApp(c),
 			"articles":    articles[:100],
 			"totalCount":  len(articles),
 			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
@@ -279,6 +289,7 @@ func IndexHandler(c *gin.Context) {
 func ArchiveHandler(c *gin.Context) {
 	c.HTML(
 		http.StatusOK, "index.html", gin.H{
+			"isBlogApp":   isBlogApp(c),
 			"articles":    articles,
 			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
 			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Flutter/软件工程/源码阅读与分析",
@@ -305,6 +316,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 	c.HTML(
 		status, "article.html", gin.H{
+			"isBlogApp":   isBlogApp(c),
 			"content":     template.HTML(content),
 			"title":       ReadTitle(path),
 			"subtitle":    subtitle,
@@ -363,7 +375,8 @@ func AllSharingHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"sharing": sharing,
+			"isBlogApp": isBlogApp(c),
+			"sharing":   sharing,
 		},
 	)
 }
@@ -374,8 +387,9 @@ func SharingHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"sharing": sharing,
-			"partly":  true,
+			"isBlogApp": isBlogApp(c),
+			"sharing":   sharing,
+			"partly":    true,
 		},
 	)
 }
@@ -386,7 +400,8 @@ func NotesHandler(c *gin.Context) {
 
 	c.HTML(
 		http.StatusOK, "list.html", gin.H{
-			"notes": notes,
+			"isBlogApp": isBlogApp(c),
+			"notes":     notes,
 		},
 	)
 }
@@ -396,6 +411,7 @@ func RSSHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
 		http.StatusOK, "rss.html", gin.H{
+			"isBlogApp": isBlogApp(c),
 			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
 			"articles":  articles,
 		},
@@ -409,6 +425,7 @@ func SharingRSSHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
 		http.StatusOK, "sharing_rss.html", gin.H{
+			"isBlogApp": isBlogApp(c),
 			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
 			"sharings":  sharings,
 		},
@@ -420,6 +437,7 @@ func SiteMapHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/xml")
 	c.HTML(
 		http.StatusOK, "sitemap.html", gin.H{
+			"isBlogApp": isBlogApp(c),
 			"rssHeader": template.HTML(`<?xml version="1.0" encoding="UTF-8"?>`),
 			"articles":  articles,
 		},
