@@ -529,5 +529,5 @@ func main() {
 	r.GET("/metrics", gin.WrapH(promhttp.Handler()))
 	r.NoRoute(func(c *gin.Context) { c.Redirect(http.StatusFound, "/404") })
 
-	r.Run("127.0.0.1:8080")
+	r.Run("0.0.0.0:8080")
 }
