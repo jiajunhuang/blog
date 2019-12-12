@@ -53,7 +53,7 @@ var (
 	ErrFailedToLoad = errors.New("Failed To Load Article")
 
 	// Prometheus
-	totalRequests = promauto.NewCounter(prometheus.CounterOpts{Name: "total_requests"})
+	totalRequests = promauto.NewCounter(prometheus.CounterOpts{Name: "total_requests_total"})
 )
 
 // InitSentry 初始化sentry
