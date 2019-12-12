@@ -16,7 +16,11 @@
 由于我是新手，所以我想使用SnackBar，但是如果直接使用 `Scaffold.of(context).showSnackBar()` 是不行的，会报错：
 
 ```
-Scaffold.of() called with a context that does not contain a Scaffold. No Scaffold ancestor could be found starting from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same StatefulWidget as that whose build function actually creates the Scaffold widget being sought. There are several ways to avoid this problem. The simplest is to use a Builder to get a context that is “under” the Scaffold. For an example of this, please see the documentation for Scaffold.of(): https://docs.flutter.io/flutter/material/Scaffold/of.html
+Scaffold.of() called with a context that does not contain a Scaffold. No Scaffold ancestor could be found starting
+from the context that was passed to Scaffold.of(). This usually happens when the context provided is from the same
+StatefulWidget as that whose build function actually creates the Scaffold widget being sought. There are several
+ways to avoid this problem. The simplest is to use a Builder to get a context that is “under” the Scaffold. For
+an example of this, please see the documentation for Scaffold.of(): https://docs.flutter.io/flutter/material/Scaffold/of.html
 ```
 
 原因是此处的context还不包含Scaffold，因为Scaffold在 `Widget build(BuildContext context)` 里才生成。解决方案就是使用一个
