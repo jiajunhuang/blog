@@ -23,6 +23,9 @@ import (
 	redis "github.com/go-redis/redis/v7"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promauto"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/russross/blackfriday"
 )
 
@@ -48,6 +51,9 @@ var (
 	ErrNotFound = errors.New("Article Not Found")
 	// ErrFailedToLoad failed to load article
 	ErrFailedToLoad = errors.New("Failed To Load Article")
+
+	// Prometheus
+	totalRequests = promauto.NewCounter(prometheus.CounterOpts{Name: "total_requests"})
 )
 
 // InitSentry 初始化sentry
@@ -491,6 +497,9 @@ func main() {
 
 	r.Use(gin.Logger())
 	r.Use(sentry.Recovery(raven.DefaultClient, false))
+	r.Use(func(c *gin.Context) {
+		totalRequests.Inc()
+	})
 
 	r.LoadHTMLGlob("templates/*.html")
 	r.Static("/static", "./static")
@@ -517,6 +526,7 @@ func main() {
 	r.GET("/tutorial/:category/:filename", TutorialHandler)
 	r.GET("/reward", RewardHandler)
 	r.POST("/search", SearchHandler)
+	r.GET("/metrics", gin.WrapH(promhttp.Handler()))
 	r.NoRoute(func(c *gin.Context) { c.Redirect(http.StatusFound, "/404") })
 
 	r.Run("127.0.0.1:8080")
