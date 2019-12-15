@@ -14,6 +14,7 @@ import (
 	"os"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -84,12 +85,12 @@ func InitializeRedis() {
 
 // Article 就是文章
 type Article struct {
-	Title       string
-	Date        string
-	Filename    string
-	DirName     string
-	PubDate     time.Time
-	Description string
+	Title       string    `json:"title"`
+	Date        string    `json:"date_str"`
+	Filename    string    `json:"file_name"`
+	DirName     string    `json:"dir_name"`
+	PubDate     time.Time `json:"-"`
+	Description string    `json:"description"`
 }
 
 // Articles 文章列表
@@ -489,6 +490,33 @@ func RewardHandler(c *gin.Context) {
 	c.Redirect(http.StatusFound, os.Getenv("ALIPAY_URL"))
 }
 
+// ArticlesAPIHandler 首页文章API
+func ArticlesAPIHandler(c *gin.Context) {
+	pageStr := c.DefaultQuery("page", "1")
+	page, err := strconv.ParseInt(pageStr, 10, 64)
+	if err != nil {
+		page = 1
+	}
+	perPage := 20
+
+	start := (int(page) - 1) * perPage
+	if start < 0 {
+		start = 0
+	}
+	end := start + perPage
+	if end > len(articles) {
+		end = len(articles)
+	}
+
+	c.JSON(http.StatusOK, gin.H{"msg": "", "result": articles[start:end]})
+}
+
+// TopArticlesAPIHandler 热门文章API
+func TopArticlesAPIHandler(c *gin.Context) {
+	topArticles := getTopVisited(20)
+	c.JSON(http.StatusOK, gin.H{"msg": "", "result": topArticles})
+}
+
 func main() {
 	// telegram bot
 	go startNoteBot()
@@ -527,6 +555,8 @@ func main() {
 	r.GET("/sharing/all", AllSharingHandler)
 	r.GET("/sharing/rss", SharingRSSHandler)
 	r.GET("/notes", NotesHandler)
+	r.GET("/api/v1/articles", ArticlesAPIHandler)
+	r.GET("/api/v1/topn", TopArticlesAPIHandler)
 	r.GET("/rss", RSSHandler)
 	r.GET("/sitemap.xml", SiteMapHandler)
 	r.GET("/tutorial/:category/:filename", TutorialHandler)
