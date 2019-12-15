@@ -20,8 +20,8 @@ var (
 )
 
 // sendNotifyToApp 往推送发一个通知
-func sendNotifyToApp() {
-	body := map[string]string{"token": notifyToken, "title": "发布了一篇新的博客", "brief": "请打开App查看", "route": ""}
+func sendNotifyToApp(brief string) {
+	body := map[string]string{"token": notifyToken, "title": "发布了一篇新的博客", "brief": brief, "route": ""}
 	jsonBytes, err := json.Marshal(body)
 	if err != nil {
 		log.Printf("failed to marshal json %+v: %s", body, err)
@@ -79,9 +79,9 @@ func startSharingBot() {
 	})
 	b.Handle(tb.OnChannelPost, func(m *tb.Message) {
 		log.Printf("received channel message %+v", m)
-		if m.FromChannel() && m.Sender.Username == "ifttt" {
+		if m.FromChannel() {
 			log.Printf("gonna send request to notify system")
-			sendNotifyToApp()
+			sendNotifyToApp(m.Text)
 			return
 		}
 	})
