@@ -360,6 +360,11 @@ func FlutterHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "articles/flutter.md", "", 0)
 }
 
+// TutorialPageHandler 教程index
+func TutorialPageHandler(c *gin.Context) {
+	renderArticle(c, http.StatusOK, "articles/tutorial.md", "", 0)
+}
+
 // AboutMeHandler 关于我
 func AboutMeHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "articles/aboutme.md", "", 0)
@@ -516,6 +521,7 @@ func main() {
 	r.GET("/articles/:filepath", ArticleHandler)
 	r.GET("/aboutme", AboutMeHandler)
 	r.GET("/flutter", FlutterHandler)
+	r.GET("/tutorial", TutorialPageHandler)
 	r.GET("/friends", FriendsHandler)
 	r.GET("/sharing", SharingHandler)
 	r.GET("/sharing/all", AllSharingHandler)
