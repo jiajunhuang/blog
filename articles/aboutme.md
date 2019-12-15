@@ -2,7 +2,7 @@
 
 > 会当凌绝顶，一览众山小。
 
-我是 `Jiajun Huang`，2016年毕业于软件工程专业。在分布式系统和高并发处理方面有一些粗浅的经验。
+我是 `Jiajun Huang`，2016年毕业于软件工程专业。在分布式和高并发方面有一些粗浅的经验。
 工作上大多使用 `Python` 和 `Golang`，最近在研究 `Flutter`。
 
 以下是我这几年业余时间做的一些值的骄傲的事情：
@@ -10,12 +10,6 @@
 - 写过 [高性能熔断器](https://github.com/jiajunhuang/guard) ，单机QPS可达22k/s
 - 写过基于UVLoop和Cython的 [高性能Web框架](https://github.com/jiajunhuang/storm)，单机QPS可达13k/s
 - 为Python解释器, Sanic, Cython等多个开源项目贡献过代码，虽然都是修bug
-
-工作上主要有：
-
-- 对单体应用进行拆分，主导多个微服务的开发，单机QPS都非常可观(具体数值不便透露)
-- 从零搭建gRPC服务体系，基于 HTTP/2 协议完成了一个分布式gRPC网关(支持多区域)
-- 各种xxx系统吧 :(
 
 ------
 
@@ -32,6 +26,7 @@
 
 ## 订阅博客
 
+- [安卓用户可以下载本站的App](http://jiajunhuang.com/dl/blogapp/android/latest.apk)
 - [订阅RSS](https://jiajunhuang.com/rss)
 - [订阅Telegram Channel](https://t.me/jiajunhuangcom)
 
