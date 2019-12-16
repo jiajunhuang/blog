@@ -171,3 +171,55 @@ const SingleChildScrollView({
     this.dragStartBehavior = DragStartBehavior.start,
 })
 ```
+
+- `Builder` 有的时候我们需要使用context，但是没法直接使用父容器的context，这个时候就需要用Builder。Builder接受一个函数，通过这个函数会把context传进去。
+
+```dart
+drawer: Builder(
+    builder: (context) => getDrawer(
+        context, _controller.future, this.setLoadingStatus)),
+```
+
+- `Drawer` 这个就是App打开时的左侧边栏，例如：
+
+```dart
+Widget getDrawer(BuildContext context) {
+  return Drawer(
+      child: ListView(
+    padding: EdgeInsets.zero,
+    children: <Widget>[
+      ListTile(
+          leading: Icon(Icons.home),
+          title: Text("主页"),
+          onTap: () => __loadUrl("/")),
+    ],
+  );
+}
+```
+
+- `WillPopScope` 用来支持这么一种情况，当你按下返回键，App将会采取什么措施。通过提供 `onWillPop` 来进行定义的操作。比如：
+
+```dart
+onWillPop: () async {
+    var controller = await _controller.future;
+    bool canGoBack = await controller.canGoBack();
+    if (canGoBack) {
+        controller.goBack();
+        return true;
+    }
+
+    return false;
+});
+```
+
+- `InkWell` 用来让一个东西可点击。比如标题栏。
+
+```dart
+title: InkWell(
+    child: Text(homeTitle),
+    onTap: () async {
+        var done = await _controller.future;
+        this.setLoadingStatus(true);
+        done.loadUrl(homePage);
+    }),
+```
