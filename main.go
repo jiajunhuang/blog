@@ -497,11 +497,14 @@ func ArticlesAPIHandler(c *gin.Context) {
 	if err != nil {
 		page = 1
 	}
-	perPage := 20
+	perPage := 50
 
 	start := (int(page) - 1) * perPage
 	if start < 0 {
 		start = 0
+	}
+	if start > len(articles) {
+		start = len(articles)
 	}
 	end := start + perPage
 	if end > len(articles) {
