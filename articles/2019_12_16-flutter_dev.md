@@ -20,10 +20,10 @@
 
 效果图：
 
-![flutter 下拉刷新](articles/img/blogapp_pull_to_refresh.gif)
-![flutter 侧边栏](articles/img/blogapp_drawer.gif)
-![flutter 动态加载更多](articles/img/blogapp_load_more.gif)
-![flutter 打开webview](articles/img/blogapp_webview.gif)
+![flutter 下拉刷新](./img/blogapp_pull_to_refresh.gif)
+![flutter 侧边栏](./img/blogapp_drawer.gif)
+![flutter 动态加载更多](./img/blogapp_load_more.gif)
+![flutter 打开webview](./img/blogapp_webview.gif)
 
 接下来以QA的方式来分享一下开发的经验：
 
