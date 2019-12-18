@@ -33,7 +33,7 @@ func main() {
 - `errors.Is` 判断是否a错误是否是b错误的后代
 - `errors.Unwrap` 将a错误的包装剔除一层
 - `errors.As` 将a错误一直剔除到错误类型为 B 类型为止
-- `fmt.Errrrf("%w", err)` 将err错误包装一层
+- `fmt.Errorf("%w", err)` 将err错误包装一层
 
 我们来看看实现：
 
