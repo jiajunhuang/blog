@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2019/12/31 - [2019年就要结束啦！](https://jiajunhuang.com/articles/2019_12_31-hello_2020.md.html)
+- 2019/12/18 - [预防缓存击穿](https://jiajunhuang.com/articles/2019_12_18-cache_miss.md.html)
 - 2019/12/16 - [flutter开发体验汇报](https://jiajunhuang.com/articles/2019_12_16-flutter_dev.md.html)
 - 2019/12/13 - [自己封装一个好用的Dart HTTP库](https://jiajunhuang.com/articles/2019_12_13-dart_requests.md.html)
 - 2019/12/11 - [Flutter应用启动后检查更新](https://jiajunhuang.com/articles/2019_12_11-flutter_do_sth_after_boot.md.html)
