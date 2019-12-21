@@ -45,7 +45,7 @@ func (d *Dao) GetAllSharing() []Sharing {
 // GetSharingWithLimit 获取分享
 func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 	var sharing []Sharing
-	if err := db.Select(&sharing, "SELECT * FROM issue ORDER BY updated_at DESC LIMIT ?", limit); err != nil {
+	if err := db.Select(&sharing, "SELECT * FROM issue WHERE content != '' ORDER BY updated_at DESC LIMIT ?", limit); err != nil {
 		log.Printf("failed to get latest %d sharing: %s", limit, err)
 		return nil
 	}
