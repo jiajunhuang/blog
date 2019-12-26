@@ -57,9 +57,9 @@ var (
 	totalRequests = promauto.NewCounter(prometheus.CounterOpts{Name: "total_requests_total"})
 )
 
-//func init() {
-//prometheus.MustRegister(totalRequests)
-//}
+func init() {
+	prometheus.MustRegister(totalRequests)
+}
 
 // InitSentry 初始化sentry
 func InitSentry() {
