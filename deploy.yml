@@ -5,7 +5,7 @@
       local_action: shell python gen_catalog.py
 
     - name: commit and push to github
-      local_action: shell git add . && git commit -m "sync at `date`" && git push || true
+      local_action: shell git add . && git commit -m "sync at `date`" && git push
 
     - name: compile blog binary
       local_action: shell go build -o blog
