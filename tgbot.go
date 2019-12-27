@@ -21,7 +21,7 @@ var (
 
 // sendNotifyToApp 往推送发一个通知
 func sendNotifyToApp(brief string) {
-	body := map[string]string{"token": notifyToken, "title": "发布了一篇新的博客", "brief": brief, "route": ""}
+	body := map[string]string{"token": notifyToken, "title": "发布了一篇新的博客", "brief": brief, "route": "https://jiajunhuang.com"}
 	jsonBytes, err := json.Marshal(body)
 	if err != nil {
 		log.Printf("failed to marshal json %+v: %s", body, err)
