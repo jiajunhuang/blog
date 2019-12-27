@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2019/12/31 - [2019年就要结束啦！](https://jiajunhuang.com/articles/2019_12_31-hello_2020.md.html)
+- 2019/12/27 - [为什么要使用gRPC？](https://jiajunhuang.com/articles/2019_12_27-why_grpc.md.html)
 - 2019/12/24 - [Matebook X Pro 2019安装Debian 10](https://jiajunhuang.com/articles/2019_12_24-matebook_x_pro_2019_debian_10.md.html)
 - 2019/12/22 - [ArchLinux忽略某个包的升级](https://jiajunhuang.com/articles/2019_12_22-archlinux_ignore_pkg.md.html)
 - 2019/12/21 - [SQLAlchemy使用主从与数据库autocommit](https://jiajunhuang.com/articles/2019_12_21-autocommit.md.html)
