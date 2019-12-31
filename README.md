@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/01/01 - [使用Gitea+Drone打造自己的CI/CD系统](https://jiajunhuang.com/articles/2020_01_01-use_gitea_with_drone.md.html)
 - 2019/12/31 - [2019年就要结束啦！](https://jiajunhuang.com/articles/2019_12_31-hello_2020.md.html)
 - 2019/12/27 - [为什么要使用gRPC？](https://jiajunhuang.com/articles/2019_12_27-why_grpc.md.html)
 - 2019/12/24 - [Matebook X Pro 2019安装Debian 10](https://jiajunhuang.com/articles/2019_12_24-matebook_x_pro_2019_debian_10.md.html)
