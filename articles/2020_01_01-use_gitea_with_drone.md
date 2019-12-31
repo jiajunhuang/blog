@@ -68,7 +68,7 @@ docker run -d --name goproxy -p 8899:8081 -v /data/docker/goproxy:/go goproxy/go
 kind: pipeline
 type: docker                   
 name: default
-                                                                                                                                                                             
+
 steps:              
 - name: migrate
   image: migrate/migrate:20200101
@@ -114,7 +114,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: "test"
-``
+```
 
 注意几点：
 
