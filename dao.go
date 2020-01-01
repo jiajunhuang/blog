@@ -42,6 +42,17 @@ func (d *Dao) GetAllSharing() []Sharing {
 	return sharing
 }
 
+// GetSharing 获取分享
+func (d *Dao) GetSharing(limit, offset int) []Sharing {
+	var sharing []Sharing
+	if err := db.Select(&sharing, "SELECT * FROM issue WHERE content != '' ORDER BY updated_at DESC LIMIT ? OFFSET ?", limit, offset); err != nil {
+		log.Printf("failed to get latest %d sharing: %s", limit, err)
+		return nil
+	}
+
+	return sharing
+}
+
 // GetSharingWithLimit 获取分享
 func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 	var sharing []Sharing
@@ -57,6 +68,17 @@ func (d *Dao) GetSharingWithLimit(limit int) []Sharing {
 func (d *Dao) GetAllNotes() []Note {
 	var notes []Note
 	if err := db.Select(&notes, "SELECT * FROM note ORDER BY updated_at DESC"); err != nil {
+		log.Printf("failed to get all notes: %s", err)
+		return nil
+	}
+
+	return notes
+}
+
+// GetNotes 获取分享
+func (d *Dao) GetNotes(limit, offset int) []Note {
+	var notes []Note
+	if err := db.Select(&notes, "SELECT * FROM note ORDER BY updated_at DESC LIMIT ? OFFSET ?", limit, offset); err != nil {
 		log.Printf("failed to get all notes: %s", err)
 		return nil
 	}
