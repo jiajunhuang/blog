@@ -14,21 +14,21 @@ type Dao struct{}
 
 // Note 随想
 type Note struct {
-	ID        int        `db:"id"`
-	Content   string     `db:"content"`
-	CreatedAt *time.Time `db:"created_at"`
-	UpdatedAt *time.Time `db:"updated_at"`
-	DeletedAt *time.Time `db:"deleted_at"`
+	ID        int        `db:"id" json:"id"`
+	Content   string     `db:"content" json:"content"`
+	CreatedAt *time.Time `db:"created_at" json:"-"`
+	UpdatedAt *time.Time `db:"updated_at" json:"-"`
+	DeletedAt *time.Time `db:"deleted_at" json:"-"`
 }
 
 // Sharing 分享
 type Sharing struct {
-	ID        int        `db:"id"`
-	Content   string     `db:"content"`
-	URL       string     `db:"url"`
-	CreatedAt *time.Time `db:"created_at"`
-	UpdatedAt *time.Time `db:"updated_at"`
-	DeletedAt *time.Time `db:"deleted_at"`
+	ID        int        `db:"id" json:"id"`
+	Content   string     `db:"content" json:"content"`
+	URL       string     `db:"url" json:"url"`
+	CreatedAt *time.Time `db:"created_at" json:"-"`
+	UpdatedAt *time.Time `db:"updated_at" json:"-"`
+	DeletedAt *time.Time `db:"deleted_at" json:"-"`
 }
 
 // GetAllSharing 获取所有分享
