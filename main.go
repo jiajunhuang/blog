@@ -14,7 +14,6 @@ import (
 	"os"
 	"regexp"
 	"sort"
-	"strconv"
 	"strings"
 	"time"
 
@@ -493,17 +492,14 @@ func RewardHandler(c *gin.Context) {
 // ArticlesAPIHandler 首页文章API
 func ArticlesAPIHandler(c *gin.Context) {
 	queryObj := struct {
-		Page int `form:"page"`
+		Page int `form:"page,default=1"`
 	}{}
 	if err := c.BindQuery(&queryObj); err != nil {
 		log.Printf("failed to bind page: %s", err)
 	}
-	if queryObj.Page == 0 {
-		page = 1
-	}
 	perPage := 50
 
-	start := (int(page) - 1) * perPage
+	start := (queryObj.Page - 1) * perPage
 	if start < 0 {
 		start = 0
 	}
@@ -527,36 +523,30 @@ func TopArticlesAPIHandler(c *gin.Context) {
 // SharingAPIHandler 获取分享
 func SharingAPIHandler(c *gin.Context) {
 	queryObj := struct {
-		Page int `form:"page"`
+		Page int `form:"page,default=1"`
 	}{}
 	if err := c.BindQuery(&queryObj); err != nil {
 		log.Printf("failed to bind page: %s", err)
 	}
-	if queryObj.Page == 0 {
-		page = 1
-	}
 	limit := 50
 
-	offset := (int(page) - 1) * limit
+	offset := (queryObj.Page - 1) * limit
 
 	sharings := dao.GetSharing(limit, offset)
-	c.JSON(http.StatusOK, gin.H{"msg": "", "result": sharing})
+	c.JSON(http.StatusOK, gin.H{"msg": "", "result": sharings})
 }
 
 // NotesAPIHandler 获取随想
 func NotesAPIHandler(c *gin.Context) {
 	queryObj := struct {
-		Page int `form:"page"`
+		Page int `form:"page,default=1"`
 	}{}
 	if err := c.BindQuery(&queryObj); err != nil {
 		log.Printf("failed to bind page: %s", err)
 	}
-	if queryObj.Page == 0 {
-		page = 1
-	}
 	limit := 50
 
-	offset := (int(page) - 1) * limit
+	offset := (queryObj.Page - 1) * limit
 
 	notes := dao.GetNotes(limit, offset)
 	c.JSON(http.StatusOK, gin.H{"msg": "", "result": notes})
