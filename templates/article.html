@@ -34,6 +34,9 @@ window.onload = function () {
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
+
+        // 移除这个button
+        $("#load_disqus_thread").remove();
     });
 }
 </script>
