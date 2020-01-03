@@ -89,23 +89,27 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-79619009-1"></script>
         <script>
-        $(function() {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+		document.addEventListener("DOMContentLoaded", function(event) {
+			$(function() {
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
 
-            gtag('config', 'UA-79619009-1');
-        });
+				gtag('config', 'UA-79619009-1');
+			});
+		});
         </script>
         {{ if not .isBlogApp }}
         <script defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
-        $(function() {
-            (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-6941340661228088",
-                enable_page_level_ads: true
-            });
-        });
+		document.addEventListener("DOMContentLoaded", function(event) {
+			$(function() {
+				(adsbygoogle = window.adsbygoogle || []).push({
+					google_ad_client: "ca-pub-6941340661228088",
+					enable_page_level_ads: true
+				});
+			});
+		});
         </script>
         {{ end }}
 </html>
