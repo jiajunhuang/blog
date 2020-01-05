@@ -8,3 +8,6 @@
 - [程序员DD](http://blog.didispace.com/)
 - [御坂研究所](https://www.nosuchfield.com)
 - [宇宙湾](https://yuzhouwan.com/)
+- [楼主大哥的博客](https://h3l.github.io/posts/)
+- [山丘](https://xiezg247.xyz/)
+- [QuantumGhost's Vault](https://blog.quantumghost.me/)
