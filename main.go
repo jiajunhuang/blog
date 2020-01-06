@@ -375,6 +375,11 @@ func FriendsHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "articles/friends.md", "", 0)
 }
 
+// AppHandler App页面
+func AppHandler(c *gin.Context) {
+	renderArticle(c, http.StatusOK, "articles/app.md", "", 0)
+}
+
 // NotFoundHandler 404
 func NotFoundHandler(c *gin.Context) {
 	renderArticle(c, http.StatusOK, "articles/404.md", "", 20)
@@ -586,6 +591,7 @@ func main() {
 	r.GET("/flutter", FlutterHandler)
 	r.GET("/tutorial", TutorialPageHandler)
 	r.GET("/friends", FriendsHandler)
+	r.GET("/app", AppHandler)
 	r.GET("/sharing", SharingHandler)
 	r.GET("/sharing/all", AllSharingHandler)
 	r.GET("/sharing/rss", SharingRSSHandler)
