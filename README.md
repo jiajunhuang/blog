@@ -130,6 +130,7 @@ https://t.me/jiajunhuangcom
 - 2019/01/13 - [杂谈](https://jiajunhuang.com/articles/2019_01_13-goroutine.md.html)
 - 2019/01/12 - [使用autossh实现内网穿透](https://jiajunhuang.com/articles/2019_01_12-autossh.md.html)
 - 2019/01/07 - [Linux线程内存模型](https://jiajunhuang.com/articles/2019_01_07-linux_thread_mem_layout.md.html)
+- 2019/01/07 - [Golang不那么蛋疼的sort](https://jiajunhuang.com/articles/2019_01_07-golang_sort_slice.md.html)
 - 2019/01/03 - [关闭手机通知，修复碎片化的生活](https://jiajunhuang.com/articles/2019_01_03-drop_notifications.md.html)
 - 2019/01/01 - [Linux下系统调用的过程](https://jiajunhuang.com/articles/2019_01_01-system_call.md.html)
 - 2018/12/27 - [Redis 5.0 Stream简明教程](https://jiajunhuang.com/articles/2018_12_27-redis_stream.md.html)
