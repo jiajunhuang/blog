@@ -6,6 +6,8 @@
 $ keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias androidKey
 ```
 
+> 记得妥善保管这个key
+
 这个步骤里会要你填密码什么的，记住它们，下面还要用。
 
 然后进到app源码目录编辑 `android/key.properties` 保存以下内容：
@@ -16,6 +18,8 @@ keyPassword=<你刚才填写的密码>
 keyAlias=androidKey
 storeFile=<密钥的绝对路径>
 ```
+
+> 记得把这个文件加到 `.gitignore` 里：`echo 'android/key.properties' >> .gitignore`
 
 然后编辑 `android/app/build.gradle`，把 ` android {` 替换成：
 
