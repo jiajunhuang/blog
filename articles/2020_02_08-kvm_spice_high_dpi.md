@@ -29,3 +29,9 @@ $ sudo virsh
 ```
 <model type='qxl' ram='65536' vram='65536' vgamem='32768' heads='1' primary='yes'/>
 ```
+
+---
+
+参考资料：
+
+- https://stafwag.github.io/blog/blog/2018/04/22/high-screen-resolution-on-a-kvm-virtual-machine-with-qxl/
