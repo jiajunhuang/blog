@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/02/12 - [Python中的并发控制](https://jiajunhuang.com/articles/2020_02_12-python_concurrency.md.html)
 - 2020/02/08 - [KVM spice协议在高分屏上的分辨率问题](https://jiajunhuang.com/articles/2020_02_08-kvm_spice_high_dpi.md.html)
 - 2020/01/11 - [计算机中的权衡(trade-off)](https://jiajunhuang.com/articles/2020_01_11-paradigm.md.html)
 - 2020/01/10 - [[声明]本站所有文章禁止转载](https://jiajunhuang.com/articles/2020_01_10-please_do_not_copy.md.html)
