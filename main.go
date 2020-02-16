@@ -314,7 +314,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 
 	content = blackfriday.Run(
 		content,
-		blackfriday.WithExtensions(blackfriday.FencedCode),
+		blackfriday.WithExtensions(blackfriday.CommonExtensions),
 	)
 
 	recommends := articles.RandomN(randomN)
