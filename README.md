@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/02/27 - [系统调用的过程](https://jiajunhuang.com/articles/2020_02_27-syscall.md.html)
 - 2020/02/26 - [MySQL charset不同导致无法使用索引的坑](https://jiajunhuang.com/articles/2020_02_26-mysql_charset_index.md.html)
 - 2020/02/19 - [微服务的缺点](https://jiajunhuang.com/articles/2020_02_19-should_i_use_microservice.md.html)
 - 2020/02/14 - [远程工作一周有感](https://jiajunhuang.com/articles/2020_02_14-remote_work.md.html)
