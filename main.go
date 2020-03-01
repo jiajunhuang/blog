@@ -284,8 +284,8 @@ func IndexHandler(c *gin.Context) {
 			"isBlogApp":   isBlogApp(c),
 			"articles":    articles[:100],
 			"totalCount":  len(articles),
-			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
-			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Flutter/软件工程/源码阅读与分析",
+			"keywords":    "Golang,Python,Go语言,Dart,Android,安卓,Kotlin,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
+			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Android/安卓/Kotlin/软件工程/源码阅读与分析",
 			"topArticles": topArticles,
 		},
 	)
@@ -297,8 +297,8 @@ func ArchiveHandler(c *gin.Context) {
 		http.StatusOK, "index.html", gin.H{
 			"isBlogApp":   isBlogApp(c),
 			"articles":    articles,
-			"keywords":    "Golang,Python,Go语言,Dart,Flutter,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
-			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Flutter/软件工程/源码阅读与分析",
+			"keywords":    "Golang,Python,Go语言,Dart,Android,安卓,Kotlin,分布式,高并发,Haskell,C,微服务,软件工程,源码阅读,源码分析",
+			"description": "享受技术带来的快乐~分布式系统/高并发处理/Golang/Python/Haskell/C/微服务/Android/安卓/Kotlin/软件工程/源码阅读与分析",
 		},
 	)
 }
@@ -353,11 +353,6 @@ func ArticleHandler(c *gin.Context) {
 	incrVisited(urlPath, "")
 
 	renderArticle(c, http.StatusOK, urlPath, "", 15)
-}
-
-// FlutterHandler 渲染Flutter专页
-func FlutterHandler(c *gin.Context) {
-	renderArticle(c, http.StatusOK, "articles/flutter.md", "", 0)
 }
 
 // TutorialPageHandler 教程index
@@ -588,7 +583,6 @@ func main() {
 	r.GET("/archive", ArchiveHandler)
 	r.GET("/articles/:filepath", ArticleHandler)
 	r.GET("/aboutme", AboutMeHandler)
-	r.GET("/flutter", FlutterHandler)
 	r.GET("/tutorial", TutorialPageHandler)
 	r.GET("/friends", FriendsHandler)
 	r.GET("/app", AppHandler)
