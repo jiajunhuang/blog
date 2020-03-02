@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/03/02 - [一个feed流系统的演进](https://jiajunhuang.com/articles/2020_03_02-feed_system_design.md.html)
 - 2020/03/01 - [Android 使用view binding](https://jiajunhuang.com/articles/2020_03_01-android_view_binding.md.html)
 - 2020/02/27 - [系统调用的过程](https://jiajunhuang.com/articles/2020_02_27-syscall.md.html)
 - 2020/02/26 - [MySQL charset不同导致无法使用索引的坑](https://jiajunhuang.com/articles/2020_02_26-mysql_charset_index.md.html)
