@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/03/06 - [MySQL Boolean类型的坑](https://jiajunhuang.com/articles/2020_03_06-mysql_boolean_tinyint_index.md.html)
 - 2020/03/04 - [pip freeze是魔鬼](https://jiajunhuang.com/articles/2020_03_04-pip_list.md.html)
 - 2020/03/02 - [一个feed流系统的演进](https://jiajunhuang.com/articles/2020_03_02-feed_system_design.md.html)
 - 2020/03/01 - [Android 使用view binding](https://jiajunhuang.com/articles/2020_03_01-android_view_binding.md.html)
