@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/03/23 - [Redis使用中的几点注意事项](https://jiajunhuang.com/articles/2020_03_23-redis_practice.md.html)
 - 2020/03/12 - [给你的代码跑个分？pylint使用教程](https://jiajunhuang.com/articles/2020_03_12-pylint.md.html)
 - 2020/03/11 - [一个Gunicorn worker数量引发的血案](https://jiajunhuang.com/articles/2020_03_11-gunicorn_worker.md.html)
 - 2020/03/06 - [MySQL Boolean类型的坑](https://jiajunhuang.com/articles/2020_03_06-mysql_boolean_tinyint_index.md.html)
