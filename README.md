@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/03/27 - [应用内购的坑](https://jiajunhuang.com/articles/2020_03_27-iap.md.html)
 - 2020/03/26 - [两种常见的访问控制模型](https://jiajunhuang.com/articles/2020_03_26-access_control.md.html)
 - 2020/03/25 - [gunicorn max-requests 选项的作用](https://jiajunhuang.com/articles/2020_03_25-gunicorn_max_requests.md.html)
 - 2020/03/23 - [Redis使用中的几点注意事项](https://jiajunhuang.com/articles/2020_03_23-redis_practice.md.html)
