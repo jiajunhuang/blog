@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2020/04/09 - [价值编程与职业发展](https://jiajunhuang.com/articles/2020_04_09-value_programming.md.html)
+- 2020/04/09 - [使用Redis的Stream模块实现群聊功能](https://jiajunhuang.com/articles/2020_04_09-redis_stream_as_im.md.html)
 - 2020/04/08 - [解决k8s cron无法读取环境变量的问题](https://jiajunhuang.com/articles/2020_04_08-k8s_cron_environment_variable.md.html)
 - 2020/03/27 - [应用内购的坑](https://jiajunhuang.com/articles/2020_03_27-iap.md.html)
 - 2020/03/26 - [两种常见的访问控制模型](https://jiajunhuang.com/articles/2020_03_26-access_control.md.html)
