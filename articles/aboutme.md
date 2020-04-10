@@ -18,7 +18,6 @@
 
 ## 订阅博客
 
-- [安卓用户可以下载本站的App](http://jiajunhuang.com/dl/blogapp/android/latest.apk)
 - [订阅RSS](https://jiajunhuang.com/rss)
 - [订阅Telegram Channel](https://t.me/jiajunhuangcom)
 - [邮件订阅](https://eepurl.com/guVPMj)
