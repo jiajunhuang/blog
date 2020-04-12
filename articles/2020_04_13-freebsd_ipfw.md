@@ -18,7 +18,7 @@ ipfw的规则是这样的，ipfw有一个规则编号，按照规则编号一次
 
 我们来看看ipfw的规则长啥样：
 
-```man
+```bash
 RULE FORMAT
      The format of firewall rules is the following:
 
@@ -95,7 +95,7 @@ $ sudo sysrc firewall_logif="YES"  # 把日志打到 `ipfw0` 这个设备里
 
 然后编辑 `/etc/ipfw.rules`：
 
-```
+```bash
 IPF="ipfw -q add"
 ipfw -q -f flush
 
