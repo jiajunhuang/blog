@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/04/12 - [Golang expvar库源码阅读](https://jiajunhuang.com/articles/2020_04_12-expvar.md.html)
 - 2020/04/11 - [Golang SQL生成库 Squirrel 教程及源码阅读](https://jiajunhuang.com/articles/2020_04_11-squirrel.md.html)
 - 2020/04/10 - [Golang validator使用教程](https://jiajunhuang.com/articles/2020_04_10-golang_validator.md.html)
 - 2020/04/09 - [价值编程与职业发展](https://jiajunhuang.com/articles/2020_04_09-value_programming.md.html)
