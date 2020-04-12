@@ -8,22 +8,22 @@
 - Linux占据服务器市场主要份额，日常生产中也是经常用到，所以必须熟练使用
 - FreeBSD的协议非常好，如果哪天有需要，基于FreeBSD做产品不需要考虑被开源的问题
 
-更何况他们同宗同源，都是类UNIX呢，两者切换起来并不难。接下来，我们就看看Linux用户怎么切换到FreeBSD：
+更何况他们都是类UNIX呢，两者切换起来并不难。接下来，我们就看看Linux用户怎么切换到FreeBSD：
 
 首先，在国内拉取FreeBSD的二进制包非常慢，所以我们要使用一个镜像：
 
 ```bash
-$ sudo mkdir -p /usr/local/etc/pkg/repos
 $ sudo su
-# cat > /usr/local/etc/pkg/repos/FreeBSD.conf << EOF
+# mkdir -p /usr/local/etc/pkg/repos
+# cat > /usr/local/etc/pkg/repos/FreeBSD.conf
 FreeBSD: {
-  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  url: "pkg+http://pkg0.twn.freebsd.org/${ABI}/quarterly",
 }
-EOF
 # pkg update
 ```
 
-- shell。服务器我们最常用的软件估计就是shell了，Linux中默认的一般是 `bash`，FreeBSD默认的一般是 `tcsh`，我不想再学一个shell怎么用，我的配置都是基于 `bash` 的，因此，我使用 `bash`：
+- shell。服务器我们最常用的软件估计就是shell了，Linux中默认的一般是 `bash`，FreeBSD默认的一般是 `tcsh`，
+我不想再学一个shell怎么用，我的配置都是基于 `bash` 的，因此，我使用 `bash`：
 
 ```bash
 $ sudo pkg install -y bash bash-completion
