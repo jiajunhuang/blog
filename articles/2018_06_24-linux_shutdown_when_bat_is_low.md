@@ -60,3 +60,15 @@ if bat.percent < 15:
     logging.warn("gonna shutdown")
     os.system("sudo shutdown -h now")
 ```
+
+---
+
+2020.04.12:
+
+现已改用upower实现，编辑 `/etc/UPower/UPower.conf`：
+
+```
+PercentageLow=20
+PercentageCritical=17
+PercentageAction=15
+```
