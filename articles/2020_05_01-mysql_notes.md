@@ -77,3 +77,4 @@ default-character-set = utf8mb4
 参考资料：
 
 - https://wiki.archlinux.org/index.php/MariaDB#Using_UTF8MB4
+- https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
