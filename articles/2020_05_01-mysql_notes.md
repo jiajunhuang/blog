@@ -56,6 +56,14 @@ default-character-set = utf8mb4
 > FLUSH PRIVILEGES;
 ```
 
+## 设置root密码
+
+```bash
+> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+
+否则会一直报错 `ERROR 1698 (28000): Access denied for user 'root'@'localhost'`。这样修改之后，在本地连接才能使用密码。
+
 ## 备份
 
 我本地的MySQL有一个cronjob每天进行备份：
