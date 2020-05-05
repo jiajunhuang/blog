@@ -145,8 +145,9 @@ func (p *Pool) Get() interface{} {
 }
 ```
 
-这一段的主要作用就是，优先从当前执行的Processor里获取，如果没有的话，就从共享池子里拿，如果还是没有的话，就调用
-`getSlow` 里拿，再不行的话，就调用 `New` 函数了。
+这一段的主要作用就是，优先从当前执行的Processor里
+获取[参考Golang的GMP](https://jiajunhuang.com/articles/2018_02_02-golang_runtime.md.html)，如果没有的话，
+就从共享池子里拿，如果还是没有的话，就调用 `getSlow` 里拿，再不行的话，就调用 `New` 函数了。
 
 我们来看看上述例子的跑分：
 
