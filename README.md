@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/05/13 - [Debian 使用NetworkManager之后networking.service崩溃](https://jiajunhuang.com/articles/2020_05_13-debian_networking.md.html)
 - 2020/05/09 - [httprouter源码阅读与分析](https://jiajunhuang.com/articles/2020_05_09-httprouter.md.html)
 - 2020/05/08 - [《程序员的自我修养-装载、链接与库》笔记](https://jiajunhuang.com/articles/2020_05_08-linker_and_loader.md.html)
 - 2020/05/05 - [Golang sync.Pool源码阅读与分析](https://jiajunhuang.com/articles/2020_05_05-go_sync_pool.md.html)
