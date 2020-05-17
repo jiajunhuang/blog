@@ -82,7 +82,7 @@ continue for import return var
 - Go语言内置的函数：
 
     ```
-    make len cap new append copy close delete complect real
+    make len cap new append copy close delete complex real
     imag panic recover
     ```
 
