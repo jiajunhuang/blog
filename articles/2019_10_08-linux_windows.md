@@ -142,8 +142,21 @@ Windows 虚拟机可能会占用比较多的CPU和内存的，可以进行如下
 
 ---
 
+2020.05.18 更新：
+
+启用Qemu的Hyper-V enlightenments特性，可以让虚拟机跑的更快一点，参考 [此处](https://blog.wikichoon.com/2014/07/enabling-hyper-v-enlightenments-with-kvm.html)：
+
+```bash
+$ export VMNAME=你的虚拟机的名字
+$ sudo virt-xml $VMNAME --edit --features hyperv_relaxed=on,hyperv_vapic=on,hyperv_spinlocks=on,hyperv_spinlocks_retries=8191
+$ sudo virt-xml $VMNAME --edit --clock hypervclock_present=yes
+```
+
+---
+
 参考资料：
 
 - [virtio 驱动介绍](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/)
 - [virtio-win.iso下载](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/virtio-win.iso)
 - [spice-guest-tools.exe下载](https://www.spice-space.org/download/binaries/spice-guest-tools/)
+- https://blog.wikichoon.com/2014/07/enabling-hyper-v-enlightenments-with-kvm.html
