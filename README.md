@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/05/18 - [virsh自动关闭windows虚拟机](https://jiajunhuang.com/articles/2020_05_18-virsh_shutdown_win.md.html)
 - 2020/05/16 - [Golang sort源码阅读](https://jiajunhuang.com/articles/2020_05_16-go_sort.md.html)
 - 2020/05/15 - [分治的思维方式](https://jiajunhuang.com/articles/2020_05_15-divide_and_conquer.md.html)
 - 2020/05/13 - [Debian 使用NetworkManager之后networking.service崩溃](https://jiajunhuang.com/articles/2020_05_13-debian_networking.md.html)
