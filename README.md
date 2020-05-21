@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/05/22 - [Linux系统迁移记录(从HDD到SSD)](https://jiajunhuang.com/articles/2020_05_22-linux_clone_sys.md.html)
+- 2020/05/21 - [Redis是如何工作的？](https://jiajunhuang.com/articles/2020_05_21-how_does_redis_work.md.html)
 - 2020/05/18 - [virsh自动关闭windows虚拟机](https://jiajunhuang.com/articles/2020_05_18-virsh_shutdown_win.md.html)
 - 2020/05/16 - [Golang sort源码阅读](https://jiajunhuang.com/articles/2020_05_16-go_sort.md.html)
 - 2020/05/15 - [分治的思维方式](https://jiajunhuang.com/articles/2020_05_15-divide_and_conquer.md.html)
