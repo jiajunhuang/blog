@@ -50,6 +50,11 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 
 
+def thread_pool_executor_callback(worker):
+    if worker.exception():
+        logging.exception("worker %s got exception", worker)
+
+
 def loooooong_task(i):
     print("task %s sleeping..." % i)
     time.sleep(10)
@@ -58,10 +63,11 @@ def loooooong_task(i):
 
 with ThreadPoolExecutor(max_workers=2) as executor:
     for i in range(10):
-        executor.submit(loooooong_task, i)
+        executor.submit(loooooong_task, i).add_done_callback(thread_pool_executor_callback)
 ```
 
-是不是非常简单，这就是Python的魔力所在。
+是不是非常简单，这就是Python的魔力所在。其中 `add_done_callback` 是用来处理异常的一个回调函数，如果不弄这个的话，
+发生异常以后，ThreadPoolExecutor 不会打印出异常，而是直接执行别的任务。
 
 ---
 
