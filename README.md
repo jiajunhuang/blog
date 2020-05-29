@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/05/29 - [用peewee代替SQLAlchemy](https://jiajunhuang.com/articles/2020_05_29-use_peewee.md.html)
 - 2020/05/23 - [Go的slice工作机制](https://jiajunhuang.com/articles/2020_05_23-go_slice.md.html)
 - 2020/05/22 - [Linux系统迁移记录(从HDD到SSD)](https://jiajunhuang.com/articles/2020_05_22-linux_clone_sys.md.html)
 - 2020/05/21 - [Redis是如何工作的？](https://jiajunhuang.com/articles/2020_05_21-how_does_redis_work.md.html)
