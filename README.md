@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/06/07 - [Go设计模式：Iterator](https://jiajunhuang.com/articles/2020_06_07-go_design_pattern_iter.md.html)
 - 2020/05/30 - [glusterfs 笔记](https://jiajunhuang.com/articles/2020_05_30-glusterfs.md.html)
 - 2020/05/29 - [用peewee代替SQLAlchemy](https://jiajunhuang.com/articles/2020_05_29-use_peewee.md.html)
 - 2020/05/23 - [Go的slice工作机制](https://jiajunhuang.com/articles/2020_05_23-go_slice.md.html)
