@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/06/15 - [操作系统也是CRUD](https://jiajunhuang.com/articles/2020_06_15-unix_crud.md.html)
 - 2020/06/13 - [把USB设备穿透给虚拟机里的系统](https://jiajunhuang.com/articles/2020_06_13-macos_kvm_usb_pass.md.html)
 - 2020/06/13 - [Go设计模式：简单工厂模式](https://jiajunhuang.com/articles/2020_06_13-go_design_pattern_factory.md.html)
 - 2020/06/12 - [debug故事之：事务让生活更美好](https://jiajunhuang.com/articles/2020_06_12-transaction_life_easy.md.html)
