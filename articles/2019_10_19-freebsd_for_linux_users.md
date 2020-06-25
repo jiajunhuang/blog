@@ -17,7 +17,7 @@ $ sudo su
 # mkdir -p /usr/local/etc/pkg/repos
 # cat > /usr/local/etc/pkg/repos/FreeBSD.conf
 FreeBSD: {
-  url: "pkg+http://pkg0.twn.freebsd.org/${ABI}/quarterly",
+  url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 # pkg update
 ```
