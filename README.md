@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/06/25 - [拯救删除ZFS之后的分区表](https://jiajunhuang.com/articles/2020_06_25-save_partition_table_zfs.md.html)
 - 2020/06/23 - [Linux使用redshift自动调整屏幕色温](https://jiajunhuang.com/articles/2020_06_23-redshift.md.html)
 - 2020/06/21 - [Go设计模式：桥接模式和策略模式](https://jiajunhuang.com/articles/2020_06_21-go_design_pattern_bridge.md.html)
 - 2020/06/20 - [Go设计模式：单例模式、原型模式和Builder模式](https://jiajunhuang.com/articles/2020_06_20-go_design_pattern_singleton.md.html)
