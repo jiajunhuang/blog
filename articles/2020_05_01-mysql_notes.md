@@ -2,8 +2,6 @@
 
 MySQL是我最常用的关系型数据库，不过运维相关的一些命令，我不是很常用，但是偶尔又要用，每次都要去搜索太麻烦了，遂作笔记。
 
-首先安装完mysql之后，执行 ``
-
 ## 把默认编码设置为 utf8mb4
 
 更改 `/etc/mysql/my.cnf`，ubuntu的话，更改 `/etc/mysql/conf.d/mysql.cnf`：
