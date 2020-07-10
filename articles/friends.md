@@ -10,4 +10,4 @@
 - [宇宙湾](https://yuzhouwan.com/)
 - [楼主大哥的博客](https://h3l.github.io/posts/)
 - [山丘](https://xiezg247.xyz/)
-- [QuantumGhost's Vault](https://blog.quantumghost.me/)
+- [QuantumGhost's Vault](https://blog.quantumghost.dev/)
