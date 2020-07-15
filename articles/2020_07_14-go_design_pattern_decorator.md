@@ -1,7 +1,6 @@
-# Go设计模式：装饰器模式和访问者模式
+# Go设计模式：装饰器模式
 
-今天我们来介绍两个设计模式，一个是老朋友，decorator，第二个就是访问者模式。如果使用过python的话，我想decorator都
-不用我介绍了，我们来看个例子：
+今天我们来介绍decorator这个经典的设计模式。如果使用过python的话，我想decorator都不用我介绍了，我们来看个例子：
 
 ```python
 import functools
