@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/07/21 - [Go设计模式: 责任链模式](https://jiajunhuang.com/articles/2020_07_21-go_design_pattern_chain.md.html)
 - 2020/07/15 - [我们真的需要这么复杂的技术栈吗？](https://jiajunhuang.com/articles/2020_07_15-do_we_need_these.md.html)
 - 2020/07/14 - [Go设计模式：装饰器模式](https://jiajunhuang.com/articles/2020_07_14-go_design_pattern_decorator.md.html)
 - 2020/07/05 - [程序员的MySQL手册(一): 安装，基本配置](https://jiajunhuang.com/articles/2020_07_05-mysql_part1.md.html)
