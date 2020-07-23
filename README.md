@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/07/23 - [程序员的MySQL手册(二): 监控与benchmark](https://jiajunhuang.com/articles/2020_07_23-mysql_part2.md.html)
+- 2020/07/23 - [Go设计模式：facade模式和观察者模式](https://jiajunhuang.com/articles/2020_07_23-go_design_pattern_facade.md.html)
 - 2020/07/21 - [Go设计模式: 责任链模式](https://jiajunhuang.com/articles/2020_07_21-go_design_pattern_chain.md.html)
 - 2020/07/15 - [我们真的需要这么复杂的技术栈吗？](https://jiajunhuang.com/articles/2020_07_15-do_we_need_these.md.html)
 - 2020/07/14 - [Go设计模式：装饰器模式](https://jiajunhuang.com/articles/2020_07_14-go_design_pattern_decorator.md.html)
