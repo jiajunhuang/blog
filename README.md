@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/07/26 - [程序员的MySQL手册(三)：数据库设计](https://jiajunhuang.com/articles/2020_07_26-mysql_part3.md.html)
 - 2020/07/25 - [Linux窗口管理器下的截图](https://jiajunhuang.com/articles/2020_07_25-linux_screenshot.md.html)
 - 2020/07/23 - [程序员的MySQL手册(二): 监控与benchmark](https://jiajunhuang.com/articles/2020_07_23-mysql_part2.md.html)
 - 2020/07/23 - [Go设计模式：facade模式和观察者模式](https://jiajunhuang.com/articles/2020_07_23-go_design_pattern_facade.md.html)
