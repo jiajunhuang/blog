@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/08/15 - [NSQ简明教程](https://jiajunhuang.com/articles/2020_08_15-nsq.md.html)
 - 2020/08/11 - [结合Redis与MySQL实现又快又好的数据方案](https://jiajunhuang.com/articles/2020_08_11-redis_mysql.md.html)
 - 2020/07/28 - [程序员的MySQL手册(五)：索引优化](https://jiajunhuang.com/articles/2020_07_28-mysql_part5.md.html)
 - 2020/07/27 - [程序员的MySQL手册(四)：索引设计](https://jiajunhuang.com/articles/2020_07_27-mysql_part4.md.html)
