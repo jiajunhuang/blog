@@ -539,28 +539,6 @@ got 8 from channel, I'm channel 1
 got 7 from channel, I'm channel 0
 ```
 
-## 我的疑惑
-
-不过，我也有一个地方还有疑惑，那就是上面代码的这一段：
-
-```go
-		if subChannel == nil || !client.IsReadyForMessages() {
-			// the client is not ready to receive messages...
-			memoryMsgChan = nil
-			backendMsgChan = nil
-			flusherChan = nil
-			// force flush
-			client.writeLock.Lock()
-			err = client.Flush()
-			client.writeLock.Unlock()
-			if err != nil {
-				goto exit
-			}
-			flushed = true
-```
-
-由于刚初始化，这段代码似乎一定会被执行？如果也有在看NSQ，并且知道这段代码逻辑的话，麻烦告诉我一声。
-
 ## 总结
 
 这篇文章，记录了一下NSQ源码分析流程，了解了NSQ是如何实现一个topic下的消息会被复制到多个channel，
