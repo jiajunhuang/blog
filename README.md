@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/08/22 - [Go DiskQueue源码阅读](https://jiajunhuang.com/articles/2020_08_22-go_diskqueue.md.html)
 - 2020/08/16 - [NSQ源码分析](https://jiajunhuang.com/articles/2020_08_16-nsq_source_code.md.html)
 - 2020/08/15 - [NSQ简明教程](https://jiajunhuang.com/articles/2020_08_15-nsq.md.html)
 - 2020/08/11 - [结合Redis与MySQL实现又快又好的数据方案](https://jiajunhuang.com/articles/2020_08_11-redis_mysql.md.html)
