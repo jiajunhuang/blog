@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/09/05 - [apt安装特定包以及忽略升级某个包](https://jiajunhuang.com/articles/2020_09_05-apt.md.html)
 - 2020/08/26 - [StackGuard的作用](https://jiajunhuang.com/articles/2020_08_26-stackguard.md.html)
 - 2020/08/26 - [Goroutine是如何处理栈的？](https://jiajunhuang.com/articles/2020_08_26-goroutine_stack.md.html)
 - 2020/08/22 - [Go DiskQueue源码阅读](https://jiajunhuang.com/articles/2020_08_22-go_diskqueue.md.html)
