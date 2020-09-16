@@ -1,4 +1,4 @@
-# Flask 与 marshmallow打造参数校验
+# 结合Flask 与 marshmallow快速进行参数校验
 
 在Flask里如何方便快速的进行参数校验呢？如下，我们通过组合Flask提供的工具函数，以及marshmallow，来完成一个方便快捷的参数
 校验函数。
