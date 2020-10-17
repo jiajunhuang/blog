@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/10/17 - [Go使用闭包简化数据库操作代码](https://jiajunhuang.com/articles/2020_10_17-golang_db_transaction.md.html)
 - 2020/10/10 - [TCMalloc设计文档学习](https://jiajunhuang.com/articles/2020_10_10-tcmalloc.md.html)
 - 2020/09/27 - [Flask和requests做一个简单的请求代理](https://jiajunhuang.com/articles/2020_09_27-flask_proxy.md.html)
 - 2020/09/21 - [Linux常用命令(四)：xargs](https://jiajunhuang.com/articles/2020_09_21-linux_cmd_xargs.md.html)
