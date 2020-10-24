@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/10/24 - [通过阳台种菜实现蔬菜自由](https://jiajunhuang.com/articles/2020_10_24-vegetable.md.html)
 - 2020/10/19 - [从GORM里学习到的panic处理方式](https://jiajunhuang.com/articles/2020_10_19-gorm_paniced.md.html)
 - 2020/10/17 - [Go使用闭包简化数据库操作代码](https://jiajunhuang.com/articles/2020_10_17-golang_db_transaction.md.html)
 - 2020/10/10 - [TCMalloc设计文档学习](https://jiajunhuang.com/articles/2020_10_10-tcmalloc.md.html)
