@@ -193,3 +193,11 @@ const (
 	_maxCode = 17
 )
 ```
+
+---
+
+ref:
+
+- https://grpc.io/docs/guides/error/
+- https://avi.im/grpc-errors/
+- https://stackoverflow.com/questions/45455144/grpc-server-error-handler-golang
