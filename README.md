@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2020/11/26 - [gRPC错误处理](https://jiajunhuang.com/articles/2020_11_26-grpc_error_handle.md.html)
 - 2020/11/13 - [Java collection的结构](https://jiajunhuang.com/articles/2020_11_13-java_colletions.md.html)
 - 2020/11/02 - [为啥Redis使用pipelining会更快？](https://jiajunhuang.com/articles/2020_11_02-why_pipelining_fast.md.html)
 - 2020/10/24 - [通过阳台种菜实现蔬菜自由](https://jiajunhuang.com/articles/2020_10_24-vegetable.md.html)
