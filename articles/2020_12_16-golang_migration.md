@@ -1,4 +1,4 @@
-# Golang里，数据库migration方案
+# Golang里数据库migration方案
 
 Python中如果用SQLAlchemy的话，一般会用alembic来做migration。那么，Go呢？我一般用这个：
 
