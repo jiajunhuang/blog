@@ -84,7 +84,7 @@ $ go get -u github.com/go-bindata/go-bindata/...
 
 然后我在Makefile里加上这么一个动作：
 
-```make
+```bash
 bindata:
 	cd migrations && go-bindata -pkg migrations .
 ```
