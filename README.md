@@ -10,8 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2020/12/31 - [你好，2021！](https://jiajunhuang.com/articles/2020_12_31-hello_2021.md.html)
 - 2020/12/23 - [来电拦截方案](https://jiajunhuang.com/articles/2020_12_23-call_screening.md.html)
+- 2020/12/22 - [你好，2021！](https://jiajunhuang.com/articles/2020_12_22-hello_2021.md.html)
 - 2020/12/19 - [gRPC鉴权方案](https://jiajunhuang.com/articles/2020_12_19-grpc_authentication.md.html)
 - 2020/12/16 - [Golang里数据库migration方案](https://jiajunhuang.com/articles/2020_12_16-golang_migration.md.html)
 - 2020/12/12 - [Android SwipeRefreshLayout左右滑动冲突的解决](https://jiajunhuang.com/articles/2020_12_12-android_swiperefresh_swipe_left_right.md.html)
