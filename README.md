@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/01/02 - [Android手动挡MVVM](https://jiajunhuang.com/articles/2021_01_02-android_mvvm.md.html)
 - 2020/12/23 - [来电拦截方案](https://jiajunhuang.com/articles/2020_12_23-call_screening.md.html)
 - 2020/12/22 - [你好，2021！](https://jiajunhuang.com/articles/2020_12_22-hello_2021.md.html)
 - 2020/12/19 - [gRPC鉴权方案](https://jiajunhuang.com/articles/2020_12_19-grpc_authentication.md.html)
