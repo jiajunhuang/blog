@@ -10,6 +10,8 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/01/03 - [怎么使用ViewModel 和 RecyclerView](https://jiajunhuang.com/articles/2021_01_03-recycler_list_view_model.md.html)
+- 2021/01/03 - [deeplink结合路由处理扩展App的能力](https://jiajunhuang.com/articles/2021_01_03-deeplink_server_route.md.html)
 - 2021/01/02 - [Android手动挡MVVM](https://jiajunhuang.com/articles/2021_01_02-android_mvvm.md.html)
 - 2020/12/23 - [来电拦截方案](https://jiajunhuang.com/articles/2020_12_23-call_screening.md.html)
 - 2020/12/22 - [你好，2021！](https://jiajunhuang.com/articles/2020_12_22-hello_2021.md.html)
