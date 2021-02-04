@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/02/04 - [为什么要把配置保存在仓库里？](https://jiajunhuang.com/articles/2021_02_04-why_save_config_to_repo.md.html)
 - 2021/01/27 - [Android自动展示和关闭进度条](https://jiajunhuang.com/articles/2021_01_27-android_progress_bar.md.html)
 - 2021/01/13 - [Kotlin/Java 列表Protobuf序列化](https://jiajunhuang.com/articles/2021_01_13-kotlin_protobuf_serialization.md.html)
 - 2021/01/03 - [怎么使用ViewModel 和 RecyclerView](https://jiajunhuang.com/articles/2021_01_03-recycler_list_view_model.md.html)
