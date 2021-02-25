@@ -112,7 +112,7 @@ func newRaftNode(id int, peers []string, join bool, getSnapshot func() ([]byte, 
 }
 ```
 
-就是实力化了一个 raftNode，然后呢，调用了 raftNode.startRaft 这个方法，那就继续跟进去：
+就是实例化了一个 raftNode，然后呢，调用了 raftNode.startRaft 这个方法，那就继续跟进去：
 
 ```go
 func (rc *raftNode) startRaft() {
