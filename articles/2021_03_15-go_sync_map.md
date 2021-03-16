@@ -248,6 +248,10 @@ func (m *Map) missLocked() {
 的逻辑是，优先更新 `read`，其次尝试更新 `dirty`。正是因为读取时，会先读取 `read` 然后才是 `dirty`，所以写入的时候，即使
 `read` 没有，也可以写入到 `dirty`。
 
+> 2021.03.16 经伟大的曌哥提醒，用“读写分离”来形容这种处理方式不是很合适，用快慢路径来形容更为恰当。的确如此，
+> 因为当key存在于 `read`中时，也是会去更新 `read` 的值的。sync.Map加速的主要原理其实就是利用CAS操作比mutex
+> 耗费的时间更低这一点。
+
 最后就是，我们来聊一下 `mutex` 和 `CAS` 的问题，一般来说，锁的性能比CAS略差，锁是基于 [test and set](https://en.wikipedia.org/wiki/Test-and-set)，
 CAS是基于 [compare and swap](https://en.wikipedia.org/wiki/Compare-and-swap) 来实现的，两者都是CPU提供的指令，当CPU没有
 提供test and set指令时，也可以用compare and swap指令来模拟锁，当然，性能就要差一些了。
