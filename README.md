@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/03/18 - [Go里优雅的使用全局配置](https://jiajunhuang.com/articles/2021_03_18-go_config.md.html)
 - 2021/03/15 - [Golang sync.Map源码分析](https://jiajunhuang.com/articles/2021_03_15-go_sync_map.md.html)
 - 2021/03/11 - [Android滑动时隐藏FAB](https://jiajunhuang.com/articles/2021_03_11-android_fab_hide.md.html)
 - 2021/02/25 - [Python中用tuple作为key](https://jiajunhuang.com/articles/2021_02_25-python_dict_tuple_as_key.md.html)
