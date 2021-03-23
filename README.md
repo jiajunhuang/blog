@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/03/23 - [Golang GIN写单测时，愉快的使用返回值](https://jiajunhuang.com/articles/2021_03_23-go_gin_unittest.md.html)
 - 2021/03/20 - [Python Queue源码分析](https://jiajunhuang.com/articles/2021_03_20-python_queue.md.html)
 - 2021/03/18 - [Go里优雅的使用全局配置](https://jiajunhuang.com/articles/2021_03_18-go_config.md.html)
 - 2021/03/15 - [Golang sync.Map源码分析](https://jiajunhuang.com/articles/2021_03_15-go_sync_map.md.html)
