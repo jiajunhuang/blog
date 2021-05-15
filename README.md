@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/05/15 - [WAL(Write-ahead logging)的套路](https://jiajunhuang.com/articles/2021_05_15-wal.md.html)
 - 2021/04/29 - [搞定CORS问题](https://jiajunhuang.com/articles/2021_04_29-cors.md.html)
 - 2021/04/15 - [如何定位程序问题所在](https://jiajunhuang.com/articles/2021_04_15-how_to_debug_program.md.html)
 - 2021/04/14 - [设计一个IM归档系统](https://jiajunhuang.com/articles/2021_04_14-system_design_archive.md.html)
