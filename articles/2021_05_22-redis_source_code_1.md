@@ -7,7 +7,7 @@
 $ git clone git@github.com:jiajunhuang/redis.git
 ```
 
-这样主要是为了方便自己加注释&保存。
+这样主要是为了方便自己加注释&保存。我fork的是最新的代码，unstable分支，提交为 `e90e5640e7840860bc6726a08135ea86687bbd58`，版本为 `6.2.3`。
 
 在阅读之前，我们可以大概猜测一下如果是我们自己来写Redis，应该是怎么处理。如果我们使用Go来写一个Redis，那么
 差不多就是先 `listen` ，然后 `accept` 之后，得到一个 `connection`，然后起一个goroutine来处理这个客户端连接。
