@@ -1,5 +1,4 @@
 - hosts: blog
-  remote_user: root
   tasks:
     - name: generate README.md
       local_action: shell python gen_catalog.py
