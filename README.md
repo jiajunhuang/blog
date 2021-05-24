@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/05/25 - [Redis源码阅读：AOF持久化](https://jiajunhuang.com/articles/2021_05_25-redis_source_code_5.md.html)
 - 2021/05/24 - [Redis源码阅读：key是怎么过期的](https://jiajunhuang.com/articles/2021_05_24-redis_source_code_4.md.html)
 - 2021/05/24 - [Redis源码阅读：字典](https://jiajunhuang.com/articles/2021_05_24-redis_source_code_3.md.html)
 - 2021/05/23 - [Redis源码阅读：执行命令](https://jiajunhuang.com/articles/2021_05_23-redis_source_code_2.md.html)
