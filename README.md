@@ -10,10 +10,11 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/05/27 - [Redis源码阅读：RDB是怎么实现的](https://jiajunhuang.com/articles/2021_05_27-redis_source_code_7.md.html)
 - 2021/05/26 - [Redis源码阅读：AOF重写](https://jiajunhuang.com/articles/2021_05_26-redis_source_code_6.md.html)
 - 2021/05/25 - [Redis源码阅读：AOF持久化](https://jiajunhuang.com/articles/2021_05_25-redis_source_code_5.md.html)
 - 2021/05/24 - [Redis源码阅读：key是怎么过期的](https://jiajunhuang.com/articles/2021_05_24-redis_source_code_4.md.html)
-- 2021/05/24 - [Redis源码阅读：字典](https://jiajunhuang.com/articles/2021_05_24-redis_source_code_3.md.html)
+- 2021/05/24 - [Redis源码阅读：字典是怎么实现的](https://jiajunhuang.com/articles/2021_05_24-redis_source_code_3.md.html)
 - 2021/05/23 - [Redis源码阅读：执行命令](https://jiajunhuang.com/articles/2021_05_23-redis_source_code_2.md.html)
 - 2021/05/22 - [Redis源码阅读：启动过程](https://jiajunhuang.com/articles/2021_05_22-redis_source_code_1.md.html)
 - 2021/05/15 - [WAL(Write-ahead logging)的套路](https://jiajunhuang.com/articles/2021_05_15-wal.md.html)
