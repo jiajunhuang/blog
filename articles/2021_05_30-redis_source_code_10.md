@@ -139,4 +139,5 @@ robj *lookupStringForBitCommand(client *c, size_t maxbit) {
 ## 总结
 
 这一篇比较简单，我们仔细看了一下Redis是如何实现位图的，位运算比较难以理解，
-我们以一个具体的例子进行了讲述。
+我们以一个具体的例子进行了讲述。最后补充一句，除了最开始我们聚的例子，我们还可以用Redis的bitmap
+来实现bloom filter，这里就不赘述了。
