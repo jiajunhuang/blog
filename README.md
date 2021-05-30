@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/05/30 - [Redis源码阅读：bitmap 位图的运算](https://jiajunhuang.com/articles/2021_05_30-redis_source_code_10.md.html)
 - 2021/05/29 - [Redis源码阅读：set是怎么做交并集运算的？](https://jiajunhuang.com/articles/2021_05_29-redis_source_code_9.md.html)
 - 2021/05/28 - [Redis源码阅读：list实现(ziplist, quicklist)](https://jiajunhuang.com/articles/2021_05_28-redis_source_code_8.md.html)
 - 2021/05/27 - [Redis源码阅读：RDB是怎么实现的](https://jiajunhuang.com/articles/2021_05_27-redis_source_code_7.md.html)
