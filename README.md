@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/06/07 - [Redis源码阅读：pub/sub实现](https://jiajunhuang.com/articles/2021_06_07-redis_source_code_12.md.html)
 - 2021/06/06 - [Redis源码阅读：zset实现](https://jiajunhuang.com/articles/2021_06_06-redis_source_code_11.md.html)
 - 2021/05/30 - [Redis源码阅读：bitmap 位图的运算](https://jiajunhuang.com/articles/2021_05_30-redis_source_code_10.md.html)
 - 2021/05/29 - [Redis源码阅读：set是怎么做交并集运算的？](https://jiajunhuang.com/articles/2021_05_29-redis_source_code_9.md.html)
