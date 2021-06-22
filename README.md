@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/06/22 - [当JS遇到uint64：JS整数溢出问题](https://jiajunhuang.com/articles/2021_06_22-json_int_precision.md.html)
 - 2021/06/19 - [SQLite3 存储以及ACID原理](https://jiajunhuang.com/articles/2021_06_19-sqlite3.md.html)
 - 2021/06/07 - [Redis源码阅读：pub/sub实现](https://jiajunhuang.com/articles/2021_06_07-redis_source_code_12.md.html)
 - 2021/06/06 - [Redis源码阅读：zset实现](https://jiajunhuang.com/articles/2021_06_06-redis_source_code_11.md.html)
