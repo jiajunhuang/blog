@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/07/09 - [用闲置的安卓手机做垃圾电话短信过滤](https://jiajunhuang.com/articles/2021_07_09-filter_your_call_and_sms.md.html)
 - 2021/07/06 - [推荐三个时间管理工具](https://jiajunhuang.com/articles/2021_07_06-manage_your_time.md.html)
 - 2021/07/02 - [一次事故反思](https://jiajunhuang.com/articles/2021_07_02-reflection_on_bug.md.html)
 - 2021/06/22 - [当JS遇到uint64：JS整数溢出问题](https://jiajunhuang.com/articles/2021_06_22-json_int_precision.md.html)
