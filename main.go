@@ -61,10 +61,6 @@ func InitSentry() error {
 		Dsn: os.Getenv("SENTRY_DSN"),
 		// Specify a fixed sample rate:
 		TracesSampleRate: 0.2,
-		// Or provide a custom sampler:
-		TracesSampler: sentry.TracesSamplerFunc(func(ctx sentry.SamplingContext) sentry.Sampled {
-			return sentry.SampledTrue
-		}),
 	})
 }
 
