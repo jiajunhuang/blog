@@ -61,7 +61,7 @@ func InitSentry() error {
 	return sentry.Init(sentry.ClientOptions{
 		Dsn: os.Getenv("SENTRY_DSN"),
 		// Specify a fixed sample rate:
-		TracesSampleRate: 1.0,
+		TracesSampleRate: 0.2,
 	})
 }
 
