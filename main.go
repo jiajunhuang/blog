@@ -17,8 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/getsentry/raven-go"
-	"github.com/gin-contrib/sentry"
+	"github.com/getsentry/sentry-go"
 	"github.com/gin-gonic/gin"
 	redis "github.com/go-redis/redis/v7"
 	_ "github.com/go-sql-driver/mysql"
@@ -57,8 +56,16 @@ var (
 )
 
 // InitSentry 初始化sentry
-func InitSentry() {
-	raven.SetDSN(os.Getenv("SENTRY_DSN"))
+func InitSentry() error {
+	return sentry.Init(sentry.ClientOptions{
+		Dsn: os.Getenv("SENTRY_DSN"),
+		// Specify a fixed sample rate:
+		TracesSampleRate: 0.2,
+		// Or provide a custom sampler:
+		TracesSampler: sentry.TracesSamplerFunc(func(ctx sentry.SamplingContext) sentry.Sampled {
+			return sentry.SampledTrue
+		}),
+	})
 }
 
 // InitializeDB 初始化数据库连接
@@ -553,18 +560,21 @@ func NotesAPIHandler(c *gin.Context) {
 }
 
 func main() {
+	if err := InitSentry(); err != nil {
+		log.Panicf("failed to init sentry: %s", err)
+	}
+	defer sentry.Flush(2 * time.Second)
+
 	// telegram bot
 	go startNoteBot()
 	go startSharingBot()
 
 	InitializeDB()
-	InitSentry()
 	InitializeRedis()
 
 	r := gin.New()
 
 	r.Use(gin.Logger())
-	r.Use(sentry.Recovery(raven.DefaultClient, false))
 	r.Use(func(c *gin.Context) {
 		totalRequests.Inc()
 	})
