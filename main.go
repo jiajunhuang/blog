@@ -18,6 +18,7 @@ import (
 	"time"
 
 	"github.com/getsentry/sentry-go"
+	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-gonic/gin"
 	redis "github.com/go-redis/redis/v7"
 	_ "github.com/go-sql-driver/mysql"
@@ -569,6 +570,7 @@ func main() {
 	InitializeRedis()
 
 	r := gin.New()
+	r.Use(sentrygin.New(sentrygin.Options{}))
 
 	r.Use(gin.Logger())
 	r.Use(func(c *gin.Context) {
