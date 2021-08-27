@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/08/27 - [单测时要不要 mock 数据库？](https://jiajunhuang.com/articles/2021_08_27-mock_db_or_not.md.html)
 - 2021/08/25 - [Sentry 自建指南](https://jiajunhuang.com/articles/2021_08_25-use_sentry.md.html)
 - 2021/08/19 - [用selenium完成自动化任务](https://jiajunhuang.com/articles/2021_08_19-selenium.md.html)
 - 2021/07/09 - [用闲置的安卓手机做垃圾电话短信过滤](https://jiajunhuang.com/articles/2021_07_09-filter_your_call_and_sms.md.html)
