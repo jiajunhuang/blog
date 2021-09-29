@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/09/29 - [gevent不是黑魔法(一): greenlet 实现](https://jiajunhuang.com/articles/2021_09_29-gevent_is_good_part1.md.html)
 - 2021/09/06 - [用 entgo 替代 gorm](https://jiajunhuang.com/articles/2021_09_06-use_entgo.md.html)
 - 2021/09/01 - [应用内使用crontab不是那么方便](https://jiajunhuang.com/articles/2021_09_01-cron_is_not_convenient.md.html)
 - 2021/08/27 - [单测时要不要 mock 数据库？](https://jiajunhuang.com/articles/2021_08_27-mock_db_or_not.md.html)
