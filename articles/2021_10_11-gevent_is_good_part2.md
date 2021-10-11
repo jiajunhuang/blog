@@ -671,9 +671,15 @@ greenlet，也就是协程。但是它也有一个特点，就是它带了一个
 
 就这样，gevent 结合 greenlet 和 event loop，实现了一套写起来同步，看起来是阻塞，单实际执行起来却是异步的非阻塞的
 协程库。但是使用的时候有一个限制条件，那就是必须使用 gevent 提供的实现，例如 `gevent.sleep`，`gevent.joinall` 等，
-一旦使用标准库自带的 sleep 等，就会出问题。
+一旦使用标准库自带的 sleep 等，就会出问题。也正是因此，gevent提供了 monkey patch，当然，这也是 gevent 被称作黑魔法
+的主要原因。
 
-而这也是有解决方案的，下一篇，我们将会看看 monkey patch 是怎么实现的。
+## 总结
+
+通过这一篇文章，我们了解了 gevent 是如何基于 greenlet 和 event loop 实现的一套协程网络库，这对我们使用 gevent 起到了
+充实信心的作用，毕竟了解了底层原理，也就知道 gevent 的实现，是不是真的如传说中的黑魔法那般碰不得。我们通过两篇文章，
+第一篇了解了 gevent 的基础，也就是 greenlet，第二篇结合 event loop 一起看 gevent 是如何实现异步非阻塞的高并发网络库的。
+相信这两篇文章会对读者带来帮助。
 
 
 ---
