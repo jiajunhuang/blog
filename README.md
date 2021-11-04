@@ -10,7 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2021/11/04 - [SQL 防注入](https://jiajunhuang.com/articles/2021_11_04-sql_injection.md.html)
+- 2021/11/04 - [SQL 防注入及原理](https://jiajunhuang.com/articles/2021_11_04-sql_injection.md.html)
 - 2021/10/12 - [使用 gomock 测试 Go 代码](https://jiajunhuang.com/articles/2021_10_12-go_mock.md.html)
 - 2021/10/11 - [gevent不是黑魔法(二): gevent 实现](https://jiajunhuang.com/articles/2021_10_11-gevent_is_good_part2.md.html)
 - 2021/09/29 - [gevent不是黑魔法(一): greenlet 实现](https://jiajunhuang.com/articles/2021_09_29-gevent_is_good_part1.md.html)
