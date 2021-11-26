@@ -87,6 +87,15 @@ RestartSec=10
 WantedBy=alc.target
 ```
 
+然后执行：
+
+```bash
+$ systemctl --user enable barriers.service
+$ 
+```
+
+重启之后就可以了。
+
 Windows 中自启动，需要先以管理员身份打开软件，然后菜单中点击设置，
 勾选 "开机自启"，然后就可以重启试试，我实测有一个小bug ，就是不管
 勾不勾选 "最小化到系统托盘" 右下角都看不到，不过没关系，软件能正常工作。
