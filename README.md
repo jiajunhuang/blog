@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/11/26 - [使用软KVM切换器 barrier 共享键鼠](https://jiajunhuang.com/articles/2021_11_26-use_barrier.md.html)
 - 2021/11/04 - [SQL 防注入及原理](https://jiajunhuang.com/articles/2021_11_04-sql_injection.md.html)
 - 2021/10/12 - [使用 gomock 测试 Go 代码](https://jiajunhuang.com/articles/2021_10_12-go_mock.md.html)
 - 2021/10/11 - [gevent不是黑魔法(二): gevent 实现](https://jiajunhuang.com/articles/2021_10_11-gevent_is_good_part2.md.html)
