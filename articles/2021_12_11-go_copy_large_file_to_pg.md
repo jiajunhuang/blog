@@ -42,7 +42,33 @@ func s2b(s string) (b []byte) {
 }
 ```
 
-以及 `sync.Pool`。
+以及 `sync.Pool`，最开始我使用的是 `bufio.Scanner`，但是没想到超过了它的限制，报了 `bufio.Scanner: token too long`，
+翻了一下代码如下：
+
+```go
+var (
+    ErrTooLong         = errors.New("bufio.Scanner: token too long")
+)
+
+//...
+
+if len(s.buf) >= s.maxTokenSize || len(s.buf) > maxInt/2 {
+    s.setErr(ErrTooLong)
+    return false
+}
+
+//...
+
+const (
+	// MaxScanTokenSize is the maximum size used to buffer a token
+	// unless the user provides an explicit buffer with Scanner.Buffer.
+	// The actual maximum token size may be smaller as the buffer
+	// may need to include, for instance, a newline.
+	MaxScanTokenSize = 64 * 1024
+)
+```
+
+可以自己把buffer调大，不过我选择自己逐行读取并且处理，毕竟咱也不知道这么大的数据里，最长的那行到底有多长。
 
 最后代码如下：
 
