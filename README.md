@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2021/12/11 - [用Go导入大型CSV到PostgreSQL](https://jiajunhuang.com/articles/2021_12_11-go_copy_large_file_to_pg.md.html)
 - 2021/12/01 - [使用 OpenWRT 搭建软路由](https://jiajunhuang.com/articles/2021_12_01-openwrt.md.html)
 - 2021/11/26 - [使用软KVM切换器 barrier 共享键鼠](https://jiajunhuang.com/articles/2021_11_26-use_barrier.md.html)
 - 2021/11/04 - [SQL 防注入及原理](https://jiajunhuang.com/articles/2021_11_04-sql_injection.md.html)
