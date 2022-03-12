@@ -8,6 +8,8 @@
 通常我们都是把回调信息放到 [callback_data](https://core.telegram.org/bots/api#inlinekeyboardmarkup) 里，从定义可以看到，
 `callback_data` 是一个字符串，最长64个字符，最短1个，如果不填写的话，就不会触发 callback 的操作（点击按钮也就没有响应）。
 
+![Telegram Inline Keyboard](./img/inline_keyboard.jpeg)
+
 如果只有一两个按钮，那么处理起来就会很简单，在处理回调的地方，写一堆的 `if...else...` 或者是用一个 `map[string]Func` 来
 保存 `callback_data` 和具体逻辑的关系就可以，但是当按钮多了以后，我们就需要一种更好的方式来切分回调函数的处理逻辑，因此，
 我就把 [httprouter](https://github.com/julienschmidt/httprouter) 引入到 Telegram Bot 的开发中。
