@@ -3,8 +3,8 @@
 最近遇到一个问题，就是传了一个超级大的uint64，结果前端发现数字对不上，精度丢失了！原因就在于，JS的Number是
 "64-bit floating point IEEE 754 number"。最大能表示的数是 `Number.MAX_SAFE_INTEGER`，一般来说，就是：
 
-- 253-1, 或者
-- +/- 9,007,199,254,740,991, 或者
+- `2 ** 53 - 1`, 或者
+- `+/- 9,007,199,254,740,991`, 或者
 - nine quadrillion seven trillion one hundred ninety-nine billion two hundred
 fifty-four million seven hundred forty thousand nine hundred ninety-one
 
