@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/03/17 - [Go 泛型](https://jiajunhuang.com/articles/2022_03_17-go_generics.md.html)
 - 2022/03/15 - [KVM 显卡穿透给 Windows](https://jiajunhuang.com/articles/2022_03_15-kvm_windows_gpu_passthrough.md.html)
 - 2022/03/12 - [使用 HTTP Router 处理 Telegram Bot 按钮回调](https://jiajunhuang.com/articles/2022_03_12-tgbot_httprouter.md.html)
 - 2022/01/10 - [使用反射(reflect)对结构体赋值](https://jiajunhuang.com/articles/2022_01_10-reflect_binding_args.md.html)
