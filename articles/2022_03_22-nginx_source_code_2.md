@@ -2,8 +2,8 @@
 
 上一篇我们了解了Nginx的启动流程，master和worker的分工。这一篇我们主要聚焦在Nginx是怎么处理请求的。
 
-[Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
-[Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
+- [Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
+- [Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
 
 ## worker 是怎么处理请求的
 
