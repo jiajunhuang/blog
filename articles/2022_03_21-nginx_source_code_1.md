@@ -1,10 +1,13 @@
-# Nginx 源码阅读（一）
+# Nginx 源码阅读（一）: 启动流程
 
 去年读了一部分Nginx源码，后来耽搁了，最近决定捡起来做完这件事情。说起Nginx源码，
 我主要是想了解Nginx的代码组织、架构、master/worker分工、以及一个请求的处理流程。
 对其它的我就不是那么感兴趣了。因此这一系列Nginx源码阅读也主要是围绕这些话题来写的。
 
 > 我读的是 Nginx 0.1.0
+
+[Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
+[Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
 
 ## 源码组织
 
