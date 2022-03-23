@@ -4,7 +4,7 @@
 
 - [Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
 - [Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
-- [Nginx 源码阅读（三）: 连接池、内存池、buf](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
+- [Nginx 源码阅读（三）: 连接池、内存池](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
 
 ## worker 是怎么处理请求的
 
