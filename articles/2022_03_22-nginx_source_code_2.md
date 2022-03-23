@@ -4,6 +4,7 @@
 
 - [Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
 - [Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
+- [Nginx 源码阅读（三）: 连接池、内存池、buf](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
 
 ## worker 是怎么处理请求的
 
@@ -790,4 +791,4 @@ right before freeing the request.
 
 这一篇文章中，我们从worker看起，然后分别去探索到底在哪里进行 `bind` 和 `listen` 的。随后跟随代码，我们发现worker
 初始化模块的时候，就已经预留好了 `accept` 和 HTTP的处理函数。最后，我们终于理顺了整个流程，了解了master和worker是
-怎么分工的，然后worker又是怎么一步一步，最后终于可以开始接收请求的。
+怎么分工的，然后worker又是怎么一步一步设置，并且在运行过程中更换事件处理handler，最后终于可以开始接收请求的。
