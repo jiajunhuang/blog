@@ -10,7 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
-- 2022/03/23 - [Nginx 源码阅读（三）: 连接池、内存池、buf](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
+- 2022/03/23 - [Nginx 源码阅读（三）: 连接池、内存池](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
 - 2022/03/22 - [Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
 - 2022/03/21 - [Nginx 源码阅读（一）: 启动流程](https://jiajunhuang.com/articles/2022_03_21-nginx_source_code_1.md.html)
 - 2022/03/17 - [Go 泛型简明教程](https://jiajunhuang.com/articles/2022_03_17-go_generics.md.html)
