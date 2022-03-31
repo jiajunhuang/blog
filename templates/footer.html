@@ -1,97 +1,91 @@
 <!--<!DOCTYPE html>-->
 <!--<html lang="cmn">-->
-    <!--<head>-->
-    <!--</head>-->
-    <!--<body>-->
-        <!--<div class="container">-->
-            <!--<main role="main" class="container">-->
-                <!--<div id="body" class="row">-->
-                    <!--<div class="col-md-9">-->
-                    </div>
-                    {{ if not .isBlogApp }}
-                    <div class="col-md-3">
-                        <div class="card mt-2">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <a href="https://eepurl.com/guVPMj" class="card-link">
-                                        <img src="/static/email.png" >
-                                        邮件 订阅
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="https://t.me/jiajunhuangcom" class="card-link">
-                                        <img src="/static/telegram.png" >
-                                        Telegram 订阅
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="/rss" class="card-link">
-                                        <img src="/static/rss.png" >
-                                        RSS 订阅
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="/tutorial/data_structure/index.md">
-                                        <img src="/static/computer.png">
-                                        数据结构的实际使用
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="/tutorial/golang/index.md">
-                                        <img src="/static/golang.png">
-                                        Golang 简明教程
-                                    </a>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="/tutorial/python/index.md">
-                                        <img src="/static/python.png">
-                                        Python 教程
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        {{ if .topArticles }}
-                        <div class="card mt-2">
-                            <div class="card-header">
-                                本站热门
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                {{ range $topArticle := .topArticles }}
-                                    <li class="list-group-item"><a href="{{ .URLPath }}">{{ .Title }}</a></li>
-                                {{ end }}
-                            </ul>
-                        </div>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                </div>
-            </main>
-
-            <footer class="footer mt-2 mb-2">
-                <span class="text-muted">
-                    <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2022, All Rights Reserved。本站禁止转载，引用请注明作者与原链。</a></p>
-                </span>
-            </footer>
+<!--<head>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--<main role="main" class="container">-->
+<!--<div id="body" class="row">-->
+<!--<div class="col-md-9">-->
+</div>
+{{ if not .isBlogApp }}
+<div class="col-md-3">
+    <div class="card mt-2">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <a href="https://eepurl.com/guVPMj" class="card-link">
+                    <img src="/static/email.png">
+                    邮件 订阅
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="https://t.me/jiajunhuangcom" class="card-link">
+                    <img src="/static/telegram.png">
+                    Telegram 订阅
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/rss" class="card-link">
+                    <img src="/static/rss.png">
+                    RSS 订阅
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/tutorial/data_structure/index.md">
+                    <img src="/static/computer.png">
+                    数据结构的实际使用
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/tutorial/golang/index.md">
+                    <img src="/static/golang.png">
+                    Golang 简明教程
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/tutorial/python/index.md">
+                    <img src="/static/python.png">
+                    Python 教程
+                </a>
+            </li>
+        </ul>
+    </div>
+    {{ if .topArticles }}
+    <div class="card mt-2">
+        <div class="card-header">
+            本站热门
         </div>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79619009-1"></script>
-        <script>
-		document.addEventListener("DOMContentLoaded", function(event) {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <ul class="list-group list-group-flush">
+            {{ range $topArticle := .topArticles }}
+            <li class="list-group-item"><a href="{{ .URLPath }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+</div>
+</main>
 
-            gtag('config', 'UA-79619009-1');
-		});
-        </script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-        <script>
-            $(function() { $('table').addClass('table table-bordered');})
-        </script>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/solarized-light.min.css" />
-        <script src="https://cdn.staticfile.org/highlight.js/10.1.2/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
+<footer class="footer mt-2 mb-2">
+    <span class="text-muted">
+        <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2022, All Rights Reserved。本站禁止转载，引用请注明作者与原链。</a></p>
+    </span>
+</footer>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(function() {
+        $('table').addClass('table table-bordered');
+    })
+</script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/solarized-light.min.css" />
+<script src="https://cdn.staticfile.org/highlight.js/10.1.2/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+
 </html>
