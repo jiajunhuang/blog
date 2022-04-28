@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/04/28 - [Golang migrate 做数据库变更管理](https://jiajunhuang.com/articles/2022_04_28-golang_migrate_iofs.md.html)
 - 2022/04/12 - [使用PostgreSQL做搜索引擎](https://jiajunhuang.com/articles/2022_04_12-postgresql_fulltext_search.md.html)
 - 2022/03/23 - [Nginx 源码阅读（三）: 连接池、内存池](https://jiajunhuang.com/articles/2022_03_23-nginx_source_code_3.md.html)
 - 2022/03/22 - [Nginx 源码阅读（二）: 请求处理](https://jiajunhuang.com/articles/2022_03_22-nginx_source_code_2.md.html)
