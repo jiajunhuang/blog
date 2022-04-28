@@ -28,7 +28,7 @@ no change
 migrate 既可以使用命令行，又可以以库的方式调用。migrate中，migration文件存放的地方，叫做 `source`，migrate支持多种
 source例如 `iofs`, `github`, `gitlab`, `s3` 等等。
 
-我想使用的就是官方的 `io/fs`：
+我想使用的就是官方的 `embed`，migrate封装为 `iofs`：
 
 ```go
 package main
