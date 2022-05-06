@@ -12,3 +12,4 @@
 - [山丘](https://xiezg247.xyz/)
 - [QuantumGhost's Vault](https://blog.quantumghost.dev/)
 - [Saltbo's Blog](https://saltbo.cn/)
+- [涛叔](https://taoshu.in/)
