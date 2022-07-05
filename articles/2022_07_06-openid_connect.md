@@ -32,7 +32,7 @@ Slack 就能以我们的身份登录，但是这样有很大的安全隐患，�
 
 OAuth 2 一共提供了4种授权模式，2015 年为 authorization code 模式新增加了一种增强模式。我们先从简单的看起：
 
-### [Client Credentials Grant](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) 模式
+### [Client Credentials Grant](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4)
 
 这种模式是最简单的，其实就是客户端告诉服务端自己是哪个客户端，服务器就将 access_token 下发：
 
