@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/07/06 - [OIDC(OpenID Connect) 简介](https://jiajunhuang.com/articles/2022_07_06-openid_connect.md.html)
 - 2022/07/05 - [任务队列简介](https://jiajunhuang.com/articles/2022_07_05-task_queue.md.html)
 - 2022/04/29 - [PostgreSQL 操作笔记](https://jiajunhuang.com/articles/2022_04_29-postgres_notes.md.html)
 - 2022/04/29 - [使用Drone CI构建CI/CD系统](https://jiajunhuang.com/articles/2022_04_29-drone_ci.md.html)
