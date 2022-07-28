@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/07/28 - [三种git流程以及发版模型](https://jiajunhuang.com/articles/2022_07_28-git_flows.md.html)
 - 2022/07/27 - [错误处理实践](https://jiajunhuang.com/articles/2022_07_27-how_to_return_error.md.html)
 - 2022/07/15 - [权限模型(RBAC/ABAC)](https://jiajunhuang.com/articles/2022_07_15-access_control.md.html)
 - 2022/07/06 - [OIDC(OpenID Connect) 简介](https://jiajunhuang.com/articles/2022_07_06-openid_connect.md.html)
