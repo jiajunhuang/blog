@@ -13,7 +13,7 @@ type noCopy struct{}
 
 // Lock is a no-op used by -copylocks checker from `go vet`.
 func (*noCopy) Lock() {}
-func (*noCopy) UnLock() {}
+func (*noCopy) Unlock() {}
 ```
 
 然后把 `noCopy` 嵌到你自定义的结构体里，然后 `go vet` 就可以帮我们进行检查了。举个例子：
