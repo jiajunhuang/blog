@@ -65,7 +65,7 @@ application). 一般来说，就是客户端，比如浏览器、Native App等�
 
 ## Authorization Code Flow
 
-![./img/auth-sequence-auth-code.png]
+![Authorization Code Flow](./img/auth-sequence-auth-code.png)
 
 流程图是使用Auth0官方文档提供的，结合这个流程图，我们可以更加清晰的了解到授权过程：
 
