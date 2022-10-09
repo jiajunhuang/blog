@@ -90,12 +90,12 @@ The flow illustrated in Figure 4 includes the following steps:
 
 我们结合实际的例子，那就是在App里，使用Google帐号登录，那么就应该先弹出一个Webview才能进行URL跳转，所以结合这个例子，步骤就是：
 
-- (A): App打开webview，将网页重定向到授权服务器，授权服务器展示授权页面
-- (B): 用户同意授权
-- (C): 授权服务器重定向回步骤A中给定的 redirect_uri，并且在URL中携带 access_token
-- (D): 由于这是一个浏览器页面，App无法直接将 access_token 返回给App，所以再次重定向到一个客户端获取access_token用的页面
-- (E): 该页面执行一段 JS 脚本，将 access_token 提取出来
-- (F): 返回给App
+- 步骤A: App打开webview，将网页重定向到授权服务器，授权服务器展示授权页面
+- 步骤B: 用户同意授权
+- 步骤C: 授权服务器重定向回步骤A中给定的 redirect_uri，并且在URL中携带 access_token
+- 步骤D: 由于这是一个浏览器页面，App无法直接将 access_token 返回给App，所以再次重定向到一个客户端获取access_token用的页面
+- 步骤E: 该页面执行一段 JS 脚本，将 access_token 提取出来
+- 步骤F: 返回给App
 
 实际上，我们可以把步骤D、E、F合并成一个步骤，也就是当授权服务器重定向回来时，我们就在该页面执行一段JS脚本，将 access_token
 提取出来，然后使用JS Bridge，或者deeplink的方式将access token提交给App，这样就简化了整个流程。
