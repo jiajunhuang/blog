@@ -1,6 +1,6 @@
 # OAuth 2 详解（三）：Resource Owner Password Credentials Grant
 
-这大概是最简单的一种授权方式了，那就是用户名密码授权。通常来说，是不建议使用，但是有一种情况下，非常适合：那就是
+这大概是最简单的一种授权方式之一了，那就是用户名密码授权。通常来说，是不建议使用，但是有一种情况下，非常适合：那就是
 自家App对接的时候，这样就可以复用已有的授权逻辑。这种模式，通常只适合用在可信度非常高的App里，一般也就是自家的App。
 
 ## 流程
@@ -30,9 +30,9 @@
 步骤如下：
 
 1. 用户点击登录，应用弹出输入用户名密码界面
-2. 应用带上用户名密码请求Authorization Server
+2. 应用带上用户名密码请求Authorization Server，还要携带 `client_id`, `client_secret`, `scope`, `grant_type` 设置为 `password`
 3. Authorization Server 校验用户名密码
-4. 校验通过，下发access token
+4. 校验通过，下发access token，以及 `refresh_token`, `expires_in` 等字段
 5. App带着access token请求接口
 6. 接口确认access token有效，返回对应数据
 

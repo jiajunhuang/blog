@@ -11,6 +11,7 @@ https://t.me/jiajunhuangcom
 ## 目录
 
 - 2022/10/10 - [OAuth 2 详解（三）：Resource Owner Password Credentials Grant](https://jiajunhuang.com/articles/2022_10_10-oauth2_explained_password.md.html)
+- 2022/10/10 - [OAuth 2 详解（四）：Client Credentials Flow](https://jiajunhuang.com/articles/2022_10_10-oauth2_explained_client_credentials.md.html)
 - 2022/10/09 - [OAuth 2 详解（二）：Implict Grant Flow](https://jiajunhuang.com/articles/2022_10_09-oauth2_explained_implict_grant.md.html)
 - 2022/10/08 - [OAuth 2 详解（一）：简介及 Authorization Code 模式](https://jiajunhuang.com/articles/2022_10_08-oauth2_explained.md.html)
 - 2022/10/06 - [ElasticSearch 学习笔记](https://jiajunhuang.com/articles/2022_10_06-elasticsearch.md.html)
