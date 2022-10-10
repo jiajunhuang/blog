@@ -21,3 +21,4 @@ ref:
 
 - https://www.rfc-editor.org/rfc/rfc6749#section-4.4
 - https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow
+- https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
