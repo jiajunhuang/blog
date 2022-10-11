@@ -3,7 +3,7 @@
 我们经常可以看到这样的需求：智能电视要我们登录帐号，或者是命令行程序，需要登录帐号。提示通常都是：扫码或者打开网页
 并且输入验证码后登录。这就是device authorization flow的流程了。
 
-这个认证流程，定义在 [RFC8628](https://www.rfc-editor.org/rfc/rfc8628)，我们来看看流程：
+这个授权流程，定义在 [RFC8628](https://www.rfc-editor.org/rfc/rfc8628)，我们来看看流程：
 
 ![Device Authorization Flow](./img/auth-sequence-device-auth.png)
 
