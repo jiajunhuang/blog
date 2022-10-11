@@ -398,9 +398,9 @@ The Authorization Code Flow goes through the following steps:
 
 区别在于，请求参数中，response_type 的值是 `code id_token` 或 `code token` 或 `code id_token token`：
 
-- 当值是 `code token` 或 `code id_token token` 时，会返回 `access_token`
-- 当值是 `code id_token` 或 `code id_token token` 时，会返回 `id_token`
-- code 一定会返回
+- 当值是 `code token` 时，会返回 `code`, `access_token`
+- 当值是 `code id_token` 时，会返回 `code`, `id_token`
+- 当值是 `code id_token token` 时，会返回 `code`, `id_token`, `access_token`
 
 以上就是OIDC的三种授权方式，通过OIDC，我们可以以第三方系统的身份来登录另外一个系统，并且获取一些基本的资料，例如first name,
 last name, username, email, avatar url等。
