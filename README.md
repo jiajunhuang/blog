@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/10/12 - [OAuth 2 详解（六）：Authorization Code Flow with PKCE](https://jiajunhuang.com/articles/2022_10_12-oauth2_explained_authorization_code_pkce.md.html)
 - 2022/10/11 - [OAuth 2 详解（五）：Device Authorization Flow](https://jiajunhuang.com/articles/2022_10_11-oauth2_explained_device_code.md.html)
 - 2022/10/10 - [OAuth 2 详解（三）：Resource Owner Password Credentials Grant](https://jiajunhuang.com/articles/2022_10_10-oauth2_explained_password.md.html)
 - 2022/10/10 - [OAuth 2 详解（四）：Client Credentials Flow](https://jiajunhuang.com/articles/2022_10_10-oauth2_explained_client_credentials.md.html)
