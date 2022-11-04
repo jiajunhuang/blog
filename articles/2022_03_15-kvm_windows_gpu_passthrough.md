@@ -88,6 +88,8 @@ $ sudo update-initramfs -u
 把BISO改成 `UEFI`，Chipset 改成 `i440`，UEFI固件选择 `/usr/share/OVMF/OVMF_CODE_4M.fd`。将磁盘驱动改成VirtIO，添加
 `virtio-win.iso` ，这里面包含的是VirtIO的各种驱动，如果没有的话，从 https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/ 找到最新的下载。
 
+> 一定要UEFI，否则虚拟机能检测到显卡，但是无法输出信号。我的尝试结果是这样。
+
 接下来就是正常安装了，这里我不会事无巨细的贴出来，因为如果你不会安装的话，穿透是基本没戏了。
 
 ### 透传硬件
