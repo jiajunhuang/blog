@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/12/04 - [OpenWRT 使用 Android/iOS USB 网络](https://jiajunhuang.com/articles/2022_12_04-openwrt_usb.md.html)
 - 2022/11/20 - [搭建旁路由](https://jiajunhuang.com/articles/2022_11_20-router.md.html)
 - 2022/11/04 - [Golang gRPC 错误处理](https://jiajunhuang.com/articles/2022_11_04-grpc_error_handling.md.html)
 - 2022/10/31 - [编写可维护的单元测试代码](https://jiajunhuang.com/articles/2022_10_31-goconvey.md.html)
