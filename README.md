@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2022/12/31 - [2022年终总结](https://jiajunhuang.com/articles/2022_12_31-hello_2023.md.html)
 - 2022/12/28 - [MySQL Index Condition Pushdown Optimization](https://jiajunhuang.com/articles/2022_12_28-index_condition_pushdown_optimization.md.html)
 - 2022/12/16 - [Go mod 简明教程](https://jiajunhuang.com/articles/2022_12_16-go_mod.md.html)
 - 2022/12/04 - [OpenWRT 使用 Android/iOS USB 网络](https://jiajunhuang.com/articles/2022_12_04-openwrt_usb.md.html)
