@@ -78,3 +78,4 @@
 ---
 
 - https://www.zybuluo.com/yulin718/note/93148
+- https://www.postgresql.org/docs/current/explicit-locking.html#LOCKING-ROWS
