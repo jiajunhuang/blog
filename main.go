@@ -316,10 +316,7 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 		return
 	}
 
-	content = blackfriday.Run(
-		content,
-		blackfriday.WithExtensions(blackfriday.CommonExtensions),
-	)
+	content = blackfriday.MarkdownCommon(content)
 
 	recommends := articles.RandomN(randomN)
 	topArticles := getTopVisited(15)
