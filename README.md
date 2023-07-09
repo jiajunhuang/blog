@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2023/07/09 - [读《格鲁夫给经理人的第一课》](https://jiajunhuang.com/articles/2023_07_09-high_output_management.md.html)
 - 2023/07/06 - [读《打开心智》](https://jiajunhuang.com/articles/2023_07_06-free_your_mind.md.html)
 - 2023/02/03 - [为什么要把复杂的联表操作拆成多个单表查询？](https://jiajunhuang.com/articles/2023_02_03-mysql.md.html)
 - 2023/01/31 - [红包系统的设计](https://jiajunhuang.com/articles/2023_01_31-red_envelope.md.html)
