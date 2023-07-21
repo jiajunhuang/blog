@@ -100,17 +100,16 @@ $ sudo update-initramfs -u
 接下里很重要的一步，就是要隐藏虚拟机特性，因为Nvidia不让在虚拟机里使用，但是我们可以通过隐藏虚拟机特性规避。
 执行 `sudo virsh edit --domain win` 来编辑你的虚拟机，记得替换成你自己的虚拟机名字。
 
-找到 `<features>` 这个XML标签，然后：
-
-- 添加一行 `<vendor_id state='on' value='1234567890ab'/>`
-- 再添加一行 `<ioapic driver='kvm'/>`
-- 再添加几行(如果已经有 `<kvm>` 标签的话，就直接编辑)
+- 在 `<os>` 标签里面，增加 `<smbios mode='host'/>`
+- 在 `<features>` 里，增加
 
 ```xml
 <kvm>
     <hidden state='on'/>
 </kvm>
 ```
+
+- 在 `<hyperv>` 标签里，删掉其他的内容，增加 `<vendor_id state='on' value='1234567890ab'/>`
 
 然后保存配置，启动虚拟机。打开虚拟机之后，在Windows里安装驱动，或者点击驱动管理，让 Windows 10 自己安装驱动，基本上就搞定了。
 
