@@ -1,6 +1,6 @@
 # 博客App
 
-Jiajun的编程随想官方App，使用Flutter打造。
+Jiajun的技术笔记官方App，使用Flutter打造。
 
 ## 隐私声明
 

@@ -85,9 +85,9 @@ func RSSHandler(c *gin.Context) {
 {{ .rssHeader }}
 <rss version="2.0">
     <channel>
-        <title>Jiajun的编程随想</title>
+        <title>Jiajun的技术笔记</title>
         <link>https://jiajunhuang.com</link>
-        <description>Jiajun的编程随想</description>
+        <description>Jiajun的技术笔记</description>
 
         {{ range $article := .articles }}
             <item>
