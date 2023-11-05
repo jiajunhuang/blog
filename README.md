@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2023/11/05 - [KVM 共享 Intel 集成显卡](https://jiajunhuang.com/articles/2023_11_05-kvm_windows_intel_gpu.md.html)
 - 2023/10/17 - [PromQL 备忘](https://jiajunhuang.com/articles/2023_10_17-prometheus_promql.md.html)
 - 2023/07/09 - [读《格鲁夫给经理人的第一课》](https://jiajunhuang.com/articles/2023_07_09-high_output_management.md.html)
 - 2023/07/06 - [读《打开心智》](https://jiajunhuang.com/articles/2023_07_06-free_your_mind.md.html)
