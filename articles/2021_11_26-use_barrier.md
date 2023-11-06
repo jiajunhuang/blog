@@ -104,6 +104,16 @@ Windows 中自启动，需要先以管理员身份打开软件，然后菜单中
 的是网络通信，也就是说如果网络不好，那么就会一卡一卡，所以这一点需要
 注意，我的建议是，能用网线的都用网线。
 
+## 常见问题
+
+- 报错说没有SSL怎么办?
+
+openssl req -x509 -nodes -days 365 -subj /CN=Barrier -newkey rsa:4096 -keyout Barrier.pem -out Barrier.pem
+
+- 报错说没有加入可信列表怎么办
+
+看下报错的日志里，把sha256加入到对应的文件。
+
 ---
 
 Ref:
