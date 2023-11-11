@@ -4,10 +4,9 @@
 正常工作，偶尔剪贴板会有点小问题，比如贴出来的是乱码，第二次贴才正常，但是无伤大雅。
 
 然而，当我用 macOS 做服务端，Linux做客户端的时候，barrier套装就不那么好用了，bug比较多，而barrier 已经2年没有新的提交了，
-这就让我不得不去找替代品，barrier 的活跃提交者fork了一份，变成了 [input-leap](https://github.com/input-leap/input-leap)，
-但是找不到能够下载的二进制，尝试了自己编译，也是一堆的报错，查了资料和 Apple M1 芯片有关系。
+`~`, `Esc`, 反引号 都无法输入，偶尔还会抽风。这就让我必须得找个替代品了。
 
-然后我又转向了使用他们的老祖宗：synergy-core，仔细看了以后才发现，这玩意儿是开源的，收费的是GUI，命令行程序开源且免费，
+所以我找到了 barrier fork 的来源：synergy-core，仔细看了以后才发现，这玩意儿是开源的，收费的是GUI，命令行程序开源且免费，
 Windows 下可能不好使用，但是 Linux 和 macOS 用命令行程序，还是可以的。
 
 ## 安装
@@ -73,7 +72,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=jiajun
+User=<改成你的名字>
 ExecStart=/usr/bin/unbuffer /usr/bin/synergyc -f --display :0 <macOS IP地址>:24800
 Environment=XAUTHORITY=/var/run/lightdm/root/:0
 Restart=always

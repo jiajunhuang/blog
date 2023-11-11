@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2023/11/11 - [macOS/Linux 编译 InputLeap](https://jiajunhuang.com/articles/2023_11_11-input_leap.md.html)
 - 2023/11/10 - [使用开源软KVM - synergy-core](https://jiajunhuang.com/articles/2023_11_10-synergy_core.md.html)
 - 2023/11/06 - [解决 macOS 终端hostname一直变化问题](https://jiajunhuang.com/articles/2023_11_06-mac_keep_hostname.md.html)
 - 2023/11/05 - [KVM 共享 Intel 集成显卡](https://jiajunhuang.com/articles/2023_11_05-kvm_windows_intel_gpu.md.html)
