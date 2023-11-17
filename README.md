@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2023/11/17 - [FreeBSD 使用 vm-bhyve 安装Debian虚拟机](https://jiajunhuang.com/articles/2023_11_17-freebsd_vm_bhyve.md.html)
 - 2023/11/16 - [FreeBSD 和 Linux 网卡聚合实现提速](https://jiajunhuang.com/articles/2023_11_16-freebsd_linux_link_aggr.md.html)
 - 2023/11/15 - [GPT 帮我搞定了时区转换问题](https://jiajunhuang.com/articles/2023_11_15-python_datetime_with_timezone.md.html)
 - 2023/11/12 - [长任务系统如何处理？](https://jiajunhuang.com/articles/2023_11_12-long_running_task.md.html)
