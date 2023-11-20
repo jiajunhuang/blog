@@ -9,9 +9,8 @@
 ```bash
 $ sudo -u postgres psql
 $ psql
-> CREATE DATABASE 数据库名;
 > CREATE USER 用户名 WITH ENCRYPTED PASSWORD '密码';
-> GRANT ALL PRIVILEGES ON DATABASE 数据库名 TO 用户名;
+> CREATE DATABASE 数据库名 OWNER 用户名;
 ```
 
 ## 更改用户密码
