@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2023/12/17 - [VueJS 总结](https://jiajunhuang.com/articles/2023_12_17-vue3.md.html)
 - 2023/11/29 - [Linux 自动挂载 alist 提供的webdav](https://jiajunhuang.com/articles/2023_11_29-alist_webdav.md.html)
 - 2023/11/17 - [FreeBSD 使用 vm-bhyve 安装Debian虚拟机](https://jiajunhuang.com/articles/2023_11_17-freebsd_vm_bhyve.md.html)
 - 2023/11/16 - [FreeBSD 和 Linux 网卡聚合实现提速](https://jiajunhuang.com/articles/2023_11_16-freebsd_linux_link_aggr.md.html)
