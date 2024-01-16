@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/01/16 - [读《为什么学生不喜欢上学》](https://jiajunhuang.com/articles/2024_01_16-why_dont_students_like_school.md.html)
 - 2024/01/07 - [OpenAI Prompt Engineering 摘录和总结](https://jiajunhuang.com/articles/2024_01_07-openai_prompt_engineering.md.html)
 - 2023/12/30 - [读《打造真正的新产品》](https://jiajunhuang.com/articles/2023_12_30-something_really_new.md.html)
 - 2023/12/26 - [2023年终总结](https://jiajunhuang.com/articles/2023_12_26-good_bye_2023.md.html)
