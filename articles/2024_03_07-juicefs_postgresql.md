@@ -27,7 +27,7 @@
 
 ## 搭建步骤
 
-1. 安装PG和JuiceFS
+### 安装PG和JuiceFS
 
 ```bash
 # sudo apt install postgresql
@@ -35,7 +35,7 @@
 # curl -sSL https://d.juicefs.com/install | sh -
 ```
 
-2. PG创建好数据库、用户、密码
+### PG创建好数据库、用户、密码
 
 ```bash
 $ sudo -u postgres psql
@@ -44,11 +44,11 @@ $ psql
 > CREATE DATABASE 数据库名 OWNER 用户名;
 ```
 
-3. 创建好 s3 的bucket和access key + secret key
+### 创建好 s3 的bucket和access key + secret key
 
 这个就直接去网页上操作，记得保存好 bucket 的 endpoint，access key, secret key 就行
 
-4. juicefs foramt 创建好文件系统
+### juicefs foramt 创建好文件系统
 
 执行命令
 
@@ -58,7 +58,7 @@ juicefs format --storage=s3 --bucket=https://<bucket endpoint> --access-key=<acc
 
 当然，上面的数据库地址，如果你不是使用本地连接的话，就得改成对应的地址
 
-5. 编辑开机自启挂载文件系统
+### 编辑开机自启挂载文件系统
 
 juicefs 本身提供一个编辑fstab的方式来实现开机自动挂载，但是缺点就是数据库的密码等等都在里面。而我更倾向于使用 systemd 挂载的方式。
 首先，确定你要挂载的路径，例如我想挂载到 `/data/bitful` 这个路径，那么我要编辑的systemd mount文件的路径就是 `/etc/systemd/system/data-bitful.mount`，你是什么路径，就用中划线连接这个路径。
@@ -84,7 +84,7 @@ WantedBy=multi-user.target
 
 > ⚠️ 例如加密、设置缓存目录等，juicefs文档没写，我也暂时还没探索，所以如果你想使用这些设置选项的话，可能暂时还只能使用fstab文件的形式。
 
-6. 校验和使用
+### 校验和使用
 
 启用：
 
