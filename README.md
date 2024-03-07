@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/03/07 - [使用 PostgreSQL 搭建 JuiceFS](https://jiajunhuang.com/articles/2024_03_07-juicefs_postgresql.md.html)
 - 2024/03/05 - [PostgreSQL 配置优化和日志分析](https://jiajunhuang.com/articles/2024_03_05-postgresql_conf.md.html)
 - 2024/03/03 - [有GitHub Copilot？那就可以搭建你的ChatGPT4服务](https://jiajunhuang.com/articles/2024_03_03-copilot_as_gpt4.md.html)
 - 2024/03/01 - [窗口函数的使用(以PG为例)](https://jiajunhuang.com/articles/2024_03_01-pg_window_function.md.html)
