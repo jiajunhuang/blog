@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/03/09 - [PostgreSQL 当MQ来使用](https://jiajunhuang.com/articles/2024_03_09-postgresql_as_mq.md.html)
 - 2024/03/07 - [使用 PostgreSQL 搭建 JuiceFS](https://jiajunhuang.com/articles/2024_03_07-juicefs_postgresql.md.html)
 - 2024/03/05 - [PostgreSQL 配置优化和日志分析](https://jiajunhuang.com/articles/2024_03_05-postgresql_conf.md.html)
 - 2024/03/03 - [有GitHub Copilot？那就可以搭建你的ChatGPT4服务](https://jiajunhuang.com/articles/2024_03_03-copilot_as_gpt4.md.html)
