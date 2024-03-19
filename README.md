@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/03/19 - [Flatpak 使用小记](https://jiajunhuang.com/articles/2024_03_19-flatpak.md.html)
 - 2024/03/10 - [Golang CAS 操作是怎么实现的](https://jiajunhuang.com/articles/2024_03_10-golang_cas.md.html)
 - 2024/03/09 - [PostgreSQL 当MQ来使用](https://jiajunhuang.com/articles/2024_03_09-postgresql_as_mq.md.html)
 - 2024/03/08 - [Clash 结合 工作VPN 的网络设计](https://jiajunhuang.com/articles/2024_03_08-clash_vpn.md.html)
