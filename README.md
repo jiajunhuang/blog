@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/03/20 - [flutter macOS 构建出错](https://jiajunhuang.com/articles/2024_03_20-flutter_macos.md.html)
 - 2024/03/19 - [Flatpak 使用小记](https://jiajunhuang.com/articles/2024_03_19-flatpak.md.html)
 - 2024/03/10 - [Golang CAS 操作是怎么实现的](https://jiajunhuang.com/articles/2024_03_10-golang_cas.md.html)
 - 2024/03/09 - [PostgreSQL 当MQ来使用](https://jiajunhuang.com/articles/2024_03_09-postgresql_as_mq.md.html)
