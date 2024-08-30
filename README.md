@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/08/30 - [HTTP 压力测试中的 Coordinated Omission](https://jiajunhuang.com/articles/2024_08_30-http_load_testing.md.html)
 - 2024/07/24 - [2的补码](https://jiajunhuang.com/articles/2024_07_24-twos_complement.md.html)
 - 2024/07/21 - [编程语言中的 context 是什么？](https://jiajunhuang.com/articles/2024_07_21-context.md.html)
 - 2024/03/20 - [flutter macOS 构建出错](https://jiajunhuang.com/articles/2024_03_20-flutter_macos.md.html)
