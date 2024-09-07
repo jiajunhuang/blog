@@ -10,6 +10,7 @@ https://t.me/jiajunhuangcom
 
 ## 目录
 
+- 2024/09/07 - [再读《程序员修炼之道-从小工到专家》](https://jiajunhuang.com/articles/2024_09_07-the_pragmatic_programmer.md.html)
 - 2024/09/06 - [再读《软件随想录》/《黑客与画家》/《软技能》](https://jiajunhuang.com/articles/2024_09_06-reread_3_books.md.html)
 - 2024/09/06 - [让浏览器下载文件](https://jiajunhuang.com/articles/2024_09_06-browser_download_file.md.html)
 - 2024/08/30 - [HTTP 压力测试中的 Coordinated Omission](https://jiajunhuang.com/articles/2024_08_30-http_load_testing.md.html)
