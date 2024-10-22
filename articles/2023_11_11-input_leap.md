@@ -108,6 +108,16 @@ WantedBy=graphical.target
 
 ---
 
+2024.10.22
+
+如果发现启动不了，报错：An error occurred: assistive devices does not trust this process, allow it in system settings.
+
+那么就要去 System Settings - Privacy & Security - Accessibility 里把 InputLeap 添加进去，同时把 `/Applications/InputLeap.app/Contents/MacOS/input-leap` 添加进去。对于第二个路径，如果用图形界面的话，是添加不了的，最终我找到的办法是：
+
+- 打开命令行，执行 `open /Applications/InputLeap.app/Contents/MacOS/`
+- 把 `input-leap` 拖拽到 Accessibility 的对话框
+- 完成
+
 refs:
 
 - https://github.com/input-leap/input-leap/wiki/Building-on-macOS
