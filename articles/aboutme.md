@@ -23,11 +23,8 @@
 ## 订阅博客
 
 - [订阅RSS](https://jiajunhuang.com/rss)
-- [订阅Telegram Channel](https://t.me/jiajunhuangcom)
 - [邮件订阅](https://eepurl.com/guVPMj)
 
-## 我的联系方式:
+## 我的联系方式
 
-- Telegram: [https://t.me/jiajunhuang](https://t.me/jiajunhuang)
-- 邮件: `gansteed(at, you know)gmail.com`
 - Github: [https://github.com/jiajunhuang](https://github.com/jiajunhuang)

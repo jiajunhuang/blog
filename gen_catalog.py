@@ -36,8 +36,6 @@ if __name__ == "__main__":
         "# Jiajun's Blog",
         "会当凌绝顶，一览众山小。",
         "- [关于我](https://jiajunhuang.com/aboutme)",
-        "- 欢迎订阅Telegram Channel：分享后端相关的精选文章",
-        "https://t.me/jiajunhuangcom",
         "## 目录",
     ]
     readme_footers = [

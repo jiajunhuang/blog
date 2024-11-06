@@ -4,10 +4,6 @@
 
 - [关于我](https://jiajunhuang.com/aboutme)
 
-- 欢迎订阅Telegram Channel：分享后端相关的精选文章
-
-https://t.me/jiajunhuangcom
-
 ## 目录
 
 - 2024/09/07 - [再读《程序员修炼之道-从小工到专家》](https://jiajunhuang.com/articles/2024_09_07-the_pragmatic_programmer.md.html)
@@ -390,7 +386,6 @@ https://t.me/jiajunhuangcom
 - 2018/09/06 - [如何挖掘二级子域名？](https://jiajunhuang.com/articles/2018_09_06-how_to_dig_subdomain.md.html)
 - 2018/09/03 - [Go Module 简明教程](https://jiajunhuang.com/articles/2018_09_03-go_module.md.html)
 - 2018/09/02 - [写了一个Telegram Bot：自动化分享高质量内容](https://jiajunhuang.com/articles/2018_09_02-write_a_tgbot.md.html)
-- 2018/09/01 - [为什么我选择放弃运营微信公众号？](https://jiajunhuang.com/articles/2018_09_01-why_i_give_up_wechat_public_account.md.html)
 - 2018/09/01 - [Vim打开很慢，怎么找出最慢的插件？怎么解决？](https://jiajunhuang.com/articles/2018_09_01-vim_speed_up.md.html)
 - 2018/09/01 - [ArchLinux 怎么降级 package ？](https://jiajunhuang.com/articles/2018_09_01-archlinux_downgrade_package.md.html)
 - 2018/08/29 - [Web后端工程师进阶指南(2018)](https://jiajunhuang.com/articles/2018_08_29-become_a_better_programmer.md.html)
