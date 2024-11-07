@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
 > 代码很简单，就是遍历 `docker` 目录下的所有 `.sh` 文件，然后执行它们。最后再清理一下无用的镜像。
 
-然后在同级目录下创建一个 `docker` 目录，里面放置所有的升级脚本，比如 `docker/nextcloud.sh`:
+然后在同级目录下创建一个 `docker` 目录，里面放置所有的升级脚本，比如 `docker/alist.sh`:
 
 ```bash
 #!/bin/bash
