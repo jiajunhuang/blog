@@ -57,25 +57,6 @@ func startSharingBot() {
 			b.Send(m.Sender, fmt.Sprintf("failed to comment: %s", err))
 			return
 		}
-
-		// 如果没有出错，就发到channel
-		latestSharing, err := dao.GetLatestSharing()
-		if err != nil {
-			log.Printf("failed to send to channel: %s", err)
-			return
-		}
-		msg := fmt.Sprintf("%s: %s#%d", latestSharing.Content, sharingURL, latestSharing.ID)
-
-		channel, err := b.ChatByID("@jiajunhuangcom")
-		if err != nil {
-			log.Printf("failed to send to channel: %s", err)
-			return
-		}
-		_, err = b.Send(channel, msg)
-		if err != nil {
-			log.Printf("failed to send to channel: %s", err)
-			return
-		}
 	})
 	b.Handle(tb.OnChannelPost, func(m *tb.Message) {
 		log.Printf("received channel message %+v", m)
