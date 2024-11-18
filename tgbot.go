@@ -17,6 +17,8 @@ var (
 
 	notifyURL   = os.Getenv("NOTIFY_URL")
 	notifyToken = os.Getenv("NOTIFY_TOKEN")
+
+	botAdminUserID = os.Getenv("BOT_ADMIN_USER_ID")
 )
 
 // sendNotifyToApp 往推送发一个通知
@@ -69,7 +71,7 @@ func startSharingBot() {
 
 	b.Handle(tb.OnText, func(m *tb.Message) {
 		log.Printf("received text message %+v", m)
-		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
+		if !(m.Private() && fmt.Sprintf("%d", m.Sender.ID) == botAdminUserID) {
 			return
 		}
 
@@ -93,7 +95,7 @@ func startNoteBot() {
 	}
 
 	b.Handle(tb.OnText, func(m *tb.Message) {
-		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
+		if !(m.Private() && fmt.Sprintf("%d", m.Sender.ID) == botAdminUserID) {
 			return
 		}
 
