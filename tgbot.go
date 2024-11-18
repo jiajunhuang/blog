@@ -51,7 +51,7 @@ func startSharingBot() {
 	}
 
 	b.Handle("/comment", func(m *tb.Message) {
-		if !(m.Private() && m.Sender.Username == "jiajunhuang") {
+		if !(m.Private() && fmt.Sprintf("%d", m.Sender.ID) == botAdminUserID) {
 			return
 		}
 
@@ -59,6 +59,8 @@ func startSharingBot() {
 			b.Send(m.Sender, fmt.Sprintf("failed to comment: %s", err))
 			return
 		}
+
+		b.Send(m.Sender, "commented")
 	})
 	b.Handle(tb.OnChannelPost, func(m *tb.Message) {
 		log.Printf("received channel message %+v", m)
