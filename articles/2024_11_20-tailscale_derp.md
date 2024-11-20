@@ -64,6 +64,8 @@ server {
 
 请注意，这里 WebSocket 的配置是必须的，否则 Tailscale 无法正常工作，我掉到这个坑好久才爬出来。
 
+> 参考掉坑 issue: https://github.com/tailscale/tailscale/issues/4072
+
 ## 配置 ACL 规则
 
 打开 tailscale 的管理页面，添加 ACL 规则，允许你的域名访问 DERP 服务器。
