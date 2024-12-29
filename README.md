@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2024/12/29 - [2024年终总结](https://jiajunhuang.com/articles/2024_12_29-bye_2024.md.html)
 - 2024/11/20 - [自建DERP服务器提升Tailscale连接速度(使用Nginx转发)](https://jiajunhuang.com/articles/2024_11_20-tailscale_derp.md.html)
 - 2024/11/07 - [自动升级Docker容器](https://jiajunhuang.com/articles/2024_11_07-auto_upgrade_docker.md.html)
 - 2024/09/07 - [再读《程序员修炼之道-从小工到专家》](https://jiajunhuang.com/articles/2024_09_07-the_pragmatic_programmer.md.html)
