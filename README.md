@@ -7,6 +7,7 @@
 ## 目录
 
 - 2025/02/16 - [自己动手写一个k8s controller](https://jiajunhuang.com/articles/2025_02_16-k8s_controller.md.html)
+- 2025/02/16 - [AWS IAM 信任链 和 EKS IRSA](https://jiajunhuang.com/articles/2025_02_16-aws_iam.md.html)
 - 2025/02/15 - [AI 会取代你的(编程)岗位吗？](https://jiajunhuang.com/articles/2025_02_15-ai.md.html)
 - 2024/12/29 - [2024年终总结](https://jiajunhuang.com/articles/2024_12_29-bye_2024.md.html)
 - 2024/11/20 - [自建DERP服务器提升Tailscale连接速度(使用Nginx转发)](https://jiajunhuang.com/articles/2024_11_20-tailscale_derp.md.html)
