@@ -28,3 +28,4 @@
 ## 我的联系方式
 
 - Github: [https://github.com/jiajunhuang](https://github.com/jiajunhuang)
+- 邮箱：gansteed 在 gmail.com，你懂的
