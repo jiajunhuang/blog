@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/03/16 - [A RC script for freebsd frpc](https://jiajunhuang.com/articles/2025_03_16-freebsd_frpc.md.html)
 - 2025/03/15 - [BottleRocket Linux check kubelet logs](https://jiajunhuang.com/articles/2025_03_15-bottlerocket_debug.md.html)
 - 2025/03/02 - [Cockpit Create VM Permission Denied](https://jiajunhuang.com/articles/2025_03_02-cockpit_vm_create_permission_denied.md.html)
 - 2025/02/16 - [自己动手写一个k8s controller](https://jiajunhuang.com/articles/2025_02_16-k8s_controller.md.html)
