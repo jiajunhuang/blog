@@ -328,6 +328,9 @@ run_rc_command "$1"
 
 Give permission by executing `chmod +x /usr/local/etc/rc.d/frpc`.
 
+Now, paste your frpc configuration in `/usr/local/etc/frpc/frpc.ini`, `/usr/local/etc/frpc/frpc_office.ini` and
+`/usr/local/etc/frpc/frpc_home.ini`(if you only have one instance, omit `office` and `home` configuration).
+
 Enable frpc in `/etc/rc.conf`:
 
 ```ini
