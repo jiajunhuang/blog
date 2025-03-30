@@ -19,7 +19,7 @@ mdev
 5. 宿主机安装Mesa库 `apt-get install mesa-utils`
 6. 重启宿主机，执行 `lspci | grep VGA`，看看输出是否有 `00:02.0 VGA compatible controller: Intel Corporation UHD Graphics 630 (Mobile) (rev 02)` 类似这么一行
 7. 进入文件夹 `cd /sys/bus/pci/devices/0000\:00:02.0`
-8. 执行 `ls -l mdev_supported_types/` 看是否有输出，每一个都是一种GPU的类型，数字越大，显存越小，我试了 `V5_4`，显存为8G
+8. 执行 `ls -l mdev_supported_types/` 看是否有输出，每一个都是一种GPU的类型，数字越大，显存越小，可以通过执行 `cat /sys/devices/pci0000\:00/0000\:00\:02.0/mdev_supported_types/<类型>/description` 查看每种类型的描述
 9. 选择一个类型，生成一个uuid，创建一个虚拟GPU
 
 ```bash
