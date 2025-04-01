@@ -72,22 +72,56 @@
 
 <footer class="footer mt-2 mb-2">
     <span class="text-muted">
-        <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2024, All Rights Reserved。本站禁止转载，引用请注明作者与原链。</a></p>
+        <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2024, All Rights Reserved。本站禁止转载，引用请注明作者与原链。</p>
     </span>
 </footer>
+
+<!-- 网站结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Jiajun的技术笔记",
+  "url": "https://jiajunhuang.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://jiajunhuang.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 </div>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js" type="application/javascript"></script>
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.bundle.min.js" type="application/javascript"></script>
+<!-- 代码高亮 -->
+<link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/styles/base16/solarized-light.min.css" type="text/css" rel="stylesheet" />
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/highlight.min.js" type="application/javascript" defer></script>
 <script>
     $(function() {
         $('table').addClass('table table-bordered');
     })
 </script>
-<link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/styles/base16/solarized-light.min.css" type="text/css" rel="stylesheet" />
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/highlight.min.js" type="application/javascript"></script>
 <script>
-    hljs.initHighlightingOnLoad();
+    document.addEventListener('DOMContentLoaded', function() {
+        // 代码高亮
+        hljs.initHighlightingOnLoad();
+
+        // 为所有图片添加 loading="lazy"
+        document.querySelectorAll('img').forEach(function(img) {
+            if (!img.hasAttribute('loading')) {
+                img.setAttribute('loading', 'lazy');
+            }
+            // 确保所有图片都有 alt 属性
+            if (!img.hasAttribute('alt') && img.hasAttribute('src')) {
+                const imgSrc = img.getAttribute('src');
+                const imgName = imgSrc.split('/').pop().split('.')[0];
+                img.setAttribute('alt', imgName || '博客图片');
+            }
+        });
+
+        // 为表格添加 Bootstrap 样式
+        document.querySelectorAll('table').forEach(function(table) {
+            table.classList.add('table', 'table-bordered');
+        });
+    });
 </script>
 </body>
 

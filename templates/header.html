@@ -4,7 +4,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <!-- iOS -->
     <meta name="apple-mobile-web-app-title" content="Jiajun的技术笔记">
     <meta name="mobile-web-app-capable" content="yes">
@@ -14,14 +14,31 @@
     <link rel="shortcut icon" href="/static/apple-touch-icon.png">
     <meta name="theme-color" content="#F8F9FA">
 
+    <!-- 规范链接 -->
+    <link rel="canonical" href="https://jiajunhuang.com{{ .urlPath }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ if .isIndex }}website{{ else }}article{{ end }}">
+    <meta property="og:url" content="https://jiajunhuang.com{{ .urlPath }}">
+    <meta property="og:title" content="{{ if .title }}{{ .title }}{{ else }}Jiajun的技术笔记{{ end }}">
+    <meta property="og:description" content="{{ if .description }}{{ .description }}{{ else }}Jiajun的个人技术博客，分享编程、技术和生活{{ end }}">
+    <meta property="og:image" content="https://jiajunhuang.com/static/apple-touch-icon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://jiajunhuang.com{{ .urlPath }}">
+    <meta property="twitter:title" content="{{ if .title }}{{ .title }}{{ else }}Jiajun的技术笔记{{ end }}">
+    <meta property="twitter:description" content="{{ if .description }}{{ .description }}{{ else }}Jiajun的个人技术博客，分享编程、技术和生活{{ end }}">
+    <meta property="twitter:image" content="https://jiajunhuang.com/static/apple-touch-icon.png">
+
     <!-- Bootstrap CSS -->
     <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://jiajunhuang.com/rss">
 
     <!-- 添加 Bootstrap 必需的 JavaScript 依赖 -->
-    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/1.16.1/umd/popper.min.js" defer></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/4.6.1/js/bootstrap.min.js" defer></script>
 
     <!-- meta -->
     {{ if .keywords }}
@@ -29,6 +46,8 @@
     {{ end }}
     {{ if .description }}
     <meta name="description" content="{{ .description }}">
+    {{ else }}
+    <meta name="description" content="Jiajun的个人技术博客，分享编程、技术和生活">
     {{ end }}
 
     <title>
@@ -59,6 +78,16 @@
             max-width: 100%;
             display: block;
             margin: 0 auto;
+        }
+
+        .article-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-meta time {
+            margin-right: 1rem;
         }
     </style>
     <script async src="https://stats.jiajunhuang.com/script.js" data-website-id="e81e121a-6756-4d07-b635-172d345abbb8"></script>

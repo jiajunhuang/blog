@@ -1,14 +1,38 @@
 {{ block "header.html" . }}{{ end }}
 
-{{ .content }}
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="author" content="Jiajun Huang">
+    <meta itemprop="datePublished" content="{{ .date }}">
+    {{ if .lastModified }}
+    <meta itemprop="dateModified" content="{{ .lastModified }}">
+    {{ end }}
+
+    <header>
+        <h1 itemprop="headline">{{ .title }}</h1>
+        <div class="article-meta">
+            <time datetime="{{ .date }}">发布于: {{ .date }}</time>
+            {{ if .lastModified }}
+            <time datetime="{{ .lastModified }}">更新于: {{ .lastModified }}</time>
+            {{ end }}
+        </div>
+    </header>
+
+    <div itemprop="articleBody">
+        {{ .content }}
+    </div>
+</article>
 
 <hr />
 
 {{ if .recommends }}
-<h5>更多文章</h5>
-{{ range $recommend := .recommends }}
-<li style="margin-left:2.5rem"><a href="/{{ .DirName }}/{{ .Filename }}.html">{{ .Title }}</a></li>
-{{ end }}
+<section class="related-articles">
+    <h5>相关文章</h5>
+    <ul>
+    {{ range $recommend := .recommends }}
+        <li style="margin-left:2.5rem"><a href="/{{ .DirName }}/{{ .Filename }}.html" rel="related">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
+</section>
 <hr />
 {{ end }}
 
@@ -41,6 +65,33 @@
             $("#load_disqus_thread").remove();
         });
     }
+</script>
+
+<!-- 添加结构化评论数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .title }}",
+  "author": {
+    "@type": "Person",
+    "name": "Jiajun Huang"
+  },
+  "datePublished": "{{ .date }}",
+  "dateModified": "{{ if .lastModified }}{{ .lastModified }}{{ else }}{{ .date }}{{ end }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jiajunhuang.com{{ .urlPath }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jiajun的技术笔记",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jiajunhuang.com/static/apple-touch-icon.png"
+    }
+  }
+}
 </script>
 {{ end }}
 {{ block "footer.html" . }}{{ end }}
