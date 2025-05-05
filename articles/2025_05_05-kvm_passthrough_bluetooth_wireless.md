@@ -59,4 +59,4 @@ $ sudo virsh edit --domain windows
 
 - [KVM显卡穿透](https://jiajunhuang.com/articles/2022_03_15-kvm_windows_gpu_passthrough.md.html)
 - [OnBoard Intel Bluetooth Error Code 10 on Windows KVM Guest](https://www.reddit.com/r/VFIO/comments/wbsqy1/how_to_fix_onboard_intel_bluetooth_error_code_10/)
-- [PCI passthrough via OVMF]https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF
+- [PCI passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
