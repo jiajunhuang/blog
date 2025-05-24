@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/05/24 - [Wake on LAN 实现工作机的自动开关机](https://jiajunhuang.com/articles/2025_05_24-wake_on_lan.md.html)
 - 2025/05/05 - [KVM 穿透板载蓝牙和无线网卡](https://jiajunhuang.com/articles/2025_05_05-kvm_passthrough_bluetooth_wireless.md.html)
 - 2025/04/03 - [CockroachDB Serverless Architecture](https://jiajunhuang.com/articles/2025_04_03-cockroachdb_serverless_architecture.md.html)
 - 2025/04/02 - [podman 无故退出](https://jiajunhuang.com/articles/2025_04_02-podman_rootless_exited.md.html)
