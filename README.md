@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/09/07 - [ToB SaaS 服务之殇](https://jiajunhuang.com/articles/2025_09_07-to_b_saas.md.html)
 - 2025/09/02 - [TiDB Lightning 源码阅读](https://jiajunhuang.com/articles/2025_09_02-lightning_source_code.md.html)
 - 2025/05/24 - [Wake on LAN 实现工作机的自动开关机](https://jiajunhuang.com/articles/2025_05_24-wake_on_lan.md.html)
 - 2025/05/05 - [KVM 穿透板载蓝牙和无线网卡](https://jiajunhuang.com/articles/2025_05_05-kvm_passthrough_bluetooth_wireless.md.html)
