@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/09/21 - [用 Siri 来控制虚拟机开启和关闭](https://jiajunhuang.com/articles/2025_09_21-siri_ssh.md.html)
 - 2025/09/07 - [ToB SaaS 服务之殇](https://jiajunhuang.com/articles/2025_09_07-to_b_saas.md.html)
 - 2025/09/02 - [TiDB Lightning 源码阅读](https://jiajunhuang.com/articles/2025_09_02-lightning_source_code.md.html)
 - 2025/05/24 - [Wake on LAN 实现工作机的自动开关机](https://jiajunhuang.com/articles/2025_05_24-wake_on_lan.md.html)
