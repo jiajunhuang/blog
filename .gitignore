@@ -4,3 +4,4 @@ __pycache__/
 /asserts.go
 /blog
 /tags
+.env

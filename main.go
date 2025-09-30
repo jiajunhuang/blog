@@ -2,15 +2,16 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"html/template"
 	"io"
-	"io/ioutil"
 	"log"
 	"math/rand"
 	"net/http"
+	"net/url"
 	"os"
 	"regexp"
 	"sort"
@@ -94,6 +95,59 @@ type Article struct {
 	DirName     string    `json:"dir_name"`
 	PubDate     time.Time `json:"-"`
 	Description string    `json:"description"`
+}
+
+// TocItem represents a table of contents item
+type TocItem struct {
+	Level int
+	Title string
+	ID    string
+}
+
+// CustomHTMLRenderer extends blackfriday's HTML renderer to collect headings
+type CustomHTMLRenderer struct {
+	*blackfriday.Html
+	Toc []TocItem
+}
+
+// Header override to capture heading information and add IDs
+func (r *CustomHTMLRenderer) Header(out *bytes.Buffer, text func() bool, level int, id string) {
+	// Only collect h1, h2, h3
+	if level >= 1 && level <= 3 {
+		// Get the text content
+		marker := out.Len()
+		text()
+		headingText := out.String()[marker:]
+		out.Truncate(marker)
+
+		// Generate ID from heading text
+		headingID := generateHeadingID(headingText)
+
+		// Store in TOC
+		r.Toc = append(r.Toc, TocItem{
+			Level: level,
+			Title: headingText,
+			ID:    headingID,
+		})
+
+		// Render the heading with ID
+		out.WriteString(fmt.Sprintf("<h%d id=\"%s\">", level, headingID))
+		text()
+		out.WriteString(fmt.Sprintf("</h%d>\n", level))
+	} else {
+		// For other levels, use default rendering
+		r.Html.Header(out, text, level, id)
+	}
+}
+
+// generateHeadingID generates a URL-safe ID from heading text
+func generateHeadingID(text string) string {
+	// Remove HTML tags
+	text = regexp.MustCompile(`<[^>]*>`).ReplaceAllString(text, "")
+	// Trim spaces
+	text = strings.TrimSpace(text)
+	// URL encode to keep Chinese characters safe
+	return url.QueryEscape(text)
 }
 
 // Articles 文章列表
@@ -261,7 +315,7 @@ func LoadArticle(dirname, filename string) *Article {
 
 // LoadMDs 读取给定目录中的所有markdown文章
 func LoadMDs(dirname string) Articles {
-	files, err := ioutil.ReadDir(dirname)
+	files, err := os.ReadDir(dirname)
 	if err != nil {
 		log.Fatalf("failed to read dir(%s): %s", dirname, err)
 		return nil
@@ -309,14 +363,34 @@ func ArchiveHandler(c *gin.Context) {
 
 func renderArticle(c *gin.Context, status int, path string, subtitle string, randomN int) {
 	path = getFilePath(path)
-	content, err := ioutil.ReadFile(path)
+	content, err := os.ReadFile(path)
 	if err != nil {
 		log.Printf("failed to read file %s: %s", path, err)
 		c.Redirect(http.StatusFound, "/404")
 		return
 	}
 
-	content = blackfriday.MarkdownCommon(content)
+	// Use custom renderer to extract TOC
+	htmlFlags := blackfriday.HTML_USE_XHTML | blackfriday.HTML_USE_SMARTYPANTS |
+		blackfriday.HTML_SMARTYPANTS_FRACTIONS | blackfriday.HTML_SMARTYPANTS_DASHES |
+		blackfriday.HTML_SMARTYPANTS_LATEX_DASHES
+
+	renderer := &CustomHTMLRenderer{
+		Html: blackfriday.HtmlRenderer(htmlFlags, "", "").(*blackfriday.Html),
+		Toc:  []TocItem{},
+	}
+
+	extensions := blackfriday.EXTENSION_NO_INTRA_EMPHASIS |
+		blackfriday.EXTENSION_TABLES |
+		blackfriday.EXTENSION_FENCED_CODE |
+		blackfriday.EXTENSION_AUTOLINK |
+		blackfriday.EXTENSION_STRIKETHROUGH |
+		blackfriday.EXTENSION_SPACE_HEADERS |
+		blackfriday.EXTENSION_HEADER_IDS |
+		blackfriday.EXTENSION_BACKSLASH_LINE_BREAK |
+		blackfriday.EXTENSION_DEFINITION_LISTS
+
+	htmlContent := blackfriday.Markdown(content, renderer, extensions)
 
 	recommends := articles.RandomN(randomN)
 	topArticles := getTopVisited(15)
@@ -324,11 +398,12 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 	c.HTML(
 		status, "article.html", gin.H{
 			"isBlogApp":   isBlogApp(c),
-			"content":     template.HTML(content),
+			"content":     template.HTML(htmlContent),
 			"title":       ReadTitle(path),
 			"subtitle":    subtitle,
 			"recommends":  recommends,
 			"topArticles": topArticles,
+			"toc":         renderer.Toc,
 		},
 	)
 }

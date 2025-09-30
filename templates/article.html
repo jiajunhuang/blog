@@ -7,6 +7,19 @@
     <meta itemprop="dateModified" content="{{ .lastModified }}">
     {{ end }}
 
+    {{ if .toc }}
+    <nav class="table-of-contents">
+        <div class="toc-title">目录</div>
+        <ul class="toc-list">
+        {{ range $item := .toc }}
+            <li class="toc-level-{{ $item.Level }}">
+                <a href="#{{ $item.ID }}">{{ $item.Title }}</a>
+            </li>
+        {{ end }}
+        </ul>
+    </nav>
+    {{ end }}
+
     <div itemprop="articleBody">
         {{ .content }}
     </div>

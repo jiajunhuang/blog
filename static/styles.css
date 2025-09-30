@@ -67,3 +67,65 @@
 .codehilite .vi { color: #19177C } /* Name.Variable.Instance */
 .codehilite .vm { color: #19177C } /* Name.Variable.Magic */
 .codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/* Table of Contents Styles */
+.table-of-contents {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0 30px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.toc-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #24292e;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 8px;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-list li {
+    margin: 4px 0;
+    line-height: 1.8;
+}
+
+.toc-list a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.toc-list a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.toc-level-1 {
+    font-weight: 600;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+.toc-level-2 {
+    padding-left: 20px;
+}
+
+.toc-level-3 {
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
