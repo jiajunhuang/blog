@@ -7,7 +7,7 @@
       local_action: shell git add . && git commit -m "sync at `date`" && git push || true
 
     - name: compile blog binary
-      local_action: shell CGO_ENABLED=0 go build -o blog
+      local_action: shell CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o blog
 
     - name: sync code & articles
       synchronize:
