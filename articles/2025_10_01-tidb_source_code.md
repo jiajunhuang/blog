@@ -686,6 +686,6 @@ func (cc *clientConn) handleStmtExecute(ctx context.Context, data []byte) (err e
 
 这里可以看到，执行的时候，会拿着服务器分配的 stmtID 来执行。
 
----
+## 总结
 
 这就是第一篇，请求流程概览的内容了，下一篇，我想再深入看看代码中握手的流程，同时看看MySQL的通信协议大概是啥样。
