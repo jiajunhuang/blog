@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/10/03 - [TiDB 源码阅读（三）：插入数据](https://jiajunhuang.com/articles/2025_10_03-tidb_source_code_insert.md.html)
 - 2025/10/02 - [TiDB 源码阅读（二）：MySQL协议概览](https://jiajunhuang.com/articles/2025_10_02-tidb_source_code_mysql_protocol.md.html)
 - 2025/10/01 - [TiDB 源码阅读（一）：服务监听、请求处理流程概览](https://jiajunhuang.com/articles/2025_10_01-tidb_source_code.md.html)
 - 2025/09/21 - [用 Siri 来控制虚拟机开启和关闭](https://jiajunhuang.com/articles/2025_09_21-siri_ssh.md.html)
