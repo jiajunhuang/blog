@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2025/10/05 - [TiDB 源码阅读（五）：索引](https://jiajunhuang.com/articles/2025_10_05-tidb_source_code_index.md.html)
 - 2025/10/04 - [TiDB 源码阅读（四）：AST、逻辑计划、物理计划](https://jiajunhuang.com/articles/2025_10_04-tidb_source_code_ast_and_plan.md.html)
 - 2025/10/03 - [TiDB 源码阅读（三）：插入数据](https://jiajunhuang.com/articles/2025_10_03-tidb_source_code_insert.md.html)
 - 2025/10/02 - [TiDB 源码阅读（二）：MySQL协议概览](https://jiajunhuang.com/articles/2025_10_02-tidb_source_code_mysql_protocol.md.html)
