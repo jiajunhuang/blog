@@ -404,6 +404,8 @@ func renderArticle(c *gin.Context, status int, path string, subtitle string, ran
 			"recommends":  recommends,
 			"topArticles": topArticles,
 			"toc":         renderer.Toc,
+			"urlPath":     c.Request.URL.Path,
+			"description": ReadDesc(path),
 		},
 	)
 }
