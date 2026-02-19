@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2026/02/19 - [你好，2026！](https://jiajunhuang.com/articles/2026_02_19-hello_2026.md.html)
 - 2025/10/12 - [TiDB 源码阅读（六）：TiDB Coprocessor 源码解析](https://jiajunhuang.com/articles/2025_10_12-tidb_source_code_coprocessor.md.html)
 - 2025/10/06 - [性能优化的核心思想](https://jiajunhuang.com/articles/2025_10_06-performance.md.html)
 - 2025/10/05 - [TiDB 源码阅读（五）：索引](https://jiajunhuang.com/articles/2025_10_05-tidb_source_code_index.md.html)
