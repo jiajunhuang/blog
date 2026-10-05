@@ -1,80 +1,48 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="cmn">-->
-<!--<head>-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="container">-->
-<!--<main role="main" class="container">-->
-<!--<div id="body" class="row">-->
-<!--<div class="col-md-9">-->
-</div>
-{{ if not .isBlogApp }}
-<div class="col-md-3">
-    <div class="card mt-2">
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <a href="https://www.digitalocean.com/?refcode=dedfc09c3066&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" data-umami-event="DigitalOceanRefLink"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
-            </li>
-            <li class="list-group-item">
-                <a href="https://eepurl.com/guVPMj" class="card-link" data-umami-event="EmailSubscription">
-                    <img src="/static/email.png">
-                    邮件 订阅
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="/rss" class="card-link" data-umami-event="RSSSubscription">
-                    <img src="/static/rss.png">
-                    RSS 订阅
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="/articles/2017_10_19-web_dev_series.md.html">
-                    <img src="/static/web.png">
-                    Web开发简介系列
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="/tutorial/data_structure/index.md">
-                    <img src="/static/computer.png">
-                    数据结构的实际使用
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="/tutorial/golang/index.md">
-                    <img src="/static/golang.png">
-                    Golang 简明教程
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="/tutorial/python/index.md">
-                    <img src="/static/python.png">
-                    Python 教程
-                </a>
-            </li>
-        </ul>
-    </div>
-    {{ if .topArticles }}
-    <div class="card mt-2">
-        <div class="card-header">
-            本站热门
-        </div>
-        <ul class="list-group list-group-flush">
-            {{ range $topArticle := .topArticles }}
-            <li class="list-group-item"><a href="{{ .URLPath }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-    </div>
-    {{ end }}
-</div>
-{{ end }}
-</div>
-</main>
-
-<footer class="footer mt-2 mb-2">
-    <span class="text-muted">
-        <p><a href="https://github.com/jiajunhuang">@jiajunhuang</a> 2015-2024, All Rights Reserved。本站禁止转载，引用请注明作者与原链。</p>
-    </span>
-</footer>
+                </div>
+                {{ if not .isBlogApp }}
+                <aside class="site-sidebar" aria-label="博客信息与推荐">
+                    <section class="sidebar-about">
+                        <p class="eyebrow">ABOUT THE AUTHOR</p>
+                        <h2>你好，我是 Jiajun<span class="accent-dot">.</span></h2>
+                        <p>享受技术带来的快乐，<br>记录编程、阅读和生活。</p>
+                        <a class="about-link" href="/aboutme">更多关于我 <span aria-hidden="true">↗</span></a>
+                        <div class="subscribe-links">
+                            <a href="/rss" data-umami-event="RSSSubscription">RSS 订阅 ↗</a>
+                            <a href="https://eepurl.com/guVPMj" data-umami-event="EmailSubscription">邮件订阅 ↗</a>
+                        </div>
+                    </section>
+                    <section class="sidebar-section">
+                        <h2>专题与教程</h2>
+                        <ul class="tutorial-list">
+                            <li><a href="/articles/2017_10_19-web_dev_series.md.html"><span class="topic-icon" aria-hidden="true">W</span>Web 开发简介<span aria-hidden="true">↗</span></a></li>
+                            <li><a href="/tutorial/data_structure/index.md"><span class="topic-icon" aria-hidden="true">DS</span>数据结构的实际使用<span aria-hidden="true">↗</span></a></li>
+                            <li><a href="/tutorial/golang/index.md"><span class="topic-icon" aria-hidden="true">Go</span>Golang 简明教程<span aria-hidden="true">↗</span></a></li>
+                            <li><a href="/tutorial/python/index.md"><span class="topic-icon" aria-hidden="true">Py</span>Python 教程<span aria-hidden="true">↗</span></a></li>
+                        </ul>
+                    </section>
+                    {{ if .topArticles }}
+                    <section class="sidebar-section">
+                        <h2>大家都在读</h2>
+                        <ol class="popular-list">
+                        {{ range $topArticle := .topArticles }}
+                            <li><a href="{{ .URLPath }}">{{ .Title }}</a></li>
+                        {{ end }}
+                        </ol>
+                    </section>
+                    {{ end }}
+                    <section class="sidebar-section sidebar-support">
+                        <h2>云服务推荐</h2>
+                        <a href="https://www.digitalocean.com/?refcode=dedfc09c3066&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" data-umami-event="DigitalOceanRefLink">DigitalOcean <span aria-hidden="true">↗</span></a>
+                    </section>
+                </aside>
+                {{ end }}
+            </div>
+        </main>
+        <footer class="site-footer">
+            <a href="https://github.com/jiajunhuang">@jiajunhuang ↗</a>
+            <p>始于 2015 · 记录与思考</p>
+            <p>All Rights Reserved。本站禁止转载，引用请注明作者与原链。</p>
+        </footer>
 
 <!-- 网站结构化数据 -->
 <script type="application/ld+json">

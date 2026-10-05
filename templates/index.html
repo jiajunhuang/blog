@@ -1,15 +1,31 @@
 {{ block "header.html" . }}{{ end }}
 
-<ul class="list-group ml-2">
-{{ range $article := .articles }}
-    <li>{{ .Date }} - <a href="/{{ .DirName }}/{{ .Filename }}.html">{{ .Title }}</a></li>
-{{ end }}
+<header class="page-intro">
+    {{ if .totalCount }}
+    <h1>会当凌绝顶，<br><span class="slogan-second-line">一览众山小。</span></h1>
+    {{ else }}
+    <h1>文章归档</h1>
+    <p class="intro-description">关于编程、阅读与生活的点滴记录。</p>
+    {{ end }}
+</header>
 
-{{ if .totalCount }}
-<li class="list-unstyled">
-    <a href="/archive">>>> 查看全部(共{{ .totalCount }}篇文章)</a>
-</li>
-</ul>
-{{ end }}
+<section aria-labelledby="article-list-title">
+    <div class="section-heading">
+        <h2 id="article-list-title">{{ if .totalCount }}最近更新{{ else }}全部文章{{ end }}</h2>
+        {{ if .totalCount }}<a href="/archive">共 {{ .totalCount }} 篇笔记 <span aria-hidden="true">↗</span></a>{{ end }}
+    </div>
+    <ul class="article-list">
+    {{ range $article := .articles }}
+        <li class="article-row">
+            <span class="article-date">{{ .Date }}</span>
+            <a href="/{{ .DirName }}/{{ .Filename }}.html">{{ .Title }}</a>
+            <span class="article-arrow" aria-hidden="true">↗</span>
+        </li>
+    {{ end }}
+    </ul>
+    {{ if .totalCount }}
+    <a class="archive-link" href="/archive">浏览全部 {{ .totalCount }} 篇文章 <span aria-hidden="true">→</span></a>
+    {{ end }}
+</section>
 
 {{ block "footer.html" . }}{{ end }}

@@ -8,8 +8,8 @@
     {{ end }}
 
     {{ if .toc }}
-    <nav class="table-of-contents">
-        <div class="toc-title">目录</div>
+    <details class="table-of-contents">
+        <summary class="toc-title">文章目录</summary>
         <ul class="toc-list">
         {{ range $item := .toc }}
             <li class="toc-level-{{ $item.Level }}">
@@ -17,10 +17,10 @@
             </li>
         {{ end }}
         </ul>
-    </nav>
+    </details>
     {{ end }}
 
-    <div itemprop="articleBody">
+    <div class="article-body" itemprop="articleBody">
         {{ .content }}
     </div>
 </article>
@@ -32,7 +32,7 @@
     <h5>相关文章</h5>
     <ul>
     {{ range $recommend := .recommends }}
-        <li style="margin-left:2.5rem"><a href="/{{ .DirName }}/{{ .Filename }}.html" rel="related">{{ .Title }}</a></li>
+        <li><a href="/{{ .DirName }}/{{ .Filename }}.html" rel="related">{{ .Title }}</a></li>
     {{ end }}
     </ul>
 </section>

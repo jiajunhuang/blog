@@ -8,11 +8,11 @@
     <!-- iOS -->
     <meta name="apple-mobile-web-app-title" content="Jiajun的技术笔记">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-status-bar-style" content="#F8F9FA">
+    <meta name="apple-mobile-web-status-bar-style" content="#faf7f2">
     <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
     <!-- Android -->
     <link rel="shortcut icon" href="/static/apple-touch-icon.png">
-    <meta name="theme-color" content="#F8F9FA">
+    <meta name="theme-color" content="#faf7f2">
 
     <!-- 规范链接 -->
     <link rel="canonical" href="https://jiajunhuang.com{{ .urlPath }}">
@@ -33,7 +33,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/styles.css?v=20261005-warm">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://jiajunhuang.com/rss">
 
     <!-- 添加 Bootstrap 必需的 JavaScript 依赖 -->
@@ -54,97 +54,37 @@
     <title>
         {{ if .title }}{{ .title }} - {{ end }}{{ if .subtitle }}{{ .subtitle }} - {{ end }}Jiajun的技术笔记
     </title>
-    <style>
-        img {
-            max-width: 100%;
-        }
-
-        li,
-        p,
-        a {
-            word-break: break-all;
-        }
-
-        blockquote {
-            background-color: #EEDFF9;
-            margin-left: 1rem;
-            padding: 0.5rem 0;
-        }
-
-        blockquote p {
-            margin: 1rem;
-        }
-
-        img.wechat_bottom {
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .article-meta {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-meta time {
-            margin-right: 1rem;
-        }
-    </style>
     <script async src="https://stats.jiajunhuang.com/script.js" data-website-id="e81e121a-6756-4d07-b635-172d345abbb8"></script>
 </head>
 
-<body>
-    <div class="container">
+<body{{ if .isBlogApp }} class="blog-app"{{ end }}>
+    <a class="skip-link" href="#main-content">跳到正文</a>
+    <div class="container site-shell">
         {{ if not .isBlogApp }}
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="/">Jiajun的技术笔记</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="form-inline mr-auto" action="/search" method="POST">
-                        <input class="form-control mr-sm-2" type="search" placeholder="搜索" name="search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-                    </form>
-
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://blog.jiajunhuang.com">EN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/archive">归档</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sharing">分享</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/notes">随想</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/friends">友链</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                工具
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://tiku.jiajunhuang.com">面试题库</a>
-                                <a class="dropdown-item" href="https://jiajunhuang.com/page/index.md">幻灯片</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/aboutme">关于</a>
-                        </li>
-                    </ul>
-                </div>
+        <header class="site-header">
+            <a class="site-brand" href="/" aria-label="Jiajun的技术笔记，首页"><span class="brand-mark" aria-hidden="true">J.</span><span>Jiajun<span class="brand-caption">的技术笔记</span></span></a>
+            <nav class="site-nav" aria-label="主导航">
+                <a href="/archive">归档</a>
+                <a href="/sharing">分享</a>
+                <a href="/notes">随想</a>
+                <a href="/friends">友链</a>
+                <details class="nav-tools">
+                    <summary>工具</summary>
+                    <div class="tools-menu">
+                        <a href="https://tiku.jiajunhuang.com">面试题库</a>
+                        <a href="https://jiajunhuang.com/page/index.md">幻灯片</a>
+                    </div>
+                </details>
+                <a href="/aboutme">关于</a>
+                <a class="nav-language" href="https://blog.jiajunhuang.com" lang="en" aria-label="English blog">EN ↗</a>
             </nav>
+            <form class="site-search" action="/search" method="POST" role="search">
+                <input id="site-search" type="search" placeholder="搜索笔记…" name="search" aria-label="搜索笔记" required>
+                <button type="submit" aria-label="搜索"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+            </form>
         </header>
         {{ end }}
 
-        <main role="main" class="container mt-2">
-            <div id="body" class="row">
-                <div class="col-md-9">
-                    <!--</html>-->
+        <main id="main-content" class="site-main" tabindex="-1">
+            <div id="body" class="content-layout">
+                <div class="primary-content">
