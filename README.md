@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2026/10/20 - [如何写一个 Agent](https://jiajunhuang.com/articles/2026_10_20-how_to_build_an_agent.md.html)
 - 2026/10/05 - [读 《明朝那些事儿》](https://jiajunhuang.com/articles/2026_10_05-mingchaonaxieshier.md.html)
 - 2026/02/19 - [你好，2026！](https://jiajunhuang.com/articles/2026_02_19-hello_2026.md.html)
 - 2025/10/12 - [TiDB 源码阅读（六）：TiDB Coprocessor 源码解析](https://jiajunhuang.com/articles/2025_10_12-tidb_source_code_coprocessor.md.html)
