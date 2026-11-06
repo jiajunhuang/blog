@@ -6,6 +6,7 @@
 
 ## 目录
 
+- 2026/11/06 - [OpenWrt 扩容实战：NVMe 分区已经扩大，但 df 显示空间不变](https://jiajunhuang.com/articles/2026_11_06-upgrade_openwrt.md.html)
 - 2026/10/20 - [如何写一个 Agent](https://jiajunhuang.com/articles/2026_10_20-how_to_build_an_agent.md.html)
 - 2026/10/05 - [读 《明朝那些事儿》](https://jiajunhuang.com/articles/2026_10_05-mingchaonaxieshier.md.html)
 - 2026/02/19 - [你好，2026！](https://jiajunhuang.com/articles/2026_02_19-hello_2026.md.html)
